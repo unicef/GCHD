@@ -1,0 +1,213 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "river_flood_100yr_jrc_2024_N10_E80",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          79.9779181554954,
+          10.00706666666666
+        ],
+        [
+          89.97625151644094,
+          10.00706666666666
+        ],
+        [
+          89.97625151644094,
+          0.008733333342419769
+        ],
+        [
+          79.9779181554954,
+          0.008733333342419769
+        ],
+        [
+          79.9779181554954,
+          10.00706666666666
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    79.9779181554954,
+    0.008733333342419769,
+    89.97625151644094,
+    10.00706666666666
+  ],
+  "properties": {
+    "title": "Riverine flood hazard – tile N10 E80",
+    "description": "A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak from which the water level recedes at a slower rate.",
+    "GCHD:hazard": "Floods",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - 100 year return period",
+    "GCHD:nominal_resolution": "90m",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Depth in m",
+    "GCHD:threshold": "0.01",
+    "GCHD:classes": "0.01 - 0.15 - 0.5 - 1.5 - 2+",
+    "GCHD:value_range": [
+      0.0,
+      50.0
+    ],
+    "GCHD:notes": "JRC currently has 90m and plans to release 30 m in the coming years which could be useful for sub-national and localized analysis in the future - also includes SSP based projections. CCRI 2021 used GAR 2015 which is quite outdated. GRID 2023 has some inconsistencies (comment from CCRI-DRM team). WRI is also a good alternative with projections - but yet to identify the future update frequencies and resolutions; it might also be good to align with INFORM data sources. Highest return period chosen to capture the maximum exposure.",
+    "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazrards/river_flood_r100",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "GCHD:tile": "ID193_N10_E80_RP100_depth",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            79.9779181554954,
+            0.008733333342419769
+          ],
+          [
+            89.97625151644094,
+            0.008733333342419769
+          ],
+          [
+            89.97625151644094,
+            10.00706666666666
+          ],
+          [
+            79.9779181554954,
+            10.00706666666666
+          ],
+          [
+            79.9779181554954,
+            0.008733333342419769
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      79.9779181554954,
+      0.008733333342419769,
+      89.97625151644094,
+      10.00706666666666
+    ],
+    "proj:shape": [
+      11998,
+      11998
+    ],
+    "proj:transform": [
+      0.0008333333356347339,
+      0.0,
+      79.9779181554954,
+      0.0,
+      -0.0008333333333325754,
+      10.00706666666666,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "JRC",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/tiles/ID193_N10_E80_RP100_depth.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Riverine flood hazard (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": 1.6279948302126506,
+            "minimum": 0.10000000149011612,
+            "maximum": 11.865198135375977,
+            "stddev": 1.326884279519358,
+            "valid_percent": 0.9664535522460938
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.10000000149011612,
+            "max": 11.865198135375977,
+            "buckets": [
+              6294,
+              1990,
+              954,
+              468,
+              264,
+              104,
+              38,
+              16,
+              5,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/flood/river_flood_100yr_jrc_2024/ID193_N10_E80_RP100_depth.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/flood/river_flood_100yr_jrc_2024/ID193_N10_E80_RP100_depth_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "river_flood_100yr_jrc_2024"
+}

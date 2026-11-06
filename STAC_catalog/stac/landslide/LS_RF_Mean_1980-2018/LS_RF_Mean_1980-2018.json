@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "LS_RF_Mean_1980-2018",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -59.49160666366777
+        ],
+        [
+          -180.0,
+          72.00005998571058
+        ],
+        [
+          180.0,
+          72.00005998571058
+        ],
+        [
+          180.0,
+          -59.49160666366777
+        ],
+        [
+          -180.0,
+          -59.49160666366777
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -59.49160666366777,
+    180.0,
+    72.00005998571058
+  ],
+  "properties": {
+    "title": "Landslide (rainfall induced)",
+    "description": "Landslide exposure is estimated using the GFDRR rainfall-triggered Global Landslide Hazard Map (V2), based on the annual frequency of significant rainfall-induced landslides per km². Children and population exposed are identified using 0.1 and 0.01 landslides/km² thresholds (Medium–High and Moderate hazard). Indicators include absolute and relative exposed population and normalized scores ranging from 0–10.",
+    "GCHD:hazard": "Geophysical",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Modelled",
+    "GCHD:nominal_resolution": "1 km",
+    "GCHD:coverage": "All land areas between 60°S and 72°N",
+    "GCHD:units": "landslides per km² per year",
+    "GCHD:threshold": "≥ 0.01 or ≥ 0.1",
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      2.0
+    ],
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/LS_RF_Mean_1980-2018_COG",
+    "start_datetime": "1980-01-01T00:00:00+00:00",
+    "end_datetime": "2018-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.0,
+            -59.49160666366777
+          ],
+          [
+            180.00833328600004,
+            -59.49160666366777
+          ],
+          [
+            180.00833328600004,
+            72.00005998571058
+          ],
+          [
+            -180.0,
+            72.00005998571058
+          ],
+          [
+            -180.0,
+            -59.49160666366777
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.0,
+      -59.49160666366777,
+      180.00833328600004,
+      72.00005998571058
+    ],
+    "proj:shape": [
+      15779,
+      43201
+    ],
+    "proj:transform": [
+      0.00833333333223768,
+      0.0,
+      -180.0,
+      0.0,
+      -0.00833333333223768,
+      72.00005998571058,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "World Bank/GFDRR",
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/landslide/LS_RF_Mean_1980-2018_COG.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Landslides"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Landslides"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/landslide/LS_RF_Mean_1980-2018.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Landslide (rainfall induced) (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 0.0005633312463760375,
+            "minimum": 0.0,
+            "maximum": 1.0654370784759521,
+            "stddev": 0.006990240858157049,
+            "valid_percent": 100.0
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.0654370784759521,
+            "buckets": [
+              383796,
+              120,
+              45,
+              21,
+              9,
+              4,
+              2,
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/landslide/LS_RF_Mean_1980-2018.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/landslide/LS_RF_Mean_1980-2018_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "landslide"
+}

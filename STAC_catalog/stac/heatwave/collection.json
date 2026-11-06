@@ -1,0 +1,88 @@
+{
+  "type": "Collection",
+  "id": "heatwave",
+  "stac_version": "1.1.0",
+  "description": "Heatwaves and Extreme Heat hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./heatwave_frequency_ecmwf_2014-2024/heatwave_frequency_ecmwf_2014-2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./heatwave_duration_ecmwf_2014-2024/heatwave_duration_ecmwf_2014-2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./heatwave_severity_ecmwf_2014-2024/heatwave_severity_ecmwf_2014-2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./extreme_heat_ecmwf_2014-2024/extreme_heat_ecmwf_2014-2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "HW",
+  "title": "Heatwaves and Extreme Heat",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -60.15000000000104,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2014-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Heatwaves and Extreme Heat",
+    "HW"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/heatwave/heatwave_frequency_ecmwf_2014-2024.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/heatwave/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

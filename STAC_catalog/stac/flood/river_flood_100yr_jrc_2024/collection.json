@@ -1,0 +1,1430 @@
+{
+  "type": "Collection",
+  "id": "river_flood_100yr_jrc_2024",
+  "stac_version": "1.1.0",
+  "description": "A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak from which the water level recedes at a slower rate.\n\nOriginal ~90 m (3 arc-second) JRC tiles of 10°x10°, one item per tile. The `mosaic` asset is a GDAL VRT over all tiles for full-resolution access with a single URL.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W20/river_flood_100yr_jrc_2024_N70_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W20/river_flood_100yr_jrc_2024_N60_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W20/river_flood_100yr_jrc_2024_N30_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W20/river_flood_100yr_jrc_2024_N20_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W20/river_flood_100yr_jrc_2024_N10_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W10/river_flood_100yr_jrc_2024_N60_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W10/river_flood_100yr_jrc_2024_N50_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W10/river_flood_100yr_jrc_2024_N40_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W10/river_flood_100yr_jrc_2024_N30_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W10/river_flood_100yr_jrc_2024_N20_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W140/river_flood_100yr_jrc_2024_N80_W140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W10/river_flood_100yr_jrc_2024_N10_W10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W0/river_flood_100yr_jrc_2024_N70_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W0/river_flood_100yr_jrc_2024_N60_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W0/river_flood_100yr_jrc_2024_N50_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W0/river_flood_100yr_jrc_2024_N40_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W0/river_flood_100yr_jrc_2024_N30_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W0/river_flood_100yr_jrc_2024_N20_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W0/river_flood_100yr_jrc_2024_N10_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W0/river_flood_100yr_jrc_2024_N0_W0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E10/river_flood_100yr_jrc_2024_N70_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W140/river_flood_100yr_jrc_2024_N70_W140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E10/river_flood_100yr_jrc_2024_N60_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E10/river_flood_100yr_jrc_2024_N50_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E10/river_flood_100yr_jrc_2024_N40_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E10/river_flood_100yr_jrc_2024_N30_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E10/river_flood_100yr_jrc_2024_N20_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E10/river_flood_100yr_jrc_2024_N10_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E10/river_flood_100yr_jrc_2024_N0_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E10/river_flood_100yr_jrc_2024_S10_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E10/river_flood_100yr_jrc_2024_S20_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E10/river_flood_100yr_jrc_2024_S30_E10.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W140/river_flood_100yr_jrc_2024_N60_W140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E20/river_flood_100yr_jrc_2024_N80_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E20/river_flood_100yr_jrc_2024_N70_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E20/river_flood_100yr_jrc_2024_N60_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E20/river_flood_100yr_jrc_2024_N50_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E20/river_flood_100yr_jrc_2024_N40_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E20/river_flood_100yr_jrc_2024_N30_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E20/river_flood_100yr_jrc_2024_N20_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E20/river_flood_100yr_jrc_2024_N10_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E20/river_flood_100yr_jrc_2024_N0_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E20/river_flood_100yr_jrc_2024_S10_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W130/river_flood_100yr_jrc_2024_N80_W130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E20/river_flood_100yr_jrc_2024_S20_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E20/river_flood_100yr_jrc_2024_S30_E20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E30/river_flood_100yr_jrc_2024_N80_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E30/river_flood_100yr_jrc_2024_N70_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E30/river_flood_100yr_jrc_2024_N60_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E30/river_flood_100yr_jrc_2024_N50_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E30/river_flood_100yr_jrc_2024_N40_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E30/river_flood_100yr_jrc_2024_N30_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E30/river_flood_100yr_jrc_2024_N20_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E30/river_flood_100yr_jrc_2024_N10_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W130/river_flood_100yr_jrc_2024_N70_W130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E30/river_flood_100yr_jrc_2024_N0_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E30/river_flood_100yr_jrc_2024_S10_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E30/river_flood_100yr_jrc_2024_S20_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E30/river_flood_100yr_jrc_2024_S30_E30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E40/river_flood_100yr_jrc_2024_N70_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E40/river_flood_100yr_jrc_2024_N60_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E40/river_flood_100yr_jrc_2024_N50_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E40/river_flood_100yr_jrc_2024_N40_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E40/river_flood_100yr_jrc_2024_N30_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E40/river_flood_100yr_jrc_2024_N20_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W130/river_flood_100yr_jrc_2024_N60_W130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E40/river_flood_100yr_jrc_2024_N10_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E40/river_flood_100yr_jrc_2024_N0_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E40/river_flood_100yr_jrc_2024_S10_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E40/river_flood_100yr_jrc_2024_S20_E40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E50/river_flood_100yr_jrc_2024_N70_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E50/river_flood_100yr_jrc_2024_N60_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E50/river_flood_100yr_jrc_2024_N50_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E50/river_flood_100yr_jrc_2024_N40_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E50/river_flood_100yr_jrc_2024_N30_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E50/river_flood_100yr_jrc_2024_N20_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W130/river_flood_100yr_jrc_2024_N50_W130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E50/river_flood_100yr_jrc_2024_N10_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E50/river_flood_100yr_jrc_2024_S10_E50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E60/river_flood_100yr_jrc_2024_N80_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E60/river_flood_100yr_jrc_2024_N70_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E60/river_flood_100yr_jrc_2024_N60_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E60/river_flood_100yr_jrc_2024_N50_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E60/river_flood_100yr_jrc_2024_N40_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E60/river_flood_100yr_jrc_2024_N30_E60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E70/river_flood_100yr_jrc_2024_N80_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E70/river_flood_100yr_jrc_2024_N70_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W130/river_flood_100yr_jrc_2024_N40_W130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E70/river_flood_100yr_jrc_2024_N60_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E70/river_flood_100yr_jrc_2024_N50_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E70/river_flood_100yr_jrc_2024_N40_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E70/river_flood_100yr_jrc_2024_N30_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E70/river_flood_100yr_jrc_2024_N20_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E70/river_flood_100yr_jrc_2024_N10_E70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E80/river_flood_100yr_jrc_2024_N80_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E80/river_flood_100yr_jrc_2024_N70_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E80/river_flood_100yr_jrc_2024_N60_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E80/river_flood_100yr_jrc_2024_N50_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W120/river_flood_100yr_jrc_2024_N80_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E80/river_flood_100yr_jrc_2024_N40_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E80/river_flood_100yr_jrc_2024_N30_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E80/river_flood_100yr_jrc_2024_N20_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E80/river_flood_100yr_jrc_2024_N10_E80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E90/river_flood_100yr_jrc_2024_N80_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E90/river_flood_100yr_jrc_2024_N70_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E90/river_flood_100yr_jrc_2024_N60_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E90/river_flood_100yr_jrc_2024_N50_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E90/river_flood_100yr_jrc_2024_N40_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E90/river_flood_100yr_jrc_2024_N30_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W120/river_flood_100yr_jrc_2024_N70_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W170/river_flood_100yr_jrc_2024_N80_W170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E90/river_flood_100yr_jrc_2024_N20_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E90/river_flood_100yr_jrc_2024_N10_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E90/river_flood_100yr_jrc_2024_N0_E90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E100/river_flood_100yr_jrc_2024_N80_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E100/river_flood_100yr_jrc_2024_N70_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E100/river_flood_100yr_jrc_2024_N60_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E100/river_flood_100yr_jrc_2024_N50_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E100/river_flood_100yr_jrc_2024_N40_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E100/river_flood_100yr_jrc_2024_N30_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E100/river_flood_100yr_jrc_2024_N20_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W120/river_flood_100yr_jrc_2024_N60_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E100/river_flood_100yr_jrc_2024_N10_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E100/river_flood_100yr_jrc_2024_N0_E100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E110/river_flood_100yr_jrc_2024_N80_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E110/river_flood_100yr_jrc_2024_N70_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E110/river_flood_100yr_jrc_2024_N60_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E110/river_flood_100yr_jrc_2024_N50_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E110/river_flood_100yr_jrc_2024_N40_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E110/river_flood_100yr_jrc_2024_N30_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E110/river_flood_100yr_jrc_2024_N20_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E110/river_flood_100yr_jrc_2024_N10_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W120/river_flood_100yr_jrc_2024_N50_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E110/river_flood_100yr_jrc_2024_N0_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E110/river_flood_100yr_jrc_2024_S10_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E110/river_flood_100yr_jrc_2024_S20_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E110/river_flood_100yr_jrc_2024_S30_E110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E120/river_flood_100yr_jrc_2024_N80_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E120/river_flood_100yr_jrc_2024_N70_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E120/river_flood_100yr_jrc_2024_N60_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E120/river_flood_100yr_jrc_2024_N50_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E120/river_flood_100yr_jrc_2024_N40_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E120/river_flood_100yr_jrc_2024_N30_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W120/river_flood_100yr_jrc_2024_N40_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E120/river_flood_100yr_jrc_2024_N20_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E120/river_flood_100yr_jrc_2024_N10_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E120/river_flood_100yr_jrc_2024_N0_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E120/river_flood_100yr_jrc_2024_S10_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E120/river_flood_100yr_jrc_2024_S20_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E120/river_flood_100yr_jrc_2024_S30_E120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E130/river_flood_100yr_jrc_2024_N80_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E130/river_flood_100yr_jrc_2024_N70_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E130/river_flood_100yr_jrc_2024_N60_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E130/river_flood_100yr_jrc_2024_N50_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W120/river_flood_100yr_jrc_2024_N30_W120.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E130/river_flood_100yr_jrc_2024_N40_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E130/river_flood_100yr_jrc_2024_N0_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E130/river_flood_100yr_jrc_2024_S10_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E130/river_flood_100yr_jrc_2024_S20_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E130/river_flood_100yr_jrc_2024_S30_E130.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E140/river_flood_100yr_jrc_2024_N80_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E140/river_flood_100yr_jrc_2024_N70_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E140/river_flood_100yr_jrc_2024_N60_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E140/river_flood_100yr_jrc_2024_N50_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E140/river_flood_100yr_jrc_2024_N40_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W110/river_flood_100yr_jrc_2024_N80_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E140/river_flood_100yr_jrc_2024_N0_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E140/river_flood_100yr_jrc_2024_S10_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E140/river_flood_100yr_jrc_2024_S20_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E140/river_flood_100yr_jrc_2024_S30_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E140/river_flood_100yr_jrc_2024_S40_E140.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E150/river_flood_100yr_jrc_2024_N80_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E150/river_flood_100yr_jrc_2024_N70_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E150/river_flood_100yr_jrc_2024_N60_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E150/river_flood_100yr_jrc_2024_N0_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E150/river_flood_100yr_jrc_2024_S10_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W110/river_flood_100yr_jrc_2024_N70_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E150/river_flood_100yr_jrc_2024_S20_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E150/river_flood_100yr_jrc_2024_S30_E150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E160/river_flood_100yr_jrc_2024_N80_E160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E160/river_flood_100yr_jrc_2024_N70_E160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E160/river_flood_100yr_jrc_2024_N60_E160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E160/river_flood_100yr_jrc_2024_S40_E160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E170/river_flood_100yr_jrc_2024_N80_E170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E170/river_flood_100yr_jrc_2024_N70_E170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E170/river_flood_100yr_jrc_2024_N60_E170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E170/river_flood_100yr_jrc_2024_S30_E170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W110/river_flood_100yr_jrc_2024_N60_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E170/river_flood_100yr_jrc_2024_S40_E170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W110/river_flood_100yr_jrc_2024_N50_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W110/river_flood_100yr_jrc_2024_N40_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W110/river_flood_100yr_jrc_2024_N30_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W170/river_flood_100yr_jrc_2024_N70_W170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W110/river_flood_100yr_jrc_2024_N20_W110.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W100/river_flood_100yr_jrc_2024_N80_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W100/river_flood_100yr_jrc_2024_N70_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W100/river_flood_100yr_jrc_2024_N60_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W100/river_flood_100yr_jrc_2024_N50_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W100/river_flood_100yr_jrc_2024_N40_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W100/river_flood_100yr_jrc_2024_N30_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W100/river_flood_100yr_jrc_2024_N20_W100.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W170/river_flood_100yr_jrc_2024_N60_W170.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W90/river_flood_100yr_jrc_2024_N80_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W90/river_flood_100yr_jrc_2024_N70_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W90/river_flood_100yr_jrc_2024_N60_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W90/river_flood_100yr_jrc_2024_N50_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W90/river_flood_100yr_jrc_2024_N40_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W90/river_flood_100yr_jrc_2024_N30_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W90/river_flood_100yr_jrc_2024_N20_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W90/river_flood_100yr_jrc_2024_N10_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W90/river_flood_100yr_jrc_2024_N0_W90.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W160/river_flood_100yr_jrc_2024_N80_W160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W80/river_flood_100yr_jrc_2024_N80_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W80/river_flood_100yr_jrc_2024_N70_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W80/river_flood_100yr_jrc_2024_N60_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W80/river_flood_100yr_jrc_2024_N50_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W80/river_flood_100yr_jrc_2024_N40_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W80/river_flood_100yr_jrc_2024_N30_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W80/river_flood_100yr_jrc_2024_N20_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W80/river_flood_100yr_jrc_2024_N10_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W80/river_flood_100yr_jrc_2024_N0_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W80/river_flood_100yr_jrc_2024_S10_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W160/river_flood_100yr_jrc_2024_N70_W160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W80/river_flood_100yr_jrc_2024_S20_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W80/river_flood_100yr_jrc_2024_S30_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_W80/river_flood_100yr_jrc_2024_S40_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S50_W80/river_flood_100yr_jrc_2024_S50_W80.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W70/river_flood_100yr_jrc_2024_N80_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W70/river_flood_100yr_jrc_2024_N70_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W70/river_flood_100yr_jrc_2024_N60_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W70/river_flood_100yr_jrc_2024_N50_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W70/river_flood_100yr_jrc_2024_N20_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W160/river_flood_100yr_jrc_2024_N60_W160.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W70/river_flood_100yr_jrc_2024_N10_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W70/river_flood_100yr_jrc_2024_N0_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W70/river_flood_100yr_jrc_2024_S10_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W70/river_flood_100yr_jrc_2024_S20_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W70/river_flood_100yr_jrc_2024_S30_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_W70/river_flood_100yr_jrc_2024_S40_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S50_W70/river_flood_100yr_jrc_2024_S50_W70.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W60/river_flood_100yr_jrc_2024_N80_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W60/river_flood_100yr_jrc_2024_N70_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W60/river_flood_100yr_jrc_2024_N60_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W150/river_flood_100yr_jrc_2024_N80_W150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W60/river_flood_100yr_jrc_2024_N50_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W60/river_flood_100yr_jrc_2024_N10_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W60/river_flood_100yr_jrc_2024_N0_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W60/river_flood_100yr_jrc_2024_S10_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W60/river_flood_100yr_jrc_2024_S20_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W60/river_flood_100yr_jrc_2024_S30_W60.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W50/river_flood_100yr_jrc_2024_N70_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W50/river_flood_100yr_jrc_2024_N60_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W50/river_flood_100yr_jrc_2024_N10_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W150/river_flood_100yr_jrc_2024_N70_W150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W50/river_flood_100yr_jrc_2024_N0_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W50/river_flood_100yr_jrc_2024_S10_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W50/river_flood_100yr_jrc_2024_S20_W50.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W40/river_flood_100yr_jrc_2024_N70_W40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W40/river_flood_100yr_jrc_2024_N0_W40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W40/river_flood_100yr_jrc_2024_S10_W40.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W30/river_flood_100yr_jrc_2024_N80_W30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W30/river_flood_100yr_jrc_2024_N70_W30.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W20/river_flood_100yr_jrc_2024_N80_W20.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W150/river_flood_100yr_jrc_2024_N60_W150.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Floods"
+    }
+  ],
+  "title": "Riverine flood hazard (original JRC tiles)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -170.00124920555788,
+          -59.986266666657585,
+          179.9687517664201,
+          80.00123333333333
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "flood",
+    "JRC"
+  ],
+  "providers": [
+    {
+      "name": "JRC",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Children's Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "mosaic": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/mosaic.vrt",
+      "type": "application/xml",
+      "title": "Global mosaic (GDAL VRT over tile COGs)",
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/flood/river_flood_100yr_jrc_2024.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/flood/river_flood_100yr_jrc_2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all tiles)",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all tiles)",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

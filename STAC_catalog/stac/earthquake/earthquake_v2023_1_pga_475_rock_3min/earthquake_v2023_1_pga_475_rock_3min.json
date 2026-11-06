@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "earthquake_v2023_1_pga_475_rock_3min",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -60.00000000000101
+        ],
+        [
+          -180.0,
+          89.99
+        ],
+        [
+          180.0,
+          89.99
+        ],
+        [
+          180.0,
+          -60.00000000000101
+        ],
+        [
+          -180.0,
+          -60.00000000000101
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -60.00000000000101,
+    180.0,
+    89.99
+  ],
+  "properties": {
+    "title": "Earthquake",
+    "description": "Earthquake exposure is derived from the GEM Global Seismic Hazard Map (v2023.1, June 2023), which maps peak ground acceleration (PGA) on reference rock for a 10% probability of exceedance in 50 years (475-year return period; Vs30 = 760–800 m/s). Exposed children and population are identified using two thresholds linked to Mercalli intensities: Strong shaking (VI; PGA ≥ 0.09 g) and Severe shaking (VIII; PGA ≥ 0.34 g). Outputs include absolute and relative exposure and normalized scores (0–10).",
+    "GCHD:hazard": "Geophysical",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "3 arc-minutes",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "PGA (g)",
+    "GCHD:threshold": ">0.09 g or >0.34g",
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      2.0
+    ],
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/earthquake_v2023_1_pga_475_rock_3min",
+    "start_datetime": "2023-01-01T00:00:00+00:00",
+    "end_datetime": "2023-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.0,
+            -60.00000000000101
+          ],
+          [
+            180.0,
+            -60.00000000000101
+          ],
+          [
+            180.0,
+            89.99
+          ],
+          [
+            -180.0,
+            89.99
+          ],
+          [
+            -180.0,
+            -60.00000000000101
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.0,
+      -60.00000000000101,
+      180.0,
+      89.99
+    ],
+    "proj:shape": [
+      3000,
+      7200
+    ],
+    "proj:transform": [
+      0.05,
+      0.0,
+      -180.0,
+      0.0,
+      -0.049996666666667,
+      89.99,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "GEM",
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Earthquake"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Earthquake"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Earthquake (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 0.07592131341993967,
+            "minimum": 0.0,
+            "maximum": 1.7157574892044067,
+            "stddev": 0.1295447300927963,
+            "valid_percent": 30.17463773419204
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.7157574892044067,
+            "buckets": [
+              113657,
+              11630,
+              4156,
+              1647,
+              532,
+              186,
+              56,
+              42,
+              28,
+              4
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/earthquake/earthquake_v2023_1_pga_475_rock_3min.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/earthquake/earthquake_v2023_1_pga_475_rock_3min_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "earthquake"
+}

@@ -1,0 +1,87 @@
+{
+  "type": "Catalog",
+  "id": "GCHD",
+  "stac_version": "1.1.0",
+  "description": "The **Global Children's Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict.\n\nEvery layer is a Cloud-Optimized GeoTIFF that can be streamed directly into GIS tools or analysis code. Processing scripts and documentation: https://github.com/unicef/GCHD",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./flood/collection.json",
+      "type": "application/json",
+      "title": "Floods"
+    },
+    {
+      "rel": "child",
+      "href": "./tropical_storm/collection.json",
+      "type": "application/json",
+      "title": "Tropical Storm"
+    },
+    {
+      "rel": "child",
+      "href": "./drought/collection.json",
+      "type": "application/json",
+      "title": "Droughts"
+    },
+    {
+      "rel": "child",
+      "href": "./heatwave/collection.json",
+      "type": "application/json",
+      "title": "Heatwaves and Extreme Heat"
+    },
+    {
+      "rel": "child",
+      "href": "./fire/collection.json",
+      "type": "application/json",
+      "title": "Fire"
+    },
+    {
+      "rel": "child",
+      "href": "./sand_dust_storm/collection.json",
+      "type": "application/json",
+      "title": "Sand and Dust Storm"
+    },
+    {
+      "rel": "child",
+      "href": "./air_pollution/collection.json",
+      "type": "application/json",
+      "title": "Air Pollution"
+    },
+    {
+      "rel": "child",
+      "href": "./malaria/collection.json",
+      "type": "application/json",
+      "title": "Vector Borne Diseases (Malaria)"
+    },
+    {
+      "rel": "child",
+      "href": "./landslide/collection.json",
+      "type": "application/json",
+      "title": "Landslides"
+    },
+    {
+      "rel": "child",
+      "href": "./earthquake/collection.json",
+      "type": "application/json",
+      "title": "Earthquake"
+    },
+    {
+      "rel": "child",
+      "href": "./conflict/collection.json",
+      "type": "application/json",
+      "title": "Complex Emergencies (Conflict)"
+    },
+    {
+      "rel": "child",
+      "href": "./volcano/collection.json",
+      "type": "application/json",
+      "title": "Volcanoes"
+    }
+  ],
+  "title": "UNICEF Global Children's Hazard Database"
+}

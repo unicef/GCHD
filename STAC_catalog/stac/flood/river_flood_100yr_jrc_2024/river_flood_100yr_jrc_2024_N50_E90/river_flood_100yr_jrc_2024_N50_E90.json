@@ -1,0 +1,213 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "river_flood_100yr_jrc_2024_N50_E90",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          89.97708484993753,
+          50.00373333333333
+        ],
+        [
+          99.97541821088306,
+          50.00373333333333
+        ],
+        [
+          99.97541821088306,
+          40.00540000000909
+        ],
+        [
+          89.97708484993753,
+          40.00540000000909
+        ],
+        [
+          89.97708484993753,
+          50.00373333333333
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    89.97708484993753,
+    40.00540000000909,
+    99.97541821088306,
+    50.00373333333333
+  ],
+  "properties": {
+    "title": "Riverine flood hazard – tile N50 E90",
+    "description": "A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak from which the water level recedes at a slower rate.",
+    "GCHD:hazard": "Floods",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - 100 year return period",
+    "GCHD:nominal_resolution": "90m",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Depth in m",
+    "GCHD:threshold": "0.01",
+    "GCHD:classes": "0.01 - 0.15 - 0.5 - 1.5 - 2+",
+    "GCHD:value_range": [
+      0.0,
+      50.0
+    ],
+    "GCHD:notes": "JRC currently has 90m and plans to release 30 m in the coming years which could be useful for sub-national and localized analysis in the future - also includes SSP based projections. CCRI 2021 used GAR 2015 which is quite outdated. GRID 2023 has some inconsistencies (comment from CCRI-DRM team). WRI is also a good alternative with projections - but yet to identify the future update frequencies and resolutions; it might also be good to align with INFORM data sources. Highest return period chosen to capture the maximum exposure.",
+    "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazrards/river_flood_r100",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "GCHD:tile": "ID197_N50_E90_RP100_depth",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            89.97708484993753,
+            40.00540000000909
+          ],
+          [
+            99.97541821088306,
+            40.00540000000909
+          ],
+          [
+            99.97541821088306,
+            50.00373333333333
+          ],
+          [
+            89.97708484993753,
+            50.00373333333333
+          ],
+          [
+            89.97708484993753,
+            40.00540000000909
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      89.97708484993753,
+      40.00540000000909,
+      99.97541821088306,
+      50.00373333333333
+    ],
+    "proj:shape": [
+      11998,
+      11998
+    ],
+    "proj:transform": [
+      0.0008333333356347339,
+      0.0,
+      89.97708484993753,
+      0.0,
+      -0.0008333333333325754,
+      50.00373333333333,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "JRC",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/tiles/ID197_N50_E90_RP100_depth.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Riverine flood hazard (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": 0.7873995116931848,
+            "minimum": 0.10000000149011612,
+            "maximum": 30.593870162963867,
+            "stddev": 0.876831193088962,
+            "valid_percent": 6.557273864746094
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.10000000149011612,
+            "max": 30.593870162963867,
+            "buckets": [
+              67367,
+              1213,
+              123,
+              31,
+              16,
+              2,
+              3,
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/flood/river_flood_100yr_jrc_2024/ID197_N50_E90_RP100_depth.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/flood/river_flood_100yr_jrc_2024/ID197_N50_E90_RP100_depth_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "river_flood_100yr_jrc_2024"
+}

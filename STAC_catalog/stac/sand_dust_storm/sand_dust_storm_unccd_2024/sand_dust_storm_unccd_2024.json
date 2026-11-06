@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "sand_dust_storm_unccd_2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179.99440198990013,
+          89.99563454989999
+        ],
+        [
+          179.99440198990013,
+          -60.00376905010006
+        ],
+        [
+          -180.0,
+          -60.00376905010006
+        ],
+        [
+          -180.0,
+          89.99563454989999
+        ],
+        [
+          179.99440198990013,
+          89.99563454989999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -60.00376905010006,
+    179.99440198990013,
+    89.99563454989999
+  ],
+  "properties": {
+    "title": "SDS Susceptiblity",
+    "description": "Sand and dust storms (SDS) are caused by intense winds over areas of arid soil that pick up large amounts of ground material into the atmosphere.",
+    "GCHD:hazard": "Sand and Dust Storm",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "1km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Index",
+    "GCHD:threshold": "All",
+    "GCHD:classes": "0-0.2-0.4-0.6-0.8-1",
+    "GCHD:value_range": [
+      0.0,
+      1.0
+    ],
+    "GCHD:notes": "SDS susceptibility only shows the areas of sds source and classes are consolidated from the UNCCD index -",
+    "GCHD:alternate_sources": "WMO",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/sand_dust_storm_annual",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.00416665010002,
+            -60.00376905010006
+          ],
+          [
+            179.99440198990013,
+            -60.00376905010006
+          ],
+          [
+            179.99440198990013,
+            89.99563454989999
+          ],
+          [
+            -180.00416665010002,
+            89.99563454989999
+          ],
+          [
+            -180.00416665010002,
+            -60.00376905010006
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.00416665010002,
+      -60.00376905010006,
+      179.99440198990013,
+      89.99563454989999
+    ],
+    "proj:shape": [
+      18000,
+      43200
+    ],
+    "proj:transform": [
+      0.008333300200000003,
+      0.0,
+      -180.00416665010002,
+      0.0,
+      -0.008333300200000003,
+      89.99563454989999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "UNCCD",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.unccd.int/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/SDS/sand_dust_storm_unccd_2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Sand and Dust Storm"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Sand and Dust Storm"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/sand_dust_storm/sand_dust_storm_unccd_2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "SDS Susceptiblity (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -999000000.0,
+          "statistics": {
+            "mean": 0.0827590065864636,
+            "minimum": 0.0,
+            "maximum": 0.999999463558197,
+            "stddev": 0.1818782002110629,
+            "valid_percent": 31.42884587236534
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 0.999999463558197,
+            "buckets": [
+              111142,
+              3071,
+              3896,
+              5338,
+              5798,
+              3926,
+              2484,
+              1139,
+              500,
+              128
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/sand_dust_storm/sand_dust_storm_unccd_2024.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/sand_dust_storm/sand_dust_storm_unccd_2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "sand_dust_storm"
+}

@@ -1,0 +1,78 @@
+{
+  "type": "Collection",
+  "id": "fire",
+  "stac_version": "1.1.0",
+  "description": "Fire hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./fire_FRP_nasa_2001-2024/fire_FRP_nasa_2001-2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./fire_frequency_nasa_2001-2023/fire_frequency_nasa_2001-2023.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "FR",
+  "title": "Fire",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2001-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Fire",
+    "FR"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/fire/fire_FRP_nasa_2001-2024.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/fire/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

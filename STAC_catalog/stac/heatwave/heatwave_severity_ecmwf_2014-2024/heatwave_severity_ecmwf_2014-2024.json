@@ -1,0 +1,217 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "heatwave_severity_ecmwf_2014-2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -60.15000000000104
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          -60.15000000000104
+        ],
+        [
+          -180.0,
+          -60.15000000000104
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -60.15000000000104,
+    180.0,
+    90.0
+  ],
+  "properties": {
+    "title": "Heatwave severity",
+    "description": "A heatwave can be defined as a period where local excess heat accumulates over a sequence of unusually hot days and nights. Heatwave severity refers to the temperature above the local 15-day average during the heatwave, expressed in degrees Celsius.",
+    "GCHD:hazard": "Heatwaves",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "10km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Temperature in C",
+    "GCHD:threshold": 3.66,
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      20.0
+    ],
+    "GCHD:alternate_sources": "NOAA CDR, NASA MERRA2, MODIS for SIDS",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/heatwave_severity_return_level_100yr",
+    "start_datetime": "2014-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.05,
+            -60.15000000000104
+          ],
+          [
+            180.0500000000025,
+            -60.15000000000104
+          ],
+          [
+            180.0500000000025,
+            90.05
+          ],
+          [
+            -180.05,
+            90.05
+          ],
+          [
+            -180.05,
+            -60.15000000000104
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.05,
+      -60.15000000000104,
+      180.0500000000025,
+      90.05
+    ],
+    "proj:shape": [
+      1502,
+      3601
+    ],
+    "proj:transform": [
+      0.1000000000000007,
+      0.0,
+      -180.05,
+      0.0,
+      -0.1000000000000007,
+      90.05,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "ECMWF",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.ecmwf.int/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/heatwave_severity_ecmwf_2014-2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Heatwaves and Extreme Heat"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Heatwaves and Extreme Heat"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/heatwave_severity_ecmwf_2014-2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Heatwave severity (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 1.5583607142973386,
+            "minimum": 0.0,
+            "maximum": 8.961355209350586,
+            "stddev": 2.0729029972876716,
+            "valid_percent": 70.10235652745327
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 8.961355209350586,
+            "buckets": [
+              179200,
+              13028,
+              26700,
+              21396,
+              27100,
+              20236,
+              11969,
+              5836,
+              1570,
+              204
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/heatwave/heatwave_severity_ecmwf_2014-2024.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/heatwave/heatwave_severity_ecmwf_2014-2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "heatwave"
+}

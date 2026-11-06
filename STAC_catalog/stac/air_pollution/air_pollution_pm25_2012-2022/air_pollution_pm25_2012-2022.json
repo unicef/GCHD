@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "air_pollution_pm25_2012-2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9949951171875,
+          67.99500274658203
+        ],
+        [
+          179.8072509765625,
+          67.99500274658203
+        ],
+        [
+          179.8072509765625,
+          -54.984352111816406
+        ],
+        [
+          -179.9949951171875,
+          -54.984352111816406
+        ],
+        [
+          -179.9949951171875,
+          67.99500274658203
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -179.9949951171875,
+    -54.984352111816406,
+    179.8072509765625,
+    67.99500274658203
+  ],
+  "properties": {
+    "title": "PM 2.5",
+    "description": "Air pollution refers to the presence of substances in the atmosphere that are harmful to human health and the environment.  Fine particle air pollution, or PM2 .5, refers to airborne particles measuring less than 2 .5 micrometers in diameter that could be emitted from vehicles, residential fuel use, coal-burning power plants, agricultural and industrial activities, waste burning, wildfires, and many other human and natural sources.",
+    "GCHD:hazard": "Air pollution",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "1km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "μg/m3",
+    "GCHD:threshold": ">5 AQG",
+    "GCHD:classes": "5 - 10 - 15 - 25 - 35+",
+    "GCHD:value_range": [
+      0.0,
+      300.0
+    ],
+    "GCHD:notes": "Threshold adopted from WHO guidelines -= https://worldhealthorg.shinyapps.io/Air_Quality_Standards_V2_1/",
+    "GCHD:alternate_sources": "WMO",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/pm25_p90_1998_2023",
+    "start_datetime": "2012-01-01T00:00:00+00:00",
+    "end_datetime": "2022-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -179.9949951171875,
+            -54.984352111816406
+          ],
+          [
+            179.8072509765625,
+            -54.984352111816406
+          ],
+          [
+            179.8072509765625,
+            67.99500274658203
+          ],
+          [
+            -179.9949951171875,
+            67.99500274658203
+          ],
+          [
+            -179.9949951171875,
+            -54.984352111816406
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -179.9949951171875,
+      -54.984352111816406,
+      179.8072509765625,
+      67.99500274658203
+    ],
+    "proj:shape": [
+      12300,
+      36000
+    ],
+    "proj:transform": [
+      0.0099945068359375,
+      0.0,
+      -179.9949951171875,
+      0.0,
+      -0.009998321533203125,
+      67.99500274658203,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "ACAG",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://sites.wustl.edu/acag/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/air_pollution/air_pollution_pm25_1998-2023.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Air Pollution"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Air Pollution"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/air_pollution/air_pollution_pm25_2012-2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "PM 2.5 (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 20.244320275837218,
+            "minimum": 1.0648834705352783,
+            "maximum": 267.970947265625,
+            "stddev": 17.879304940189055,
+            "valid_percent": 34.068359375
+          },
+          "histogram": {
+            "count": 11,
+            "min": 1.0648834705352783,
+            "max": 267.970947265625,
+            "buckets": [
+              90289,
+              25826,
+              4392,
+              1358,
+              185,
+              18,
+              11,
+              10,
+              7,
+              5
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/air_pollution/air_pollution_pm25_2012-2022.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/air_pollution/air_pollution_pm25_2012-2022_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "air_pollution"
+}

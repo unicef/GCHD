@@ -210,6 +210,25 @@
     .tag-conflict { background: #FEE2E2; color: #991B1B; }
     .tag-upcoming { background: #F3F4F6; color: #6B7280; }
 
+    .catalog-callout {
+      margin-top: 2.5rem;
+      background: var(--white);
+      border: 1px solid #E5E7EB;
+      border-left: 4px solid var(--unicef-blue);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem 2.5rem; flex-wrap: wrap;
+    }
+    .catalog-text { flex: 1 1 420px; }
+    .catalog-text h3 { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.4rem; }
+    .catalog-text p  { font-size: 0.9rem; color: #6B7280; }
+    .catalog-text a  { color: var(--unicef-dark-blue); }
+    .catalog-links {
+      display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+    }
+    .catalog-json { font-size: 0.8rem; color: var(--unicef-dark-blue); }
+
     /* ── METHODOLOGY ── */
     #methodology { background: var(--white); }
 
@@ -352,6 +371,7 @@
     <a href="#hazards">Hazards</a>
     <a href="#methodology">Methodology</a>
     <a href="#dashboard">Dashboard</a>
+    <a href="STAC_catalog/browser/">Data Catalog</a>
     <a href="https://github.com/unicef/GCHD" target="_blank">GitHub</a>
   </div>
 </nav>
@@ -463,7 +483,7 @@
         <div class="hazard-icon">🌫️</div>
         <div><span class="tag tag-climate">Climate</span></div>
         <h3>Air Pollution</h3>
-        <p>Satellite PM2.5 — 90th percentile, 1998–2023</p>
+        <p>Satellite PM2.5 — 90th percentile, 2012–2022</p>
       </div>
 
       <div class="hazard-card cat-climate">
@@ -480,36 +500,53 @@
         <p>MAP — Pf &amp; Pv prevalence, 2013–2022 average</p>
       </div>
 
-      <!-- Geophysical (upcoming) -->
-      <div class="hazard-card cat-geo upcoming">
+      <!-- Geophysical hazards -->
+      <div class="hazard-card cat-geo">
         <div class="hazard-icon">🏔️</div>
-        <div><span class="tag tag-geo">Geophysical</span> <span class="tag tag-upcoming">Q3 2026</span></div>
+        <div><span class="tag tag-geo">Geophysical</span></div>
         <h3>Earthquake</h3>
-        <p>GEM — probabilistic peak ground acceleration</p>
+        <p>GEM v2023.1 — peak ground acceleration on rock, 475-year return period</p>
       </div>
 
-      <div class="hazard-card cat-geo upcoming">
+      <div class="hazard-card cat-geo">
         <div class="hazard-icon">🌋</div>
-        <div><span class="tag tag-geo">Geophysical</span> <span class="tag tag-upcoming">Q3 2026</span></div>
+        <div><span class="tag tag-geo">Geophysical</span></div>
         <h3>Volcano</h3>
-        <p>GVM / Smithsonian — volcanic hazard zones</p>
+        <p>Smithsonian GVP — population within 100 km of volcanoes active since 1800</p>
       </div>
 
-      <div class="hazard-card cat-geo upcoming">
+      <div class="hazard-card cat-geo">
         <div class="hazard-icon">⛰️</div>
-        <div><span class="tag tag-geo">Geophysical</span> <span class="tag tag-upcoming">Q3 2026</span></div>
+        <div><span class="tag tag-geo">Geophysical</span></div>
         <h3>Landslide</h3>
-        <p>NASA / UNDRR — landslide susceptibility</p>
+        <p>World Bank / GFDRR — earthquake- and rainfall-triggered landslide hazard</p>
       </div>
 
-      <!-- Conflict (upcoming) -->
-      <div class="hazard-card cat-conflict upcoming">
+      <!-- Conflict -->
+      <div class="hazard-card cat-conflict">
         <div class="hazard-icon">⚠️</div>
-        <div><span class="tag tag-conflict">Conflict</span> <span class="tag tag-upcoming">Q3 2026</span></div>
+        <div><span class="tag tag-conflict">Conflict</span></div>
         <h3>Armed Conflict</h3>
-        <p>ACLED / UCDP — conflict event density</p>
+        <p>ACLED — conflict index from events &amp; fatalities, Sep 2020–Aug 2025</p>
       </div>
 
+    </div>
+
+    <!-- STAC data catalog -->
+    <div class="catalog-callout">
+      <div class="catalog-text">
+        <h3>Browse and download the hazard layers</h3>
+        <p>
+          All hazard layers are published as Cloud-Optimized GeoTIFFs in a
+          <a href="https://stacspec.org/" target="_blank" rel="noopener">STAC</a> catalog,
+          with metadata, previews and direct download links. Stream them into GIS tools or
+          analysis code without downloading whole files.
+        </p>
+      </div>
+      <div class="catalog-links">
+        <a class="btn btn-primary" href="STAC_catalog/browser/">Open the data catalog →</a>
+        <a class="catalog-json" href="STAC_catalog/stac/catalog.json">catalog.json (STAC 1.1)</a>
+      </div>
     </div>
   </div>
 </section>

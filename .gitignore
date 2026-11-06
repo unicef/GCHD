@@ -66,3 +66,12 @@ CLAUDE.md
 !exposure_analysis/subnational_level/config/hazard_info.json
 !exposure_analysis/subnational_level/config/countries_info.csv
 !exposure_analysis/subnational_level/config/countries_NA_summary.csv
+
+# STAC catalog: secrets out, generated catalog JSON in
+STAC_catalog/.env
+!STAC_catalog/stac/**/*.json
+!STAC_catalog/browser/**/*.json
+!STAC_catalog/stac/**/*.geojson
+!STAC_catalog/thumbnails/overviews.json
+!STAC_catalog/reports/*.csv
+STAC_catalog/work/
