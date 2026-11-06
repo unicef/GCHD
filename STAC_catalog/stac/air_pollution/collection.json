@@ -1,0 +1,73 @@
+{
+  "type": "Collection",
+  "id": "air_pollution",
+  "stac_version": "1.1.0",
+  "description": "Air Pollution hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./air_pollution_pm25_2012-2022/air_pollution_pm25_2012-2022.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "AP",
+  "title": "Air Pollution",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9949951171875,
+          -54.984352111816406,
+          179.8072509765625,
+          67.99500274658203
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2012-01-01T00:00:00Z",
+          "2022-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Air Pollution",
+    "AP"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/air_pollution/air_pollution_pm25_2012-2022.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/air_pollution/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

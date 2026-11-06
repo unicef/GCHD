@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "tropical_storm_100yr_giri_2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
+  ],
+  "properties": {
+    "title": "Wind speed",
+    "description": "A tropical storm is a type of storm system characterized by a low-pressure center, a closed low-level atmospheric circulation, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain.",
+    "GCHD:hazard": "Tropical Storm",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - 100 year return period",
+    "GCHD:nominal_resolution": "10km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "m/s",
+    "GCHD:threshold": ">17.5 m/s",
+    "GCHD:classes": "63 - 119 - 154 - 178 - 209+",
+    "GCHD:value_range": [
+      0.0,
+      60.0
+    ],
+    "GCHD:notes": "GIRI preferred over STORM following country level testing by CCRI DRM team and saffir simpson classification is used to establish thresholds.  Classification from WMO - https://wmo.int/content/classification-of-tropical-cyclones",
+    "GCHD:alternate_sources": "STORM",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/storm_giri_rp100",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.00082337073323,
+            -90.00041168536661
+          ],
+          [
+            180.00082337073323,
+            -90.00041168536661
+          ],
+          [
+            180.00082337073323,
+            90.00041168536661
+          ],
+          [
+            -180.00082337073323,
+            90.00041168536661
+          ],
+          [
+            -180.00082337073323,
+            -90.00041168536661
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.00082337073323,
+      -90.00041168536661,
+      180.00082337073323,
+      90.00041168536661
+    ],
+    "proj:shape": [
+      1800,
+      3600
+    ],
+    "proj:transform": [
+      0.10000045742818513,
+      0.0,
+      -180.00082337073323,
+      0.0,
+      -0.10000045742818513,
+      90.00041168536661,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "GIRI",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.undrr.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/storm/tropical_storm_100yr_giri_2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Tropical Storm"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Tropical Storm"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/tropical_storm/tropical_storm_100yr_giri_2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Wind speed (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 20.54862277025168,
+            "minimum": 0.0,
+            "maximum": 51.588592529296875,
+            "stddev": 16.35635433556031,
+            "valid_percent": 47.828102111816406
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 51.588592529296875,
+            "buckets": [
+              85323,
+              1109,
+              1217,
+              12715,
+              40981,
+              35463,
+              23233,
+              23277,
+              18926,
+              8513
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/tropical_storm/tropical_storm_100yr_giri_2024.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/tropical_storm/tropical_storm_100yr_giri_2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "tropical_storm"
+}

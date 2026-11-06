@@ -1,0 +1,977 @@
+collections:
+  flood:
+    title: Floods
+    glide_code: FL
+  tropical_storm:
+    title: Tropical Storm
+    glide_code: TC
+  drought:
+    title: Droughts
+    glide_code: DR
+  heatwave:
+    title: Heatwaves and Extreme Heat
+    glide_code: HW
+  fire:
+    title: Fire
+    glide_code: FR
+  sand_dust_storm:
+    title: Sand and Dust Storm
+    glide_code: null
+  air_pollution:
+    title: Air Pollution
+    glide_code: AP
+  malaria:
+    title: Vector Borne Diseases (Malaria)
+    glide_code: EP
+  landslide:
+    title: Landslides
+    glide_code: LS
+  earthquake:
+    title: Earthquake
+    glide_code: EQ
+  conflict:
+    title: Complex Emergencies (Conflict)
+    glide_code: CE
+  volcano:
+    title: Volcanoes
+    glide_code: VO
+layers:
+- id: river_flood_100yr_jrc_2024
+  collection: flood
+  source_filename: river_flood_100yr_jrc_2024_1km.tif
+  title: Riverine flood hazard
+  hazard: Floods
+  description: A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak
+    from which the water level recedes at a slower rate.
+  notes: JRC currently has 90m and plans to release 30 m in the coming years which could be useful for sub-national and localized
+    analysis in the future - also includes SSP based projections. CCRI 2021 used GAR 2015 which is quite outdated. GRID 2023
+    has some inconsistencies (comment from CCRI-DRM team). WRI is also a good alternative with projections - but yet to identify
+    the future update frequencies and resolutions; it might also be good to align with INFORM data sources. Highest return
+    period chosen to capture the maximum exposure.
+  hazard_phase: Preparedness/Planning
+  data_type: Probabilistic - 100 year return period
+  resolution: 90m
+  coverage: Global
+  units: Depth in m
+  legend_label: Depth in m
+  threshold: '0.01'
+  classes: 0.01 - 0.15 - 0.5 - 1.5 - 2+
+  range:
+  - 0.0
+  - 50.0
+  actual_range:
+  - 0.144
+  - 43.56
+  nodata_note: nan
+  source_provider: JRC
+  alternate_sources: WRI, UNEP GRID 2023
+  gee_asset: projects/unicef-ccri/assets/hazrards/river_flood_r100
+  naming_convention: river_flood_100yr_jrc_2024
+  start_year: 2024
+  end_year: 2024
+  source:
+    type: tiles
+    container: climate
+    prefix: CCRI/data/raw/riverline_flood/2025_update/
+    legacy_href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/flood/river_flood_100yr_jrc_2024_1km.tif
+  nodata: -9999.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#cfe8ff'
+  - '#8fcbff'
+  - '#1d7bff'
+  - '#0654be'
+  - '#00357d'
+  transparent_zero: false
+  thumb_range: null
+- id: coastal_flood_100yr_jrc_2024
+  collection: flood
+  source_filename: coastal_flood_100yr_jrc_2024.tif
+  title: Coastal flood hazard
+  hazard: Floods
+  description: Coastal flooding is most frequently the result of storm surges and high winds coinciding with high tides
+  notes: While 1000 year return period is available, it might be easier to keep the same as floods. Note WRI coastal flood
+    is average annual impact of storm surge (a good indicator to be considered for others as well with different return periods)
+    and UNEP GRID is only available as a point layer; SIDS might not be well represented and more discussions needed on the
+    added value
+  hazard_phase: Preparedness/Planning
+  data_type: Probabilistic - 100 year return period
+  resolution: 90m
+  coverage: Global
+  units: Binary
+  legend_label: Binary
+  threshold: None
+  classes: None
+  range:
+  - 0.0
+  - 1.0
+  actual_range:
+  - 0.0
+  - 1.0
+  nodata_note: n/a
+  source_provider: JRC
+  alternate_sources: WRI, UNEP GRID 2023
+  gee_asset: projects/unicef-ccri/assets/hazards/coastal_flood_r100
+  naming_convention: coastal_flood_100yr_jrc_2024
+  start_year: 2024
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/flood/coastal_flood_100yr_jrc_2024.tif
+  nodata: 255
+  dtype: uint8
+  overview_resampling: mode
+  palette:
+  - '#ffffff'
+  - '#084081'
+  transparent_zero: true
+  thumb_range: null
+- id: tropical_storm_100yr_giri_2024
+  collection: tropical_storm
+  source_filename: tropical_storm_100yr_giri_2024.tif
+  title: Wind speed
+  hazard: Tropical Storm
+  description: A tropical storm is a type of storm system characterized by a low-pressure center, a closed low-level atmospheric
+    circulation, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain.
+  notes: GIRI preferred over STORM following country level testing by CCRI DRM team and saffir simpson classification is used
+    to establish thresholds.  Classification from WMO - https://wmo.int/content/classification-of-tropical-cyclones
+  hazard_phase: Preparedness/Planning
+  data_type: Probabilistic - 100 year return period
+  resolution: 10km
+  coverage: Global
+  units: m/s
+  legend_label: Wind speed in m/s
+  threshold: '>17.5 m/s'
+  classes: 63 - 119 - 154 - 178 - 209+
+  range:
+  - 0.0
+  - 60.0
+  actual_range:
+  - 0.0
+  - 51.46
+  nodata_note: nan (no risk)
+  source_provider: GIRI
+  alternate_sources: STORM
+  gee_asset: projects/unicef-ccri/assets/hazards/storm_giri_rp100
+  naming_convention: tropical_storm_100yr_giri_2024
+  start_year: 2024
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/storm/tropical_storm_100yr_giri_2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#e4eff2'
+  - '#c3dce7'
+  - '#9ebdd2'
+  - '#7e8ab0'
+  - '#6d6c91'
+  transparent_zero: true
+  thumb_range: null
+- id: agricultural_drought_fao_1984-2023
+  collection: drought
+  source_filename: agricultural_drought_fao_1984-2023.tif
+  title: Agricultural Drought (Agricultural Stress Index)
+  hazard: Droughts
+  description: Agricultural drought occurs when there is insufficient soil moisture to meet the needs of a particular crop
+    at a particular time
+  notes: Drought is a complicated phenomena - GRID's drought layer is not useful to be considered as it predominantly caters
+    to the location of hydro-electric power generation. JRC doesnt have any immediate plans to release global drought layer
+    and WFP is working on one - yet to be generated.
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 1km
+  coverage: Global
+  units: '%'
+  legend_label: Agricultural Stress Index(%)
+  threshold: '>30% cropland affected'
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 100.0
+  actual_range:
+  - 15.0
+  - 100.0
+  nodata_note: n/a
+  source_provider: FAO
+  alternate_sources: WFP, JRC - yet to be published
+  gee_asset: projects/unicef-ccri/assets/hazards/ASI_return_level_100yr
+  naming_convention: agricultural_drought_fao_1984-2023
+  start_year: 1984
+  end_year: 2023
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/agricultural_drought_fao_1984-2023.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#fdf4cb'
+  - '#fbd992'
+  - '#f3b431'
+  - '#c66216'
+  - '#843d09'
+  transparent_zero: false
+  thumb_range: null
+- id: drought_spi_terraclimate_1958-2025
+  collection: drought
+  source_filename: drought_spi_copernicus_1940_2024.tif
+  title: Meteorological Drought (Standardized Precipitation Index)
+  hazard: Droughts
+  description: SPI measures the deviation of precipitation from the climatological average over a given accumulation period
+    and is widely used to detect and characterize meteorological droughts. Probability values are computed from the full 1958–2025
+    record (804 monthly time steps) dividing the numbers of months lower than TH (1.5) with total months
+  notes: 'The SPI measures the precipitation deficit that accumulated over the preceding months and evaluates the deficit
+    with respect to a reference period -12-month time scale. More details: https://github.com/dohyung-kim/precip-index/blob/main/README.md'
+  hazard_phase: Preparedness/Planning
+  data_type: Probabilistic - empirical
+  resolution: 5km
+  coverage: Global
+  units: Index
+  legend_label: Index
+  threshold: '>0.09 (global mean)'
+  classes: Use natural breaks/quantile
+  range:
+  - -10.0
+  - 10.0
+  actual_range:
+  - 0.0
+  - 1.0
+  nodata_note: nan
+  source_provider: TerraClimate
+  alternate_sources: World Bank (GOST)
+  gee_asset: projects/unicef-ccri/assets/droughts/spei12_TerraClimate_1958-2025
+  naming_convention: drought_spi_terraclimate_1958-2025
+  start_year: 1958
+  end_year: 2025
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/drought_spi_copernicus_1940_2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#fdf4cb'
+  - '#fbd992'
+  - '#f3b431'
+  - '#c66216'
+  - '#843d09'
+  transparent_zero: false
+  thumb_range: null
+- id: drought_spei_terraclimate_1958-2025
+  collection: drought
+  source_filename: SPEI12_return_level_100yr.tif
+  title: Meteorological Drought (Standardized Precipitation Evapotranspiration Index)
+  hazard: Droughts
+  description: SPEI adds the effect of evapotranspiration and is better suited to assess droughts under climate change scenarios
+    where temperature changes are important. Probability values are computed from the full 1958–2025 record (804 monthly time
+    steps) dividing the numbers of months lower than TH (1.5) with total months
+  notes: 'The SPEI is an extension of the SPI and incorporates potential evapotranspiration to capture the impact of temperature
+    on drought -12-month time scale. More details: https://github.com/dohyung-kim/precip-index/blob/main/README.md'
+  hazard_phase: Preparedness/Planning
+  data_type: Probabilistic - empirical
+  resolution: 5km
+  coverage: Global
+  units: Index
+  legend_label: Index
+  threshold: '>0.06 (global mean)'
+  classes: Use quantile
+  range:
+  - -10.0
+  - 10.0
+  actual_range:
+  - 0.0
+  - 1.0
+  nodata_note: nan
+  source_provider: TerraClimate
+  alternate_sources: World Bank (GOST)
+  gee_asset: projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025
+  naming_convention: drought_spei_terraclimate_1958-2025
+  start_year: 1958
+  end_year: 2025
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/SPEI12_return_level_100yr.tif
+  nodata: .nan
+  source_nodata: -9999.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#fdf4cb'
+  - '#fbd992'
+  - '#f3b431'
+  - '#c66216'
+  - '#843d09'
+  transparent_zero: false
+  thumb_range: null
+- id: heatwave_frequency_ecmwf_2014-2024
+  collection: heatwave
+  source_filename: heatwave_frequency_ecmwf_2014-2024.tif
+  title: Heatwave frequency
+  hazard: Heatwaves
+  description: A heatwave can be defined as a period where local excess heat accumulates over a sequence of unusually hot
+    days and nights. Heatwave frequency refers to the number of heatwaves per year.
+  notes: Baseline and attributable layer being generated by VUB currently - including SIDS
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 10km
+  coverage: Global
+  units: Number of heatwaves per year
+  legend_label: Times per year
+  threshold: 16.02
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 50.0
+  actual_range:
+  - 0.0
+  - 46.0
+  nodata_note: n/a
+  source_provider: ECMWF
+  alternate_sources: NOAA CDR, NASA MERRA2, MODIS for SIDS
+  gee_asset: projects/unicef-ccri/assets/hazards/heatwave_frequency_return_level_100yr
+  naming_convention: heatwave_frequency_ecmwf_2014-2024
+  start_year: 2014
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/heatwave_frequency_ecmwf_2014-2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#f8e593'
+  - '#f8cc14'
+  - '#F89800'
+  - '#F86800'
+  - '#F83000'
+  transparent_zero: true
+  thumb_range: null
+- id: heatwave_duration_ecmwf_2014-2024
+  collection: heatwave
+  source_filename: heatwave_duration_ecmwf_2014-2024.tif
+  title: Heatwave duration
+  hazard: Heatwaves
+  description: A heatwave can be defined as a period where local excess heat accumulates over a sequence of unusually hot
+    days and nights. Heatwave duration refers to the total number of days an event lasts.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 10km
+  coverage: Global
+  units: Length of event
+  legend_label: Number of days
+  threshold: 94.01
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 365.0
+  actual_range:
+  - 0.0
+  - 346.0
+  nodata_note: n/a
+  source_provider: ECMWF
+  alternate_sources: NOAA CDR, NASA MERRA2, MODIS for SIDS
+  gee_asset: projects/unicef-ccri/assets/hazards/heatwave_duration_return_level_100yr
+  naming_convention: heatwave_duration_ecmwf_2014-2024
+  start_year: 2014
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/heatwave_duration_ecmwf_2014-2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#f8e593'
+  - '#f8cc14'
+  - '#F89800'
+  - '#F86800'
+  - '#F83000'
+  transparent_zero: true
+  thumb_range: null
+- id: heatwave_severity_ecmwf_2014-2024
+  collection: heatwave
+  source_filename: heatwave_severity_ecmwf_2014-2024.tif
+  title: Heatwave severity
+  hazard: Heatwaves
+  description: A heatwave can be defined as a period where local excess heat accumulates over a sequence of unusually hot
+    days and nights. Heatwave severity refers to the temperature above the local 15-day average during the heatwave, expressed
+    in degrees Celsius.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 10km
+  coverage: Global
+  units: Temperature in C
+  legend_label: Temperature in °C
+  threshold: 3.66
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 20.0
+  actual_range:
+  - 0.0
+  - 15.03
+  nodata_note: n/a
+  source_provider: ECMWF
+  alternate_sources: NOAA CDR, NASA MERRA2, MODIS for SIDS
+  gee_asset: projects/unicef-ccri/assets/hazards/heatwave_severity_return_level_100yr
+  naming_convention: heatwave_severity_ecmwf_2014-2024
+  start_year: 2014
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/heatwave_severity_ecmwf_2014-2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#f8e593'
+  - '#f8cc14'
+  - '#F89800'
+  - '#F86800'
+  - '#F83000'
+  transparent_zero: true
+  thumb_range: null
+- id: extreme_heat_ecmwf_2014-2024
+  collection: heatwave
+  source_filename: extreme_heat_ecmwf_2014-2024.tif
+  title: Extreme hot days
+  hazard: Heatwaves
+  description: Extremely high temperatures (extremely hot days) are estimated when a day exceeds 35 degrees Celsius.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 10km
+  coverage: Global
+  units: Number of days with extreme temperature (>35°C)
+  legend_label: Number of days over 35°C
+  threshold: 35 days
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 365.0
+  actual_range:
+  - 0.0
+  - 355.0
+  nodata_note: n/a
+  source_provider: ECMWF
+  alternate_sources: NOAA CDR, NASA MERRA2, MODIS for SIDS
+  gee_asset: projects/unicef-ccri/assets/hazards/high_temp_degree_days_return_level_100yr
+  naming_convention: extreme_heat_ecmwf_2014-2024
+  start_year: 2014
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/extreme_heat_ecmwf_2014-2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#f8e593'
+  - '#f8cc14'
+  - '#F89800'
+  - '#F86800'
+  - '#F83000'
+  transparent_zero: false
+  thumb_range: null
+- id: fire_FRP_nasa_2001-2024
+  collection: fire
+  source_filename: fire_FRP_nasa_2001-2024.tif
+  title: Fire Intensity
+  hazard: Fire
+  description: Wildfires are uncontrolled burns of vegetation, including forests, shrublands, grasslands, savannas, and croplands.
+    Fire frequency is obtained from NASA’s Fire Information for Resource Management System (FIRMS) is used as a proxy for
+    fire hazard.
+  notes: '*World Bank''s modelled data link is not up-to-date; FIRMS data of average Fire count  between 2014-2024 >1'
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 250 m
+  coverage: Global
+  units: MW
+  legend_label: MW
+  threshold: 37.89
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 15000.0
+  actual_range:
+  - 0.53
+  - 13994.0
+  nodata_note: nan
+  source_provider: NASA FIRMS
+  alternate_sources: JRC Global Wildfire Information System, NASA FIRMS, World Bank
+  gee_asset: projects/unicef-ccri/assets/hazards/FIRMS_FRP_90th_percentile
+  naming_convention: fire_FRP_nasa_2001-2024
+  start_year: 2001
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/fire/fire_FRP_nasa_2001-2024.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#F0F0DC'
+  - '#FFD282'
+  - '#FF8C3C'
+  - '#DC3C1E'
+  - '#5A0000'
+  transparent_zero: false
+  thumb_range: null
+- id: fire_frequency_nasa_2001-2023
+  collection: fire
+  source_filename: fire_frequency_nasa_2001-2023.tif
+  title: Fire Frequency
+  hazard: Fire
+  description: Wildfires are uncontrolled burns of vegetation, including forests, shrublands, grasslands, savannas, and croplands.
+    Fire Radiative Power (FRP) is a measure of the energy released by a fire in the form of radiation.
+  notes: '*World Bank''s modelled data link is not up-to-date; FIRMS data of average Fire count  between 2014-2024 >1'
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 250 m
+  coverage: Global
+  units: km⁻² · yr⁻¹
+  legend_label: km⁻² · yr⁻¹
+  threshold: 4.91
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 1500.0
+  actual_range:
+  - 1.0
+  - 1382.0
+  nodata_note: nan
+  source_provider: NASA FIRMS
+  alternate_sources: JRC Global Wildfire Information System, NASA FIRMS, World Bank
+  gee_asset: projects/unicef-ccri/assets/hazards/FIRMS_count_90th_percentile
+  naming_convention: fire_frequency_nasa_2001-2023
+  start_year: 2001
+  end_year: 2023
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/fire/fire_frequency_nasa_2001-2023.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#F0F0DC'
+  - '#FFD282'
+  - '#FF8C3C'
+  - '#DC3C1E'
+  - '#5A0000'
+  transparent_zero: false
+  thumb_range: null
+- id: sand_dust_storm_unccd_2024
+  collection: sand_dust_storm
+  source_filename: sand_dust_storm_unccd_2024.tif
+  title: SDS Susceptiblity
+  hazard: Sand and Dust Storm
+  description: Sand and dust storms (SDS) are caused by intense winds over areas of arid soil that pick up large amounts of
+    ground material into the atmosphere.
+  notes: SDS susceptibility only shows the areas of sds source and classes are consolidated from the UNCCD index -
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 1km
+  coverage: Global
+  units: Index
+  legend_label: Index
+  threshold: All
+  classes: 0-0.2-0.4-0.6-0.8-1
+  range:
+  - 0.0
+  - 1.0
+  actual_range:
+  - 0.0
+  - 1.0
+  nodata_note: -999000000
+  source_provider: UNCCD
+  alternate_sources: WMO
+  gee_asset: projects/unicef-ccri/assets/hazards/sand_dust_storm_annual
+  naming_convention: sand_dust_storm_unccd_2024
+  start_year: 2024
+  end_year: 2024
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/SDS/sand_dust_storm_unccd_2024.tif
+  nodata: -999000000.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#faf0dc'
+  - '#e6d2b4'
+  - '#c8aa82'
+  - '#a0785a'
+  - '#261f28'
+  transparent_zero: false
+  thumb_range: null
+- id: air_pollution_pm25_2012-2022
+  collection: air_pollution
+  source_filename: air_pollution_pm25_1998-2023.tif
+  title: PM 2.5
+  hazard: Air pollution
+  description: Air pollution refers to the presence of substances in the atmosphere that are harmful to human health and the
+    environment.  Fine particle air pollution, or PM2 .5, refers to airborne particles measuring less than 2 .5 micrometers
+    in diameter that could be emitted from vehicles, residential fuel use, coal-burning power plants, agricultural and industrial
+    activities, waste burning, wildfires, and many other human and natural sources.
+  notes: Threshold adopted from WHO guidelines -= https://worldhealthorg.shinyapps.io/Air_Quality_Standards_V2_1/
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 1km
+  coverage: Global
+  units: μg/m3
+  legend_label: PM 2.5 in μg/m3
+  threshold: '>5 AQG'
+  classes: 5 - 10 - 15 - 25 - 35+
+  range:
+  - 0.0
+  - 300.0
+  actual_range:
+  - 1.05
+  - 286.36
+  nodata_note: n/a
+  source_provider: ACAG
+  alternate_sources: WMO
+  gee_asset: projects/unicef-ccri/assets/hazards/pm25_p90_1998_2023
+  naming_convention: air_pollution_pm25_2012-2022
+  start_year: 2012
+  end_year: 2022
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/air_pollution/air_pollution_pm25_1998-2023.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#d0dde5'
+  - '#99a1b4'
+  - '#7c6e87'
+  - '#5a4b5e'
+  - '#261f27'
+  transparent_zero: false
+  thumb_range: null
+- id: vectorborne_malariapv_2012-2022
+  collection: malaria
+  source_filename: vectorborne_malariapv_2012-2022.tif
+  title: Malaria Plasmodium Vivax
+  hazard: Vector Borne Diseases
+  description: P. vivax is the dominant malaria parasite in most countries outside of sub-Saharan Africa. Malaria is a life-threatening
+    disease caused by parasites transmitted to humans through the bites of infected female Anopheles mosquitoes.
+  notes: This layer map provides estimates of newly diagnosed Plasmodium falciparum cases per 1,000 population, on a given
+    year. To produce these estimates, we apply geostatistical models to response datasets consisting of PR points and routine
+    surveillance reports, and a rich set of geospatial covariates that characterise habitat for Anopheles mosquitos that spread
+    the disease. The maps cover all malaria-endemic countries and are produced annually from year 2000 at a 5x5 km resolution.
+    The rasters may be downloaded as a series of multi-band GeoTiffs. The first band consists of the modelled estimates as
+    rates per person [0-1]. The second band is a mask consisting of the values zero and 1; the 1 values represent pixels that
+    we mask out because they are sparsely populated. This masking is only applied to South America, and we define "sparsely
+    populated" as areas that have a modelled estimate of >0 and a population of ≤5 people per pixel.
+  hazard_phase: Preparedness/Planning
+  data_type: Modelled
+  resolution: 5km
+  coverage: Global
+  units: '# per 1000 people'
+  legend_label: rates per person
+  threshold: '> 0,001'
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 1.0
+  actual_range:
+  - 0.0
+  - 0.25
+  nodata_note: -9999(no risk)
+  source_provider: MAP
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/Pv_average_2013_2022
+  naming_convention: vectorborne_malariapv_2012-2022
+  start_year: 2013
+  end_year: 2022
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/malaria/vectorborne_malariapv_2012-2022.tif
+  nodata: -9999.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#e8f0e3'
+  - '#bcd4b4'
+  - '#8ba889'
+  - '#607c66'
+  - '#35503d'
+  transparent_zero: false
+  thumb_range: null
+- id: vectorborne_malariapf_2012-2022
+  collection: malaria
+  source_filename: vectorborne_malariapf_2012-2022.tif
+  title: Malaria Plasmodium Falciparum
+  hazard: Vector Borne Diseases
+  description: Malaria is a life-threatening disease caused by parasites transmitted to humans through the bites of infected
+    female Anopheles mosquitoes. P. falciparum is the deadliest malaria parasite and the most prevalent on the African continent.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Modelled
+  resolution: 5km
+  coverage: Global
+  units: '# per 1000 people'
+  legend_label: '# per 1000 people'
+  threshold: '> 0,001'
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 1.0
+  actual_range:
+  - 0.0
+  - 0.6
+  nodata_note: -9999 (no risk)
+  source_provider: MAP
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/Pf_average_2013_2022
+  naming_convention: vectorborne_malariapf_2012-2022
+  start_year: 2013
+  end_year: 2022
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/malaria/vectorborne_malariapf_2012-2022.tif
+  nodata: -9999.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#e8f0e3'
+  - '#bcd4b4'
+  - '#8ba889'
+  - '#607c66'
+  - '#35503d'
+  transparent_zero: false
+  thumb_range: null
+- id: landslides_trig_earthquakes
+  collection: landslide
+  source_filename: landslides_trig_earthquakes.tif
+  title: Landslide (earthquake induced)
+  hazard: Geophysical
+  description: 'The Global Landslide Hazard Map: Earthquake-Triggered Landslide Hazard presents an estimate of earthquake-triggered
+    landslide hazard at a global scale which builds upon work by Nadim et al. (2006; 2013) and uses the NASA Global Landslide
+    Susceptibility Map as a base.'
+  notes: Nadim et al. (2006; 2013) and Arup-BGS (2018) generate a landslide susceptibility score by scoring, ranking and multiplying
+    a series of susceptibility factors. An earthquake-triggered landslide hazard score is then generated by multiplying this
+    susceptibility score by a triggering factor. For this project, the susceptibility score is provided by the NASA Global
+    Landslide Susceptibility Map – the score being a number between 1 and 5 representing very low through to very high landslide
+    susceptibility. The earthquake-triggered landslide hazard score is generated by multiplying this NASA Global Landslide
+    Susceptibility Map score by the seismic-trigger index proposed by Nadim et al. (2005; 2013) . The resulting score is then
+    scaled to the range 0 – 300 to allow comparison with the estimation of earthquake-triggered landslide hazard and the corresponding
+    approximate annual frequency proposed by Nadim et al. (2006; 2013).
+  hazard_phase: Preparedness/Planning
+  data_type: Modelled
+  resolution: ~100m
+  coverage: All land areas between 60°S and 72°N
+  units: Susceptibility (1-5)
+  legend_label: null
+  threshold: null
+  classes: null
+  range:
+  - null
+  - null
+  actual_range:
+  - 1.0
+  - 5.0
+  nodata_note: 0
+  source_provider: World Bank/GFDRR
+  alternate_sources: null
+  gee_asset: null
+  naming_convention: null
+  start_year: null
+  end_year: null
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/landslide/landslides_trig_earthquakes.tif
+  nodata: 0
+  dtype: null
+  overview_resampling: mode
+  palette: &id001
+  - '#F2F6E7'
+  - '#D7E3AF'
+  - '#B7C77F'
+  - '#8B9556'
+  - '#5E5A2D'
+  transparent_zero: false
+  thumb_range: null
+- id: LS_RF_Mean_1980-2018
+  collection: landslide
+  source_filename: LS_RF_Mean_1980-2018_COG.tif
+  title: Landslide (rainfall induced)
+  hazard: Geophysical
+  description: Landslide exposure is estimated using the GFDRR rainfall-triggered Global Landslide Hazard Map (V2), based
+    on the annual frequency of significant rainfall-induced landslides per km². Children and population exposed are identified
+    using 0.1 and 0.01 landslides/km² thresholds (Medium–High and Moderate hazard). Indicators include absolute and relative
+    exposed population and normalized scores ranging from 0–10.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Modelled
+  resolution: 1 km
+  coverage: All land areas between 60°S and 72°N
+  units: landslides per km² per year
+  legend_label: landslides per km² per year
+  threshold: ≥ 0.01 or ≥ 0.1
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 2.0
+  actual_range:
+  - 0.0
+  - 1.73
+  nodata_note: nan
+  source_provider: World Bank/GFDRR
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/LS_RF_Mean_1980-2018_COG
+  naming_convention: null
+  start_year: 1980
+  end_year: 2018
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/landslide/LS_RF_Mean_1980-2018_COG.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette: *id001
+  transparent_zero: false
+  thumb_range: null
+- id: earthquake_v2023_1_pga_475_rock_3min
+  collection: earthquake
+  source_filename: earthquake_v2023_1_pga_475_rock_3min.tif
+  title: Earthquake
+  hazard: Geophysical
+  description: 'Earthquake exposure is derived from the GEM Global Seismic Hazard Map (v2023.1, June 2023), which maps peak
+    ground acceleration (PGA) on reference rock for a 10% probability of exceedance in 50 years (475-year return period; Vs30
+    = 760–800 m/s). Exposed children and population are identified using two thresholds linked to Mercalli intensities: Strong
+    shaking (VI; PGA ≥ 0.09 g) and Severe shaking (VIII; PGA ≥ 0.34 g). Outputs include absolute and relative exposure and
+    normalized scores (0–10).'
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 3 arc-minutes
+  coverage: Global
+  units: PGA (g)
+  legend_label: PGA (g)
+  threshold: '>0.09 g or >0.34g'
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 2.0
+  actual_range:
+  - 0.0
+  - 1.46
+  nodata_note: nan
+  source_provider: GEM
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/earthquake_v2023_1_pga_475_rock_3min
+  naming_convention: null
+  start_year: 2023
+  end_year: 2023
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#EAF6D4'
+  - '#D3E094'
+  - '#B9C966'
+  - '#927F54'
+  - '#5C4823'
+  transparent_zero: false
+  thumb_range: null
+- id: UNICEF_ACLED_CI_Sep2020_Aug2025
+  collection: conflict
+  source_filename: conflict_grid_0p01_degree.tif
+  title: Conflict
+  hazard: Complex Emergencies
+  description: Conflict Index generated from the geometric mean of normalized conflict events and fatalities recorded by ACLED
+    between September 2020 and August 2025. The index ranges between 0 and 10.
+  notes: This layer was generated using point data f fatalities and conflict events from ACLED.
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 0.1 degree/11km
+  coverage: Global
+  units: Index
+  legend_label: Index
+  threshold: '>=0.01'
+  classes: Use natural breaks/quantile
+  range:
+  - 0.0
+  - 10.0
+  actual_range:
+  - 0.0
+  - null
+  nodata_note: nan
+  source_provider: ACLED
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/conflict_admin2_0p1_degree
+  naming_convention: UNICEF_ACLED_CI_Sep2020_Aug2025
+  start_year: 2020
+  end_year: 2025
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/conflict/conflict_grid_0p01_degree.tif
+  nodata: -9999.0
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#FFF1A0'
+  - '#FFD966'
+  - '#FFB347'
+  - '#E24A1A'
+  - '#A80000'
+  transparent_zero: false
+  thumb_range: null
+- id: GVP_Hol_volcanoes_1800
+  collection: volcano
+  source_filename: hol_volcanoes_buffer_100km.tif
+  title: Volcanoes
+  hazard: Geophysical
+  description: Number of people and children within 100km2 radius of an active volcano. A volcano is considered active if
+    it had vlocanic activity after 1800. The 100km radius was selected as the maximum distance where children could be affected
+    by emissions from volcanoes.
+  notes: 'This layer was produced using records of active volcanoes since 1800 from the Smithsonian Institute-Global Volcanism
+    Program. The Hazard layer has ranks from 0 to 5 with 0 being not within 100km of an active volcano. 0 - 10km: 5, 10 -
+    30km: 4, 30 - 50km: 3, 50 - 80km: 2, 80 to 100km: 1, > 100km: 0. This layer was developed with significant input from
+    UNICEF''s PG Climate team, Prof. Claire Horwell of Durham University and Assoc. Prof. Carol Stewart of the Massey University,
+    New Zealand. Data Source: https://volcano.si.edu/'
+  hazard_phase: Preparedness/Planning
+  data_type: Observed
+  resolution: 0.1 degree/11km
+  coverage: Global
+  units: people per 100 km²
+  legend_label: people per 100km2
+  threshold: <=100km
+  classes: 0, 30, 50, 80, 100, >100
+  range:
+  - 0.0
+  - 100000.0
+  actual_range:
+  - 0.0
+  - 84950.0
+  nodata_note: nan
+  source_provider: Smithsnian Institute- Global Volcanism Program
+  alternate_sources: null
+  gee_asset: projects/unicef-ccri/assets/hazards/hol_volcanoes_1800_100kmbuff
+  naming_convention: GVP_Hol_volcanoes_1800
+  start_year: null
+  end_year: null
+  source:
+    type: file
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/volcano/hol_volcanoes_buffer_100km.tif
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette:
+  - '#FFE6D9'
+  - '#FFB399'
+  - '#FF8066'
+  - '#CC4D33'
+  - '#9C2E00'
+  transparent_zero: false
+  thumb_range: null

@@ -1,0 +1,73 @@
+{
+  "type": "Collection",
+  "id": "volcano",
+  "stac_version": "1.1.0",
+  "description": "Volcanoes hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./GVP_Hol_volcanoes_1800/GVP_Hol_volcanoes_1800.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "VO",
+  "title": "Volcanoes",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.999964691,
+          -78.504456939,
+          179.999162898,
+          85.611438297
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-22T15:49:30Z",
+          "2026-10-22T15:49:30Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Volcanoes",
+    "VO"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/volcano/GVP_Hol_volcanoes_1800.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/volcano/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

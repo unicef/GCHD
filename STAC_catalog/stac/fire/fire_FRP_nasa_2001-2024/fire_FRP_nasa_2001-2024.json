@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "fire_FRP_nasa_2001-2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
+  ],
+  "properties": {
+    "title": "Fire Intensity",
+    "description": "Wildfires are uncontrolled burns of vegetation, including forests, shrublands, grasslands, savannas, and croplands. Fire frequency is obtained from NASA’s Fire Information for Resource Management System (FIRMS) is used as a proxy for fire hazard.",
+    "GCHD:hazard": "Fire",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "250 m",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "MW",
+    "GCHD:threshold": 37.89,
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      15000.0
+    ],
+    "GCHD:notes": "*World Bank's modelled data link is not up-to-date; FIRMS data of average Fire count  between 2014-2024 >1",
+    "GCHD:alternate_sources": "JRC Global Wildfire Information System, NASA FIRMS, World Bank",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/FIRMS_FRP_90th_percentile",
+    "start_datetime": "2001-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.0,
+            -90.0
+          ],
+          [
+            180.0,
+            -90.0
+          ],
+          [
+            180.0,
+            90.0
+          ],
+          [
+            -180.0,
+            90.0
+          ],
+          [
+            -180.0,
+            -90.0
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.0,
+      -90.0,
+      180.0,
+      90.0
+    ],
+    "proj:shape": [
+      3600,
+      7200
+    ],
+    "proj:transform": [
+      0.05,
+      0.0,
+      -180.0,
+      0.0,
+      -0.05,
+      90.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "NASA FIRMS",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://firms.modaps.eosdis.nasa.gov/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/fire/fire_FRP_nasa_2001-2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Fire"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Fire"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_FRP_nasa_2001-2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fire Intensity (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 33.09592465022708,
+            "minimum": 1.399999976158142,
+            "maximum": 3543.800048828125,
+            "stddev": 32.80495115542844,
+            "valid_percent": 18.772315979003906
+          },
+          "histogram": {
+            "count": 11,
+            "min": 1.399999976158142,
+            "max": 3543.800048828125,
+            "buckets": [
+              98375,
+              39,
+              2,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/fire/fire_FRP_nasa_2001-2024.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/fire/fire_FRP_nasa_2001-2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "fire"
+}

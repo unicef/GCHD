@@ -1,0 +1,216 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "coastal_flood_100yr_jrc_2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.999583333335,
+          83.67622999987842
+        ],
+        [
+          179.99868766760153,
+          83.67622999987842
+        ],
+        [
+          179.99868766760153,
+          -56.393958774339666
+        ],
+        [
+          -179.999583333335,
+          -56.393958774339666
+        ],
+        [
+          -179.999583333335,
+          83.67622999987842
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -179.999583333335,
+    -56.393958774339666,
+    179.99868766760153,
+    83.67622999987842
+  ],
+  "properties": {
+    "title": "Coastal flood hazard",
+    "description": "Coastal flooding is most frequently the result of storm surges and high winds coinciding with high tides",
+    "GCHD:hazard": "Floods",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - 100 year return period",
+    "GCHD:nominal_resolution": "90m",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Binary",
+    "GCHD:value_range": [
+      0.0,
+      1.0
+    ],
+    "GCHD:notes": "While 1000 year return period is available, it might be easier to keep the same as floods. Note WRI coastal flood is average annual impact of storm surge (a good indicator to be considered for others as well with different return periods) and UNEP GRID is only available as a point layer; SIDS might not be well represented and more discussions needed on the added value",
+    "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/coastal_flood_r100",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -179.999583333335,
+            -56.393958774339666
+          ],
+          [
+            179.99868766760153,
+            -56.393958774339666
+          ],
+          [
+            179.99868766760153,
+            83.67622999987842
+          ],
+          [
+            -179.999583333335,
+            83.67622999987842
+          ],
+          [
+            -179.999583333335,
+            -56.393958774339666
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -179.999583333335,
+      -56.393958774339666,
+      179.99868766760153,
+      83.67622999987842
+    ],
+    "proj:shape": [
+      168157,
+      432178
+    ],
+    "proj:transform": [
+      0.0008329861098920735,
+      0.0,
+      -179.999583333335,
+      0.0,
+      -0.0008329726908437833,
+      83.67622999987842,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "JRC",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/flood/coastal_flood_100yr_jrc_2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Floods"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Floods"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/coastal_flood_100yr_jrc_2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Coastal flood hazard (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": 255.0,
+          "statistics": {
+            "mean": 0.0007464951441102757,
+            "minimum": 0,
+            "maximum": 1,
+            "stddev": 0.027311863523203524,
+            "valid_percent": 100.0
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.0,
+            "buckets": [
+              408271,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              305
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/flood/coastal_flood_100yr_jrc_2024.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/flood/coastal_flood_100yr_jrc_2024_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "flood"
+}

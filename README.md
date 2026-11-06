@@ -32,6 +32,7 @@ GCHD/
 ├── multi_hazard_indicators/ # Multi-Hazard Count (MHC) and Multi-Hazard Intensity (MHI)
 ├── exposure_analysis/       # Population and boundary data for exposure computation
 ├── web_app/                 # Interactive dashboard (Python Dash + Google Earth Engine)
+├── STAC_catalog/            # STAC catalog of the hazard layers (COGs) and its STAC Browser
 └── index.html               # Public landing page
 ```
 
@@ -73,6 +74,17 @@ Source code is in [`web_app/`](web_app/).
 
 ---
 
+## Data Catalog (STAC)
+
+All hazard layers are published as Cloud-Optimized GeoTIFFs in a [STAC](https://stacspec.org/) catalog, with metadata, previews and direct download links:
+
+- **Browse:** [unicef.github.io/GCHD/STAC_catalog/browser/](https://unicef.github.io/GCHD/STAC_catalog/browser/)
+- **STAC root:** [`catalog.json`](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json)
+
+The COGs can be streamed straight into GIS tools or code without downloading whole files. See [`STAC_catalog/`](STAC_catalog/) for how the catalog is built and for Python examples, including how to read the ~90 m river flood tiles over an area of interest.
+
+---
+
 ## Data Sources
 
 | Hazard | Source | Return Period / Metric |
@@ -85,9 +97,13 @@ Source code is in [`web_app/`](web_app/).
 | Heatwave | ERA5 / ECMWF | Frequency, duration, severity  100-year return level|
 | Extreme heat | ERA5 / ECMWF | Degree-days 100-year return level|
 | Wildfire | NASA FIRMS | 90th percentile |
-| Air pollution (PM2.5) | Satellite-derived | 90th percentile, 1998–2023 |
+| Air pollution (PM2.5) | Satellite-derived | 90th percentile, 2012–2022 |
 | Sand & dust storm | UNCCD | Occurrence frequency |
 | Malaria | MAP (Malaria Atlas Project) | Multi-year average, 2013–2022 |
+| Earthquake | GEM Global Seismic Hazard Map v2023.1 | PGA on rock, 475-year return period |
+| Volcano | Smithsonian Global Volcanism Program | Population within 100 km of volcanoes active since 1800 |
+| Landslide | World Bank / GFDRR | Earthquake-triggered susceptibility; rainfall-triggered frequency, 1980–2018 |
+| Conflict | ACLED | Conflict index (events and fatalities), Sep 2020–Aug 2025 |
 
 ---
 

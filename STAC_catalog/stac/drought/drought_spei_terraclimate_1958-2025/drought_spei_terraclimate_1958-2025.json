@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "drought_spei_terraclimate_1958-2025",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179.875,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          179.875,
+          90.0
+        ],
+        [
+          179.875,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    179.875,
+    90.0
+  ],
+  "properties": {
+    "title": "Meteorological Drought (Standardized Precipitation Evapotranspiration Index)",
+    "description": "SPEI adds the effect of evapotranspiration and is better suited to assess droughts under climate change scenarios where temperature changes are important. Probability values are computed from the full 1958–2025 record (804 monthly time steps) dividing the numbers of months lower than TH (1.5) with total months",
+    "GCHD:hazard": "Droughts",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - empirical",
+    "GCHD:nominal_resolution": "5km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Index",
+    "GCHD:threshold": ">0.06 (global mean)",
+    "GCHD:classes": "Use quantile",
+    "GCHD:value_range": [
+      -10.0,
+      10.0
+    ],
+    "GCHD:notes": "The SPEI is an extension of the SPI and incorporates potential evapotranspiration to capture the impact of temperature on drought -12-month time scale. More details: https://github.com/dohyung-kim/precip-index/blob/main/README.md",
+    "GCHD:alternate_sources": "World Bank (GOST)",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025",
+    "start_datetime": "1958-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.125,
+            -90.125
+          ],
+          [
+            179.875,
+            -90.125
+          ],
+          [
+            179.875,
+            90.125
+          ],
+          [
+            -180.125,
+            90.125
+          ],
+          [
+            -180.125,
+            -90.125
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.125,
+      -90.125,
+      179.875,
+      90.125
+    ],
+    "proj:shape": [
+      721,
+      1440
+    ],
+    "proj:transform": [
+      0.25,
+      0.0,
+      -180.125,
+      0.0,
+      -0.25,
+      90.125,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "TerraClimate",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.climatologylab.org/terraclimate.html"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/SPEI12_return_level_100yr.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Droughts"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Droughts"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Meteorological Drought (Standardized Precipitation Evapotranspiration Index) (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": -4.923140577099837,
+            "minimum": -33.854244232177734,
+            "maximum": -1.8218475580215454,
+            "stddev": 2.45523150504551,
+            "valid_percent": 35.82956414473684
+          },
+          "histogram": {
+            "count": 11,
+            "min": -33.854244232177734,
+            "max": -1.8218475580215454,
+            "buckets": [
+              2,
+              16,
+              34,
+              102,
+              461,
+              2585,
+              4186,
+              4835,
+              44289,
+              131707
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/drought/drought_spei_terraclimate_1958-2025.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/drought/drought_spei_terraclimate_1958-2025_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "drought"
+}

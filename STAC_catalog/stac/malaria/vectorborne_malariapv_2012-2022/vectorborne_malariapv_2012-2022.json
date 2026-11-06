@@ -1,0 +1,217 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "vectorborne_malariapv_2012-2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -118.375,
+          53.54162321668227
+        ],
+        [
+          170.25000000000023,
+          53.54162321668227
+        ],
+        [
+          170.25000000000023,
+          -55.08337678331782
+        ],
+        [
+          -118.375,
+          -55.08337678331782
+        ],
+        [
+          -118.375,
+          53.54162321668227
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -118.375,
+    -55.08337678331782,
+    170.25000000000023,
+    53.54162321668227
+  ],
+  "properties": {
+    "title": "Malaria Plasmodium Vivax",
+    "description": "P. vivax is the dominant malaria parasite in most countries outside of sub-Saharan Africa. Malaria is a life-threatening disease caused by parasites transmitted to humans through the bites of infected female Anopheles mosquitoes.",
+    "GCHD:hazard": "Vector Borne Diseases",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Modelled",
+    "GCHD:nominal_resolution": "5km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "# per 1000 people",
+    "GCHD:threshold": "> 0,001",
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      1.0
+    ],
+    "GCHD:notes": "This layer map provides estimates of newly diagnosed Plasmodium falciparum cases per 1,000 population, on a given year. To produce these estimates, we apply geostatistical models to response datasets consisting of PR points and routine surveillance reports, and a rich set of geospatial covariates that characterise habitat for Anopheles mosquitos that spread the disease. The maps cover all malaria-endemic countries and are produced annually from year 2000 at a 5x5 km resolution. The rasters may be downloaded as a series of multi-band GeoTiffs. The first band consists of the modelled estimates as rates per person [0-1]. The second band is a mask consisting of the values zero and 1; the 1 values represent pixels that we mask out because they are sparsely populated. This masking is only applied to South America, and we define \"sparsely populated\" as areas that have a modelled estimate of >0 and a population of ≤5 people per pixel.",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/Pv_average_2013_2022",
+    "start_datetime": "2013-01-01T00:00:00+00:00",
+    "end_datetime": "2022-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.375,
+            -55.08337678331782
+          ],
+          [
+            170.25000000000023,
+            -55.08337678331782
+          ],
+          [
+            170.25000000000023,
+            53.54162321668227
+          ],
+          [
+            -118.375,
+            53.54162321668227
+          ],
+          [
+            -118.375,
+            -55.08337678331782
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -118.375,
+      -55.08337678331782,
+      170.25000000000023,
+      53.54162321668227
+    ],
+    "proj:shape": [
+      2607,
+      6927
+    ],
+    "proj:transform": [
+      0.0416666666666667,
+      0.0,
+      -118.375,
+      0.0,
+      -0.0416666666666667,
+      53.54162321668227,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "MAP",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://malariaatlas.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/malaria/vectorborne_malariapv_2012-2022.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Vector Borne Diseases (Malaria)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Vector Borne Diseases (Malaria)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/malaria/vectorborne_malariapv_2012-2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Malaria Plasmodium Vivax (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": -0.02229750243278212,
+            "minimum": -666.596923828125,
+            "maximum": 0.17330379784107208,
+            "stddev": 3.7200234803012435,
+            "valid_percent": 15.899753076424872
+          },
+          "histogram": {
+            "count": 11,
+            "min": -666.596923828125,
+            "max": 0.17330379784107208,
+            "buckets": [
+              1,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1,
+              62841
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/malaria/vectorborne_malariapv_2012-2022.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/malaria/vectorborne_malariapv_2012-2022_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "malaria"
+}

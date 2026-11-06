@@ -1,0 +1,218 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "agricultural_drought_fao_1984-2023",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179.9955360575997,
+          75.0044643
+        ],
+        [
+          179.9955360575997,
+          -56.00446429238991
+        ],
+        [
+          -180.0,
+          -56.00446429238991
+        ],
+        [
+          -180.0,
+          75.0044643
+        ],
+        [
+          179.9955360575997,
+          75.0044643
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -56.00446429238991,
+    179.9955360575997,
+    75.0044643
+  ],
+  "properties": {
+    "title": "Agricultural Drought (Agricultural Stress Index)",
+    "description": "Agricultural drought occurs when there is insufficient soil moisture to meet the needs of a particular crop at a particular time",
+    "GCHD:hazard": "Droughts",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "1km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "%",
+    "GCHD:threshold": ">30% cropland affected",
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      100.0
+    ],
+    "GCHD:notes": "Drought is a complicated phenomena - GRID's drought layer is not useful to be considered as it predominantly caters to the location of hydro-electric power generation. JRC doesnt have any immediate plans to release global drought layer and WFP is working on one - yet to be generated.",
+    "GCHD:alternate_sources": "WFP, JRC - yet to be published",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/ASI_return_level_100yr",
+    "start_datetime": "1984-01-01T00:00:00+00:00",
+    "end_datetime": "2023-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.004464,
+            -56.00446429238991
+          ],
+          [
+            179.9955360575997,
+            -56.00446429238991
+          ],
+          [
+            179.9955360575997,
+            75.0044643
+          ],
+          [
+            -180.004464,
+            75.0044643
+          ],
+          [
+            -180.004464,
+            -56.00446429238991
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.004464,
+      -56.00446429238991,
+      179.9955360575997,
+      75.0044643
+    ],
+    "proj:shape": [
+      14673,
+      40320
+    ],
+    "proj:transform": [
+      0.008928571429999994,
+      0.0,
+      -180.004464,
+      0.0,
+      -0.008928571429999994,
+      75.0044643,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "FAO",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.fao.org/giews/earthobservation/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/agricultural_drought_fao_1984-2023.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Droughts"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Droughts"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/agricultural_drought_fao_1984-2023.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Agricultural Drought (Agricultural Stress Index) (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 57.44673756897058,
+            "minimum": 14.845843315124512,
+            "maximum": 100.0,
+            "stddev": 25.123555309640167,
+            "valid_percent": 16.03814091823056
+          },
+          "histogram": {
+            "count": 11,
+            "min": 14.845843315124512,
+            "max": 100.0,
+            "buckets": [
+              4097,
+              7542,
+              7481,
+              7581,
+              6993,
+              5333,
+              4599,
+              4588,
+              4159,
+              8885
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/drought/agricultural_drought_fao_1984-2023.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/drought/agricultural_drought_fao_1984-2023_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "drought"
+}

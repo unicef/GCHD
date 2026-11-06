@@ -1,0 +1,73 @@
+{
+  "type": "Collection",
+  "id": "conflict",
+  "stac_version": "1.1.0",
+  "description": "Complex Emergencies (Conflict) hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./UNICEF_ACLED_CI_Sep2020_Aug2025/UNICEF_ACLED_CI_Sep2020_Aug2025.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "CE",
+  "title": "Complex Emergencies (Conflict)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          179.99999999967258,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Complex Emergencies (Conflict)",
+    "CE"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/conflict/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

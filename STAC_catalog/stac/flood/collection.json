@@ -1,0 +1,79 @@
+{
+  "type": "Collection",
+  "id": "flood",
+  "stac_version": "1.1.0",
+  "description": "Floods hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./river_flood_100yr_jrc_2024/collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    },
+    {
+      "rel": "item",
+      "href": "./coastal_flood_100yr_jrc_2024/coastal_flood_100yr_jrc_2024.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "FL",
+  "title": "Floods",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.999583333335,
+          -59.986266666657585,
+          179.99868766760153,
+          83.67622999987842
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Floods",
+    "FL"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/flood/river_flood_100yr_jrc_2024.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/flood/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

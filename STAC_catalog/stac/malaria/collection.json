@@ -1,0 +1,78 @@
+{
+  "type": "Collection",
+  "id": "malaria",
+  "stac_version": "1.1.0",
+  "description": "Vector Borne Diseases (Malaria) hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./vectorborne_malariapv_2012-2022/vectorborne_malariapv_2012-2022.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./vectorborne_malariapf_2012-2022/vectorborne_malariapf_2012-2022.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "EP",
+  "title": "Vector Borne Diseases (Malaria)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -118.375,
+          -55.083376783317874,
+          170.25000000000023,
+          53.54162321668227
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2013-01-01T00:00:00Z",
+          "2022-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Vector Borne Diseases (Malaria)",
+    "EP"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/malaria/vectorborne_malariapv_2012-2022.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/malaria/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

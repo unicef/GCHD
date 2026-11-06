@@ -1,0 +1,83 @@
+{
+  "type": "Collection",
+  "id": "drought",
+  "stac_version": "1.1.0",
+  "description": "Droughts hazard layers in the Global Children's Hazard Database.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./agricultural_drought_fao_1984-2023/agricultural_drought_fao_1984-2023.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./drought_spi_terraclimate_1958-2025/drought_spi_terraclimate_1958-2025.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./drought_spei_terraclimate_1958-2025/drought_spei_terraclimate_1958-2025.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:glide_code": "DR",
+  "title": "Droughts",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          179.9955360575997,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1958-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Droughts",
+    "DR"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/drought/agricultural_drought_fao_1984-2023.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/drought/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

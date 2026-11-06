@@ -1,0 +1,2 @@
+import{b$ as l,a6 as u,be as a}from"./util-D3ZBeMIe.js";import"./utils-BFUSjNrH.js";import"./_commonjsHelpers-CE1G-McA.js";function m(e){const c=e.load||l,r=e.imageExtent,s=e.crossOrigin??null;return()=>{const t=new Image;return t.crossOrigin=s,e.referrerPolicy!==void 0&&(t.referrerPolicy=e.referrerPolicy),c(t,e.url).then(o=>{const i=u(r)/o.width,n=a(r)/o.height;return{image:o,extent:r,resolution:i!==n?[i,n]:n,pixelRatio:1}})}}export{m as createLoader};
+//# sourceMappingURL=static-BFq1QK7z.js.map

@@ -1,0 +1,1784 @@
+{
+ "air_pollution/_collection_overview.png": [
+  -179.994995117,
+  -54.984352112,
+  179.807250977,
+  67.995002747
+ ],
+ "air_pollution/air_pollution_pm25_2012-2022_overview.png": [
+  -179.994995117,
+  -54.984352112,
+  179.807250977,
+  67.995002747
+ ],
+ "conflict/UNICEF_ACLED_CI_Sep2020_Aug2025_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "conflict/_collection_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "drought/_collection_overview.png": [
+  -180.0,
+  -90.0,
+  179.995536058,
+  90.0
+ ],
+ "drought/agricultural_drought_fao_1984-2023_overview.png": [
+  -180.0,
+  -56.004464292,
+  179.995536058,
+  75.0044643
+ ],
+ "drought/drought_spei_terraclimate_1958-2025_overview.png": [
+  -180.0,
+  -90.0,
+  179.875,
+  90.0
+ ],
+ "drought/drought_spi_terraclimate_1958-2025_overview.png": [
+  -180.0,
+  -90.0,
+  179.875,
+  90.0
+ ],
+ "earthquake/_collection_overview.png": [
+  -180.0,
+  -60.0,
+  180.0,
+  89.99
+ ],
+ "earthquake/earthquake_v2023_1_pga_475_rock_3min_overview.png": [
+  -180.0,
+  -60.0,
+  180.0,
+  89.99
+ ],
+ "fire/_collection_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "fire/fire_FRP_nasa_2001-2024_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "fire/fire_frequency_nasa_2001-2023_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "flood/_collection_overview.png": [
+  -179.999583333,
+  -59.986266667,
+  179.998687668,
+  83.67623
+ ],
+ "flood/coastal_flood_100yr_jrc_2024_overview.png": [
+  -179.999583333,
+  -56.393958774,
+  179.998687668,
+  83.67623
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID100_N70_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  60.003733333,
+  -10.015415428,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID101_N60_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  50.004566667,
+  -10.015415428,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID102_N30_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  20.007066667,
+  -10.015415428,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID103_N20_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  10.0079,
+  -10.015415428,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID104_N10_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  0.008733333,
+  -10.015415428,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID105_N60_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  50.004566667,
+  -0.016248734,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID106_N50_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  40.0054,
+  -0.016248734,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID107_N40_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  30.006233333,
+  -0.016248734,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID108_N30_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  20.007066667,
+  -0.016248734,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID109_N20_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  10.0079,
+  -0.016248734,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID10_N80_W140_RP100_depth_overview.png": [
+  -140.003749122,
+  70.0029,
+  -130.005415761,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID110_N10_W10_RP100_depth_overview.png": [
+  -10.014582094,
+  0.008733333,
+  -0.016248734,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID111_N70_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  60.003733333,
+  9.982917961,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID112_N60_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  50.004566667,
+  9.982917961,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID113_N50_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  40.0054,
+  9.982917961,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID114_N40_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  30.006233333,
+  9.982917961,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID115_N30_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  20.007066667,
+  9.982917961,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID116_N20_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  10.0079,
+  9.982917961,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID117_N10_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  0.008733333,
+  9.982917961,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID118_N0_W0_RP100_depth_overview.png": [
+  -0.0154154,
+  -9.990433333,
+  9.982917961,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID119_N70_E10_RP100_depth_overview.png": [
+  9.983751294,
+  60.003733333,
+  19.982084655,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID11_N70_W140_RP100_depth_overview.png": [
+  -140.003749122,
+  60.003733333,
+  -130.005415761,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID120_N60_E10_RP100_depth_overview.png": [
+  9.983751294,
+  50.004566667,
+  19.982084655,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID121_N50_E10_RP100_depth_overview.png": [
+  9.983751294,
+  40.0054,
+  19.982084655,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID122_N40_E10_RP100_depth_overview.png": [
+  9.983751294,
+  30.006233333,
+  19.982084655,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID123_N30_E10_RP100_depth_overview.png": [
+  9.983751294,
+  20.007066667,
+  19.982084655,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID124_N20_E10_RP100_depth_overview.png": [
+  9.983751294,
+  10.0079,
+  19.982084655,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID125_N10_E10_RP100_depth_overview.png": [
+  9.983751294,
+  0.008733333,
+  19.982084655,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID126_N0_E10_RP100_depth_overview.png": [
+  9.983751294,
+  -9.990433333,
+  19.982084655,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID127_S10_E10_RP100_depth_overview.png": [
+  9.983751294,
+  -19.9896,
+  19.982084655,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID128_S20_E10_RP100_depth_overview.png": [
+  9.983751294,
+  -29.988766667,
+  19.982084655,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID129_S30_E10_RP100_depth_overview.png": [
+  9.983751294,
+  -39.987933333,
+  19.982084655,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID12_N60_W140_RP100_depth_overview.png": [
+  -140.003749122,
+  50.004566667,
+  -130.005415761,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID130_N80_E20_RP100_depth_overview.png": [
+  19.982917989,
+  70.0029,
+  29.98125135,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID131_N70_E20_RP100_depth_overview.png": [
+  19.982917989,
+  60.003733333,
+  29.98125135,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID132_N60_E20_RP100_depth_overview.png": [
+  19.982917989,
+  50.004566667,
+  29.98125135,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID133_N50_E20_RP100_depth_overview.png": [
+  19.982917989,
+  40.0054,
+  29.98125135,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID134_N40_E20_RP100_depth_overview.png": [
+  19.982917989,
+  30.006233333,
+  29.98125135,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID135_N30_E20_RP100_depth_overview.png": [
+  19.982917989,
+  20.007066667,
+  29.98125135,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID136_N20_E20_RP100_depth_overview.png": [
+  19.982917989,
+  10.0079,
+  29.98125135,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID137_N10_E20_RP100_depth_overview.png": [
+  19.982917989,
+  0.008733333,
+  29.98125135,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID138_N0_E20_RP100_depth_overview.png": [
+  19.982917989,
+  -9.990433333,
+  29.98125135,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID139_S10_E20_RP100_depth_overview.png": [
+  19.982917989,
+  -19.9896,
+  29.98125135,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID13_N80_W130_RP100_depth_overview.png": [
+  -130.004582428,
+  70.0029,
+  -120.006249067,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID140_S20_E20_RP100_depth_overview.png": [
+  19.982917989,
+  -29.988766667,
+  29.98125135,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID141_S30_E20_RP100_depth_overview.png": [
+  19.982917989,
+  -39.987933333,
+  29.98125135,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID142_N80_E30_RP100_depth_overview.png": [
+  29.982084683,
+  70.0029,
+  39.980418044,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID143_N70_E30_RP100_depth_overview.png": [
+  29.982084683,
+  60.003733333,
+  39.980418044,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID144_N60_E30_RP100_depth_overview.png": [
+  29.982084683,
+  50.004566667,
+  39.980418044,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID145_N50_E30_RP100_depth_overview.png": [
+  29.982084683,
+  40.0054,
+  39.980418044,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID146_N40_E30_RP100_depth_overview.png": [
+  29.982084683,
+  30.006233333,
+  39.980418044,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID147_N30_E30_RP100_depth_overview.png": [
+  29.982084683,
+  20.007066667,
+  39.980418044,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID148_N20_E30_RP100_depth_overview.png": [
+  29.982084683,
+  10.0079,
+  39.980418044,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID149_N10_E30_RP100_depth_overview.png": [
+  29.982084683,
+  0.008733333,
+  39.980418044,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID14_N70_W130_RP100_depth_overview.png": [
+  -130.004582428,
+  60.003733333,
+  -120.006249067,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID150_N0_E30_RP100_depth_overview.png": [
+  29.982084683,
+  -9.990433333,
+  39.980418044,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID151_S10_E30_RP100_depth_overview.png": [
+  29.982084683,
+  -19.9896,
+  39.980418044,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID152_S20_E30_RP100_depth_overview.png": [
+  29.982084683,
+  -29.988766667,
+  39.980418044,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID153_S30_E30_RP100_depth_overview.png": [
+  29.982084683,
+  -39.987933333,
+  39.980418044,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID154_N70_E40_RP100_depth_overview.png": [
+  39.981251378,
+  60.003733333,
+  49.979584739,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID155_N60_E40_RP100_depth_overview.png": [
+  39.981251378,
+  50.004566667,
+  49.979584739,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID156_N50_E40_RP100_depth_overview.png": [
+  39.981251378,
+  40.0054,
+  49.979584739,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID157_N40_E40_RP100_depth_overview.png": [
+  39.981251378,
+  30.006233333,
+  49.979584739,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID158_N30_E40_RP100_depth_overview.png": [
+  39.981251378,
+  20.007066667,
+  49.979584739,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID159_N20_E40_RP100_depth_overview.png": [
+  39.981251378,
+  10.0079,
+  49.979584739,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID15_N60_W130_RP100_depth_overview.png": [
+  -130.004582428,
+  50.004566667,
+  -120.006249067,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID160_N10_E40_RP100_depth_overview.png": [
+  39.981251378,
+  0.008733333,
+  49.979584739,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID161_N0_E40_RP100_depth_overview.png": [
+  39.981251378,
+  -9.990433333,
+  49.979584739,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID162_S10_E40_RP100_depth_overview.png": [
+  39.981251378,
+  -19.9896,
+  49.979584739,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID163_S20_E40_RP100_depth_overview.png": [
+  39.981251378,
+  -29.988766667,
+  49.979584739,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID164_N70_E50_RP100_depth_overview.png": [
+  49.980418072,
+  60.003733333,
+  59.978751433,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID165_N60_E50_RP100_depth_overview.png": [
+  49.980418072,
+  50.004566667,
+  59.978751433,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID166_N50_E50_RP100_depth_overview.png": [
+  49.980418072,
+  40.0054,
+  59.978751433,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID167_N40_E50_RP100_depth_overview.png": [
+  49.980418072,
+  30.006233333,
+  59.978751433,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID168_N30_E50_RP100_depth_overview.png": [
+  49.980418072,
+  20.007066667,
+  59.978751433,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID169_N20_E50_RP100_depth_overview.png": [
+  49.980418072,
+  10.0079,
+  59.978751433,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID16_N50_W130_RP100_depth_overview.png": [
+  -130.004582428,
+  40.0054,
+  -120.006249067,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID170_N10_E50_RP100_depth_overview.png": [
+  49.980418072,
+  0.008733333,
+  59.978751433,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID171_S10_E50_RP100_depth_overview.png": [
+  49.980418072,
+  -19.9896,
+  59.978751433,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID172_N80_E60_RP100_depth_overview.png": [
+  59.979584767,
+  70.0029,
+  69.977918128,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID173_N70_E60_RP100_depth_overview.png": [
+  59.979584767,
+  60.003733333,
+  69.977918128,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID174_N60_E60_RP100_depth_overview.png": [
+  59.979584767,
+  50.004566667,
+  69.977918128,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID175_N50_E60_RP100_depth_overview.png": [
+  59.979584767,
+  40.0054,
+  69.977918128,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID176_N40_E60_RP100_depth_overview.png": [
+  59.979584767,
+  30.006233333,
+  69.977918128,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID177_N30_E60_RP100_depth_overview.png": [
+  59.979584767,
+  20.007066667,
+  69.977918128,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID178_N80_E70_RP100_depth_overview.png": [
+  69.978751461,
+  70.0029,
+  79.977084822,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID179_N70_E70_RP100_depth_overview.png": [
+  69.978751461,
+  60.003733333,
+  79.977084822,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID17_N40_W130_RP100_depth_overview.png": [
+  -130.004582428,
+  30.006233333,
+  -120.006249067,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID180_N60_E70_RP100_depth_overview.png": [
+  69.978751461,
+  50.004566667,
+  79.977084822,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID181_N50_E70_RP100_depth_overview.png": [
+  69.978751461,
+  40.0054,
+  79.977084822,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID182_N40_E70_RP100_depth_overview.png": [
+  69.978751461,
+  30.006233333,
+  79.977084822,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID183_N30_E70_RP100_depth_overview.png": [
+  69.978751461,
+  20.007066667,
+  79.977084822,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID184_N20_E70_RP100_depth_overview.png": [
+  69.978751461,
+  10.0079,
+  79.977084822,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID185_N10_E70_RP100_depth_overview.png": [
+  69.978751461,
+  0.008733333,
+  79.977084822,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID186_N80_E80_RP100_depth_overview.png": [
+  79.977918155,
+  70.0029,
+  89.976251516,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID187_N70_E80_RP100_depth_overview.png": [
+  79.977918155,
+  60.003733333,
+  89.976251516,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID188_N60_E80_RP100_depth_overview.png": [
+  79.977918155,
+  50.004566667,
+  89.976251516,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID189_N50_E80_RP100_depth_overview.png": [
+  79.977918155,
+  40.0054,
+  89.976251516,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID18_N80_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  70.0029,
+  -110.007082372,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID190_N40_E80_RP100_depth_overview.png": [
+  79.977918155,
+  30.006233333,
+  89.976251516,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID191_N30_E80_RP100_depth_overview.png": [
+  79.977918155,
+  20.007066667,
+  89.976251516,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID192_N20_E80_RP100_depth_overview.png": [
+  79.977918155,
+  10.0079,
+  89.976251516,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID193_N10_E80_RP100_depth_overview.png": [
+  79.977918155,
+  0.008733333,
+  89.976251516,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID194_N80_E90_RP100_depth_overview.png": [
+  89.97708485,
+  70.0029,
+  99.975418211,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID195_N70_E90_RP100_depth_overview.png": [
+  89.97708485,
+  60.003733333,
+  99.975418211,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID196_N60_E90_RP100_depth_overview.png": [
+  89.97708485,
+  50.004566667,
+  99.975418211,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID197_N50_E90_RP100_depth_overview.png": [
+  89.97708485,
+  40.0054,
+  99.975418211,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID198_N40_E90_RP100_depth_overview.png": [
+  89.97708485,
+  30.006233333,
+  99.975418211,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID199_N30_E90_RP100_depth_overview.png": [
+  89.97708485,
+  20.007066667,
+  99.975418211,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID19_N70_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  60.003733333,
+  -110.007082372,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID1_N80_W170_RP100_depth_overview.png": [
+  -170.001249206,
+  70.0029,
+  -160.002915845,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID200_N20_E90_RP100_depth_overview.png": [
+  89.97708485,
+  10.0079,
+  99.975418211,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID201_N10_E90_RP100_depth_overview.png": [
+  89.97708485,
+  0.008733333,
+  99.975418211,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID202_N0_E90_RP100_depth_overview.png": [
+  89.97708485,
+  -9.990433333,
+  99.975418211,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID203_N80_E100_RP100_depth_overview.png": [
+  99.976251544,
+  70.0029,
+  109.974584905,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID204_N70_E100_RP100_depth_overview.png": [
+  99.976251544,
+  60.003733333,
+  109.974584905,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID205_N60_E100_RP100_depth_overview.png": [
+  99.976251544,
+  50.004566667,
+  109.974584905,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID206_N50_E100_RP100_depth_overview.png": [
+  99.976251544,
+  40.0054,
+  109.974584905,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID207_N40_E100_RP100_depth_overview.png": [
+  99.976251544,
+  30.006233333,
+  109.974584905,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID208_N30_E100_RP100_depth_overview.png": [
+  99.976251544,
+  20.007066667,
+  109.974584905,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID209_N20_E100_RP100_depth_overview.png": [
+  99.976251544,
+  10.0079,
+  109.974584905,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID20_N60_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  50.004566667,
+  -110.007082372,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID210_N10_E100_RP100_depth_overview.png": [
+  99.976251544,
+  0.008733333,
+  109.974584905,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID211_N0_E100_RP100_depth_overview.png": [
+  99.976251544,
+  -9.990433333,
+  109.974584905,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID212_N80_E110_RP100_depth_overview.png": [
+  109.975418239,
+  70.0029,
+  119.9737516,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID213_N70_E110_RP100_depth_overview.png": [
+  109.975418239,
+  60.003733333,
+  119.9737516,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID214_N60_E110_RP100_depth_overview.png": [
+  109.975418239,
+  50.004566667,
+  119.9737516,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID215_N50_E110_RP100_depth_overview.png": [
+  109.975418239,
+  40.0054,
+  119.9737516,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID216_N40_E110_RP100_depth_overview.png": [
+  109.975418239,
+  30.006233333,
+  119.9737516,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID217_N30_E110_RP100_depth_overview.png": [
+  109.975418239,
+  20.007066667,
+  119.9737516,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID218_N20_E110_RP100_depth_overview.png": [
+  109.975418239,
+  10.0079,
+  119.9737516,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID219_N10_E110_RP100_depth_overview.png": [
+  109.975418239,
+  0.008733333,
+  119.9737516,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID21_N50_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  40.0054,
+  -110.007082372,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID220_N0_E110_RP100_depth_overview.png": [
+  109.975418239,
+  -9.990433333,
+  119.9737516,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID221_S10_E110_RP100_depth_overview.png": [
+  109.975418239,
+  -19.9896,
+  119.9737516,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID222_S20_E110_RP100_depth_overview.png": [
+  109.975418239,
+  -29.988766667,
+  119.9737516,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID223_S30_E110_RP100_depth_overview.png": [
+  109.975418239,
+  -39.987933333,
+  119.9737516,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID224_N80_E120_RP100_depth_overview.png": [
+  119.974584933,
+  70.0029,
+  129.972918294,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID225_N70_E120_RP100_depth_overview.png": [
+  119.974584933,
+  60.003733333,
+  129.972918294,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID226_N60_E120_RP100_depth_overview.png": [
+  119.974584933,
+  50.004566667,
+  129.972918294,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID227_N50_E120_RP100_depth_overview.png": [
+  119.974584933,
+  40.0054,
+  129.972918294,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID228_N40_E120_RP100_depth_overview.png": [
+  119.974584933,
+  30.006233333,
+  129.972918294,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID229_N30_E120_RP100_depth_overview.png": [
+  119.974584933,
+  20.007066667,
+  129.972918294,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID22_N40_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  30.006233333,
+  -110.007082372,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID230_N20_E120_RP100_depth_overview.png": [
+  119.974584933,
+  10.0079,
+  129.972918294,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID231_N10_E120_RP100_depth_overview.png": [
+  119.974584933,
+  0.008733333,
+  129.972918294,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID232_N0_E120_RP100_depth_overview.png": [
+  119.974584933,
+  -9.990433333,
+  129.972918294,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID233_S10_E120_RP100_depth_overview.png": [
+  119.974584933,
+  -19.9896,
+  129.972918294,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID234_S20_E120_RP100_depth_overview.png": [
+  119.974584933,
+  -29.988766667,
+  129.972918294,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID235_S30_E120_RP100_depth_overview.png": [
+  119.974584933,
+  -39.987933333,
+  129.972918294,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID236_N80_E130_RP100_depth_overview.png": [
+  129.973751628,
+  70.0029,
+  139.972084989,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID237_N70_E130_RP100_depth_overview.png": [
+  129.973751628,
+  60.003733333,
+  139.972084989,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID238_N60_E130_RP100_depth_overview.png": [
+  129.973751628,
+  50.004566667,
+  139.972084989,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID239_N50_E130_RP100_depth_overview.png": [
+  129.973751628,
+  40.0054,
+  139.972084989,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID23_N30_W120_RP100_depth_overview.png": [
+  -120.005415733,
+  20.007066667,
+  -110.007082372,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID240_N40_E130_RP100_depth_overview.png": [
+  129.973751628,
+  30.006233333,
+  139.972084989,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID241_N0_E130_RP100_depth_overview.png": [
+  129.973751628,
+  -9.990433333,
+  139.972084989,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID242_S10_E130_RP100_depth_overview.png": [
+  129.973751628,
+  -19.9896,
+  139.972084989,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID243_S20_E130_RP100_depth_overview.png": [
+  129.973751628,
+  -29.988766667,
+  139.972084989,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID244_S30_E130_RP100_depth_overview.png": [
+  129.973751628,
+  -39.987933333,
+  139.972084989,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID245_N80_E140_RP100_depth_overview.png": [
+  139.972918322,
+  70.0029,
+  149.971251683,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID246_N70_E140_RP100_depth_overview.png": [
+  139.972918322,
+  60.003733333,
+  149.971251683,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID247_N60_E140_RP100_depth_overview.png": [
+  139.972918322,
+  50.004566667,
+  149.971251683,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID248_N50_E140_RP100_depth_overview.png": [
+  139.972918322,
+  40.0054,
+  149.971251683,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID249_N40_E140_RP100_depth_overview.png": [
+  139.972918322,
+  30.006233333,
+  149.971251683,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID24_N80_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  70.0029,
+  -100.007915678,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID250_N0_E140_RP100_depth_overview.png": [
+  139.972918322,
+  -9.990433333,
+  149.971251683,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID251_S10_E140_RP100_depth_overview.png": [
+  139.972918322,
+  -19.9896,
+  149.971251683,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID252_S20_E140_RP100_depth_overview.png": [
+  139.972918322,
+  -29.988766667,
+  149.971251683,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID253_S30_E140_RP100_depth_overview.png": [
+  139.972918322,
+  -39.987933333,
+  149.971251683,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID254_S40_E140_RP100_depth_overview.png": [
+  139.972918322,
+  -49.9871,
+  149.971251683,
+  -39.988766667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID255_N80_E150_RP100_depth_overview.png": [
+  149.972085017,
+  70.0029,
+  159.970418378,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID256_N70_E150_RP100_depth_overview.png": [
+  149.972085017,
+  60.003733333,
+  159.970418378,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID257_N60_E150_RP100_depth_overview.png": [
+  149.972085017,
+  50.004566667,
+  159.970418378,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID258_N0_E150_RP100_depth_overview.png": [
+  149.972085017,
+  -9.990433333,
+  159.970418378,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID259_S10_E150_RP100_depth_overview.png": [
+  149.972085017,
+  -19.9896,
+  159.970418378,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID25_N70_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  60.003733333,
+  -100.007915678,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID260_S20_E150_RP100_depth_overview.png": [
+  149.972085017,
+  -29.988766667,
+  159.970418378,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID261_S30_E150_RP100_depth_overview.png": [
+  149.972085017,
+  -39.987933333,
+  159.970418378,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID262_N80_E160_RP100_depth_overview.png": [
+  159.971251711,
+  70.0029,
+  169.969585072,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID263_N70_E160_RP100_depth_overview.png": [
+  159.971251711,
+  60.003733333,
+  169.969585072,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID264_N60_E160_RP100_depth_overview.png": [
+  159.971251711,
+  50.004566667,
+  169.969585072,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID265_S40_E160_RP100_depth_overview.png": [
+  159.971251711,
+  -49.9871,
+  169.969585072,
+  -39.988766667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID266_N80_E170_RP100_depth_overview.png": [
+  169.970418405,
+  70.0029,
+  179.968751766,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID267_N70_E170_RP100_depth_overview.png": [
+  169.970418405,
+  60.003733333,
+  179.968751766,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID268_N60_E170_RP100_depth_overview.png": [
+  169.970418405,
+  50.004566667,
+  179.968751766,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID269_S30_E170_RP100_depth_overview.png": [
+  169.970418405,
+  -39.987933333,
+  179.968751766,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID26_N60_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  50.004566667,
+  -100.007915678,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID270_S40_E170_RP100_depth_overview.png": [
+  169.970418405,
+  -49.9871,
+  179.968751766,
+  -39.988766667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID27_N50_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  40.0054,
+  -100.007915678,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID28_N40_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  30.006233333,
+  -100.007915678,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID29_N30_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  20.007066667,
+  -100.007915678,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID2_N70_W170_RP100_depth_overview.png": [
+  -170.001249206,
+  60.003733333,
+  -160.002915845,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID30_N20_W110_RP100_depth_overview.png": [
+  -110.006249039,
+  10.0079,
+  -100.007915678,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID32_N80_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  70.0029,
+  -90.008748984,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID33_N70_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  60.003733333,
+  -90.008748984,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID34_N60_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  50.004566667,
+  -90.008748984,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID35_N50_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  40.0054,
+  -90.008748984,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID36_N40_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  30.006233333,
+  -90.008748984,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID37_N30_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  20.007066667,
+  -90.008748984,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID38_N20_W100_RP100_depth_overview.png": [
+  -100.007082344,
+  10.0079,
+  -90.008748984,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID3_N60_W170_RP100_depth_overview.png": [
+  -170.001249206,
+  50.004566667,
+  -160.002915845,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID40_N80_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  70.0029,
+  -80.009582289,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID41_N70_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  60.003733333,
+  -80.009582289,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID42_N60_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  50.004566667,
+  -80.009582289,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID43_N50_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  40.0054,
+  -80.009582289,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID44_N40_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  30.006233333,
+  -80.009582289,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID45_N30_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  20.007066667,
+  -80.009582289,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID46_N20_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  10.0079,
+  -80.009582289,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID47_N10_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  0.008733333,
+  -80.009582289,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID48_N0_W90_RP100_depth_overview.png": [
+  -90.00791565,
+  -9.990433333,
+  -80.009582289,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID4_N80_W160_RP100_depth_overview.png": [
+  -160.002082511,
+  70.0029,
+  -150.00374915,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID50_N80_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  70.0029,
+  -70.010415595,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID51_N70_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  60.003733333,
+  -70.010415595,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID52_N60_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  50.004566667,
+  -70.010415595,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID53_N50_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  40.0054,
+  -70.010415595,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID54_N40_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  30.006233333,
+  -70.010415595,
+  40.004566667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID55_N30_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  20.007066667,
+  -70.010415595,
+  30.0054
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID56_N20_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  10.0079,
+  -70.010415595,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID57_N10_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  0.008733333,
+  -70.010415595,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID58_N0_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -9.990433333,
+  -70.010415595,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID59_S10_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -19.9896,
+  -70.010415595,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID5_N70_W160_RP100_depth_overview.png": [
+  -160.002082511,
+  60.003733333,
+  -150.00374915,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID60_S20_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -29.988766667,
+  -70.010415595,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID61_S30_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -39.987933333,
+  -70.010415595,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID62_S40_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -49.9871,
+  -70.010415595,
+  -39.988766667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID63_S50_W80_RP100_depth_overview.png": [
+  -80.008748956,
+  -59.986266667,
+  -70.010415595,
+  -49.987933333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID65_N80_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  70.0029,
+  -60.0112489,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID66_N70_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  60.003733333,
+  -60.0112489,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID67_N60_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  50.004566667,
+  -60.0112489,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID68_N50_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  40.0054,
+  -60.0112489,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID69_N20_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  10.0079,
+  -60.0112489,
+  20.006233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID6_N60_W160_RP100_depth_overview.png": [
+  -160.002082511,
+  50.004566667,
+  -150.00374915,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID70_N10_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  0.008733333,
+  -60.0112489,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID71_N0_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -9.990433333,
+  -60.0112489,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID72_S10_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -19.9896,
+  -60.0112489,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID73_S20_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -29.988766667,
+  -60.0112489,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID74_S30_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -39.987933333,
+  -60.0112489,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID75_S40_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -49.9871,
+  -60.0112489,
+  -39.988766667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID76_S50_W70_RP100_depth_overview.png": [
+  -70.009582261,
+  -59.986266667,
+  -60.0112489,
+  -49.987933333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID77_N80_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  70.0029,
+  -50.012082206,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID78_N70_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  60.003733333,
+  -50.012082206,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID79_N60_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  50.004566667,
+  -50.012082206,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID7_N80_W150_RP100_depth_overview.png": [
+  -150.002915817,
+  70.0029,
+  -140.004582456,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID80_N50_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  40.0054,
+  -50.012082206,
+  50.003733333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID81_N10_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  0.008733333,
+  -50.012082206,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID82_N0_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  -9.990433333,
+  -50.012082206,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID83_S10_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  -19.9896,
+  -50.012082206,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID84_S20_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  -29.988766667,
+  -50.012082206,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID85_S30_W60_RP100_depth_overview.png": [
+  -60.010415567,
+  -39.987933333,
+  -50.012082206,
+  -29.9896
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID87_N70_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  60.003733333,
+  -40.012915511,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID88_N60_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  50.004566667,
+  -40.012915511,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID89_N10_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  0.008733333,
+  -40.012915511,
+  10.007066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID8_N70_W150_RP100_depth_overview.png": [
+  -150.002915817,
+  60.003733333,
+  -140.004582456,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID90_N0_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  -9.990433333,
+  -40.012915511,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID91_S10_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  -19.9896,
+  -40.012915511,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID92_S20_W50_RP100_depth_overview.png": [
+  -50.011248872,
+  -29.988766667,
+  -40.012915511,
+  -19.990433333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID94_N70_W40_RP100_depth_overview.png": [
+  -40.012082178,
+  60.003733333,
+  -30.013748817,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID95_N0_W40_RP100_depth_overview.png": [
+  -40.012082178,
+  -9.990433333,
+  -30.013748817,
+  0.0079
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID96_S10_W40_RP100_depth_overview.png": [
+  -40.012082178,
+  -19.9896,
+  -30.013748817,
+  -9.991266667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID97_N80_W30_RP100_depth_overview.png": [
+  -30.012915483,
+  70.0029,
+  -20.014582122,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID98_N70_W30_RP100_depth_overview.png": [
+  -30.012915483,
+  60.003733333,
+  -20.014582122,
+  70.002066667
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID99_N80_W20_RP100_depth_overview.png": [
+  -20.013748789,
+  70.0029,
+  -10.015415428,
+  80.001233333
+ ],
+ "flood/river_flood_100yr_jrc_2024/ID9_N60_W150_RP100_depth_overview.png": [
+  -150.002915817,
+  50.004566667,
+  -140.004582456,
+  60.0029
+ ],
+ "flood/river_flood_100yr_jrc_2024_overview.png": [
+  -170.001249206,
+  -59.986266667,
+  179.968751761,
+  80.001233333
+ ],
+ "heatwave/_collection_overview.png": [
+  -180.0,
+  -60.15,
+  180.0,
+  90.0
+ ],
+ "heatwave/extreme_heat_ecmwf_2014-2024_overview.png": [
+  -180.0,
+  -60.15,
+  180.0,
+  90.0
+ ],
+ "heatwave/heatwave_duration_ecmwf_2014-2024_overview.png": [
+  -180.0,
+  -60.15,
+  180.0,
+  90.0
+ ],
+ "heatwave/heatwave_frequency_ecmwf_2014-2024_overview.png": [
+  -180.0,
+  -60.15,
+  180.0,
+  90.0
+ ],
+ "heatwave/heatwave_severity_ecmwf_2014-2024_overview.png": [
+  -180.0,
+  -60.15,
+  180.0,
+  90.0
+ ],
+ "landslide/LS_RF_Mean_1980-2018_overview.png": [
+  -180.0,
+  -59.491606664,
+  180.0,
+  72.000059986
+ ],
+ "landslide/_collection_overview.png": [
+  -180.0,
+  -60.000416667,
+  180.0,
+  84.999583333
+ ],
+ "landslide/landslides_trig_earthquakes_overview.png": [
+  -180.0,
+  -60.000416667,
+  179.999583333,
+  84.999583333
+ ],
+ "malaria/_collection_overview.png": [
+  -118.375,
+  -55.083376783,
+  170.25,
+  53.541623217
+ ],
+ "malaria/vectorborne_malariapf_2012-2022_overview.png": [
+  -118.375,
+  -55.083376783,
+  170.25,
+  53.541623217
+ ],
+ "malaria/vectorborne_malariapv_2012-2022_overview.png": [
+  -118.375,
+  -55.083376783,
+  170.25,
+  53.541623217
+ ],
+ "sand_dust_storm/_collection_overview.png": [
+  -180.0,
+  -60.00376905,
+  179.99440199,
+  89.99563455
+ ],
+ "sand_dust_storm/sand_dust_storm_unccd_2024_overview.png": [
+  -180.0,
+  -60.00376905,
+  179.99440199,
+  89.99563455
+ ],
+ "tropical_storm/_collection_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "tropical_storm/tropical_storm_100yr_giri_2024_overview.png": [
+  -180.0,
+  -90.0,
+  180.0,
+  90.0
+ ],
+ "volcano/GVP_Hol_volcanoes_1800_overview.png": [
+  -179.999964691,
+  -78.504456939,
+  179.999162898,
+  85.611438297
+ ],
+ "volcano/_collection_overview.png": [
+  -179.999964691,
+  -78.504456939,
+  179.999162898,
+  85.611438297
+ ]
+}

@@ -1,0 +1,216 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "UNICEF_ACLED_CI_Sep2020_Aug2025",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179.99999999967258,
+          -90.0
+        ],
+        [
+          -180.0,
+          -90.0
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          179.99999999967258,
+          90.0
+        ],
+        [
+          179.99999999967258,
+          -90.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -90.0,
+    179.99999999967258,
+    90.0
+  ],
+  "properties": {
+    "title": "Conflict",
+    "description": "Conflict Index generated from the geometric mean of normalized conflict events and fatalities recorded by ACLED between September 2020 and August 2025. The index ranges between 0 and 10.",
+    "GCHD:hazard": "Complex Emergencies",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Observed",
+    "GCHD:nominal_resolution": "0.1 degree/11km",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Index",
+    "GCHD:threshold": ">=0.01",
+    "GCHD:classes": "Use natural breaks/quantile",
+    "GCHD:value_range": [
+      0.0,
+      10.0
+    ],
+    "GCHD:notes": "This layer was generated using point data f fatalities and conflict events from ACLED.",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/conflict_admin2_0p1_degree",
+    "start_datetime": "2020-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.0,
+            -90.00000000009209
+          ],
+          [
+            179.99999999967258,
+            -90.00000000009209
+          ],
+          [
+            179.99999999967258,
+            90.0
+          ],
+          [
+            -180.0,
+            90.0
+          ],
+          [
+            -180.0,
+            -90.00000000009209
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.0,
+      -90.00000000009209,
+      179.99999999967258,
+      90.0
+    ],
+    "proj:shape": [
+      18000,
+      36000
+    ],
+    "proj:transform": [
+      0.009999999999990905,
+      0.0,
+      -180.0,
+      0.0,
+      -0.010000000000005116,
+      90.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "ACLED",
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/conflict/conflict_grid_0p01_degree.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Complex Emergencies (Conflict)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Complex Emergencies (Conflict)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Conflict (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": 0.07240348303400669,
+            "minimum": 0.0,
+            "maximum": 1.9135539531707764,
+            "stddev": 0.0883598687170924,
+            "valid_percent": 3.9892196655273438
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.9135539531707764,
+            "buckets": [
+              19647,
+              1036,
+              163,
+              41,
+              10,
+              4,
+              4,
+              2,
+              6,
+              2
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "conflict"
+}
