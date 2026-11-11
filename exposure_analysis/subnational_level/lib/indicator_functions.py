@@ -139,21 +139,35 @@ class IndicatorUtils:
         exposed_mask = aexp_num > 0
         exposed_indices = df[exposed_mask].index
         
-        if len(exposed_indices) > 1:
-            values = df.loc[exposed_indices, expi_col].values
+        # Classify on the index rounded to the reported precision (1 decimal).
+        # The exposure index is delivered rounded to 1dp; classifying on the
+        # UNROUNDED value makes units that sit on a Fisher-Jenks break flip class
+        # based on sub-decimal differences invisible in the output
+        # ("what you see is what's classed"). Rounding first makes the class a
+        # deterministic function of the reported index, so identical reported
+        # indices always get the same class on re-runs.
+        idx_vals = np.round(pd.to_numeric(df.loc[exposed_indices, expi_col], errors="coerce"), 1)
+        # Exposed units with a valid (non-NaN) index are classified via Jenks;
+        # exposed units whose index is NaN cannot be binned -> class 1 (lowest).
+        valid_idx = idx_vals.dropna().index
+        nan_idx = idx_vals.index.difference(valid_idx)
+        df.loc[nan_idx, output_col] = 1
+
+        if len(valid_idx) > 1:
+            values = idx_vals.loc[valid_idx].values
             unique_values = np.unique(values)
             if len(unique_values) <= 1:
-                df.loc[exposed_indices, output_col] = 1
+                df.loc[valid_idx, output_col] = 1
             else:
                 effective_k = min(k, len(unique_values))
                 try:
                     fj = mapclassify.FisherJenks(values, k=effective_k)
-                    df.loc[exposed_indices, output_col] = fj.yb + 1  # Classes 1-k
+                    df.loc[valid_idx, output_col] = fj.yb + 1  # Classes 1-k
                 except Exception as e:
                     print(f"  Warning: Fisher-Jenks classification failed: {e}")
-                    df.loc[exposed_indices, output_col] = 1
-        elif len(exposed_indices) == 1:
-            df.loc[exposed_indices, output_col] = 1
+                    df.loc[valid_idx, output_col] = 1
+        elif len(valid_idx) == 1:
+            df.loc[valid_idx, output_col] = 1
 
         df[output_col] = pd.to_numeric(df[output_col], errors="coerce")
         

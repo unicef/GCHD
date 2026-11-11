@@ -68,6 +68,10 @@ class GEEUtils:
         ee = self.ee
         adm2_fc = ee.FeatureCollection(f"{self.unicef_data_source_path}/{self.ADMIN2_ASSET}")
         adm2_fc = adm2_fc.filter(ee.Filter.eq(admin_values[admin_level], ucode))
+        # The asset stores some adm2 units more than once as separate features with
+        # identical geometry and identical properties (e.g. NGA, SEN, SLE). Return one
+        # feature per adm2_ucode so callers cannot double-count rows, area or population.
+        adm2_fc = adm2_fc.distinct("adm2_ucode")
         adm2_fc = adm2_fc.map(lambda f: f.set("geo_level", "DISTRICT"))
         return adm2_fc    
     
@@ -97,8 +101,10 @@ class GEEUtils:
             countries_to_process = admin0_fc.aggregate_array("ucode").getInfo()
 
             countries_not_available = set(self.countries_no_population)
-            filtered_countries_list = [item for item in countries_to_process if item not in countries_not_available]
-            filtered_countries_list.sort()
+            filtered_countries_list = sorted({
+                item for item in countries_to_process
+                if item not in countries_not_available
+            })
             return filtered_countries_list
         except Exception as e:
             print(f"Error retrieving countries to process: {e}")
@@ -1696,7 +1702,12 @@ class Hazard:
     indicator: str
     code: str
     band: str = None
+    display_name: Optional[str] = None
     short_code: Optional[str] = None
+    # Physical unit of the hazard's own measurement (hazs_mean/std/min/max), e.g.
+    # "m", "m/s", "PGA (g)". The normalised g/c/r indices are unitless and are NOT
+    # described by this field. Optional so older hazard_info.json files still load.
+    unit: Optional[str] = None
     th_min: float = 0.0 
     min: Optional[float] = 0.0
     max: Optional[float] = 1.0
@@ -1740,6 +1751,10 @@ class Hazard:
         d["nodata"] = to_float_or_none(d.get("nodata", -9999.0)) or -9999.0
         d["apply_nodata"] = to_int(d.get("apply_nodata", 0))
         d["mosaic"] = to_int(d.get("mosaic", 0))
-        
+        d["display_name"] = d.get("display_name", d.get("name", ""))
+
+        unit = d.get("unit")
+        d["unit"] = unit.strip() if isinstance(unit, str) and unit.strip() else None
+
         return cls(**d)
 
