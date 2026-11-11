@@ -4,7 +4,7 @@ Everything that was hardcoded across the notebooks lives here instead:
 output roots, prod_date, production year / WorldPop release, GEE project,
 SDMX metadata, and the export/throttle knobs. Values come from environment
 variables (prefixed ``GCHD_``) with sensible defaults, so the *same code* runs
-locally (``./output``) or on Azure (``abfs://...``) by changing env only.
+locally (``notebooks/output``) or on Azure (``abfs://...``) by changing env only.
 
 Design choices
 --------------
@@ -24,11 +24,17 @@ from __future__ import annotations
 
 import datetime as dt
 import os
+from pathlib import Path
 from typing import Optional
 
 from pydantic import BaseModel, Field, field_validator
 
 ENV_PREFIX = "GCHD_"
+
+# subnational_level/ — the folder holding pipeline/, lib/ and notebooks/.
+PACKAGE_ROOT = Path(__file__).resolve().parents[1]
+# Absolute, so notebooks in any subfolder and the CLI from any cwd share one output.
+DEFAULT_STORAGE_ROOT = (PACKAGE_ROOT / "notebooks" / "output").as_posix()
 
 # The population classes the pipeline extracts, in canonical order. Mirrors
 # aggregation_functions.POPULATION_CLASSES; kept here so a run can subset them.
@@ -61,7 +67,7 @@ class Settings(BaseModel):
     # -- Storage ----------------------------------------------------------
     # A local path OR an fsspec URL (e.g. "abfs://gchd/prod"). io_paths builds
     # aux/base/export/upscale/_manifests paths off this single root.
-    storage_root: str = "output"
+    storage_root: str = DEFAULT_STORAGE_ROOT
 
     # -- SDMX metadata ----------------------------------------------------
     is_draft: bool = True

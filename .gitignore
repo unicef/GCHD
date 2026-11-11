@@ -75,3 +75,7 @@ STAC_catalog/.env
 !STAC_catalog/thumbnails/overviews.json
 !STAC_catalog/reports/*.csv
 STAC_catalog/work/
+
+# Subnational pipeline: local one-off scripts and derived notebook outputs
+exposure_analysis/subnational_level/scratch/
+exposure_analysis/subnational_level/notebooks/output/

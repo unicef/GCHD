@@ -13,22 +13,40 @@ broken out by **total / male / female** and **under-18** subgroups, at **global 
 aggregation scopes. A final stage also exports **continuous raster surfaces (GeoTIFF) per country**
 and attempts hand those rasters off to SharePoint automatically.
 
-Everything runs from numbered Jupyter notebooks in `notebooks/`, backed by two shared Python
-modules in `lib/` and canonical reference data in `config/`.
+Everything runs from numbered Jupyter notebooks in `notebooks/` (`pipeline/` for the
+admin-2 stages, `products/` for the summaries built on them), backed by shared Python
+modules in `lib/`, the `pipeline/` package, and canonical reference data in `config/`.
+
+All notebooks write under one output root: `notebooks/output/` by default, or the folder
+(or `abfs://` URL) set in the `GCHD_STORAGE_ROOT` environment variable. Notebooks find
+the repository folder themselves, so they run from any working directory.
 
 ---
 
 ## Folder layout
 
 ```
-handoff/
+subnational_level/
 ├── README.md                       # this file
-├── notebooks/                      # numbered in execution order
-│   ├── 01_adm2_hazard_exposure_updated.ipynb        # Phase 1 — exposure extraction
-│   ├── 02_adm2_hazard_indices_NA.ipynb              # Phase 2 — indices & classes
-│   ├── 03_adm2_hazard_export.ipynb                  # Phase 3 — Excel + GeoPackage export
-│   ├── 04_adm2_hazard_exposure_raster_country.ipynb # Phase 4 — per-country rasters + SharePoint
-│   └── 05_adm2_hazard_export_sdmx.ipynb             # Phase 5 — SDMX-CSV export
+├── notebooks/
+│   ├── pipeline/                   # admin-2 stages, numbered in execution order
+│   │   ├── 00_adm2_hazard_pixel_counts.ipynb            # valid-pixel counts (weights)
+│   │   ├── 01_adm2_hazard_exposure_updated.ipynb        # Phase 1 — exposure extraction
+│   │   ├── 02_adm2_hazard_indices_NA.ipynb              # Phase 2 — indices & classes
+│   │   ├── 03_adm2_hazard_export.ipynb                  # Phase 3 — Excel + GeoPackage export
+│   │   ├── 04_adm2_hazard_exposure_raster_country.ipynb # Phase 4 — per-country rasters + SharePoint
+│   │   └── 05_adm2_hazard_export_sdmx.ipynb             # Phase 5 — SDMX-CSV export
+│   ├── products/                   # summaries built on the admin-2 tables
+│   │   ├── 06_country_admin1_summary.ipynb
+│   │   ├── 07_global_admin1_admin0_summary.ipynb
+│   │   ├── 08_admin2_pretty_excel.ipynb
+│   │   ├── 09_global_admin0_children_exposure.ipynb
+│   │   ├── 10_global_admin0_multi_hazard_overlap.ipynb
+│   │   └── 11_country_only_indices_restricted.ipynb
+│   └── output/                     # default output root — GITIGNORED, regenerated
+│
+├── pipeline/                       # the same stages as parameterised steps (CLI: python -m pipeline.cli)
+├── scratch/                        # local one-off scripts — GITIGNORED
 │
 ├── lib/                            # shared Python modules (imported by the notebooks)
 │   ├── GEE_functions.py            # GEEUtils + Hazard: Earth Engine wrappers, exposure math, exports

@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from pipeline import io_paths, hazards, na_rules
-from pipeline.settings import Settings
+from pipeline.settings import DEFAULT_STORAGE_ROOT, Settings
 
 
 # -- settings -------------------------------------------------------------
@@ -24,7 +24,8 @@ from pipeline.settings import Settings
 def test_settings_defaults():
     s = Settings()
     assert s.gee_project == "unicef-ccri"
-    assert s.storage_root == "output"
+    assert s.storage_root == DEFAULT_STORAGE_ROOT
+    assert DEFAULT_STORAGE_ROOT.endswith("subnational_level/notebooks/output")
     # prod_date is a valid ISO date
     assert len(s.prod_date) == 10 and s.prod_date[4] == "-"
     assert s.export_target in ("drive", "gcs")
