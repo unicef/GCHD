@@ -30,6 +30,7 @@ from ..settings import Settings
 from ..hazards import load_hazards, DUPLICATE_COUNT_OF
 from .. import io_paths
 from .. import auth
+from ..countries import countries_to_process
 
 STEP = "s00"
 
@@ -52,6 +53,31 @@ def _await_admission(ee, settings: Settings) -> None:
         time.sleep(settings.batch_cooldown_s)
 
 
+_ANALYSIS_SCALE: dict[str, object] = {}
+
+
+def _analysis_scale(utils, ucode: str):
+    """The country's population scale (WorldPop, ~92.77 m): the scale s01 reduces
+    hazs_mean/std at, so the counts weight exactly the pixels behind those means.
+    Cached per country; None for countries without population."""
+    if ucode not in _ANALYSIS_SCALE:
+        if utils.check_country_no_population(ucode):
+            _ANALYSIS_SCALE[ucode] = None
+        else:
+            utils.set_population_dicts(ucode, utils.get_admin2_boundaries(ucode, admin_level="adm0_ucode"))
+            utils.get_population_classes()
+            _ANALYSIS_SCALE[ucode] = utils.analysis_scale
+    return _ANALYSIS_SCALE[ucode]
+
+
+def _native_scale(ee, hazard):
+    """Fallback for no-population countries. A mosaic has no projection, so its
+    nominalScale() is the ~111 km WGS84 default; read a member image instead."""
+    if hazard.mosaic:
+        return ee.Image(ee.ImageCollection(hazard.asset).first()).projection().nominalScale()
+    return ee.Image(hazard.asset).projection().nominalScale()
+
+
 def _submit_one(ee, utils, settings: Settings, hazard, ucode: str):
     """Submit ONE count export for (hazard, ucode). Returns the started task, or
     None if this hazard is a duplicate-count twin (skipped)."""
@@ -61,7 +87,7 @@ def _submit_one(ee, utils, settings: Settings, hazard, ucode: str):
     images = utils.define_hazard(hazard)
     raw = images["hazard_raw_image"].rename("haz").toFloat()
     adm2_fc = utils.get_admin2_boundaries(ucode, admin_level="adm0_ucode")
-    scale = settings.scale_override or raw.projection().nominalScale()
+    scale = settings.scale_override or _analysis_scale(utils, ucode) or _native_scale(ee, hazard)
 
     reduced = raw.reduceRegions(
         collection=adm2_fc,
@@ -94,8 +120,7 @@ def run(settings: Settings, *, allow_interactive: bool = False) -> pd.DataFrame:
     ee, utils = auth.ee_and_utils(settings, allow_interactive=allow_interactive)
 
     hazards = load_hazards(settings)  # honors settings.process_hazards
-    iso3 = settings.process_countries  # note: get_countries_to_process expects ISO3
-    countries = utils.get_countries_to_process(iso3)
+    countries = countries_to_process(utils, settings.process_countries)
     print(f"s00: {len(hazards)} hazards x {len(countries)} countries "
           f"(twins skipped: {sorted(set(h.code for h in hazards) & set(DUPLICATE_COUNT_OF))})")
 

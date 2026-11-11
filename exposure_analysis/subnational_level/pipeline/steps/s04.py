@@ -28,6 +28,7 @@ from __future__ import annotations
 from ..settings import Settings
 from ..hazards import load_hazards
 from .. import auth
+from ..countries import countries_to_process
 
 STEP = "s04"
 
@@ -68,7 +69,7 @@ def run(settings: Settings, *, allow_interactive: bool = False,
     also run the (deferred) SharePoint hand-off — otherwise stop after export."""
     ee, utils = auth.ee_and_utils(settings, allow_interactive=allow_interactive)
     hazards = load_hazards(settings)
-    countries = utils.get_countries_to_process(settings.process_countries)
+    countries = countries_to_process(utils, settings.process_countries)
     print(f"s04: {len(hazards)} hazards x {len(countries)} countries -> Drive")
 
     submitted = []  # (task, description)

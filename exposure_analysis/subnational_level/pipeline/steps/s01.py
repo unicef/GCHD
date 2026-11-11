@@ -34,8 +34,16 @@ from ..settings import Settings
 from ..hazards import load_hazards
 from .. import io_paths
 from .. import auth
+from ..countries import countries_to_process
 
 STEP = "s01"
+
+
+def partial_ucode(filename: str, hazard_code: str) -> str | None:
+    """Country ucode of a partial named ``{ucode}_{code}_admin2.csv``, else None.
+    Ucodes vary in length (CAN_V1, BES1_V2), so strip the known suffix."""
+    suffix = f"_{hazard_code}_admin2.csv"
+    return filename[: -len(suffix)] if filename.endswith(suffix) else None
 
 
 def _filtered_countries(utils, base_root: str, hazard_code: str, countries: list[str]) -> list[str]:
@@ -46,10 +54,18 @@ def _filtered_countries(utils, base_root: str, hazard_code: str, countries: list
     processed: set[str] = set()
     if partials_dir.exists():
         for f in partials_dir.iterdir():
-            if f.is_file() and f.suffix == ".csv":
-                processed.add(f.name[:6])  # e.g. "CAN_V1"
+            ucode = partial_ucode(f.name, hazard_code)
+            if f.is_file() and ucode:
+                processed.add(ucode)
     no_pop = set(utils.countries_no_population)
     return [c for c in countries if c not in processed and c not in no_pop]
+
+
+def _define_hazard(utils, settings: Settings, hazard):
+    """define_hazard also stamps the run metadata written into every partial;
+    without these arguments it uses today's date and the draft dataflow."""
+    return utils.define_hazard(hazard, production_date=settings.prod_date,
+                               dataflow=settings.dataflow)
 
 
 def _run_main(settings: Settings, ee, utils, hazards, countries, base_root: str) -> int:
@@ -57,7 +73,7 @@ def _run_main(settings: Settings, ee, utils, hazards, countries, base_root: str)
     saved = 0
     for hazard in hazards:
         print(f"\n{'='*60}\nHazard: {hazard.name} ({hazard.code})\n{'='*60}")
-        hazard_images = utils.define_hazard(hazard)
+        hazard_images = _define_hazard(utils, settings, hazard)
         todo = _filtered_countries(utils, base_root, hazard.code, countries)
         print(f"Countries to process: {len(todo)}")
         for ucode in todo:
@@ -100,7 +116,7 @@ def _run_fill(settings: Settings, ee, utils, hazards, base_root: str) -> int:
         if sum(len(m) for _, m in file_errors) == 0:
             continue
         print(f"\n{'='*60}\nFilling missing units for: {hazard_obj.name}\n{'='*60}")
-        hazard_images = utils.define_hazard(hazard_obj)
+        hazard_images = _define_hazard(utils, settings, hazard_obj)
 
         for filename, missing_list in file_errors:
             if not missing_list:
@@ -151,7 +167,7 @@ def run(settings: Settings, *, allow_interactive: bool = False,
     io_paths.ensure_local_dir(f"{base_root}/hazards/.keep")  # create base tree locally
 
     hazards = load_hazards(settings)
-    countries = utils.get_countries_to_process(settings.process_countries)
+    countries = countries_to_process(utils, settings.process_countries)
     print(f"s01: {len(hazards)} hazards x {len(countries)} countries -> {base_root}")
 
     saved = _run_main(settings, ee, utils, hazards, countries, base_root)

@@ -32,7 +32,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "hazard_info.json"
-NOTEBOOK_00 = ROOT / "notebooks" / "00_adm2_hazard_pixel_counts.ipynb"
+NOTEBOOK_00 = ROOT / "notebooks" / "pipeline" / "00_adm2_hazard_pixel_counts.ipynb"
+STEP_S00 = ROOT / "pipeline" / "steps" / "s00.py"
 
 # The WGS84 1-degree default that mosaic() reports when it has no projection.
 DEGREE_SCALE_M = 111319.49
@@ -114,6 +115,14 @@ def test_notebook00_uses_the_analysis_scale():
         "notebook 00 should resolve the population/analysis scale per country")
     assert "analysis_scale" in code
 
+
+def test_s00_step_does_not_scale_from_the_hazard_image():
+    """The CLI step had kept the defect after the notebook was fixed."""
+    code = STEP_S00.read_text(encoding="utf-8")
+    assert "raw.projection().nominalScale()" not in code
+    assert "_analysis_scale(utils, ucode)" in code
+    body = code.split("def _native_scale", 1)[1].split("\ndef ", 1)[0]
+    assert "ImageCollection" in body and ".first()" in body
 
 def test_notebook00_native_scale_helper_avoids_the_mosaic():
     """The no-population fallback must read the scale from a MEMBER image."""

@@ -28,6 +28,7 @@ from ..settings import Settings
 from ..hazards import load_hazards
 from .. import io_paths
 from .. import auth
+from ..countries import countries_to_process
 
 STEP = "s03"
 ADM0_COL = "adm0_ucode"
@@ -147,7 +148,7 @@ def run(settings: Settings, *, allow_interactive: bool = False,
     but we init EE once up front so both share the session."""
     ee, utils = auth.ee_and_utils(settings, allow_interactive=allow_interactive)
     hazards = load_hazards(settings)
-    countries = utils.get_countries_to_process(settings.process_countries)
+    countries = countries_to_process(utils, settings.process_countries)
     print(f"s03: {len(hazards)} hazards x {len(countries)} countries")
 
     n_xlsx = export_excel(settings, utils, hazards, countries) if excel else 0

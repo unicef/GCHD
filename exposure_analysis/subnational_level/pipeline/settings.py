@@ -108,7 +108,7 @@ class Settings(BaseModel):
     poll_seconds: int = 30                         # EE task poll interval (SharePoint phase)
 
     # -- Optional run filters (None = all) -------------------------------
-    process_countries: Optional[list[str]] = None   # ucodes, e.g. ["EGY_V1"]
+    process_countries: Optional[list[str]] = None   # ucodes or ISO3, e.g. ["EGY_V1"] or ["EGY"]
     process_hazards: Optional[list[str]] = None      # hazard codes
     population_classes: list[str] = Field(
         default_factory=lambda: list(DEFAULT_POPULATION_CLASSES)

@@ -32,6 +32,7 @@ from ..hazards import load_hazards
 from ..state_countries import STATE_COUNTRIES
 from .. import na_rules
 from .. import io_paths
+from ..countries import resolve as resolve_countries
 
 STEP = "s02"
 
@@ -215,7 +216,7 @@ def run(settings: Settings) -> dict:
 
     # Countries whose partials to read. If not filtered, read whatever partials
     # exist on disk (pure-pandas step has no EE to enumerate the world).
-    countries = settings.process_countries
+    countries = resolve_countries(settings.process_countries)
     written = []
     for hazard in hazards:
         code = hazard.code
