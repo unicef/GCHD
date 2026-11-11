@@ -1,0 +1,23 @@
+# Top-level dependencies for exposure_analysis/subnational_level/notebooks
+# Everything else in requirements.txt is a transitive dependency of these.
+
+# Earth Engine
+earthengine-api
+
+# Geospatial (geopandas pulls in GDAL via pyogrio; wheels bundle GDAL on Windows)
+geopandas
+shapely
+mapclassify
+
+# Data
+numpy
+pandas
+
+# HTTP / SharePoint (Google Drive + Microsoft Graph auth used by lib modules)
+requests
+msal
+google-api-python-client
+google-auth-oauthlib
+
+# Notebook runtime
+ipykernel
