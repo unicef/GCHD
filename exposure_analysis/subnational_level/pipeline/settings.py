@@ -61,7 +61,9 @@ class Settings(BaseModel):
     # -- Run identity -----------------------------------------------------
     prod_date: str = Field(default_factory=_today)  # ISO date stamped on outputs
     production_year: int = 2026                      # data vintage for this run
-    time_period: int = 2026                          # SDMX TIME_PERIOD
+    # Reference year of the data, i.e. of the WorldPop population (2025 release).
+    # Stamped on the partials and as SDMX TIME_PERIOD; move to 2026 with the data.
+    time_period: int = 2025
     worldpop_release: str = "R2025A"                 # WorldPop dataset release tag
 
     # -- Storage ----------------------------------------------------------

@@ -63,8 +63,9 @@ def _filtered_countries(utils, base_root: str, hazard_code: str, countries: list
 
 def _define_hazard(utils, settings: Settings, hazard):
     """define_hazard also stamps the run metadata written into every partial;
-    without these arguments it uses today's date and the draft dataflow."""
+    without these arguments it uses today's date, 2025 and the draft dataflow."""
     return utils.define_hazard(hazard, production_date=settings.prod_date,
+                               time_period=settings.time_period,
                                dataflow=settings.dataflow)
 
 

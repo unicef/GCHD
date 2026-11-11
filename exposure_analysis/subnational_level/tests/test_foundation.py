@@ -24,6 +24,7 @@ from pipeline.settings import DEFAULT_STORAGE_ROOT, Settings
 def test_settings_defaults():
     s = Settings()
     assert s.gee_project == "unicef-ccri"
+    assert s.time_period == 2025  # data year of the WorldPop population
     assert s.storage_root == DEFAULT_STORAGE_ROOT
     assert DEFAULT_STORAGE_ROOT.endswith("subnational_level/notebooks/output")
     # prod_date is a valid ISO date
