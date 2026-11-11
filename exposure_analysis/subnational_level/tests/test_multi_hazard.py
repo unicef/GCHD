@@ -1,4 +1,4 @@
-"""Tests for the multi-hazard overlap assembly (notebook 11).
+"""Tests for the multi-hazard overlap assembly (notebook 10).
 
 Pure, no Earth Engine / no network. Run from the subnational_level dir:
     ..\\..\\.venv\\Scripts\\python.exe tests/test_multi_hazard.py

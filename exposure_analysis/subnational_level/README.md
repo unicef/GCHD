@@ -2,12 +2,8 @@
 
 A cleaned, documented subset of UNICEF's Global Child Hazard Database processing pipeline.
 
-This pipeline computes child population exposure to climate and environmental hazards at the
-admin2 level globally, then derives the exposure indices and classes used for CCRI 
-scoring, and exports the results as tables, vector files, per-country rasters, and SDMX-CSV.
-Each hazard layer (riverine/coastal flood, tropical storm, drought, heatwave, fire, sand & dust,
-PM2.5, malaria, earthquake, volcano, landslide, …) is intersected in Google Earth Engine
-with WorldPop child-population rasters to produce, per admin2 unit:
+This pipeline computes child population exposure to climate and environmental hazards at the admin2 level globally, then derives the exposure indices and classes used for CCRI scoring, and exports the results as tables, vector files, per-country rasters, and SDMX-CSV.
+Each hazard layer (riverine/coastal flood, tropical storm, drought, heatwave, fire, sand & dust, PM2.5, malaria, earthquake, volcano, landslide, …) is intersected in Google Earth Engine with WorldPop child-population rasters to produce, per admin2 unit:
 
 - **`aexp`** absolute exposure, **`rexp`** relative exposure,
 - **`expi`** normalized exposure index (0–10), **`expc`** exposure class,
