@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_vgb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -64.8500004606,
+          18.750000260999986
+        ],
+        [
+          -64.27000046292,
+          18.750000260999986
+        ],
+        [
+          -64.27000046292,
+          18.306666929439984
+        ],
+        [
+          -64.8500004606,
+          18.306666929439984
+        ],
+        [
+          -64.8500004606,
+          18.750000260999986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -64.8500004606,
+    18.306666929439984,
+    -64.27000046292,
+    18.750000260999986
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – British Virgin Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VGB",
+    "GCHD:country": "British Virgin Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -64.8500004606,
+            18.306666929439984
+          ],
+          [
+            -64.27000046292,
+            18.306666929439984
+          ],
+          [
+            -64.27000046292,
+            18.750000260999986
+          ],
+          [
+            -64.8500004606,
+            18.750000260999986
+          ],
+          [
+            -64.8500004606,
+            18.306666929439984
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -64.8500004606,
+      18.306666929439984,
+      -64.27000046292,
+      18.750000260999986
+    ],
+    "proj:shape": [
+      532,
+      696
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -64.8500004606,
+      0.0,
+      -0.00083333333,
+      18.750000260999986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/vgb_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – British Virgin Islands (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7120631622389435,
+            "minimum": 3.999999989900971e-6,
+            "maximum": 5.85271692276001,
+            "stddev": 1.015248786521513,
+            "valid_percent": 2.7479798634517327
+          },
+          "histogram": {
+            "count": 11,
+            "min": 3.999999989900971e-6,
+            "max": 5.85271692276001,
+            "buckets": [
+              6491,
+              1263,
+              906,
+              572,
+              476,
+              231,
+              109,
+              65,
+              43,
+              19
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/vgb.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/vgb_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

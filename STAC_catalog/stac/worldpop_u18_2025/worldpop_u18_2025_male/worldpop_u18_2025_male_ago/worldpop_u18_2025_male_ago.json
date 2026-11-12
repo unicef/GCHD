@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_ago",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          11.669165899989997,
+          -4.3883329797800155
+        ],
+        [
+          24.086665850319996,
+          -4.3883329797800155
+        ],
+        [
+          24.086665850319996,
+          -18.038332925180015
+        ],
+        [
+          11.669165899989997,
+          -18.038332925180015
+        ],
+        [
+          11.669165899989997,
+          -4.3883329797800155
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    11.669165899989997,
+    -18.038332925180015,
+    24.086665850319996,
+    -4.3883329797800155
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Angola",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AGO",
+    "GCHD:country": "Angola",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.669165899989997,
+            -18.038332925180015
+          ],
+          [
+            24.086665850319996,
+            -18.038332925180015
+          ],
+          [
+            24.086665850319996,
+            -4.3883329797800155
+          ],
+          [
+            11.669165899989997,
+            -4.3883329797800155
+          ],
+          [
+            11.669165899989997,
+            -18.038332925180015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      11.669165899989997,
+      -18.038332925180015,
+      24.086665850319996,
+      -4.3883329797800155
+    ],
+    "proj:shape": [
+      16380,
+      14901
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      11.669165899989997,
+      0.0,
+      -0.00083333333,
+      -4.3883329797800155,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/ago_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Angola (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.35972808944333423,
+            "minimum": 0.0,
+            "maximum": 80.85737609863281,
+            "stddev": 1.4456506030970264,
+            "valid_percent": 28.419016563841204
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 80.85737609863281,
+            "buckets": [
+              270303,
+              481,
+              212,
+              104,
+              43,
+              26,
+              21,
+              15,
+              10,
+              7
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/ago.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/ago_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

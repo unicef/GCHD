@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_som",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          40.99083244937,
+          11.988333621379986
+        ],
+        [
+          51.414999074339995,
+          11.988333621379986
+        ],
+        [
+          51.414999074339995,
+          -1.662499657350013
+        ],
+        [
+          40.99083244937,
+          -1.662499657350013
+        ],
+        [
+          40.99083244937,
+          11.988333621379986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    40.99083244937,
+    -1.662499657350013,
+    51.414999074339995,
+    11.988333621379986
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Somalia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SOM",
+    "GCHD:country": "Somalia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.99083244937,
+            -1.662499657350013
+          ],
+          [
+            51.414999074339995,
+            -1.662499657350013
+          ],
+          [
+            51.414999074339995,
+            11.988333621379986
+          ],
+          [
+            40.99083244937,
+            11.988333621379986
+          ],
+          [
+            40.99083244937,
+            -1.662499657350013
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      40.99083244937,
+      -1.662499657350013,
+      51.414999074339995,
+      11.988333621379986
+    ],
+    "proj:shape": [
+      16381,
+      12509
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      40.99083244937,
+      0.0,
+      -0.00083333333,
+      11.988333621379986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/som_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Somalia (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.5430869510501096,
+            "minimum": 0.0,
+            "maximum": 116.9197769165039,
+            "stddev": 1.6923345460711667,
+            "valid_percent": 24.497732177109974
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 116.9197769165039,
+            "buckets": [
+              195735,
+              252,
+              92,
+              27,
+              20,
+              20,
+              19,
+              2,
+              1,
+              2
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/som.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/som_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

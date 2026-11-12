@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_omn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          52.000832405329994,
+          26.507500229969985
+        ],
+        [
+          59.839165707309995,
+          26.507500229969985
+        ],
+        [
+          59.839165707309995,
+          16.650833602729985
+        ],
+        [
+          52.000832405329994,
+          16.650833602729985
+        ],
+        [
+          52.000832405329994,
+          26.507500229969985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    52.000832405329994,
+    16.650833602729985,
+    59.839165707309995,
+    26.507500229969985
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Oman",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "OMN",
+    "GCHD:country": "Oman",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.000832405329994,
+            16.650833602729985
+          ],
+          [
+            59.839165707309995,
+            16.650833602729985
+          ],
+          [
+            59.839165707309995,
+            26.507500229969985
+          ],
+          [
+            52.000832405329994,
+            26.507500229969985
+          ],
+          [
+            52.000832405329994,
+            16.650833602729985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      52.000832405329994,
+      16.650833602729985,
+      59.839165707309995,
+      26.507500229969985
+    ],
+    "proj:shape": [
+      11828,
+      9406
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      52.000832405329994,
+      0.0,
+      -0.00083333333,
+      26.507500229969985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/omn_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Oman (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.20077640510896025,
+            "minimum": 0.0,
+            "maximum": 6.247313499450684,
+            "stddev": 0.40970822181637845,
+            "valid_percent": 5.168591832822086
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 6.247313499450684,
+            "buckets": [
+              39884,
+              1896,
+              750,
+              314,
+              161,
+              84,
+              15,
+              19,
+              7,
+              5
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/omn.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/omn_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

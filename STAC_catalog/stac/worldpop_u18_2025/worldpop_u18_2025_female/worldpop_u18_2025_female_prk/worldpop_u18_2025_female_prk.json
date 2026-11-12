@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_prk",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          124.18083211660999,
+          43.010000163959994
+        ],
+        [
+          130.69749875720998,
+          43.010000163959994
+        ],
+        [
+          130.69749875720998,
+          37.67666685195999
+        ],
+        [
+          124.18083211660999,
+          37.67666685195999
+        ],
+        [
+          124.18083211660999,
+          43.010000163959994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    124.18083211660999,
+    37.67666685195999,
+    130.69749875720998,
+    43.010000163959994
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Democratic People's Republic of Korea",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PRK",
+    "GCHD:country": "Democratic People's Republic of Korea",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            124.18083211660999,
+            37.67666685195999
+          ],
+          [
+            130.69749875720998,
+            37.67666685195999
+          ],
+          [
+            130.69749875720998,
+            43.010000163959994
+          ],
+          [
+            124.18083211660999,
+            43.010000163959994
+          ],
+          [
+            124.18083211660999,
+            37.67666685195999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      124.18083211660999,
+      37.67666685195999,
+      130.69749875720998,
+      43.010000163959994
+    ],
+    "proj:shape": [
+      6400,
+      7820
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      124.18083211660999,
+      0.0,
+      -0.00083333333,
+      43.010000163959994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/prk_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Democratic People's Republic of Korea (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.8605439963152836,
+            "minimum": 0.0,
+            "maximum": 48.03254318237305,
+            "stddev": 1.9720902310686308,
+            "valid_percent": 10.17161427294398
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 48.03254318237305,
+            "buckets": [
+              84714,
+              1641,
+              615,
+              262,
+              98,
+              38,
+              14,
+              4,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/prk.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/prk_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

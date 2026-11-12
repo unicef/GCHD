@@ -1413,7 +1413,7 @@
     "items_geojson": {
       "href": "./items.geojson",
       "type": "application/geo+json",
-      "title": "Item index (GeoJSON FeatureCollection, all tiles)",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
       "roles": [
         "metadata"
       ]
@@ -1421,7 +1421,7 @@
     "items_parquet": {
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
-      "title": "Item index (stac-geoparquet, all tiles)",
+      "title": "Item index (stac-geoparquet, all items)",
       "roles": [
         "metadata"
       ]

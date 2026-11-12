@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_asm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -170.84583336995001,
+          -14.155832940710017
+        ],
+        [
+          -169.41833337566,
+          -14.155832940710017
+        ],
+        [
+          -169.41833337566,
+          -14.373332939840017
+        ],
+        [
+          -170.84583336995001,
+          -14.373332939840017
+        ],
+        [
+          -170.84583336995001,
+          -14.155832940710017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -170.84583336995001,
+    -14.373332939840017,
+    -169.41833337566,
+    -14.155832940710017
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – American Samoa (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ASM",
+    "GCHD:country": "American Samoa (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -170.84583336995001,
+            -14.373332939840017
+          ],
+          [
+            -169.41833337566,
+            -14.373332939840017
+          ],
+          [
+            -169.41833337566,
+            -14.155832940710017
+          ],
+          [
+            -170.84583336995001,
+            -14.155832940710017
+          ],
+          [
+            -170.84583336995001,
+            -14.373332939840017
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -170.84583336995001,
+      -14.373332939840017,
+      -169.41833337566,
+      -14.155832940710017
+    ],
+    "proj:shape": [
+      261,
+      1713
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -170.84583336995001,
+      0.0,
+      -0.00083333333,
+      -14.155832940710017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/asm_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – American Samoa (USA) (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7431007956288344,
+            "minimum": 0.0,
+            "maximum": 4.931492805480957,
+            "stddev": 0.7450866533996271,
+            "valid_percent": 2.5347083996815285
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 4.931492805480957,
+            "buckets": [
+              2115,
+              699,
+              628,
+              292,
+              223,
+              82,
+              13,
+              5,
+              5,
+              13
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/asm.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/asm_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

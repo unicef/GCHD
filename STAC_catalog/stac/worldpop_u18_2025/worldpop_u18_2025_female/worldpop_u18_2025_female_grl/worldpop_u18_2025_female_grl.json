@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_grl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -73.25166709366,
+          83.66166666802
+        ],
+        [
+          -11.351667341260004,
+          83.66166666802
+        ],
+        [
+          -11.351667341260004,
+          59.745000097020004
+        ],
+        [
+          -73.25166709366,
+          59.745000097020004
+        ],
+        [
+          -73.25166709366,
+          83.66166666802
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -73.25166709366,
+    59.745000097020004,
+    -11.351667341260004,
+    83.66166666802
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Greenland",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GRL",
+    "GCHD:country": "Greenland",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -73.25166709366,
+            59.745000097020004
+          ],
+          [
+            -11.351667341260004,
+            59.745000097020004
+          ],
+          [
+            -11.351667341260004,
+            83.66166666802
+          ],
+          [
+            -73.25166709366,
+            83.66166666802
+          ],
+          [
+            -73.25166709366,
+            59.745000097020004
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -73.25166709366,
+      59.745000097020004,
+      -11.351667341260004,
+      83.66166666802
+    ],
+    "proj:shape": [
+      28700,
+      74280
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -73.25166709366,
+      0.0,
+      -0.00083333333,
+      83.66166666802,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/grl_F_Under_18_2024_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Greenland (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.5732361381575906,
+            "minimum": 0.00006577970634680241,
+            "maximum": 18.427396774291992,
+            "stddev": 1.4862481557804388,
+            "valid_percent": 0.04167653093434343
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.00006577970634680241,
+            "max": 18.427396774291992,
+            "buckets": [
+              160,
+              8,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/grl.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/grl_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

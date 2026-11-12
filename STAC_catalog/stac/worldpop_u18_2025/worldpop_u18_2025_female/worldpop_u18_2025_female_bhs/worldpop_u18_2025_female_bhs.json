@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_bhs",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -80.47166706478001,
+          27.270833560249987
+        ],
+        [
+          -72.71250042915001,
+          27.270833560249987
+        ],
+        [
+          -72.71250042915001,
+          20.912500252349986
+        ],
+        [
+          -80.47166706478001,
+          20.912500252349986
+        ],
+        [
+          -80.47166706478001,
+          27.270833560249987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -80.47166706478001,
+    20.912500252349986,
+    -72.71250042915001,
+    27.270833560249987
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Bahamas",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BHS",
+    "GCHD:country": "Bahamas",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -80.47166706478001,
+            20.912500252349986
+          ],
+          [
+            -72.71250042915001,
+            20.912500252349986
+          ],
+          [
+            -72.71250042915001,
+            27.270833560249987
+          ],
+          [
+            -80.47166706478001,
+            27.270833560249987
+          ],
+          [
+            -80.47166706478001,
+            20.912500252349986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -80.47166706478001,
+      20.912500252349986,
+      -72.71250042915001,
+      27.270833560249987
+    ],
+    "proj:shape": [
+      7630,
+      9311
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -80.47166706478001,
+      0.0,
+      -0.00083333333,
+      27.270833560249987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/bhs_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Bahamas (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.10338043345818111,
+            "minimum": 0.0,
+            "maximum": 6.430820465087891,
+            "stddev": 0.41168442696842866,
+            "valid_percent": 0.8274042038690477
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 6.430820465087891,
+            "buckets": [
+              6919,
+              78,
+              30,
+              20,
+              26,
+              21,
+              13,
+              5,
+              2,
+              3
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/bhs.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/bhs_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

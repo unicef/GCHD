@@ -2,7 +2,7 @@
   "type": "Catalog",
   "id": "GCHD",
   "stac_version": "1.1.0",
-  "description": "The **Global Children's Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict.\n\nEvery layer is a Cloud-Optimized GeoTIFF that can be streamed directly into GIS tools or analysis code. Processing scripts and documentation: https://github.com/unicef/GCHD",
+  "description": "The **Global Children's Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It also includes WorldPop gridded estimates of the population under 18 (female, male and total), the basis for exposure analysis.\n\nEvery layer is a Cloud-Optimized GeoTIFF that can be streamed directly into GIS tools or analysis code. Processing scripts and documentation: https://github.com/unicef/GCHD",
   "links": [
     {
       "rel": "root",
@@ -81,6 +81,12 @@
       "href": "./volcano/collection.json",
       "type": "application/json",
       "title": "Volcanoes"
+    },
+    {
+      "rel": "child",
+      "href": "./worldpop_u18_2025/collection.json",
+      "type": "application/json",
+      "title": "WorldPop U18 population 2025"
     }
   ],
   "title": "UNICEF Global Children's Hazard Database"

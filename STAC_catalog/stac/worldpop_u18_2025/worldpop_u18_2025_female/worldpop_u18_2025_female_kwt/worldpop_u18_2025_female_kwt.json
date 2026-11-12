@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_kwt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          46.55333242712,
+          30.104166882249988
+        ],
+        [
+          48.65416575205,
+          30.104166882249988
+        ],
+        [
+          48.65416575205,
+          28.525000221899987
+        ],
+        [
+          46.55333242712,
+          28.525000221899987
+        ],
+        [
+          46.55333242712,
+          30.104166882249988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    46.55333242712,
+    28.525000221899987,
+    48.65416575205,
+    30.104166882249988
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Kuwait",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KWT",
+    "GCHD:country": "Kuwait",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.55333242712,
+            28.525000221899987
+          ],
+          [
+            48.65416575205,
+            28.525000221899987
+          ],
+          [
+            48.65416575205,
+            30.104166882249988
+          ],
+          [
+            46.55333242712,
+            30.104166882249988
+          ],
+          [
+            46.55333242712,
+            28.525000221899987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      46.55333242712,
+      28.525000221899987,
+      48.65416575205,
+      30.104166882249988
+    ],
+    "proj:shape": [
+      1895,
+      2521
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      46.55333242712,
+      0.0,
+      -0.00083333333,
+      30.104166882249988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/kwt_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Kuwait (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.3015640199416343,
+            "minimum": 0.0,
+            "maximum": 14.792303085327148,
+            "stddev": 2.7228345853908063,
+            "valid_percent": 8.604910714285714
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 14.792303085327148,
+            "buckets": [
+              54623,
+              3613,
+              2145,
+              2613,
+              1412,
+              905,
+              309,
+              636,
+              1254,
+              338
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/kwt.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/kwt_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_nld",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          3.358332599899997,
+          53.55333345512
+        ],
+        [
+          7.227499251089997,
+          53.55333345512
+        ],
+        [
+          7.227499251089997,
+          50.750000133
+        ],
+        [
+          3.358332599899997,
+          50.750000133
+        ],
+        [
+          3.358332599899997,
+          53.55333345512
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    3.358332599899997,
+    50.750000133,
+    7.227499251089997,
+    53.55333345512
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Netherlands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NLD",
+    "GCHD:country": "Netherlands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            3.358332599899997,
+            50.750000133
+          ],
+          [
+            7.227499251089997,
+            50.750000133
+          ],
+          [
+            7.227499251089997,
+            53.55333345512
+          ],
+          [
+            3.358332599899997,
+            53.55333345512
+          ],
+          [
+            3.358332599899997,
+            50.750000133
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      3.358332599899997,
+      50.750000133,
+      7.227499251089997,
+      53.55333345512
+    ],
+    "proj:shape": [
+      3364,
+      4643
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      3.358332599899997,
+      0.0,
+      -0.00083333333,
+      53.55333345512,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/nld_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Netherlands (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3235884189575932,
+            "minimum": 0.0,
+            "maximum": 6.6292572021484375,
+            "stddev": 0.6491353186059201,
+            "valid_percent": 35.82444512297844
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 6.6292572021484375,
+            "buckets": [
+              237017,
+              16003,
+              8729,
+              5228,
+              2559,
+              1405,
+              659,
+              356,
+              129,
+              112
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/nld.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/nld_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

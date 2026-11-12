@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_mda",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          26.617499173529996,
+          48.49166680869998
+        ],
+        [
+          30.161665826019995,
+          48.49166680869998
+        ],
+        [
+          30.161665826019995,
+          45.46750015412998
+        ],
+        [
+          26.617499173529996,
+          45.46750015412998
+        ],
+        [
+          26.617499173529996,
+          48.49166680869998
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    26.617499173529996,
+    45.46750015412998,
+    30.161665826019995,
+    48.49166680869998
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Moldova",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MDA",
+    "GCHD:country": "Moldova",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            26.617499173529996,
+            45.46750015412998
+          ],
+          [
+            30.161665826019995,
+            45.46750015412998
+          ],
+          [
+            30.161665826019995,
+            48.49166680869998
+          ],
+          [
+            26.617499173529996,
+            48.49166680869998
+          ],
+          [
+            26.617499173529996,
+            45.46750015412998
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      26.617499173529996,
+      45.46750015412998,
+      30.161665826019995,
+      48.49166680869998
+    ],
+    "proj:shape": [
+      3629,
+      4253
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      26.617499173529996,
+      0.0,
+      -0.00083333333,
+      48.49166680869998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/mda_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Moldova (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3706777650244181,
+            "minimum": 0.0,
+            "maximum": 11.06617259979248,
+            "stddev": 0.83806946959737,
+            "valid_percent": 13.08705484839817
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 11.06617259979248,
+            "buckets": [
+              107563,
+              6878,
+              1154,
+              380,
+              314,
+              236,
+              206,
+              240,
+              120,
+              35
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/mda.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/mda_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

@@ -32,7 +32,7 @@ GCHD/
 ├── multi_hazard_indicators/ # Multi-Hazard Count (MHC) and Multi-Hazard Intensity (MHI)
 ├── exposure_analysis/       # Population and boundary data for exposure computation
 ├── web_app/                 # Interactive dashboard (Python Dash + Google Earth Engine)
-├── STAC_catalog/            # STAC catalog of the hazard layers (COGs) and its STAC Browser
+├── STAC_catalog/            # STAC catalog of the hazard and U18 population layers (COGs) and its STAC Browser
 └── index.html               # Public landing page
 ```
 
@@ -76,7 +76,7 @@ Source code is in [`web_app/`](web_app/).
 
 ## Data Catalog (STAC)
 
-All hazard layers are published as Cloud-Optimized GeoTIFFs in a [STAC](https://stacspec.org/) catalog, with metadata, previews and direct download links:
+All hazard layers, and the WorldPop 2025 under-18 population grids (female, male and total, 100 m, one file per country), are published as Cloud-Optimized GeoTIFFs in a [STAC](https://stacspec.org/) catalog, with metadata, previews and direct download links:
 
 - **Browse:** [unicef.github.io/GCHD/STAC_catalog/browser/](https://unicef.github.io/GCHD/STAC_catalog/browser/)
 - **STAC root:** [`catalog.json`](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json)

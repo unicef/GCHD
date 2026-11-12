@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_hun",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          16.113332548879995,
+          48.58500014165999
+        ],
+        [
+          22.895832521749995,
+          48.58500014165999
+        ],
+        [
+          22.895832521749995,
+          45.73666681971999
+        ],
+        [
+          16.113332548879995,
+          45.73666681971999
+        ],
+        [
+          16.113332548879995,
+          48.58500014165999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    16.113332548879995,
+    45.73666681971999,
+    22.895832521749995,
+    48.58500014165999
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Hungary",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "HUN",
+    "GCHD:country": "Hungary",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.113332548879995,
+            45.73666681971999
+          ],
+          [
+            22.895832521749995,
+            45.73666681971999
+          ],
+          [
+            22.895832521749995,
+            48.58500014165999
+          ],
+          [
+            16.113332548879995,
+            48.58500014165999
+          ],
+          [
+            16.113332548879995,
+            45.73666681971999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      16.113332548879995,
+      45.73666681971999,
+      22.895832521749995,
+      48.58500014165999
+    ],
+    "proj:shape": [
+      3418,
+      8139
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      16.113332548879995,
+      0.0,
+      -0.00083333333,
+      48.58500014165999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/hun_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Hungary (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.10807386034997003,
+            "minimum": 0.0,
+            "maximum": 7.885117530822754,
+            "stddev": 0.3192190326171741,
+            "valid_percent": 32.51386673433875
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 7.885117530822754,
+            "buckets": [
+              139077,
+              2926,
+              900,
+              330,
+              165,
+              58,
+              22,
+              12,
+              5,
+              3
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/hun.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/hun_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

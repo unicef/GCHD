@@ -1,0 +1,1318 @@
+{
+  "type": "Collection",
+  "id": "worldpop_u18_2025_total",
+  "stac_version": "1.1.0",
+  "description": "Estimated number of children under 18 per ~100 m grid cell in 2025 (WorldPop R2025A, constrained), one item per country.\n\nEstimated number of children under 18 per ~100 m grid cell (3 arc-seconds) in 2025, from the WorldPop R2025A constrained (`CN`) population estimates. Constrained means people are only allocated to cells mapped as built settlement; all other cells are nodata.\n\nThe data are one Cloud-Optimized GeoTIFF per country, served from their original location on Azure, with one STAC item per country. The `mosaic` asset of each group is a GDAL VRT over all country files, for global access with a single URL.\n\nUnits: people per grid cell. Nodata: -99999. License: CC-BY-4.0. Citation: WorldPop (www.worldpop.org), R2025A.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_abw/worldpop_u18_2025_total_abw.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_afg/worldpop_u18_2025_total_afg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ago/worldpop_u18_2025_total_ago.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_aia/worldpop_u18_2025_total_aia.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ala/worldpop_u18_2025_total_ala.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_alb/worldpop_u18_2025_total_alb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_and/worldpop_u18_2025_total_and.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_are/worldpop_u18_2025_total_are.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_arg/worldpop_u18_2025_total_arg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_arm/worldpop_u18_2025_total_arm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_asm/worldpop_u18_2025_total_asm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_atg/worldpop_u18_2025_total_atg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_aus/worldpop_u18_2025_total_aus.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_aut/worldpop_u18_2025_total_aut.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_aze/worldpop_u18_2025_total_aze.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bdi/worldpop_u18_2025_total_bdi.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bel/worldpop_u18_2025_total_bel.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ben/worldpop_u18_2025_total_ben.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bes/worldpop_u18_2025_total_bes.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bfa/worldpop_u18_2025_total_bfa.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bgd/worldpop_u18_2025_total_bgd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bgr/worldpop_u18_2025_total_bgr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bhr/worldpop_u18_2025_total_bhr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bhs/worldpop_u18_2025_total_bhs.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bih/worldpop_u18_2025_total_bih.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_blm/worldpop_u18_2025_total_blm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_blr/worldpop_u18_2025_total_blr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_blz/worldpop_u18_2025_total_blz.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bmu/worldpop_u18_2025_total_bmu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bol/worldpop_u18_2025_total_bol.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bra/worldpop_u18_2025_total_bra.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_brb/worldpop_u18_2025_total_brb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_brn/worldpop_u18_2025_total_brn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_btn/worldpop_u18_2025_total_btn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_bwa/worldpop_u18_2025_total_bwa.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_caf/worldpop_u18_2025_total_caf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_can/worldpop_u18_2025_total_can.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_che/worldpop_u18_2025_total_che.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_chl/worldpop_u18_2025_total_chl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_chn/worldpop_u18_2025_total_chn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_civ/worldpop_u18_2025_total_civ.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cmr/worldpop_u18_2025_total_cmr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cod/worldpop_u18_2025_total_cod.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cog/worldpop_u18_2025_total_cog.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cok/worldpop_u18_2025_total_cok.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_col/worldpop_u18_2025_total_col.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_com/worldpop_u18_2025_total_com.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cpv/worldpop_u18_2025_total_cpv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cri/worldpop_u18_2025_total_cri.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cub/worldpop_u18_2025_total_cub.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cuw/worldpop_u18_2025_total_cuw.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cym/worldpop_u18_2025_total_cym.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cyp/worldpop_u18_2025_total_cyp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_cze/worldpop_u18_2025_total_cze.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_deu/worldpop_u18_2025_total_deu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_dji/worldpop_u18_2025_total_dji.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_dma/worldpop_u18_2025_total_dma.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_dnk/worldpop_u18_2025_total_dnk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_dom/worldpop_u18_2025_total_dom.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_dza/worldpop_u18_2025_total_dza.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ecu/worldpop_u18_2025_total_ecu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_egy/worldpop_u18_2025_total_egy.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_eri/worldpop_u18_2025_total_eri.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_esh/worldpop_u18_2025_total_esh.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_esp/worldpop_u18_2025_total_esp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_est/worldpop_u18_2025_total_est.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_eth/worldpop_u18_2025_total_eth.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_fin/worldpop_u18_2025_total_fin.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_fji/worldpop_u18_2025_total_fji.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_flk/worldpop_u18_2025_total_flk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_fra/worldpop_u18_2025_total_fra.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_fro/worldpop_u18_2025_total_fro.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_fsm/worldpop_u18_2025_total_fsm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gab/worldpop_u18_2025_total_gab.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gbr/worldpop_u18_2025_total_gbr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_geo/worldpop_u18_2025_total_geo.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ggy/worldpop_u18_2025_total_ggy.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gha/worldpop_u18_2025_total_gha.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gib/worldpop_u18_2025_total_gib.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gin/worldpop_u18_2025_total_gin.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_glp/worldpop_u18_2025_total_glp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gmb/worldpop_u18_2025_total_gmb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gnb/worldpop_u18_2025_total_gnb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gnq/worldpop_u18_2025_total_gnq.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_grc/worldpop_u18_2025_total_grc.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_grd/worldpop_u18_2025_total_grd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_grl/worldpop_u18_2025_total_grl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gtm/worldpop_u18_2025_total_gtm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_guf/worldpop_u18_2025_total_guf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_gum/worldpop_u18_2025_total_gum.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_guy/worldpop_u18_2025_total_guy.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_hkg/worldpop_u18_2025_total_hkg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_hnd/worldpop_u18_2025_total_hnd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_hrv/worldpop_u18_2025_total_hrv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_hti/worldpop_u18_2025_total_hti.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_hun/worldpop_u18_2025_total_hun.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_idn/worldpop_u18_2025_total_idn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_imn/worldpop_u18_2025_total_imn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ind/worldpop_u18_2025_total_ind.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_irl/worldpop_u18_2025_total_irl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_irn/worldpop_u18_2025_total_irn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_irq/worldpop_u18_2025_total_irq.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_isl/worldpop_u18_2025_total_isl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_isr/worldpop_u18_2025_total_isr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ita/worldpop_u18_2025_total_ita.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_jam/worldpop_u18_2025_total_jam.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_jey/worldpop_u18_2025_total_jey.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_jor/worldpop_u18_2025_total_jor.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_jpn/worldpop_u18_2025_total_jpn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kaz/worldpop_u18_2025_total_kaz.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ken/worldpop_u18_2025_total_ken.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kgz/worldpop_u18_2025_total_kgz.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_khm/worldpop_u18_2025_total_khm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kir/worldpop_u18_2025_total_kir.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kna/worldpop_u18_2025_total_kna.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kor/worldpop_u18_2025_total_kor.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_kwt/worldpop_u18_2025_total_kwt.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lao/worldpop_u18_2025_total_lao.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lbn/worldpop_u18_2025_total_lbn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lbr/worldpop_u18_2025_total_lbr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lby/worldpop_u18_2025_total_lby.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lca/worldpop_u18_2025_total_lca.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lie/worldpop_u18_2025_total_lie.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lka/worldpop_u18_2025_total_lka.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lso/worldpop_u18_2025_total_lso.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ltu/worldpop_u18_2025_total_ltu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lux/worldpop_u18_2025_total_lux.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_lva/worldpop_u18_2025_total_lva.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mac/worldpop_u18_2025_total_mac.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_maf/worldpop_u18_2025_total_maf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mar/worldpop_u18_2025_total_mar.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mco/worldpop_u18_2025_total_mco.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mda/worldpop_u18_2025_total_mda.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mdg/worldpop_u18_2025_total_mdg.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mdv/worldpop_u18_2025_total_mdv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mex/worldpop_u18_2025_total_mex.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mhl/worldpop_u18_2025_total_mhl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mkd/worldpop_u18_2025_total_mkd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mli/worldpop_u18_2025_total_mli.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mlt/worldpop_u18_2025_total_mlt.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mmr/worldpop_u18_2025_total_mmr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mne/worldpop_u18_2025_total_mne.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mng/worldpop_u18_2025_total_mng.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mnp/worldpop_u18_2025_total_mnp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_moz/worldpop_u18_2025_total_moz.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mrt/worldpop_u18_2025_total_mrt.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_msr/worldpop_u18_2025_total_msr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mtq/worldpop_u18_2025_total_mtq.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mus/worldpop_u18_2025_total_mus.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mwi/worldpop_u18_2025_total_mwi.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_mys/worldpop_u18_2025_total_mys.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_myt/worldpop_u18_2025_total_myt.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nam/worldpop_u18_2025_total_nam.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ncl/worldpop_u18_2025_total_ncl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ner/worldpop_u18_2025_total_ner.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nfk/worldpop_u18_2025_total_nfk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nga/worldpop_u18_2025_total_nga.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nic/worldpop_u18_2025_total_nic.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_niu/worldpop_u18_2025_total_niu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nld/worldpop_u18_2025_total_nld.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nor/worldpop_u18_2025_total_nor.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_npl/worldpop_u18_2025_total_npl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nru/worldpop_u18_2025_total_nru.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_nzl/worldpop_u18_2025_total_nzl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_omn/worldpop_u18_2025_total_omn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pak/worldpop_u18_2025_total_pak.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pan/worldpop_u18_2025_total_pan.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pcn/worldpop_u18_2025_total_pcn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_per/worldpop_u18_2025_total_per.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_phl/worldpop_u18_2025_total_phl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_plw/worldpop_u18_2025_total_plw.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_png/worldpop_u18_2025_total_png.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pol/worldpop_u18_2025_total_pol.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pri/worldpop_u18_2025_total_pri.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_prk/worldpop_u18_2025_total_prk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_prt/worldpop_u18_2025_total_prt.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pry/worldpop_u18_2025_total_pry.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pse/worldpop_u18_2025_total_pse.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_pyf/worldpop_u18_2025_total_pyf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_qat/worldpop_u18_2025_total_qat.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_reu/worldpop_u18_2025_total_reu.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_rou/worldpop_u18_2025_total_rou.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_rus/worldpop_u18_2025_total_rus.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_rwa/worldpop_u18_2025_total_rwa.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sau/worldpop_u18_2025_total_sau.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sdn/worldpop_u18_2025_total_sdn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sen/worldpop_u18_2025_total_sen.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sgp/worldpop_u18_2025_total_sgp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_shn/worldpop_u18_2025_total_shn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sjm/worldpop_u18_2025_total_sjm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_slb/worldpop_u18_2025_total_slb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sle/worldpop_u18_2025_total_sle.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_slv/worldpop_u18_2025_total_slv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_smr/worldpop_u18_2025_total_smr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_som/worldpop_u18_2025_total_som.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_spm/worldpop_u18_2025_total_spm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_srb/worldpop_u18_2025_total_srb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ssd/worldpop_u18_2025_total_ssd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_stp/worldpop_u18_2025_total_stp.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sur/worldpop_u18_2025_total_sur.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_svk/worldpop_u18_2025_total_svk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_svn/worldpop_u18_2025_total_svn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_swe/worldpop_u18_2025_total_swe.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_swz/worldpop_u18_2025_total_swz.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_sxm/worldpop_u18_2025_total_sxm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_syc/worldpop_u18_2025_total_syc.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_syr/worldpop_u18_2025_total_syr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tca/worldpop_u18_2025_total_tca.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tcd/worldpop_u18_2025_total_tcd.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tgo/worldpop_u18_2025_total_tgo.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tha/worldpop_u18_2025_total_tha.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tjk/worldpop_u18_2025_total_tjk.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tkl/worldpop_u18_2025_total_tkl.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tkm/worldpop_u18_2025_total_tkm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tls/worldpop_u18_2025_total_tls.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ton/worldpop_u18_2025_total_ton.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tto/worldpop_u18_2025_total_tto.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tun/worldpop_u18_2025_total_tun.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tur/worldpop_u18_2025_total_tur.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tuv/worldpop_u18_2025_total_tuv.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_twn/worldpop_u18_2025_total_twn.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_tza/worldpop_u18_2025_total_tza.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_uga/worldpop_u18_2025_total_uga.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ukr/worldpop_u18_2025_total_ukr.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ury/worldpop_u18_2025_total_ury.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_usa/worldpop_u18_2025_total_usa.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_uzb/worldpop_u18_2025_total_uzb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_vct/worldpop_u18_2025_total_vct.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_ven/worldpop_u18_2025_total_ven.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_vgb/worldpop_u18_2025_total_vgb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_vir/worldpop_u18_2025_total_vir.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_vnm/worldpop_u18_2025_total_vnm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_vut/worldpop_u18_2025_total_vut.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_wlf/worldpop_u18_2025_total_wlf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_wsm/worldpop_u18_2025_total_wsm.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_xkx/worldpop_u18_2025_total_xkx.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_yem/worldpop_u18_2025_total_yem.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_zaf/worldpop_u18_2025_total_zaf.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_zmb/worldpop_u18_2025_total_zmb.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_total_zwe/worldpop_u18_2025_total_zwe.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "WorldPop U18 population 2025"
+    }
+  ],
+  "GCHD:units": "people per grid cell",
+  "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+  "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+  "GCHD:source_release": "R2025A",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+  "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+  "title": "Total U18 population 2025 (WorldPop R2025A)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -56.52583277122999,
+          179.99999856,
+          83.66166666802
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "population",
+    "under 18",
+    "WorldPop",
+    "exposure",
+    "Total U18"
+  ],
+  "providers": [
+    {
+      "name": "WorldPop, University of Southampton",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.worldpop.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Children's Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "mosaic": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_u18_2025/total/mosaic.vrt",
+      "type": "application/xml",
+      "title": "Global mosaic (GDAL VRT over country COGs)",
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../thumbnails/worldpop_u18_2025/total.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../thumbnails/worldpop_u18_2025/total_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all items)",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_grc",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          19.373332535839996,
+          41.75083350232999
+        ],
+        [
+          28.247499167009998,
+          41.75083350232999
+        ],
+        [
+          28.247499167009998,
+          34.80083353012999
+        ],
+        [
+          19.373332535839996,
+          34.80083353012999
+        ],
+        [
+          19.373332535839996,
+          41.75083350232999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    19.373332535839996,
+    34.80083353012999,
+    28.247499167009998,
+    41.75083350232999
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Greece",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GRC",
+    "GCHD:country": "Greece",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.373332535839996,
+            34.80083353012999
+          ],
+          [
+            28.247499167009998,
+            34.80083353012999
+          ],
+          [
+            28.247499167009998,
+            41.75083350232999
+          ],
+          [
+            19.373332535839996,
+            41.75083350232999
+          ],
+          [
+            19.373332535839996,
+            34.80083353012999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      19.373332535839996,
+      34.80083353012999,
+      28.247499167009998,
+      41.75083350232999
+    ],
+    "proj:shape": [
+      8340,
+      10649
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      19.373332535839996,
+      0.0,
+      -0.00083333333,
+      41.75083350232999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/grc_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Greece (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.06162463755829894,
+            "minimum": 0.0,
+            "maximum": 11.747294425964355,
+            "stddev": 0.392815353373611,
+            "valid_percent": 16.78749902587282
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 11.747294425964355,
+            "buckets": [
+              136774,
+              438,
+              212,
+              149,
+              86,
+              75,
+              62,
+              49,
+              16,
+              6
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/grc.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/grc_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

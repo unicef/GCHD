@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_zaf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          16.455832547509996,
+          -22.125832908830024
+        ],
+        [
+          38.00333246132,
+          -22.125832908830024
+        ],
+        [
+          38.00333246132,
+          -46.981666142740025
+        ],
+        [
+          16.455832547509996,
+          -46.981666142740025
+        ],
+        [
+          16.455832547509996,
+          -22.125832908830024
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    16.455832547509996,
+    -46.981666142740025,
+    38.00333246132,
+    -22.125832908830024
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – South Africa",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ZAF",
+    "GCHD:country": "South Africa",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            16.455832547509996,
+            -46.981666142740025
+          ],
+          [
+            38.00333246132,
+            -46.981666142740025
+          ],
+          [
+            38.00333246132,
+            -22.125832908830024
+          ],
+          [
+            16.455832547509996,
+            -22.125832908830024
+          ],
+          [
+            16.455832547509996,
+            -46.981666142740025
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      16.455832547509996,
+      -46.981666142740025,
+      38.00333246132,
+      -22.125832908830024
+    ],
+    "proj:shape": [
+      29827,
+      25857
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      16.455832547509996,
+      0.0,
+      -0.00083333333,
+      -22.125832908830024,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/zaf_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – South Africa (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.11201917423089022,
+            "minimum": 0.0,
+            "maximum": 7.037529468536377,
+            "stddev": 0.34591016488817156,
+            "valid_percent": 18.52763407939189
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 7.037529468536377,
+            "buckets": [
+              164484,
+              2046,
+              740,
+              402,
+              298,
+              221,
+              162,
+              69,
+              28,
+              24
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/zaf.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/zaf_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

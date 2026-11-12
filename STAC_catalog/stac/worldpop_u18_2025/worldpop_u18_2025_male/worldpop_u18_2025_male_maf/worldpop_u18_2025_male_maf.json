@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_maf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -63.153333800720006,
+          18.125000263499988
+        ],
+        [
+          -62.970833801450006,
+          18.125000263499988
+        ],
+        [
+          -62.970833801450006,
+          18.045833597149986
+        ],
+        [
+          -63.153333800720006,
+          18.045833597149986
+        ],
+        [
+          -63.153333800720006,
+          18.125000263499988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -63.153333800720006,
+    18.045833597149986,
+    -62.970833801450006,
+    18.125000263499988
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Saint Martin",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MAF",
+    "GCHD:country": "Saint Martin",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -63.153333800720006,
+            18.045833597149986
+          ],
+          [
+            -62.970833801450006,
+            18.045833597149986
+          ],
+          [
+            -62.970833801450006,
+            18.125000263499988
+          ],
+          [
+            -63.153333800720006,
+            18.125000263499988
+          ],
+          [
+            -63.153333800720006,
+            18.045833597149986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -63.153333800720006,
+      18.045833597149986,
+      -62.970833801450006,
+      18.125000263499988
+    ],
+    "proj:shape": [
+      95,
+      219
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -63.153333800720006,
+      0.0,
+      -0.00083333333,
+      18.125000263499988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/maf_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Saint Martin (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.9003942718588742,
+            "minimum": 0.0,
+            "maximum": 12.588942527770996,
+            "stddev": 1.3162885030585254,
+            "valid_percent": 17.69766882960827
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 12.588942527770996,
+            "buckets": [
+              2859,
+              550,
+              118,
+              68,
+              31,
+              34,
+              15,
+              0,
+              1,
+              6
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/maf.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/maf_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

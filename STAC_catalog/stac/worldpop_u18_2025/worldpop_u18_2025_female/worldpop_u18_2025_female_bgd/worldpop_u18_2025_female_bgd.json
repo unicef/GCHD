@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_bgd",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          88.00916559462999,
+          26.63333356279999
+        ],
+        [
+          92.67916557595,
+          26.63333356279999
+        ],
+        [
+          92.67916557595,
+          20.57583358702999
+        ],
+        [
+          88.00916559462999,
+          20.57583358702999
+        ],
+        [
+          88.00916559462999,
+          26.63333356279999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    88.00916559462999,
+    20.57583358702999,
+    92.67916557595,
+    26.63333356279999
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Bangladesh",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BGD",
+    "GCHD:country": "Bangladesh",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.00916559462999,
+            20.57583358702999
+          ],
+          [
+            92.67916557595,
+            20.57583358702999
+          ],
+          [
+            92.67916557595,
+            26.63333356279999
+          ],
+          [
+            88.00916559462999,
+            26.63333356279999
+          ],
+          [
+            88.00916559462999,
+            20.57583358702999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      88.00916559462999,
+      20.57583358702999,
+      92.67916557595,
+      26.63333356279999
+    ],
+    "proj:shape": [
+      7269,
+      5604
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      88.00916559462999,
+      0.0,
+      -0.00083333333,
+      26.63333356279999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/bgd_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Bangladesh (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.9614619730182985,
+            "minimum": 0.0,
+            "maximum": 38.33921813964844,
+            "stddev": 2.3431730510393862,
+            "valid_percent": 41.498838014240505
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 38.33921813964844,
+            "buckets": [
+              305560,
+              22679,
+              4269,
+              1547,
+              662,
+              271,
+              121,
+              196,
+              218,
+              186
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/bgd.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/bgd_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}
