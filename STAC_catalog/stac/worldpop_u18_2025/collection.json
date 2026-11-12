@@ -1,0 +1,121 @@
+{
+  "type": "Collection",
+  "id": "worldpop_u18_2025",
+  "stac_version": "1.1.0",
+  "description": "Estimated number of children under 18 per ~100 m grid cell (3 arc-seconds) in 2025, from the WorldPop R2025A constrained (`CN`) population estimates. Constrained means people are only allocated to cells mapped as built settlement; all other cells are nodata.\n\nThe data are one Cloud-Optimized GeoTIFF per country, served from their original location on Azure, with one STAC item per country. The `mosaic` asset of each group is a GDAL VRT over all country files, for global access with a single URL.\n\nUnits: people per grid cell. Nodata: -99999. License: CC-BY-4.0. Citation: WorldPop (www.worldpop.org), R2025A.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC BY 4.0"
+    },
+    {
+      "rel": "about",
+      "href": "https://www.worldpop.org/",
+      "type": "text/html",
+      "title": "WorldPop"
+    },
+    {
+      "rel": "child",
+      "href": "./worldpop_u18_2025_female/collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "child",
+      "href": "./worldpop_u18_2025_male/collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "child",
+      "href": "./worldpop_u18_2025_total/collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    }
+  ],
+  "GCHD:units": "people per grid cell",
+  "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+  "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+  "GCHD:source_release": "R2025A",
+  "title": "WorldPop U18 population 2025",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -56.52583277122999,
+          179.99999856,
+          83.66166666802
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "population",
+    "under 18",
+    "WorldPop",
+    "exposure"
+  ],
+  "providers": [
+    {
+      "name": "WorldPop, University of Southampton",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.worldpop.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Children's Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "../../thumbnails/worldpop_u18_2025/total.png",
+      "type": "image/png",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../thumbnails/worldpop_u18_2025/_collection_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  }
+}

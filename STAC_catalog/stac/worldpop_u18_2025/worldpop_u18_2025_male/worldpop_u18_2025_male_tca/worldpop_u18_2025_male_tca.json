@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_tca",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -72.48250043007,
+          21.962500248149986
+        ],
+        [
+          -71.08250043567,
+          21.962500248149986
+        ],
+        [
+          -71.08250043567,
+          21.178333584619985
+        ],
+        [
+          -72.48250043007,
+          21.178333584619985
+        ],
+        [
+          -72.48250043007,
+          21.962500248149986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -72.48250043007,
+    21.178333584619985,
+    -71.08250043567,
+    21.962500248149986
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Turks and Caicos Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "TCA",
+    "GCHD:country": "Turks and Caicos Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -72.48250043007,
+            21.178333584619985
+          ],
+          [
+            -71.08250043567,
+            21.178333584619985
+          ],
+          [
+            -71.08250043567,
+            21.962500248149986
+          ],
+          [
+            -72.48250043007,
+            21.962500248149986
+          ],
+          [
+            -72.48250043007,
+            21.178333584619985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -72.48250043007,
+      21.178333584619985,
+      -71.08250043567,
+      21.962500248149986
+    ],
+    "proj:shape": [
+      941,
+      1680
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -72.48250043007,
+      0.0,
+      -0.00083333333,
+      21.962500248149986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/tca_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Turks and Caicos Islands (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.30586007242532287,
+            "minimum": 9.999999747378752e-6,
+            "maximum": 5.874843120574951,
+            "stddev": 0.5450755566817436,
+            "valid_percent": 0.994596581010453
+          },
+          "histogram": {
+            "count": 11,
+            "min": 9.999999747378752e-6,
+            "max": 5.874843120574951,
+            "buckets": [
+              4989,
+              482,
+              172,
+              98,
+              56,
+              31,
+              11,
+              2,
+              3,
+              2
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/tca.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/tca_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

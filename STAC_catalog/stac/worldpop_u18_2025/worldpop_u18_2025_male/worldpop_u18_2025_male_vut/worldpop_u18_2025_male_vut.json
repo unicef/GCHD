@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_vut",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          166.54166528049998,
+          -13.072499611710015
+        ],
+        [
+          170.23833193238,
+          -13.072499611710015
+        ],
+        [
+          170.23833193238,
+          -20.252499582990016
+        ],
+        [
+          166.54166528049998,
+          -20.252499582990016
+        ],
+        [
+          166.54166528049998,
+          -13.072499611710015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    166.54166528049998,
+    -20.252499582990016,
+    170.23833193238,
+    -13.072499611710015
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Vanuatu",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VUT",
+    "GCHD:country": "Vanuatu",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            166.54166528049998,
+            -20.252499582990016
+          ],
+          [
+            170.23833193238,
+            -20.252499582990016
+          ],
+          [
+            170.23833193238,
+            -13.072499611710015
+          ],
+          [
+            166.54166528049998,
+            -13.072499611710015
+          ],
+          [
+            166.54166528049998,
+            -20.252499582990016
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      166.54166528049998,
+      -20.252499582990016,
+      170.23833193238,
+      -13.072499611710015
+    ],
+    "proj:shape": [
+      8616,
+      4436
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      166.54166528049998,
+      0.0,
+      -0.00083333333,
+      -13.072499611710015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/vut_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Vanuatu (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.45642909954376615,
+            "minimum": 0.0,
+            "maximum": 4.916703224182129,
+            "stddev": 0.4212237735065349,
+            "valid_percent": 1.1452414772727273
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 4.916703224182129,
+            "buckets": [
+              4152,
+              1603,
+              297,
+              66,
+              25,
+              15,
+              12,
+              13,
+              5,
+              4
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/vut.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/vut_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

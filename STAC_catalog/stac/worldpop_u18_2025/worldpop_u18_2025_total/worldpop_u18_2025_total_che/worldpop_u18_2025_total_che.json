@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_che",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.956665922839997,
+          47.807500144769996
+        ],
+        [
+          10.491665904699996,
+          47.807500144769996
+        ],
+        [
+          10.491665904699996,
+          45.81833348606
+        ],
+        [
+          5.956665922839997,
+          45.81833348606
+        ],
+        [
+          5.956665922839997,
+          47.807500144769996
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.956665922839997,
+    45.81833348606,
+    10.491665904699996,
+    47.807500144769996
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Switzerland",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CHE",
+    "GCHD:country": "Switzerland",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.956665922839997,
+            45.81833348606
+          ],
+          [
+            10.491665904699996,
+            45.81833348606
+          ],
+          [
+            10.491665904699996,
+            47.807500144769996
+          ],
+          [
+            5.956665922839997,
+            47.807500144769996
+          ],
+          [
+            5.956665922839997,
+            45.81833348606
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      5.956665922839997,
+      45.81833348606,
+      10.491665904699996,
+      47.807500144769996
+    ],
+    "proj:shape": [
+      2387,
+      5442
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      5.956665922839997,
+      0.0,
+      -0.00083333333,
+      47.807500144769996,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/che_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Switzerland (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.37399328606264026,
+            "minimum": 0.0,
+            "maximum": 25.050474166870117,
+            "stddev": 1.1484397077096478,
+            "valid_percent": 35.10872395833333
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 25.050474166870117,
+            "buckets": [
+              156075,
+              3486,
+              1233,
+              559,
+              227,
+              123,
+              45,
+              21,
+              11,
+              1
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/che.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/che_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

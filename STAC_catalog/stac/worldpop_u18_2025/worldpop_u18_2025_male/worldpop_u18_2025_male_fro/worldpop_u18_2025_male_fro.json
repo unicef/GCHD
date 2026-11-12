@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_fro",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -7.689167355910003,
+          62.39333341975999
+        ],
+        [
+          -6.255834028310003,
+          62.39333341975999
+        ],
+        [
+          -6.255834028310003,
+          61.39083342376999
+        ],
+        [
+          -7.689167355910003,
+          61.39083342376999
+        ],
+        [
+          -7.689167355910003,
+          62.39333341975999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -7.689167355910003,
+    61.39083342376999,
+    -6.255834028310003,
+    62.39333341975999
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Faroe Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "FRO",
+    "GCHD:country": "Faroe Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -7.689167355910003,
+            61.39083342376999
+          ],
+          [
+            -6.255834028310003,
+            61.39083342376999
+          ],
+          [
+            -6.255834028310003,
+            62.39333341975999
+          ],
+          [
+            -7.689167355910003,
+            62.39333341975999
+          ],
+          [
+            -7.689167355910003,
+            61.39083342376999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -7.689167355910003,
+      61.39083342376999,
+      -6.255834028310003,
+      62.39333341975999
+    ],
+    "proj:shape": [
+      1203,
+      1720
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -7.689167355910003,
+      0.0,
+      -0.00083333333,
+      62.39333341975999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/fro_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Faroe Islands (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.444433466261423,
+            "minimum": 0.0,
+            "maximum": 1.915679931640625,
+            "stddev": 0.40447839555014375,
+            "valid_percent": 1.2519612970711298
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.915679931640625,
+            "buckets": [
+              3191,
+              1904,
+              1309,
+              994,
+              689,
+              367,
+              325,
+              231,
+              132,
+              50
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/fro.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/fro_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

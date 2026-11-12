@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_mex",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -118.36416691321,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          32.718333538459994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -118.36416691321,
+    14.534166944529993,
+    -86.71083370649,
+    32.718333538459994
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Mexico",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MEX",
+    "GCHD:country": "Mexico",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.36416691321,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            14.534166944529993
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -118.36416691321,
+      14.534166944529993,
+      -86.71083370649,
+      32.718333538459994
+    ],
+    "proj:shape": [
+      21821,
+      37984
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -118.36416691321,
+      0.0,
+      -0.00083333333,
+      32.718333538459994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/mex_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Mexico (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.28428967303292907,
+            "minimum": 0.0,
+            "maximum": 45.03361511230469,
+            "stddev": 1.1826190226554087,
+            "valid_percent": 26.670767455432937
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 45.03361511230469,
+            "buckets": [
+              159481,
+              713,
+              307,
+              183,
+              101,
+              41,
+              18,
+              9,
+              6,
+              2
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/mex.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/mex_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

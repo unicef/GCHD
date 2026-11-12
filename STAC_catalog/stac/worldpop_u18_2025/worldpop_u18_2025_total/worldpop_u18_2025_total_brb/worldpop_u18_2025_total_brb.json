@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_brb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -59.65083381473,
+          13.335000282659987
+        ],
+        [
+          -59.42000048232,
+          13.335000282659987
+        ],
+        [
+          -59.42000048232,
+          13.045000283819986
+        ],
+        [
+          -59.65083381473,
+          13.045000283819986
+        ],
+        [
+          -59.65083381473,
+          13.335000282659987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -59.65083381473,
+    13.045000283819986,
+    -59.42000048232,
+    13.335000282659987
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Barbados",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BRB",
+    "GCHD:country": "Barbados",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -59.65083381473,
+            13.045000283819986
+          ],
+          [
+            -59.42000048232,
+            13.045000283819986
+          ],
+          [
+            -59.42000048232,
+            13.335000282659987
+          ],
+          [
+            -59.65083381473,
+            13.335000282659987
+          ],
+          [
+            -59.65083381473,
+            13.045000283819986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -59.65083381473,
+      13.045000283819986,
+      -59.42000048232,
+      13.335000282659987
+    ],
+    "proj:shape": [
+      348,
+      277
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -59.65083381473,
+      0.0,
+      -0.00083333333,
+      13.335000282659987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/brb_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Barbados (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.501758634430614,
+            "minimum": 0.0,
+            "maximum": 7.341587066650391,
+            "stddev": 1.7681960211325702,
+            "valid_percent": 40.92078509481721
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 7.341587066650391,
+            "buckets": [
+              20199,
+              5096,
+              3765,
+              3174,
+              2271,
+              1649,
+              987,
+              571,
+              564,
+              1170
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/brb.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/brb_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

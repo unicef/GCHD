@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_spm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -56.405000494380005,
+          47.144166814089985
+        ],
+        [
+          -56.125833828830004,
+          47.144166814089985
+        ],
+        [
+          -56.125833828830004,
+          46.75083348232999
+        ],
+        [
+          -56.405000494380005,
+          46.75083348232999
+        ],
+        [
+          -56.405000494380005,
+          47.144166814089985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -56.405000494380005,
+    46.75083348232999,
+    -56.125833828830004,
+    47.144166814089985
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Saint Pierre et Miquelon",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SPM",
+    "GCHD:country": "Saint Pierre et Miquelon",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -56.405000494380005,
+            46.75083348232999
+          ],
+          [
+            -56.125833828830004,
+            46.75083348232999
+          ],
+          [
+            -56.125833828830004,
+            47.144166814089985
+          ],
+          [
+            -56.405000494380005,
+            47.144166814089985
+          ],
+          [
+            -56.405000494380005,
+            46.75083348232999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -56.405000494380005,
+      46.75083348232999,
+      -56.125833828830004,
+      47.144166814089985
+    ],
+    "proj:shape": [
+      472,
+      335
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -56.405000494380005,
+      0.0,
+      -0.00083333333,
+      47.144166814089985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/spm_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Saint Pierre et Miquelon (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.6214324306846809,
+            "minimum": 0.0,
+            "maximum": 3.625430107116699,
+            "stddev": 0.8257749134239352,
+            "valid_percent": 0.9884897546167467
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 3.625430107116699,
+            "buckets": [
+              872,
+              202,
+              183,
+              174,
+              6,
+              16,
+              27,
+              5,
+              1,
+              77
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/spm.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/spm_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

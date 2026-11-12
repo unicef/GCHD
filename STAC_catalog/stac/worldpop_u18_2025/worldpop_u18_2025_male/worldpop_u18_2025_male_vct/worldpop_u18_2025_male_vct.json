@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_vct",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -61.460833807490005,
+          13.382500282469985
+        ],
+        [
+          -61.11500047554001,
+          13.382500282469985
+        ],
+        [
+          -61.11500047554001,
+          12.532500285869986
+        ],
+        [
+          -61.460833807490005,
+          12.532500285869986
+        ],
+        [
+          -61.460833807490005,
+          13.382500282469985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -61.460833807490005,
+    12.532500285869986,
+    -61.11500047554001,
+    13.382500282469985
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Saint Vincent and the Grenadines",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VCT",
+    "GCHD:country": "Saint Vincent and the Grenadines",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.460833807490005,
+            12.532500285869986
+          ],
+          [
+            -61.11500047554001,
+            12.532500285869986
+          ],
+          [
+            -61.11500047554001,
+            13.382500282469985
+          ],
+          [
+            -61.460833807490005,
+            13.382500282469985
+          ],
+          [
+            -61.460833807490005,
+            12.532500285869986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -61.460833807490005,
+      12.532500285869986,
+      -61.11500047554001,
+      13.382500282469985
+    ],
+    "proj:shape": [
+      1020,
+      415
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -61.460833807490005,
+      0.0,
+      -0.00083333333,
+      13.382500282469985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/vct_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Saint Vincent and the Grenadines (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7392430270059541,
+            "minimum": 0.0,
+            "maximum": 5.766915798187256,
+            "stddev": 0.9068188349778922,
+            "valid_percent": 4.16607606898181
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 5.766915798187256,
+            "buckets": [
+              11351,
+              2451,
+              1461,
+              985,
+              629,
+              351,
+              216,
+              119,
+              56,
+              16
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/vct.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/vct_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

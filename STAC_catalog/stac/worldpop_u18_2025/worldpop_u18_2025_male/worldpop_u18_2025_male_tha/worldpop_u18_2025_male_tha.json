@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_tha",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          97.34333222395999,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          20.465833587469987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    97.34333222395999,
+    5.612500313549987,
+    105.63749885745,
+    20.465833587469987
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Thailand",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "THA",
+    "GCHD:country": "Thailand",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            97.34333222395999,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            5.612500313549987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      97.34333222395999,
+      5.612500313549987,
+      105.63749885745,
+      20.465833587469987
+    ],
+    "proj:shape": [
+      17824,
+      9953
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      97.34333222395999,
+      0.0,
+      -0.00083333333,
+      20.465833587469987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/tha_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Thailand (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.16975663161598697,
+            "minimum": 0.0,
+            "maximum": 16.61166763305664,
+            "stddev": 0.4647653023528673,
+            "valid_percent": 29.869666466346157
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 16.61166763305664,
+            "buckets": [
+              173129,
+              1050,
+              385,
+              185,
+              102,
+              50,
+              31,
+              14,
+              7,
+              2
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/tha.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/tha_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

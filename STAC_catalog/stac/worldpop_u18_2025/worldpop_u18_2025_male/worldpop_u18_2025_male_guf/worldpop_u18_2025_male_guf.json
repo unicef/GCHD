@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_guf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -54.55500050178,
+          5.758333646299986
+        ],
+        [
+          -51.62000051352,
+          5.758333646299986
+        ],
+        [
+          -51.62000051352,
+          2.1091669942299864
+        ],
+        [
+          -54.55500050178,
+          2.1091669942299864
+        ],
+        [
+          -54.55500050178,
+          5.758333646299986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -54.55500050178,
+    2.1091669942299864,
+    -51.62000051352,
+    5.758333646299986
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – French Guiana",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GUF",
+    "GCHD:country": "French Guiana",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -54.55500050178,
+            2.1091669942299864
+          ],
+          [
+            -51.62000051352,
+            2.1091669942299864
+          ],
+          [
+            -51.62000051352,
+            5.758333646299986
+          ],
+          [
+            -54.55500050178,
+            5.758333646299986
+          ],
+          [
+            -54.55500050178,
+            2.1091669942299864
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -54.55500050178,
+      2.1091669942299864,
+      -51.62000051352,
+      5.758333646299986
+    ],
+    "proj:shape": [
+      4379,
+      3522
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -54.55500050178,
+      0.0,
+      -0.00083333333,
+      5.758333646299986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/guf_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – French Guiana (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3549978116977599,
+            "minimum": 0.0,
+            "maximum": 15.588930130004883,
+            "stddev": 1.0601884040840444,
+            "valid_percent": 1.6850443719660195
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 15.588930130004883,
+            "buckets": [
+              13469,
+              393,
+              147,
+              88,
+              47,
+              33,
+              18,
+              14,
+              5,
+              4
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/guf.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/male/guf_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

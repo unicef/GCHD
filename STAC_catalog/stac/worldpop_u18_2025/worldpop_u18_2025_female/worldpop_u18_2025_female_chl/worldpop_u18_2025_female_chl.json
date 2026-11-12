@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_chl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -109.45416694885,
+          -17.499166260669995
+        ],
+        [
+          -66.41583378767001,
+          -17.499166260669995
+        ],
+        [
+          -66.41583378767001,
+          -56.52583277122999
+        ],
+        [
+          -109.45416694885,
+          -56.52583277122999
+        ],
+        [
+          -109.45416694885,
+          -17.499166260669995
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -109.45416694885,
+    -56.52583277122999,
+    -66.41583378767001,
+    -17.499166260669995
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Chile",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CHL",
+    "GCHD:country": "Chile",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -109.45416694885,
+            -56.52583277122999
+          ],
+          [
+            -66.41583378767001,
+            -56.52583277122999
+          ],
+          [
+            -66.41583378767001,
+            -17.499166260669995
+          ],
+          [
+            -109.45416694885,
+            -17.499166260669995
+          ],
+          [
+            -109.45416694885,
+            -56.52583277122999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -109.45416694885,
+      -56.52583277122999,
+      -66.41583378767001,
+      -17.499166260669995
+    ],
+    "proj:shape": [
+      46832,
+      51646
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -109.45416694885,
+      0.0,
+      -0.00083333333,
+      -17.499166260669995,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/chl_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Chile (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.0350664274670688,
+            "minimum": 4.999999873689376e-6,
+            "maximum": 11.22454833984375,
+            "stddev": 0.297207119682673,
+            "valid_percent": 3.556201224434876
+          },
+          "histogram": {
+            "count": 11,
+            "min": 4.999999873689376e-6,
+            "max": 11.22454833984375,
+            "buckets": [
+              33665,
+              75,
+              30,
+              21,
+              11,
+              6,
+              8,
+              8,
+              1,
+              5
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/chl.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/chl_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

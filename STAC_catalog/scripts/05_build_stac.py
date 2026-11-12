@@ -8,6 +8,7 @@ the COG itself (rio-stac); everything descriptive comes from layers.yaml.
   stac/<collection>/collection.json
   stac/<collection>/<item>/<item>.json
   stac/flood/river_flood_100yr_jrc_2024/collection.json   (one item per JRC tile)
+  stac/worldpop_u18_2025/worldpop_u18_2025_<group>/       (one item per country, see population.py)
 
 The catalog is SELF_CONTAINED (relative links), so it works from GitHub Pages
 and from a local http server alike. COG hrefs are absolute Azure URLs.
@@ -27,6 +28,8 @@ from urllib.parse import urljoin
 import pystac
 import rasterio
 import yaml
+
+import population
 from rio_stac import create_stac_item
 from shapely.geometry import box, mapping, shape
 from stac_geoparquet.arrow import parse_stac_items_to_arrow, to_parquet
@@ -50,7 +53,8 @@ ROOT_DESCRIPTION = (
     "The **Global Children's Hazard Database (GCHD)** brings together global, gridded layers of "
     "the climate, environmental, geophysical and conflict hazards that children are exposed to: "
     "floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, "
-    "malaria, landslides, earthquakes, volcanoes and conflict.\n\n"
+    "malaria, landslides, earthquakes, volcanoes and conflict. It also includes WorldPop gridded "
+    "estimates of the population under 18 (female, male and total), the basis for exposure analysis.\n\n"
     "Every layer is a Cloud-Optimized GeoTIFF that can be streamed directly into GIS tools or "
     "analysis code. Processing scripts and documentation: https://github.com/unicef/GCHD")
 
@@ -253,23 +257,28 @@ def build(workers: int):
         add_overview(c, THUMB_DIR / cid / "_collection_overview.png", c.extent.spatial.bboxes[0])
         root.add_child(c)
 
+    pop = population.build_collection(add_overview, UNICEF, workers)
+    if pop:
+        root.add_child(pop[0])
+        tiled += pop[1]
+
     if STAC_OUT.exists():
         shutil.rmtree(STAC_OUT)
     root.normalize_hrefs(str(STAC_OUT))
     for sub in tiled:
         d = Path(sub.get_self_href()).parent
         sub.add_asset("items_geojson", pystac.Asset(
-            str(d / "items.geojson"), title="Item index (GeoJSON FeatureCollection, all tiles)",
+            str(d / "items.geojson"), title="Item index (GeoJSON FeatureCollection, all items)",
             media_type=pystac.MediaType.GEOJSON, roles=["metadata"]))
         sub.add_asset("items_parquet", pystac.Asset(
-            str(d / "items.parquet"), title="Item index (stac-geoparquet, all tiles)",
+            str(d / "items.parquet"), title="Item index (stac-geoparquet, all items)",
             media_type="application/vnd.apache.parquet", roles=["metadata"]))
     root.make_all_asset_hrefs_relative()
     root.save(catalog_type=pystac.CatalogType.SELF_CONTAINED)
     for sub in tiled:
         write_item_index(sub)
     n = root.validate_all()
-    print(f"Saved {STAC_OUT}/catalog.json; {len(collections)} collections, validated {n} STAC objects")
+    print(f"Saved {STAC_OUT}/catalog.json; {len(collections) + bool(pop)} collections, validated {n} STAC objects")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_deu",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.866665923199998,
+          55.05916678242999
+        ],
+        [
+          15.041665886499997,
+          55.05916678242999
+        ],
+        [
+          15.041665886499997,
+          47.27000014691999
+        ],
+        [
+          5.866665923199998,
+          47.27000014691999
+        ],
+        [
+          5.866665923199998,
+          55.05916678242999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.866665923199998,
+    47.27000014691999,
+    15.041665886499997,
+    55.05916678242999
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Germany",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "DEU",
+    "GCHD:country": "Germany",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.866665923199998,
+            47.27000014691999
+          ],
+          [
+            15.041665886499997,
+            47.27000014691999
+          ],
+          [
+            15.041665886499997,
+            55.05916678242999
+          ],
+          [
+            5.866665923199998,
+            55.05916678242999
+          ],
+          [
+            5.866665923199998,
+            47.27000014691999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      5.866665923199998,
+      47.27000014691999,
+      15.041665886499997,
+      55.05916678242999
+    ],
+    "proj:shape": [
+      9347,
+      11010
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      5.866665923199998,
+      0.0,
+      -0.00083333333,
+      55.05916678242999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/deu_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Germany (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.13448584151242046,
+            "minimum": 0.0,
+            "maximum": 4.600134372711182,
+            "stddev": 0.34918174264775353,
+            "valid_percent": 53.505859375
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 4.600134372711182,
+            "buckets": [
+              441581,
+              17160,
+              8364,
+              4524,
+              2479,
+              1311,
+              590,
+              401,
+              190,
+              73
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/deu.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/female/deu_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

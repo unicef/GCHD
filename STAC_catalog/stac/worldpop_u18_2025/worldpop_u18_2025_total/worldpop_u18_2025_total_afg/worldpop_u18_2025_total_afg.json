@@ -1,0 +1,202 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_afg",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          60.518332371259994,
+          38.49000018203999
+        ],
+        [
+          74.88916564710999,
+          38.49000018203999
+        ],
+        [
+          74.88916564710999,
+          29.377500218489992
+        ],
+        [
+          60.518332371259994,
+          29.377500218489992
+        ],
+        [
+          60.518332371259994,
+          38.49000018203999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    60.518332371259994,
+    29.377500218489992,
+    74.88916564710999,
+    38.49000018203999
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Afghanistan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AFG",
+    "GCHD:country": "Afghanistan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "proj:epsg": 4326,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            60.518332371259994,
+            29.377500218489992
+          ],
+          [
+            74.88916564710999,
+            29.377500218489992
+          ],
+          [
+            74.88916564710999,
+            38.49000018203999
+          ],
+          [
+            60.518332371259994,
+            38.49000018203999
+          ],
+          [
+            60.518332371259994,
+            29.377500218489992
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      60.518332371259994,
+      29.377500218489992,
+      74.88916564710999,
+      38.49000018203999
+    ],
+    "proj:shape": [
+      10935,
+      17245
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      60.518332371259994,
+      0.0,
+      -0.00083333333,
+      38.49000018203999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Children's Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Children's Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/afg_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Afghanistan (Cloud-Optimized GeoTIFF)",
+      "raster:bands": [
+        {
+          "data_type": "float32",
+          "scale": 1.0,
+          "offset": 0.0,
+          "sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.4188389564628032,
+            "minimum": 0.0,
+            "maximum": 82.96568298339844,
+            "stddev": 3.107888091935605,
+            "valid_percent": 20.615384615384617
+          },
+          "histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 82.96568298339844,
+            "buckets": [
+              133603,
+              2908,
+              396,
+              123,
+              53,
+              32,
+              32,
+              28,
+              22,
+              19
+            ]
+          }
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/afg.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "overview": {
+      "href": "../../../../thumbnails/worldpop_u18_2025/total/afg_overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ]
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}
