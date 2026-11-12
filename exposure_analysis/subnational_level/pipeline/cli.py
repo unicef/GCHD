@@ -86,6 +86,32 @@ def s01_cmd(no_fill, storage_root, prod_date, countries, hazards, allow_interact
             fill_missing=(False if no_fill else None))
 
 
+@main.command("s01c")
+@click.option("--workers", type=int, default=8, show_default=True,
+              help="Countries reduced in parallel.")
+@click.option("--mode", type=click.Choice(["interactive", "batch"]), default="interactive", show_default=True,
+              help="interactive: getInfo requests (5-minute cap each); batch: one Drive export per country.")
+@click.option("--drive-folder", default=None, help="Drive folder for batch exports [gchd_s01c_<prod_date>].")
+@click.option("--collect-only", is_flag=True, default=False,
+              help="Batch mode: do not submit, only collect finished exports.")
+@click.option("--chunk-batch", type=int, default=25, show_default=True,
+              help="Interactive mode: chunks per request (halved automatically on timeout).")
+@click.option("--hazard-batch", type=int, default=22, show_default=True,
+              help="Hazards per request; lower it if requests run out of memory.")
+@click.option("--tile-scale", type=int, default=4, show_default=True)
+@click.option("--overwrite", is_flag=True, default=False,
+              help="Recompute countries whose partials already exist.")
+@common_options
+def s01c_cmd(workers, mode, drive_folder, collect_only, chunk_batch, hazard_batch, tile_scale, overwrite,
+             storage_root, prod_date, countries, hazards, allow_interactive):
+    """Same partials as s01, from one multi-band reduction per country over 500 km chunks."""
+    from .steps import s01c
+    settings = _settings_from(storage_root, prod_date, countries, hazards)
+    s01c.run(settings, allow_interactive=allow_interactive, workers=workers,
+             chunk_batch=chunk_batch, hazard_batch=hazard_batch, tile_scale=tile_scale,
+             overwrite=overwrite, mode=mode, drive_folder=drive_folder, collect_only=collect_only)
+
+
 @main.command("s02")
 @common_options
 def s02_cmd(storage_root, prod_date, countries, hazards, allow_interactive):
