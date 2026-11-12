@@ -1,6 +1,6 @@
 # GCHD STAC Catalog
 
-A [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/) for the hazard layers of the Global Children's Hazard Database. Each layer is published as a Cloud-Optimized GeoTIFF (COG) with a thumbnail and the metadata from `docs/Global Hazard Data catalog.xlsx`. The catalog also includes the WorldPop under-18 population for 2025 (see [WorldPop U18 population](#worldpop-u18-population)). The catalog can be browsed with [STAC Browser](https://github.com/radiantearth/stac-browser).
+A [SpatioTemporal Asset Catalog (STAC)](https://stacspec.org/) for the hazard layers of the Global Child Hazard Database. Each layer is published as a Cloud-Optimized GeoTIFF (COG) with a thumbnail and the metadata from `docs/Global Hazard Data catalog.xlsx`. The catalog also includes the WorldPop under-18 population for 2025 (see [WorldPop U18 population](#worldpop-u18-population)). The catalog can be browsed with [STAC Browser](https://github.com/radiantearth/stac-browser).
 
 - Browser: https://unicef.github.io/GCHD/STAC_catalog/browser/
 - Catalog: https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json

@@ -47,10 +47,10 @@ OVERVIEWS = THUMB_DIR / "overviews.json"   # overlay PNG -> bbox it covers (writ
 UNICEF = pystac.Provider(
     name="UNICEF", url="https://www.unicef.org/",
     roles=[pystac.ProviderRole.PROCESSOR, pystac.ProviderRole.HOST],
-    description="Global Children's Hazard Database (GCHD)")
+    description="Global Child Hazard Database (GCHD)")
 
 ROOT_DESCRIPTION = (
-    "The **Global Children's Hazard Database (GCHD)** brings together global, gridded layers of "
+    "The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of "
     "the climate, environmental, geophysical and conflict hazards that children are exposed to: "
     "floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, "
     "malaria, landslides, earthquakes, volcanoes and conflict. It also includes WorldPop gridded "
@@ -175,7 +175,7 @@ def build(workers: int):
     base = container_client(PUBLIC_CONTAINER).url
     published = {b.name for b in container_client(PUBLIC_CONTAINER).list_blobs(name_starts_with=COG_PREFIX + "/")}
 
-    root = pystac.Catalog(id="GCHD", title="UNICEF Global Children's Hazard Database",
+    root = pystac.Catalog(id="GCHD", title="UNICEF Global Child Hazard Database",
                           description=ROOT_DESCRIPTION)
     collections = {}
     tiled = []  # nested tile collections that get an items.geojson / items.parquet index
@@ -186,7 +186,7 @@ def build(workers: int):
             g = groups[cid]
             collections[cid] = pystac.Collection(
                 id=cid, title=g["title"],
-                description=f"{g['title']} hazard layers in the Global Children's Hazard Database.",
+                description=f"{g['title']} hazard layers in the Global Child Hazard Database.",
                 extent=pystac.Extent(pystac.SpatialExtent([[-180, -90, 180, 90]]),
                                      pystac.TemporalExtent([[None, None]])),
                 license="other",

@@ -2,13 +2,13 @@
   "type": "Collection",
   "id": "sand_dust_storm",
   "stac_version": "1.1.0",
-  "description": "Sand and Dust Storm hazard layers in the Global Children's Hazard Database.",
+  "description": "Sand and Dust Storm hazard layers in the Global Child Hazard Database.",
   "links": [
     {
       "rel": "root",
       "href": "../catalog.json",
       "type": "application/json",
-      "title": "UNICEF Global Children's Hazard Database"
+      "title": "UNICEF Global Child Hazard Database"
     },
     {
       "rel": "item",
@@ -19,7 +19,7 @@
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
-      "title": "UNICEF Global Children's Hazard Database"
+      "title": "UNICEF Global Child Hazard Database"
     }
   ],
   "title": "Sand and Dust Storm",
