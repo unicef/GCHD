@@ -8,6 +8,7 @@ earthengine-api
 geopandas
 shapely
 mapclassify
+exactextract   # s01b: zonal statistics on the COGs
 
 # Data
 numpy

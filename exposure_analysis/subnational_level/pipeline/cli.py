@@ -86,6 +86,16 @@ def s01_cmd(no_fill, storage_root, prod_date, countries, hazards, allow_interact
             fill_missing=(False if no_fill else None))
 
 
+@main.command("s01b")
+@click.option("--cache-dir", default=None, help="Boundaries and population cache [<storage_root>/cache].")
+@common_options
+def s01b_cmd(cache_dir, storage_root, prod_date, countries, hazards, allow_interactive):
+    """Prototype: same partials as s01, from the COGs on Azure with exactextract (no Earth Engine compute)."""
+    from .steps import s01b
+    settings = _settings_from(storage_root, prod_date, countries, hazards)
+    s01b.run(settings, cache_dir=cache_dir)
+
+
 @main.command("s01c")
 @click.option("--workers", type=int, default=8, show_default=True,
               help="Countries reduced in parallel.")
