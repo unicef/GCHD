@@ -1,6 +1,6 @@
 # Hazard Data
 
-This folder contains per-hazard documentation and processing scripts for all hazard layers in the Global Children's Hazard Database.
+This folder contains per-hazard documentation and processing scripts for all hazard layers in the Global Child Hazard Database.
 
 Each subfolder corresponds to one hazard and contains:
 - A `README.md` describing the data source, processing methodology, output format, and update cadence

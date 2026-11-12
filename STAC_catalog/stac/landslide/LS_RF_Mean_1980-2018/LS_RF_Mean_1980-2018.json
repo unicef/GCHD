@@ -116,7 +116,7 @@
       },
       {
         "name": "UNICEF",
-        "description": "Global Children's Hazard Database (GCHD)",
+        "description": "Global Child Hazard Database (GCHD)",
         "roles": [
           "processor",
           "host"
@@ -137,7 +137,7 @@
       "rel": "root",
       "href": "../../catalog.json",
       "type": "application/json",
-      "title": "UNICEF Global Children's Hazard Database"
+      "title": "UNICEF Global Child Hazard Database"
     },
     {
       "rel": "collection",

@@ -1,6 +1,6 @@
 # GCHD Web Application
 
-Interactive dashboard for the Global Children's Hazard Database.
+Interactive dashboard for the Global Child Hazard Database.
 
 ## Tech Stack
 
