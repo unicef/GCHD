@@ -17,7 +17,9 @@ listed in ``COG_LAYERS``, checked against s01 in Malawi (exposures within
 0.08 %). Left out because the COG is a different product or version: the
 heat layers (ECMWF 2014-2024 vs 100-year return levels), TerraClimate
 SPI/SPEI, agricultural drought (FAO ASI vs ASI return level) and river flood
-(JRC 2024 tiles; up to 68 % apart per unit).
+(JRC 2024 tiles; up to 68 % apart per unit). Also left out until the
+catalogue settles them: tropical storm (grid shifted half a pixel against the
+GEE asset) and malaria Pf/Pv (2012-2022 vs the 2013-2022 GEE average).
 """
 
 from __future__ import annotations
@@ -38,13 +40,10 @@ GDAL_ENV = dict(GDAL_DISABLE_READDIR_ON_OPEN="EMPTY_DIR", CPL_VSIL_CURL_ALLOWED_
 # hazard code -> COG under public/gchd_cog/ (same raster as the GEE asset in hazard_info.json)
 COG_LAYERS = {
     "coastal_flood_100yr": "flood/coastal_flood_100yr_jrc_2024.tif",
-    "tropical_storm_100yr": "tropical_storm/tropical_storm_100yr_giri_2024.tif",
     "fire_intensity": "fire/fire_FRP_nasa_2001-2024.tif",
     "fire_frequency": "fire/fire_frequency_nasa_2001-2023.tif",
     "sand_dust_storm_susc": "sand_dust_storm/sand_dust_storm_unccd_2024.tif",
     "air_pollution_pm25": "air_pollution/air_pollution_pm25_2012-2022.tif",
-    "epidemics_malaria_pv": "malaria/vectorborne_malariapv_2012-2022.tif",
-    "epidemics_malaria_pf": "malaria/vectorborne_malariapf_2012-2022.tif",
     "earthquake_pga_0p09": "earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
     "earthquake_pga_0p34": "earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
     "volcano_100km_buff": "volcano/GVP_Hol_volcanoes_1800.tif",
