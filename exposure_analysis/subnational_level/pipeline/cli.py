@@ -88,12 +88,21 @@ def s01_cmd(no_fill, storage_root, prod_date, countries, hazards, allow_interact
 
 @main.command("s01b")
 @click.option("--cache-dir", default=None, help="Boundaries and population cache [<storage_root>/cache].")
+@click.option("--population", type=click.Choice(["download", "remote"]), default="download", show_default=True,
+              help="download: cache each country's population COGs; remote: read them in place.")
+@click.option("--workers", type=int, default=1, show_default=True, help="Countries processed at once.")
+@click.option("--max-cache-gb", type=float, default=20, show_default=True,
+              help="Disk the downloaded population may hold at once.")
+@click.option("--keep-cache", is_flag=True, default=False,
+              help="Keep each country's population files after use (default: delete them).")
 @common_options
-def s01b_cmd(cache_dir, storage_root, prod_date, countries, hazards, allow_interactive):
+def s01b_cmd(cache_dir, population, workers, max_cache_gb, keep_cache,
+             storage_root, prod_date, countries, hazards, allow_interactive):
     """Prototype: same partials as s01, from the COGs on Azure with exactextract (no Earth Engine compute)."""
     from .steps import s01b
     settings = _settings_from(storage_root, prod_date, countries, hazards)
-    s01b.run(settings, cache_dir=cache_dir)
+    s01b.run(settings, cache_dir=cache_dir, population=population, workers=workers,
+             max_cache_gb=max_cache_gb, keep_cache=keep_cache)
 
 
 @main.command("s01c")

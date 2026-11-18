@@ -70,6 +70,8 @@ class Settings(BaseModel):
     # A local path OR an fsspec URL (e.g. "abfs://gchd/prod"). io_paths builds
     # aux/base/export/upscale/_manifests paths off this single root.
     storage_root: str = DEFAULT_STORAGE_ROOT
+    # Admin-2 boundaries as <adm0_ucode>.parquet (COG route); empty = fetch from Earth Engine.
+    boundaries_url: str = "https://unidatadapmclimatechange.blob.core.windows.net/public/boundaries/adm2"
 
     # -- SDMX metadata ----------------------------------------------------
     is_draft: bool = True
