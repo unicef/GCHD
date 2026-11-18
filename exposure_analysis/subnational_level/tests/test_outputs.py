@@ -34,6 +34,10 @@ DEFAULT_RESULTS = ROOT / "notebooks" / "output" / "results_admin1"
 # A hazard whose weights collapsed reads as a tiny national pixel total.
 # Egypt's broken river-flood table summed to 20 across 411 districts.
 MIN_PIXELS_PER_UNIT = 1.0
+# genuinely sparse: the source raster has data in 1 of the country's units
+SPARSE_COVERAGE = {
+    ("TUV", "air_pollution_pm25"),  # PM2.5 raster misses the atolls: 2 pixels, 1 of 28 units
+}
 
 
 def _find_long_csv():
@@ -200,8 +204,8 @@ def test_counts_are_not_degenerate_for_present_hazards():
     degenerate = []
     for (iso, hz), g in t.groupby(["iso", "hazard_code"]):
         total = pd.to_numeric(g.hazs_count, errors="coerce").fillna(0).sum()
-        if total == 0:
-            continue           # genuinely absent hazard — legitimate
+        if total == 0 or (iso, hz) in SPARSE_COVERAGE:
+            continue           # genuinely absent or sparse hazard — legitimate
         if total / len(g) < MIN_PIXELS_PER_UNIT:
             degenerate.append((iso, hz, total, len(g)))
 
