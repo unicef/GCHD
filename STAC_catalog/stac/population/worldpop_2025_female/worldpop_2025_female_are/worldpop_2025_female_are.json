@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_are",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          51.498332407339994,
+          26.069166898389984
+        ],
+        [
+          56.382499054469996,
+          26.069166898389984
+        ],
+        [
+          56.382499054469996,
+          22.632500245469984
+        ],
+        [
+          51.498332407339994,
+          22.632500245469984
+        ],
+        [
+          51.498332407339994,
+          26.069166898389984
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    51.498332407339994,
+    22.632500245469984,
+    56.382499054469996,
+    26.069166898389984
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – United Arab Emirates",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ARE",
+    "GCHD:country": "United Arab Emirates",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            51.498332407339994,
+            22.632500245469984
+          ],
+          [
+            56.382499054469996,
+            22.632500245469984
+          ],
+          [
+            56.382499054469996,
+            26.069166898389984
+          ],
+          [
+            51.498332407339994,
+            26.069166898389984
+          ],
+          [
+            51.498332407339994,
+            22.632500245469984
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      51.498332407339994,
+      22.632500245469984,
+      56.382499054469996,
+      26.069166898389984
+    ],
+    "proj:shape": [
+      4124,
+      5861
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      51.498332407339994,
+      0.0,
+      -0.00083333333,
+      26.069166898389984,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/are_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – United Arab Emirates (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 8466910,
+      "file:checksum": "d501102af2664b18880ad320bc6b460d3405bd",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.387768948894811,
+            "minimum": 0.0,
+            "maximum": 22.353675842285156,
+            "stddev": 3.589473696283967,
+            "valid_percent": 7.776065143897365
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 22.353675842285156,
+            "buckets": [
+              41208,
+              6436,
+              3669,
+              2397,
+              1025,
+              754,
+              938,
+              740,
+              194,
+              50
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7685,
+      "file:checksum": "12206309546076d4b6f2ddad63c47771fcb74a6ef38a08f291f6fe49ff9805fe4d41"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7109,
+      "file:checksum": "1220e3dee050839fe011a3184ead0387e8909594ad828252a8e24745b6c19a09d319"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

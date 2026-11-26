@@ -1,0 +1,209 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_mex",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -118.36416691321,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          32.718333538459994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -118.36416691321,
+    14.534166944529993,
+    -86.71083370649,
+    32.718333538459994
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Mexico",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MEX",
+    "GCHD:country": "Mexico",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.36416691321,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            14.534166944529993
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -118.36416691321,
+      14.534166944529993,
+      -86.71083370649,
+      32.718333538459994
+    ],
+    "proj:shape": [
+      21821,
+      37984
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -118.36416691321,
+      0.0,
+      -0.00083333333,
+      32.718333538459994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/mex_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Mexico (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 232809494,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.9274229769801257,
+            "minimum": 0.0,
+            "maximum": 168.9277801513672,
+            "stddev": 4.4315842215724714,
+            "valid_percent": 26.670767455432937
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 168.9277801513672,
+            "buckets": [
+              159625,
+              617,
+              286,
+              164,
+              73,
+              46,
+              20,
+              13,
+              13,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7477,
+      "file:checksum": "12203b0c1c982f64cb4576e70c00b8eae2415ae9e8590b7c81437f5f8ade4342f945"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6456,
+      "file:checksum": "122042618e33606e7406acb377d35ddc6c9adface6cddb1a78e8008c4d9e648b1add"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

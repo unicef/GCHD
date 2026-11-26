@@ -1,0 +1,209 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_dza",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -8.667500685330003,
+          37.09000018763999
+        ],
+        [
+          11.994999232019998,
+          37.09000018763999
+        ],
+        [
+          11.994999232019998,
+          18.968333593459988
+        ],
+        [
+          -8.667500685330003,
+          18.968333593459988
+        ],
+        [
+          -8.667500685330003,
+          37.09000018763999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -8.667500685330003,
+    18.968333593459988,
+    11.994999232019998,
+    37.09000018763999
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Algeria",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "DZA",
+    "GCHD:country": "Algeria",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -8.667500685330003,
+            18.968333593459988
+          ],
+          [
+            11.994999232019998,
+            18.968333593459988
+          ],
+          [
+            11.994999232019998,
+            37.09000018763999
+          ],
+          [
+            -8.667500685330003,
+            37.09000018763999
+          ],
+          [
+            -8.667500685330003,
+            18.968333593459988
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -8.667500685330003,
+      18.968333593459988,
+      11.994999232019998,
+      37.09000018763999
+    ],
+    "proj:shape": [
+      21746,
+      24795
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -8.667500685330003,
+      0.0,
+      -0.00083333333,
+      37.09000018763999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/dza_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Algeria (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 100510971,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.873129363047015,
+            "minimum": 0.0,
+            "maximum": 287.17529296875,
+            "stddev": 4.817691465525174,
+            "valid_percent": 13.086589265850945
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 287.17529296875,
+            "buckets": [
+              119914,
+              360,
+              120,
+              50,
+              13,
+              9,
+              2,
+              2,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11883,
+      "file:checksum": "12206a2c8a672914ad14c5d4bfec9bf423056bc73f30ca0464c6569b11b1965f65e5"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11218,
+      "file:checksum": "122009866f7060a32e47121a3bd1af72a90c09dc9b41af6834e786ce0c3ecee806f3"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

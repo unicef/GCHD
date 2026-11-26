@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_mac",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          113.52833215922,
+          22.217500247129987
+        ],
+        [
+          113.59833215894,
+          22.217500247129987
+        ],
+        [
+          113.59833215894,
+          22.109166914229988
+        ],
+        [
+          113.52833215922,
+          22.109166914229988
+        ],
+        [
+          113.52833215922,
+          22.217500247129987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    113.52833215922,
+    22.109166914229988,
+    113.59833215894,
+    22.217500247129987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Macao",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MAC",
+    "GCHD:country": "Macao",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.52833215922,
+            22.109166914229988
+          ],
+          [
+            113.59833215894,
+            22.109166914229988
+          ],
+          [
+            113.59833215894,
+            22.217500247129987
+          ],
+          [
+            113.52833215922,
+            22.217500247129987
+          ],
+          [
+            113.52833215922,
+            22.109166914229988
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      113.52833215922,
+      22.109166914229988,
+      113.59833215894,
+      22.217500247129987
+    ],
+    "proj:shape": [
+      130,
+      84
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      113.52833215922,
+      0.0,
+      -0.00083333333,
+      22.217500247129987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/mac_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Macao (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 21294,
+      "file:checksum": "d501102ffb5e27475990dda0290be38149ce1d",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 195.50827230810958,
+            "minimum": 0.0,
+            "maximum": 2087.8349609375,
+            "stddev": 350.8956991405627,
+            "valid_percent": 33.76373626373626
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 2087.8349609375,
+            "buckets": [
+              2746,
+              334,
+              178,
+              143,
+              115,
+              66,
+              51,
+              36,
+              10,
+              8
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5151,
+      "file:checksum": "12205bc9b2783ec13d81d011078f71a39c2b336ad50829f2547448ecf7360b2cadd4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6142,
+      "file:checksum": "12201e04372fe033cdaa9b82a8c72626978dde1ce24973ce5f111bee8f0ed1d9f102"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

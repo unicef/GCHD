@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_hrv",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          13.489999226039997,
+          46.554166816449985
+        ],
+        [
+          19.446665868879997,
+          46.554166816449985
+        ],
+        [
+          19.446665868879997,
+          42.38750016644998
+        ],
+        [
+          13.489999226039997,
+          42.38750016644998
+        ],
+        [
+          13.489999226039997,
+          46.554166816449985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    13.489999226039997,
+    42.38750016644998,
+    19.446665868879997,
+    46.554166816449985
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Croatia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "HRV",
+    "GCHD:country": "Croatia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            13.489999226039997,
+            42.38750016644998
+          ],
+          [
+            19.446665868879997,
+            42.38750016644998
+          ],
+          [
+            19.446665868879997,
+            46.554166816449985
+          ],
+          [
+            13.489999226039997,
+            46.554166816449985
+          ],
+          [
+            13.489999226039997,
+            42.38750016644998
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      13.489999226039997,
+      42.38750016644998,
+      19.446665868879997,
+      46.554166816449985
+    ],
+    "proj:shape": [
+      5000,
+      7148
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      13.489999226039997,
+      0.0,
+      -0.00083333333,
+      46.554166816449985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/hrv_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Croatia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17157842,
+      "file:checksum": "d50110771511ab9387c5b694aa9bc4d96f5981",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7344079547784059,
+            "minimum": 0.0,
+            "maximum": 65.23399353027344,
+            "stddev": 2.7313894379653765,
+            "valid_percent": 17.27453255753138
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 65.23399353027344,
+            "buckets": [
+              124440,
+              1328,
+              466,
+              195,
+              131,
+              129,
+              112,
+              9,
+              4,
+              17
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7796,
+      "file:checksum": "1220c7e9d2c726b47c0c81a1fadb7d9d96387eabaf06a4e91f2d5f92276d3a62380b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6959,
+      "file:checksum": "1220f395a9a58bc3771ab3d9ab72acbc87d7e8f3c51c13848692efd498299f6723f8"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

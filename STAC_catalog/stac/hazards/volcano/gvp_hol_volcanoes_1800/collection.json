@@ -1,0 +1,219 @@
+{
+  "type": "Collection",
+  "id": "gvp_hol_volcanoes_1800",
+  "stac_version": "1.1.0",
+  "description": "Number of people and children within 100km2 radius of an active volcano. A volcano is considered active if it had vlocanic activity after 1800. The 100km radius was selected as the maximum distance where children could be affected by emissions from volcanoes.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/volcano/hol_volcanoes_buffer_100km.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Volcanoes"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://volcano.si.edu/",
+      "type": "text/html",
+      "title": "Original source (Smithsonian Institution - Global Volcanism Program)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Geophysical",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "0.1 degree/11km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "people per 100 km²",
+  "GCHD:threshold": "<=100km",
+  "GCHD:classes": "0, 30, 50, 80, 100, >100",
+  "GCHD:value_range": [
+    0.0,
+    100000.0
+  ],
+  "GCHD:notes": "This layer was produced using records of active volcanoes since 1800 from the Smithsonian Institute-Global Volcanism Program. The Hazard layer has ranks from 0 to 5 with 0 being not within 100km of an active volcano. 0 - 10km: 5, 10 - 30km: 4, 30 - 50km: 3, 50 - 80km: 2, 80 to 100km: 1, > 100km: 0. This layer was developed with significant input from UNICEF's PG Climate team, Prof. Claire Horwell of Durham University and Assoc. Prof. Carol Stewart of the Massey University, New Zealand. Data Source: https://volcano.si.edu/",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/hol_volcanoes_1800_100kmbuff",
+  "GCHD:datetime_source": "source file modified date",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "volcano_100km_buff",
+      "app_name": "volcanoes_gvp_1800-2025",
+      "unicef_code": "VO",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0,
+      "default": true
+    }
+  ],
+  "title": "Volcanoes",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.999964691,
+          -78.504456939,
+          179.999162898,
+          85.611438297
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-22T15:49:30Z",
+          "2026-10-22T15:49:30Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Volcanoes",
+    "VO"
+  ],
+  "providers": [
+    {
+      "name": "Smithsonian Institution - Global Volcanism Program",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://volcano.si.edu/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/volcano/GVP_Hol_volcanoes_1800.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Volcanoes (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        5347,
+        11729
+      ],
+      "proj:transform": [
+        0.030693079340864526,
+        0.0,
+        -179.999964691,
+        0.0,
+        -0.030693079340938845,
+        85.611438297,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -179.999964691,
+        -78.504456939,
+        179.999162898,
+        85.611438297
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 71750.03097684405,
+            "minimum": 7025.3857421875,
+            "maximum": 100000.0,
+            "stddev": 26153.732852462796,
+            "valid_percent": 2.727265123126338
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 7025.3857421875,
+            "max": 100000.0,
+            "buckets": [
+              250,
+              701,
+              787,
+              834,
+              910,
+              984,
+              1013,
+              1115,
+              1588,
+              4860
+            ]
+          }
+        }
+      ],
+      "file:size": 6485872,
+      "file:checksum": "d501106d353f4ca4ff7850d6bf7869570fbe15"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 62188,
+      "file:checksum": "122054c3605c6617d09448fc94463b21893affd998bb34f6aeb0b8cf284c1b476253"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 92363,
+      "file:checksum": "1220f36ab02d779065691bdd3d5db32a3321ee34c681193c3814a21d9993e797a437"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

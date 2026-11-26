@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_wsm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -172.80416669545,
+          -13.439999610240017
+        ],
+        [
+          -171.39833336773998,
+          -13.439999610240017
+        ],
+        [
+          -171.39833336773998,
+          -14.075832941030017
+        ],
+        [
+          -172.80416669545,
+          -14.075832941030017
+        ],
+        [
+          -172.80416669545,
+          -13.439999610240017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -172.80416669545,
+    -14.075832941030017,
+    -171.39833336773998,
+    -13.439999610240017
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Samoa",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "WSM",
+    "GCHD:country": "Samoa",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -172.80416669545,
+            -14.075832941030017
+          ],
+          [
+            -171.39833336773998,
+            -14.075832941030017
+          ],
+          [
+            -171.39833336773998,
+            -13.439999610240017
+          ],
+          [
+            -172.80416669545,
+            -13.439999610240017
+          ],
+          [
+            -172.80416669545,
+            -14.075832941030017
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -172.80416669545,
+      -14.075832941030017,
+      -171.39833336773998,
+      -13.439999610240017
+    ],
+    "proj:shape": [
+      763,
+      1687
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -172.80416669545,
+      0.0,
+      -0.00083333333,
+      -13.439999610240017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/wsm_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Samoa (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 437818,
+      "file:checksum": "d501109dbe348cf2df045192c8cef7a174a624",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.187075177935943,
+            "minimum": 0.00013345282059162855,
+            "maximum": 47.2911376953125,
+            "stddev": 4.324521123299774,
+            "valid_percent": 5.914096174568965
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.00013345282059162855,
+            "max": 47.2911376953125,
+            "buckets": [
+              22020,
+              3931,
+              1261,
+              463,
+              205,
+              150,
+              49,
+              11,
+              7,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3423,
+      "file:checksum": "122018aca08acca2a3106d789e4a11bb008ea7be4649fb727aac96d5108db126a2d8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2995,
+      "file:checksum": "12208649f297271020c2100ef843ff5b919e82c22219e849e92249a1a5b53dfde1d8"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

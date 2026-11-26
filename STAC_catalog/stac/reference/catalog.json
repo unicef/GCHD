@@ -1,0 +1,42 @@
+{
+  "type": "Catalog",
+  "id": "reference",
+  "stac_version": "1.1.0",
+  "description": "Auxiliary grids used to build the indicators, such as the land/sea mask of the ERA5 0.1° grid.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./land_sea_mask/collection.json",
+      "type": "application/json",
+      "title": "Land/sea mask (ERA5 0.1 deg grid)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "title": "Reference grids",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

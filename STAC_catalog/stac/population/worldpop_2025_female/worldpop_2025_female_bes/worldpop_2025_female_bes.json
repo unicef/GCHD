@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_bes",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -68.42083377965,
+          17.650000265399985
+        ],
+        [
+          -62.945833801549995,
+          17.650000265399985
+        ],
+        [
+          -62.945833801549995,
+          12.025000287899985
+        ],
+        [
+          -68.42083377965,
+          12.025000287899985
+        ],
+        [
+          -68.42083377965,
+          17.650000265399985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -68.42083377965,
+    12.025000287899985,
+    -62.945833801549995,
+    17.650000265399985
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Bonaire",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BES",
+    "GCHD:country": "Bonaire",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -68.42083377965,
+            12.025000287899985
+          ],
+          [
+            -62.945833801549995,
+            12.025000287899985
+          ],
+          [
+            -62.945833801549995,
+            17.650000265399985
+          ],
+          [
+            -68.42083377965,
+            17.650000265399985
+          ],
+          [
+            -68.42083377965,
+            12.025000287899985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -68.42083377965,
+      12.025000287899985,
+      -62.945833801549995,
+      17.650000265399985
+    ],
+    "proj:shape": [
+      6750,
+      6570
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -68.42083377965,
+      0.0,
+      -0.00083333333,
+      17.650000265399985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/bes_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Bonaire (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1276223,
+      "file:checksum": "d501103ced398be9837a415dec4a1c725e1c17",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.794143153479724,
+            "minimum": 0.008808364160358906,
+            "maximum": 9.63177490234375,
+            "stddev": 1.1879831774825198,
+            "valid_percent": 0.07140562311935808
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.008808364160358906,
+            "max": 9.63177490234375,
+            "buckets": [
+              594,
+              68,
+              28,
+              11,
+              9,
+              10,
+              3,
+              3,
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 536,
+      "file:checksum": "1220fafc31e761858a1db40148bc9141ec8a16e17855fb97755fc9c8af8c81f1c618"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 521,
+      "file:checksum": "12207e0d4b7a6750a05c632332d18f19d55b41dd60af0ebc52ec6f281afdd014fc2e"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

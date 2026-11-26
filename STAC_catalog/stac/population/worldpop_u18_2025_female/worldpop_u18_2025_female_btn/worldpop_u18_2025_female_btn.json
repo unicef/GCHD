@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_btn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          88.74583225834999,
+          28.24666688967999
+        ],
+        [
+          92.12416557817,
+          28.24666688967999
+        ],
+        [
+          92.12416557817,
+          26.70250022918999
+        ],
+        [
+          88.74583225834999,
+          26.70250022918999
+        ],
+        [
+          88.74583225834999,
+          28.24666688967999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    88.74583225834999,
+    26.70250022918999,
+    92.12416557817,
+    28.24666688967999
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Bhutan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BTN",
+    "GCHD:country": "Bhutan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            88.74583225834999,
+            26.70250022918999
+          ],
+          [
+            92.12416557817,
+            26.70250022918999
+          ],
+          [
+            92.12416557817,
+            28.24666688967999
+          ],
+          [
+            88.74583225834999,
+            28.24666688967999
+          ],
+          [
+            88.74583225834999,
+            26.70250022918999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      88.74583225834999,
+      26.70250022918999,
+      92.12416557817,
+      28.24666688967999
+    ],
+    "proj:shape": [
+      1853,
+      4054
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      88.74583225834999,
+      0.0,
+      -0.00083333333,
+      28.24666688967999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/btn_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Bhutan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3173135,
+      "file:checksum": "d50110a9ccc17018dee14b39df7316aa508847",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.18894117886830097,
+            "minimum": 0.0,
+            "maximum": 7.2286505699157715,
+            "stddev": 0.3406597514432622,
+            "valid_percent": 11.453891257995735
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 7.2286505699157715,
+            "buckets": [
+              53652,
+              924,
+              193,
+              56,
+              44,
+              37,
+              30,
+              27,
+              27,
+              18
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5280,
+      "file:checksum": "1220e463a4f82be3e309d1a3a25be4169d42fa6cc3b73db99589f412c3bc9fa696b8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5280,
+      "file:checksum": "1220ca942e62fec7d3bbcb91f6c62b537ff77a5f2fba2ef895a88154771e475c8b38"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

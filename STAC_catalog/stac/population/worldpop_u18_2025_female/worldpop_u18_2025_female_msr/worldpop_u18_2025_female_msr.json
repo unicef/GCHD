@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_msr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -62.241667137700006,
+          16.824166935369988
+        ],
+        [
+          -62.144167138090005,
+          16.824166935369988
+        ],
+        [
+          -62.144167138090005,
+          16.67416693596999
+        ],
+        [
+          -62.241667137700006,
+          16.67416693596999
+        ],
+        [
+          -62.241667137700006,
+          16.824166935369988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -62.241667137700006,
+    16.67416693596999,
+    -62.144167138090005,
+    16.824166935369988
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Montserrat",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MSR",
+    "GCHD:country": "Montserrat",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.241667137700006,
+            16.67416693596999
+          ],
+          [
+            -62.144167138090005,
+            16.67416693596999
+          ],
+          [
+            -62.144167138090005,
+            16.824166935369988
+          ],
+          [
+            -62.241667137700006,
+            16.824166935369988
+          ],
+          [
+            -62.241667137700006,
+            16.67416693596999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -62.241667137700006,
+      16.67416693596999,
+      -62.144167138090005,
+      16.824166935369988
+    ],
+    "proj:shape": [
+      180,
+      117
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -62.241667137700006,
+      0.0,
+      -0.00083333333,
+      16.824166935369988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/msr_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Montserrat (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 19462,
+      "file:checksum": "d501107fc810eff5622b6ab0a05718d528f3e9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.1729114113784418,
+            "minimum": 0.0,
+            "maximum": 1.2873940467834473,
+            "stddev": 0.17140387538825524,
+            "valid_percent": 12.459639126305792
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.2873940467834473,
+            "buckets": [
+              1496,
+              562,
+              321,
+              100,
+              85,
+              22,
+              18,
+              10,
+              5,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3600,
+      "file:checksum": "12204a78e7c01ee30cd07eb442caecf34fd12349ca0c35db76475e8ba67b7736540f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3962,
+      "file:checksum": "12205ba84ee542035cc294ff5cf4e3b467ac389e3a23799d2fedbeb75c407a4308d7"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_cri",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -85.95916704283,
+          11.219166957789986
+        ],
+        [
+          -82.55166705646,
+          11.219166957789986
+        ],
+        [
+          -82.55166705646,
+          8.040833637169985
+        ],
+        [
+          -85.95916704283,
+          8.040833637169985
+        ],
+        [
+          -85.95916704283,
+          11.219166957789986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -85.95916704283,
+    8.040833637169985,
+    -82.55166705646,
+    11.219166957789986
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Costa Rica",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CRI",
+    "GCHD:country": "Costa Rica",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -85.95916704283,
+            8.040833637169985
+          ],
+          [
+            -82.55166705646,
+            8.040833637169985
+          ],
+          [
+            -82.55166705646,
+            11.219166957789986
+          ],
+          [
+            -85.95916704283,
+            11.219166957789986
+          ],
+          [
+            -85.95916704283,
+            8.040833637169985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -85.95916704283,
+      8.040833637169985,
+      -82.55166705646,
+      11.219166957789986
+    ],
+    "proj:shape": [
+      3814,
+      4089
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -85.95916704283,
+      0.0,
+      -0.00083333333,
+      11.219166957789986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/cri_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Costa Rica (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10094612,
+      "file:checksum": "d50110c489a8ff7e464a111db1770db0665033",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.24096113632199,
+            "minimum": 0.0,
+            "maximum": 118.68787384033203,
+            "stddev": 6.487356180668482,
+            "valid_percent": 18.95368887290795
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 118.68787384033203,
+            "buckets": [
+              180076,
+              2707,
+              1094,
+              644,
+              407,
+              207,
+              161,
+              152,
+              83,
+              15
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12614,
+      "file:checksum": "12204df5bf99d6e4d003e4e573f91545c9c5175f3c3d9cc092047ff4bc2b87606924"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11659,
+      "file:checksum": "122093c5509d7f16ec91f9509f794ae798b9caea4318b3e108239f4eda1c5e42e3f9"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

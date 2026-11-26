@@ -1,0 +1,184 @@
+{
+  "type": "Collection",
+  "id": "adm0",
+  "stac_version": "1.1.0",
+  "description": "UNICEF GeoRepo ADM0 (2025-10-14); Mali replaced by MLI_V2 dissolved from ADM2. `has_exposure` marks units present in the exposure tables.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0/adm0.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "ADM0 vector tiles",
+      "pmtiles:layers": [
+        "adm0"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Administrative boundaries"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "ucode",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "name_en",
+      "type": "string"
+    },
+    {
+      "name": "iso3",
+      "type": "string"
+    },
+    {
+      "name": "adm0_type",
+      "type": "string"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "has_exposure",
+      "type": "bool"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "table:row_count": 289,
+  "table:primary_geometry": "geometry",
+  "GCHD:geometry_types": [
+    "MultiPolygon",
+    "Polygon"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 10,
+  "pmtiles:layers": [
+    "adm0"
+  ],
+  "title": "Administrative boundaries - ADM0 (countries and territories)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -89.90000153,
+          180.0,
+          83.62741852
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "administrative boundaries",
+    "ADM0"
+  ],
+  "providers": [
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0/adm0.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Administrative boundaries - ADM0 (countries and territories) (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 109119928,
+      "file:checksum": "12200d87df459f30e01d724e18ec8d3fa7ad3f30e675232670af9fc239c6e454aa18"
+    },
+    "tiles": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0/adm0.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Administrative boundaries - ADM0 (countries and territories) (PMTiles vector tiles)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 57986222,
+      "file:checksum": "12204b7309f660648ff5ced05b9e535f49b33ee78b20ca408703f5b363b0d74715ba"
+    },
+    "style": {
+      "href": "./style.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default MapLibre style (PMTiles)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 688,
+      "file:checksum": "1220dffac65689085aee8aab0ad778d2c3b53bb13e4abcc5011ae40c1ab101e1c958"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 32067,
+      "file:checksum": "122042393b17b1900d25922e20fdb003d874afbe83f0575c165ba1b649f4fa81f094"
+    }
+  }
+}

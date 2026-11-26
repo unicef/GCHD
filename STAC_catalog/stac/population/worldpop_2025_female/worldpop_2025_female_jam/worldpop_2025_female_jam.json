@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_jam",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -78.36916707319,
+          18.525000261899986
+        ],
+        [
+          -75.97000041612,
+          18.525000261899986
+        ],
+        [
+          -75.97000041612,
+          17.391666933099987
+        ],
+        [
+          -78.36916707319,
+          17.391666933099987
+        ],
+        [
+          -78.36916707319,
+          18.525000261899986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -78.36916707319,
+    17.391666933099987,
+    -75.97000041612,
+    18.525000261899986
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Jamaica",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "JAM",
+    "GCHD:country": "Jamaica",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -78.36916707319,
+            17.391666933099987
+          ],
+          [
+            -75.97000041612,
+            17.391666933099987
+          ],
+          [
+            -75.97000041612,
+            18.525000261899986
+          ],
+          [
+            -78.36916707319,
+            18.525000261899986
+          ],
+          [
+            -78.36916707319,
+            17.391666933099987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -78.36916707319,
+      17.391666933099987,
+      -75.97000041612,
+      18.525000261899986
+    ],
+    "proj:shape": [
+      1360,
+      2879
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -78.36916707319,
+      0.0,
+      -0.00083333333,
+      18.525000261899986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/jam_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Jamaica (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3608236,
+      "file:checksum": "d50110775b7079c1f3a861edcee703a5596064",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.148503880140478,
+            "minimum": 0.0,
+            "maximum": 178.75189208984375,
+            "stddev": 5.847305178654761,
+            "valid_percent": 17.810159478305785
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 178.75189208984375,
+            "buckets": [
+              86552,
+              1119,
+              338,
+              171,
+              56,
+              21,
+              7,
+              3,
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6581,
+      "file:checksum": "12201ae09300648b5b8e1f99e6826537058d836cdf65604bee4b2bba552dfa848dd1"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6160,
+      "file:checksum": "1220ad670b9773eb7c8a4c3aa9ce67e15ed9ea2672e8f6e16e90a6b42eef3a6c6dba"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

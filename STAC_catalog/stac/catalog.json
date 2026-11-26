@@ -2,7 +2,7 @@
   "type": "Catalog",
   "id": "GCHD",
   "stac_version": "1.1.0",
-  "description": "The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It also includes WorldPop gridded estimates of the population under 18 (female, male and total), the basis for exposure analysis.\n\nEvery layer is a Cloud-Optimized GeoTIFF that can be streamed directly into GIS tools or analysis code. Processing scripts and documentation: https://github.com/unicef/GCHD",
+  "description": "The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It adds the Multi-Hazard Intensity (MHI) index, WorldPop 2025 population grids (under 18 and all ages, female, male and total), harmonised administrative boundaries (ADM0/1/2), and hazard-exposure statistics per administrative unit.\n\nGridded layers are Cloud-Optimized GeoTIFFs that stream directly into GIS tools or analysis code; boundaries and exposure statistics are (Geo)Parquet tables that DuckDB, GeoPandas or Arrow read over HTTP. Processing scripts and documentation: https://github.com/unicef/GCHD",
   "links": [
     {
       "rel": "root",
@@ -12,82 +12,65 @@
     },
     {
       "rel": "child",
-      "href": "./flood/collection.json",
+      "href": "./hazards/catalog.json",
       "type": "application/json",
-      "title": "Floods"
+      "title": "Hazards"
     },
     {
       "rel": "child",
-      "href": "./tropical_storm/collection.json",
+      "href": "./multi_hazard/catalog.json",
       "type": "application/json",
-      "title": "Tropical Storm"
+      "title": "Multi-hazard indicators"
     },
     {
       "rel": "child",
-      "href": "./drought/collection.json",
+      "href": "./population/catalog.json",
       "type": "application/json",
-      "title": "Droughts"
+      "title": "Population"
     },
     {
       "rel": "child",
-      "href": "./heatwave/collection.json",
+      "href": "./boundaries/catalog.json",
       "type": "application/json",
-      "title": "Heatwaves and Extreme Heat"
+      "title": "Administrative boundaries"
     },
     {
       "rel": "child",
-      "href": "./fire/collection.json",
+      "href": "./exposure/catalog.json",
       "type": "application/json",
-      "title": "Fire"
+      "title": "Hazard exposure statistics"
     },
     {
       "rel": "child",
-      "href": "./sand_dust_storm/collection.json",
+      "href": "./reference/catalog.json",
       "type": "application/json",
-      "title": "Sand and Dust Storm"
+      "title": "Reference grids"
     },
     {
-      "rel": "child",
-      "href": "./air_pollution/collection.json",
-      "type": "application/json",
-      "title": "Air Pollution"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
     },
     {
-      "rel": "child",
-      "href": "./malaria/collection.json",
-      "type": "application/json",
-      "title": "Vector Borne Diseases (Malaria)"
-    },
-    {
-      "rel": "child",
-      "href": "./landslide/collection.json",
-      "type": "application/json",
-      "title": "Landslides"
-    },
-    {
-      "rel": "child",
-      "href": "./earthquake/collection.json",
-      "type": "application/json",
-      "title": "Earthquake"
-    },
-    {
-      "rel": "child",
-      "href": "./conflict/collection.json",
-      "type": "application/json",
-      "title": "Complex Emergencies (Conflict)"
-    },
-    {
-      "rel": "child",
-      "href": "./volcano/collection.json",
-      "type": "application/json",
-      "title": "Volcanoes"
-    },
-    {
-      "rel": "child",
-      "href": "./worldpop_u18_2025/collection.json",
-      "type": "application/json",
-      "title": "WorldPop U18 population 2025"
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
     }
   ],
-  "title": "UNICEF Global Child Hazard Database"
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "exposure",
+    "climate",
+    "population",
+    "administrative boundaries"
+  ],
+  "title": "UNICEF Global Child Hazard Database",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
 }

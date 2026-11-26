@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_imn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -4.830000700680003,
+          54.41833345165999
+        ],
+        [
+          -4.308334036100003,
+          54.41833345165999
+        ],
+        [
+          -4.308334036100003,
+          54.04416678648999
+        ],
+        [
+          -4.830000700680003,
+          54.04416678648999
+        ],
+        [
+          -4.830000700680003,
+          54.41833345165999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -4.830000700680003,
+    54.04416678648999,
+    -4.308334036100003,
+    54.41833345165999
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Isle of Man",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "IMN",
+    "GCHD:country": "Isle of Man",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -4.830000700680003,
+            54.04416678648999
+          ],
+          [
+            -4.308334036100003,
+            54.04416678648999
+          ],
+          [
+            -4.308334036100003,
+            54.41833345165999
+          ],
+          [
+            -4.830000700680003,
+            54.41833345165999
+          ],
+          [
+            -4.830000700680003,
+            54.04416678648999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -4.830000700680003,
+      54.04416678648999,
+      -4.308334036100003,
+      54.41833345165999
+    ],
+    "proj:shape": [
+      449,
+      626
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -4.830000700680003,
+      0.0,
+      -0.00083333333,
+      54.41833345165999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/imn_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Isle of Man (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 248320,
+      "file:checksum": "d501100b873c30409b9d05edc800052e16d0db",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.5797234740488673,
+            "minimum": 0.0,
+            "maximum": 25.408977508544922,
+            "stddev": 4.796637605997921,
+            "valid_percent": 11.605128898439556
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 25.408977508544922,
+            "buckets": [
+              25880,
+              2508,
+              693,
+              508,
+              613,
+              691,
+              647,
+              570,
+              378,
+              131
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8120,
+      "file:checksum": "1220788167af4b95fd197a904d79e74738acc30c470a1eb97025b783e03efd8fef21"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7415,
+      "file:checksum": "12204fd5611606bbfb849b1107d77c62a1112e7b3077dfca34146790f61ff51970b2"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

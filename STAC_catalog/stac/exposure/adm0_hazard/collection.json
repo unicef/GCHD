@@ -1,0 +1,591 @@
+{
+  "type": "Collection",
+  "id": "adm0_hazard",
+  "stac_version": "1.1.0",
+  "description": "Roll-up of adm2_hazard to country level, with the same rules and GEE provenance as adm1_hazard. Join to adm0 on adm0_ucode = ucode.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hazard exposure statistics"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "hazard_code",
+      "type": "string",
+      "description": "GCHD pipeline hazard code (CSV file stem); see config/hazard_map.yaml."
+    },
+    {
+      "name": "unicef_code",
+      "type": "string",
+      "description": "UNICEF proposed / GLIDE code from the 'Hazard Codes' tab."
+    },
+    {
+      "name": "source_release",
+      "type": "string",
+      "description": "Release date of the source CSVs."
+    },
+    {
+      "name": "geo_level",
+      "type": "string",
+      "description": "Determines at what geographic level (global, country, region, etc)."
+    },
+    {
+      "name": "hazard",
+      "type": "string",
+      "description": "The hazard type that is being assessed."
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "description": "GEE asset from  which hazard data was obtained."
+    },
+    {
+      "name": "prod_date",
+      "type": "date32[day]",
+      "description": "The date when the data was produced."
+    },
+    {
+      "name": "dataflow",
+      "type": "string",
+      "description": "Data flow code according to UNICEF."
+    },
+    {
+      "name": "time_period",
+      "type": "int16",
+      "description": "Year or time period for which the data is produced."
+    },
+    {
+      "name": "iso3",
+      "type": "string",
+      "description": "ISO 3 code of the country"
+    },
+    {
+      "name": "adm0_id",
+      "type": "int64",
+      "description": "Administrative level 0 (national level) unique ID."
+    },
+    {
+      "name": "adm0_name",
+      "type": "string",
+      "description": "Administrative level 0 (national level) readable name."
+    },
+    {
+      "name": "adm0_ucode",
+      "type": "string",
+      "description": "Administrative level 0 (national level) unique code."
+    },
+    {
+      "name": "adm1_name",
+      "type": "string",
+      "description": "Administrative level 1 (regional level) readable name."
+    },
+    {
+      "name": "adm1_ucode",
+      "type": "string",
+      "description": "Administrative level 1 (regional level) unique code."
+    },
+    {
+      "name": "adm2_name",
+      "type": "string",
+      "description": "Administrative level 2 (district level) readable name."
+    },
+    {
+      "name": "adm2_ucode",
+      "type": "string",
+      "description": "Administrative level 2 (district level) unique code."
+    },
+    {
+      "name": "unicef_region",
+      "type": "string",
+      "description": "UNICEF region acronym."
+    },
+    {
+      "name": "unicef_region_full",
+      "type": "string",
+      "description": "Complete name of the UNICEF region."
+    },
+    {
+      "name": "hazs_mean",
+      "type": "double",
+      "description": "Average intensity value of the hazard across the assessed administrative area. Higher numbers mean the physical danger is generally greater."
+    },
+    {
+      "name": "hazs_std",
+      "type": "double",
+      "description": "How much the intensity varies within the assessed administrative area. A large value means some locations are much riskier than others."
+    },
+    {
+      "name": "hazs_max",
+      "type": "double",
+      "description": "Highest hazard intensity within the administrative area. Higher values indicate severe localized impacts."
+    },
+    {
+      "name": "hazs_min",
+      "type": "double",
+      "description": "Lowest hazard intensity within the administrative area. Lower values represent minimal hazard intensity."
+    },
+    {
+      "name": "hazs_median",
+      "type": "double",
+      "description": "Middle value of hazard intensity when ranked from lowest to highest within the administrative area. Higher median refers to moderate–high intensity."
+    },
+    {
+      "name": "gindex",
+      "type": "double",
+      "description": "A 0–10 index scaled using global minimum and maximum hazard intensity values. Higher values indicate more severe global hazard levels.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "cindex",
+      "type": "double",
+      "description": "A 0–10 index scaled using country-specific minimum and maximum hazard intensity values. Higher values indicate severe national-level hazard conditions.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "rindex",
+      "type": "double",
+      "description": "A 0–10 index scaled using regional intensity extremes. Higher values reflect more severe regional hazard conditions.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "pop_total",
+      "type": "double",
+      "description": "Estimated number of people residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "pop_total_m",
+      "type": "double",
+      "description": "Estimated number of male population residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "pop_total_f",
+      "type": "double",
+      "description": "Estimated number of  female population residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_pop_total",
+      "type": "double",
+      "description": "Estimated number of children residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_pop_m",
+      "type": "double",
+      "description": "Estimated number of boys under 18 residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_pop_f",
+      "type": "double",
+      "description": "Estimated number of girls under 18 residing in an admin unit.",
+      "unit": "Persons"
+    },
+    {
+      "name": "aexp",
+      "type": "double",
+      "description": "Estimated number of people residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "amexp",
+      "type": "double",
+      "description": "Estimated number of males residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "afexp",
+      "type": "double",
+      "description": "Estimated number of females residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_aexp",
+      "type": "double",
+      "description": "Estimated number of children (under 18 years) residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_amexp",
+      "type": "double",
+      "description": "Estimated number of male children (under 18 years) residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "u18_afexp",
+      "type": "double",
+      "description": "Estimated number of female children (under 18 years) residing in hazard-exposed areas.",
+      "unit": "Persons"
+    },
+    {
+      "name": "rexp",
+      "type": "double",
+      "description": "Estimated proportion of the total population of the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "rmexp",
+      "type": "double",
+      "description": "Estimated proportion of all males in the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "rfexp",
+      "type": "double",
+      "description": "Estimated proportion of all females in the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "u18_rexp",
+      "type": "double",
+      "description": "Estimated proportion of all children (under 18) in the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "u18_rmexp",
+      "type": "double",
+      "description": "Estimated proportion of male children (under 18) in the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "u18_rfexp",
+      "type": "double",
+      "description": "Estimated proportion of female children (under 18) in the administrative area residing in hazard-exposed areas.",
+      "unit": "Percent (%)"
+    },
+    {
+      "name": "gexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "cexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "rexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "gmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "cmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "rmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "gfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "cfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "rfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_gexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_cexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_rexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_gmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_cmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_rmexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high. Male population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_gfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_cfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a country where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "u18_rfexpi",
+      "type": "double",
+      "description": "A 0–10 index that combines log-scaled absolute exposure and percentage-based relative children exposure (each robust min–max normalised) via the geometric mean, identifying locations within a region where both the number and proportion of people exposed are simultaneously high. Female population only.",
+      "unit": "Index (0–10)"
+    },
+    {
+      "name": "gexpc",
+      "type": "int8",
+      "description": "Categorisation of global exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "cexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific exposure index scores into five classes, clearly conveying relative exposure levels at the national scale.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "rexpc",
+      "type": "int8",
+      "description": "Categorisation of regional exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "gmexpc",
+      "type": "int8",
+      "description": "Categorisation of global exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "cmexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific exposure index scores into five classes, clearly conveying relative exposure levels at the national scale. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "rmexpc",
+      "type": "int8",
+      "description": "Categorisation of regional exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "gfexpc",
+      "type": "int8",
+      "description": "Categorisation of global exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "cfexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific exposure index scores into five classes, clearly conveying relative exposure levels at the national scale. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "rfexpc",
+      "type": "int8",
+      "description": "Categorisation of regional exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_gexpc",
+      "type": "int8",
+      "description": "Categorisation of global children exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_cexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific children exposure index scores into five classes, clearly conveying relative exposure levels at the national scale.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_rexpc",
+      "type": "int8",
+      "description": "Categorisation of regional children exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_gmexpc",
+      "type": "int8",
+      "description": "Categorisation of global children exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_cmexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific children exposure index scores into five classes, clearly conveying relative exposure levels at the national scale. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_rmexpc",
+      "type": "int8",
+      "description": "Categorisation of regional children exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts. Male population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_gfexpc",
+      "type": "int8",
+      "description": "Categorisation of global children exposure index scores into five classes indicating relative levels of population exposure, from Very low to Very high. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_cfexpc",
+      "type": "int8",
+      "description": "Categorisation of country-specific children exposure index scores into five classes, clearly conveying relative exposure levels at the national scale. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "u18_rfexpc",
+      "type": "int8",
+      "description": "Categorisation of regional children exposure index scores into five classes, providing clear and actionable relative exposure levels within regional contexts. Female population only.",
+      "unit": "Class label (1-5)"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "description": "Data availability flag: empty = valid, 'No Data', 'Insufficient Data', 'Not Applicable'."
+    },
+    {
+      "name": "n_adm2",
+      "type": "int32",
+      "description": "Number of ADM2 units aggregated (roll-up tables only).",
+      "unit": "count"
+    },
+    {
+      "name": "n_adm2_with_data",
+      "type": "int32",
+      "description": "ADM2 units with non-null aexp (roll-up tables only).",
+      "unit": "count"
+    }
+  ],
+  "table:row_count": 5610,
+  "GCHD:source_release": "2026-08-31",
+  "GCHD:boundaries": "adm0",
+  "title": "Hazard exposure by country (ADM0), per hazard (roll-up)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -89.90000153,
+          180.0,
+          83.62741852
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "exposure",
+    "hazard",
+    "ADM0"
+  ],
+  "providers": [
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0_hazard/adm0_hazard.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Hazard exposure by country (ADM0), per hazard (roll-up) (Parquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 312875,
+      "file:checksum": "12208bac0a12d09941b5aa09014319d2f985d2f9fbbe0afc9f43e62c767b1737f837"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Thumbnail (ADM0 administrative boundaries)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 32067,
+      "file:checksum": "122042393b17b1900d25922e20fdb003d874afbe83f0575c165ba1b649f4fa81f094"
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "id": "unicef_acled_ci_sep2020_aug2025",
+  "stac_version": "1.1.0",
+  "description": "Conflict Index generated from the geometric mean of normalized conflict events and fatalities recorded by ACLED between September 2020 and August 2025. The index ranges between 0 and 10.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/conflict/conflict_grid_0p01_degree.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Complex Emergencies (Conflict)"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://acleddata.com/",
+      "type": "text/html",
+      "title": "Original source (ACLED)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Complex Emergencies",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "0.1 degree/11km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Index",
+  "GCHD:threshold": ">=0.01",
+  "GCHD:classes": "Use natural breaks/quantile",
+  "GCHD:value_range": [
+    0.0,
+    10.0
+  ],
+  "GCHD:notes": "This layer was generated using point data f fatalities and conflict events from ACLED.",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/conflict_admin2_0p1_degree",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "complex_emergencies_acled_0p01_grid",
+      "app_name": null,
+      "unicef_code": "CE",
+      "valid": "> -1000",
+      "op": ">=",
+      "threshold": 0,
+      "default": false
+    }
+  ],
+  "title": "Conflict",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          179.99999999967258,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Complex Emergencies (Conflict)",
+    "CE"
+  ],
+  "providers": [
+    {
+      "name": "ACLED",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://acleddata.com/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Conflict (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        18000,
+        36000
+      ],
+      "proj:transform": [
+        0.009999999999990905,
+        0.0,
+        -180.0,
+        0.0,
+        -0.010000000000005116,
+        90.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -90.00000000009209,
+        179.99999999967258,
+        90.0
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": 0.07240348303400669,
+            "minimum": 0.0,
+            "maximum": 1.9135539531707764,
+            "stddev": 0.0883598687170924,
+            "valid_percent": 3.9892196655273438
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.9135539531707764,
+            "buckets": [
+              19647,
+              1036,
+              163,
+              41,
+              10,
+              4,
+              4,
+              2,
+              6,
+              2
+            ]
+          }
+        }
+      ],
+      "file:size": 35177793,
+      "file:checksum": "d50110861dd20dc596e4e1a04f88080af901aa"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 65740,
+      "file:checksum": "12203f7466e174bfb8c68512ceb73b7405498184b7c516b0b2c947a93077b966a035"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 96071,
+      "file:checksum": "1220849b3992104f310adb8634e98c0c1092bf7fb17cd31bdb861e7eb77c215afddc"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

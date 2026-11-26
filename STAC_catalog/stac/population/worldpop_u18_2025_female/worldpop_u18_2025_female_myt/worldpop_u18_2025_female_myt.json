@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_myt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          45.01833243326,
+          -12.63666628012002
+        ],
+        [
+          45.2999990988,
+          -12.63666628012002
+        ],
+        [
+          45.2999990988,
+          -13.00499961198002
+        ],
+        [
+          45.01833243326,
+          -13.00499961198002
+        ],
+        [
+          45.01833243326,
+          -12.63666628012002
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    45.01833243326,
+    -13.00499961198002,
+    45.2999990988,
+    -12.63666628012002
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Mayotte",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MYT",
+    "GCHD:country": "Mayotte",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            45.01833243326,
+            -13.00499961198002
+          ],
+          [
+            45.2999990988,
+            -13.00499961198002
+          ],
+          [
+            45.2999990988,
+            -12.63666628012002
+          ],
+          [
+            45.01833243326,
+            -12.63666628012002
+          ],
+          [
+            45.01833243326,
+            -13.00499961198002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      45.01833243326,
+      -13.00499961198002,
+      45.2999990988,
+      -12.63666628012002
+    ],
+    "proj:shape": [
+      442,
+      338
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      45.01833243326,
+      0.0,
+      -0.00083333333,
+      -12.63666628012002,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/myt_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Mayotte (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 83210,
+      "file:checksum": "d501107710de86848b2b5ad1755754d88500a7",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 5.810121855345912,
+            "minimum": 0.0,
+            "maximum": 40.188270568847656,
+            "stddev": 7.595895665384462,
+            "valid_percent": 9.57856970735495
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 40.188270568847656,
+            "buckets": [
+              8685,
+              1893,
+              1303,
+              1037,
+              515,
+              352,
+              150,
+              90,
+              199,
+              86
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7543,
+      "file:checksum": "1220a6ec5982b5a83d8e36962f8179f70a8f4836b603b3a5ec1b44a558556e3ddf50"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9524,
+      "file:checksum": "122039492de4419bf63f971d443ce5722c22d4e6f57f25c28a1ff03f300b0aa8f521"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

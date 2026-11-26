@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_slv",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -90.13166702614001,
+          14.450833611529987
+        ],
+        [
+          -87.68416703593,
+          14.450833611529987
+        ],
+        [
+          -87.68416703593,
+          13.155000283379987
+        ],
+        [
+          -90.13166702614001,
+          13.155000283379987
+        ],
+        [
+          -90.13166702614001,
+          14.450833611529987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -90.13166702614001,
+    13.155000283379987,
+    -87.68416703593,
+    14.450833611529987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – El Salvador",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SLV",
+    "GCHD:country": "El Salvador",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -90.13166702614001,
+            13.155000283379987
+          ],
+          [
+            -87.68416703593,
+            13.155000283379987
+          ],
+          [
+            -87.68416703593,
+            14.450833611529987
+          ],
+          [
+            -90.13166702614001,
+            14.450833611529987
+          ],
+          [
+            -90.13166702614001,
+            13.155000283379987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -90.13166702614001,
+      13.155000283379987,
+      -87.68416703593,
+      14.450833611529987
+    ],
+    "proj:shape": [
+      1555,
+      2937
+    ],
+    "proj:transform": [
+      0.0008333333300000017,
+      0.0,
+      -90.13166702614001,
+      0.0,
+      -0.0008333333299999998,
+      14.450833611529987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/slv_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – El Salvador (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 7137185,
+      "file:checksum": "d50110fcff44a3ba1119333142612cb9cfd633",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.2400001339779316,
+            "minimum": 0.0,
+            "maximum": 93.31172943115234,
+            "stddev": 5.889249288562092,
+            "valid_percent": 31.880898941068143
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 93.31172943115234,
+            "buckets": [
+              168586,
+              3917,
+              2234,
+              1321,
+              592,
+              311,
+              175,
+              95,
+              25,
+              12
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11539,
+      "file:checksum": "122079d99fa8bdc4a097acabd8d716eeb5330bdb8b48e5db654806689931340caed4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11116,
+      "file:checksum": "1220336c843e1de8696a3958e7ffbb7036be212f1142cd5adba8bd56513ae68495a9"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

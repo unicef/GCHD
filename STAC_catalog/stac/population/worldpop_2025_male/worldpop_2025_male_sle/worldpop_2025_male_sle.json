@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_sle",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -13.300834000130003,
+          10.000000295999985
+        ],
+        [
+          -10.271667345580003,
+          10.000000295999985
+        ],
+        [
+          -10.271667345580003,
+          6.920833641649986
+        ],
+        [
+          -13.300834000130003,
+          6.920833641649986
+        ],
+        [
+          -13.300834000130003,
+          10.000000295999985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -13.300834000130003,
+    6.920833641649986,
+    -10.271667345580003,
+    10.000000295999985
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Sierra Leone",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SLE",
+    "GCHD:country": "Sierra Leone",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -13.300834000130003,
+            6.920833641649986
+          ],
+          [
+            -10.271667345580003,
+            6.920833641649986
+          ],
+          [
+            -10.271667345580003,
+            10.000000295999985
+          ],
+          [
+            -13.300834000130003,
+            10.000000295999985
+          ],
+          [
+            -13.300834000130003,
+            6.920833641649986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -13.300834000130003,
+      6.920833641649986,
+      -10.271667345580003,
+      10.000000295999985
+    ],
+    "proj:shape": [
+      3695,
+      3635
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -13.300834000130003,
+      0.0,
+      -0.00083333333,
+      10.000000295999985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/sle_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Sierra Leone (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10227749,
+      "file:checksum": "d501105827b7256d005b1caa6c53c78e0d4b85",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.8011427679338068,
+            "minimum": 0.0,
+            "maximum": 143.37786865234375,
+            "stddev": 4.429811620698786,
+            "valid_percent": 31.028626457093257
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 143.37786865234375,
+            "buckets": [
+              315300,
+              3000,
+              1149,
+              524,
+              210,
+              64,
+              11,
+              4,
+              7,
+              6
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 24341,
+      "file:checksum": "1220ec2c1a547847ce13d0810198b35e2be8fe511723fa62b82f48044caee5ef8b0e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 24100,
+      "file:checksum": "1220e7805d2b1429d9ae5343315ef0562c3b652e978ed81a5411fc37a87ee311a4c3"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_nru",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          166.90916527903,
+          -0.502499661990015
+        ],
+        [
+          166.95916527883,
+          -0.502499661990015
+        ],
+        [
+          166.95916527883,
+          -0.5541663284500149
+        ],
+        [
+          166.90916527903,
+          -0.5541663284500149
+        ],
+        [
+          166.90916527903,
+          -0.502499661990015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    166.90916527903,
+    -0.5541663284500149,
+    166.95916527883,
+    -0.502499661990015
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Nauru",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NRU",
+    "GCHD:country": "Nauru",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            166.90916527903,
+            -0.5541663284500149
+          ],
+          [
+            166.95916527883,
+            -0.5541663284500149
+          ],
+          [
+            166.95916527883,
+            -0.502499661990015
+          ],
+          [
+            166.90916527903,
+            -0.502499661990015
+          ],
+          [
+            166.90916527903,
+            -0.5541663284500149
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      166.90916527903,
+      -0.5541663284500149,
+      166.95916527883,
+      -0.502499661990015
+    ],
+    "proj:shape": [
+      62,
+      60
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      166.90916527903,
+      0.0,
+      -0.00083333333,
+      -0.502499661990015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/nru_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Nauru (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 9968,
+      "file:checksum": "d501102a3a6cc229d8b12fb4413a2fda2dba98",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.758970358814352,
+            "minimum": 0.0,
+            "maximum": 23.469806671142578,
+            "stddev": 4.074603968004297,
+            "valid_percent": 34.46236559139785
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 23.469806671142578,
+            "buckets": [
+              399,
+              316,
+              308,
+              135,
+              53,
+              36,
+              8,
+              1,
+              8,
+              18
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4560,
+      "file:checksum": "1220cd2ee355824902b64acf6103456635ea564f68b95b922a820627a46c9fa52f2e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3475,
+      "file:checksum": "12200ea6b7820128aa9f65f2f03476d3c2655defec2cb485a2128bacaf585b30a8d3"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

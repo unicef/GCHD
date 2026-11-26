@@ -1,0 +1,209 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_jpn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          122.9333321216,
+          45.523333487239995
+        ],
+        [
+          153.98166533074001,
+          45.523333487239995
+        ],
+        [
+          153.98166533074001,
+          24.045833573149995
+        ],
+        [
+          122.9333321216,
+          24.045833573149995
+        ],
+        [
+          122.9333321216,
+          45.523333487239995
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    122.9333321216,
+    24.045833573149995,
+    153.98166533074001,
+    45.523333487239995
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Japan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "JPN",
+    "GCHD:country": "Japan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            122.9333321216,
+            24.045833573149995
+          ],
+          [
+            153.98166533074001,
+            24.045833573149995
+          ],
+          [
+            153.98166533074001,
+            45.523333487239995
+          ],
+          [
+            122.9333321216,
+            45.523333487239995
+          ],
+          [
+            122.9333321216,
+            24.045833573149995
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      122.9333321216,
+      24.045833573149995,
+      153.98166533074001,
+      45.523333487239995
+    ],
+    "proj:shape": [
+      25773,
+      37258
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      122.9333321216,
+      0.0,
+      -0.00083333333,
+      45.523333487239995,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/jpn_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Japan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 139208685,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.414383754659132,
+            "minimum": 0.0,
+            "maximum": 160.25848388671875,
+            "stddev": 8.7904826002802,
+            "valid_percent": 5.727835199224259
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 160.25848388671875,
+            "buckets": [
+              40083,
+              819,
+              310,
+              166,
+              88,
+              53,
+              30,
+              18,
+              11,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4079,
+      "file:checksum": "1220d8c20ea19636ab8e8fb0b182ee698b66862af0c6cc61d78f3f180046546104ba"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2920,
+      "file:checksum": "122039327db1d6d13fc8eca4d3bd4c9878c6f89444eab3e85a18c63bd8b679b0d4c8"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

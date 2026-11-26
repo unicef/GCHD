@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_plw",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          134.12166541018,
+          8.172500303309985
+        ],
+        [
+          134.72083207445,
+          8.172500303309985
+        ],
+        [
+          134.72083207445,
+          6.888333641779985
+        ],
+        [
+          134.12166541018,
+          6.888333641779985
+        ],
+        [
+          134.12166541018,
+          8.172500303309985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    134.12166541018,
+    6.888333641779985,
+    134.72083207445,
+    8.172500303309985
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Palau",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PLW",
+    "GCHD:country": "Palau",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            134.12166541018,
+            6.888333641779985
+          ],
+          [
+            134.72083207445,
+            6.888333641779985
+          ],
+          [
+            134.72083207445,
+            8.172500303309985
+          ],
+          [
+            134.12166541018,
+            8.172500303309985
+          ],
+          [
+            134.12166541018,
+            6.888333641779985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      134.12166541018,
+      6.888333641779985,
+      134.72083207445,
+      8.172500303309985
+    ],
+    "proj:shape": [
+      1541,
+      719
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      134.12166541018,
+      0.0,
+      -0.00083333333,
+      8.172500303309985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/plw_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Palau (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 115128,
+      "file:checksum": "d50110d3f902818f71eb32c1e33b4f5f051b03",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.5598201540736378,
+            "minimum": 0.0,
+            "maximum": 170.69097900390625,
+            "stddev": 9.92249218351818,
+            "valid_percent": 0.49870064069037656
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 170.69097900390625,
+            "buckets": [
+              2409,
+              8,
+              2,
+              8,
+              3,
+              3,
+              3,
+              1,
+              1,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1068,
+      "file:checksum": "12209a3b3171abc9160b1bbbc403d196bbd5acf3fe2c6e7d97abced274f2cb06d0b8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1614,
+      "file:checksum": "1220f6bd7fcdc6efa7c7419ccf31316d006b48efcd82ffee473c34bfa8a51aafee5c"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

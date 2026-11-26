@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_phl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          116.92833214561999,
+          21.12166691817999
+        ],
+        [
+          126.60499877358,
+          21.12166691817999
+        ],
+        [
+          126.60499877358,
+          4.58750031764999
+        ],
+        [
+          116.92833214561999,
+          4.58750031764999
+        ],
+        [
+          116.92833214561999,
+          21.12166691817999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    116.92833214561999,
+    4.58750031764999,
+    126.60499877358,
+    21.12166691817999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Philippines",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PHL",
+    "GCHD:country": "Philippines",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            116.92833214561999,
+            4.58750031764999
+          ],
+          [
+            126.60499877358,
+            4.58750031764999
+          ],
+          [
+            126.60499877358,
+            21.12166691817999
+          ],
+          [
+            116.92833214561999,
+            21.12166691817999
+          ],
+          [
+            116.92833214561999,
+            4.58750031764999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      116.92833214561999,
+      4.58750031764999,
+      126.60499877358,
+      21.12166691817999
+    ],
+    "proj:shape": [
+      19841,
+      11612
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      116.92833214561999,
+      0.0,
+      -0.00083333333,
+      21.12166691817999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/phl_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Philippines (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 86642979,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.0879054700466186,
+            "minimum": 0.0,
+            "maximum": 538.4732055664062,
+            "stddev": 8.687618037624215,
+            "valid_percent": 15.396647135416666
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 538.4732055664062,
+            "buckets": [
+              94118,
+              358,
+              74,
+              34,
+              9,
+              2,
+              1,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7284,
+      "file:checksum": "12206f168f4b7517798ad240a037319f5c2683a55cdef01a045782084790a32f519f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 14708,
+      "file:checksum": "1220e858036b7929276620e37fb0d7603557a8c805ff20fb2df2df1a57151b6f7a9d"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

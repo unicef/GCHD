@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_yem",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          41.81499911274,
+          19.000000259999986
+        ],
+        [
+          54.53416572853,
+          19.000000259999986
+        ],
+        [
+          54.53416572853,
+          12.107500287569987
+        ],
+        [
+          41.81499911274,
+          12.107500287569987
+        ],
+        [
+          41.81499911274,
+          19.000000259999986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    41.81499911274,
+    12.107500287569987,
+    54.53416572853,
+    19.000000259999986
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Yemen",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "YEM",
+    "GCHD:country": "Yemen",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            41.81499911274,
+            12.107500287569987
+          ],
+          [
+            54.53416572853,
+            12.107500287569987
+          ],
+          [
+            54.53416572853,
+            19.000000259999986
+          ],
+          [
+            41.81499911274,
+            19.000000259999986
+          ],
+          [
+            41.81499911274,
+            12.107500287569987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      41.81499911274,
+      12.107500287569987,
+      54.53416572853,
+      19.000000259999986
+    ],
+    "proj:shape": [
+      8271,
+      15263
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      41.81499911274,
+      0.0,
+      -0.00083333333,
+      19.000000259999986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/yem_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Yemen (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 21402348,
+      "file:checksum": "d50110d1e6c1e1189e4eba27444eb228eb10c9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.0199635371344256,
+            "minimum": 0.0,
+            "maximum": 179.0013427734375,
+            "stddev": 3.736636833300471,
+            "valid_percent": 13.952174831081082
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 179.0013427734375,
+            "buckets": [
+              78771,
+              396,
+              71,
+              29,
+              13,
+              7,
+              2,
+              2,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7425,
+      "file:checksum": "12207a0e413b838d33e15902d75b8d38a41dd5fa6effb3a35b74a08e4cf34c245c68"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6718,
+      "file:checksum": "122056aea21eba1c69733dbe865e81fe35a5bdec99c565f5cb16a7ebd6c655461ce7"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

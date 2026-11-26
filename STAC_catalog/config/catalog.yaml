@@ -1,0 +1,143 @@
+# Catalog structure and the collections that do not come from the xlsx (config/layers.yaml).
+# Hand-edited; read by gchd_stac/common.py (load_layers merges `layers` below) and 08_build_stac.py.
+
+root:
+  id: GCHD
+  title: UNICEF Global Child Hazard Database
+  description: |-
+    The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It adds the Multi-Hazard Intensity (MHI) index, WorldPop 2025 population grids (under 18 and all ages, female, male and total), harmonised administrative boundaries (ADM0/1/2), and hazard-exposure statistics per administrative unit.
+
+    Gridded layers are Cloud-Optimized GeoTIFFs that stream directly into GIS tools or analysis code; boundaries and exposure statistics are (Geo)Parquet tables that DuckDB, GeoPandas or Arrow read over HTTP. Processing scripts and documentation: https://github.com/unicef/GCHD
+  keywords: [GCHD, UNICEF, children, hazard, exposure, climate, population, administrative boundaries]
+  contact: {name: UNICEF GCHD team, url: "https://github.com/unicef/GCHD"}
+
+license_url: https://github.com/unicef/GCHD      # rel:license for collections whose license is "other"
+
+# Top-level sub-catalogs, in display order. Hazard themes (config/layers.yaml `collections`) sit under `hazards`.
+groups:
+  hazards:
+    title: Hazards
+    description: Global gridded hazard layers, grouped by hazard theme. Each layer is one collection whose `data` asset is a Cloud-Optimized GeoTIFF (the river flood layer is 264 tiles with a VRT mosaic).
+  multi_hazard:
+    title: Multi-hazard indicators
+    description: Indicators that combine several hazard layers, such as the Multi-Hazard Intensity (MHI) index.
+  population:
+    title: Population
+    description: WorldPop R2025A constrained population estimates for 2025 at ~100 m, the basis of the exposure analysis. Children under 18 and all ages, each as female, male and total, one item per country and a global VRT mosaic per collection.
+  boundaries:
+    title: Administrative boundaries
+    description: Harmonised administrative boundaries (ADM0 countries and territories, ADM1, ADM2 districts) as GeoParquet, with PMTiles vector tiles for maps. These are the units of the exposure tables.
+  exposure:
+    title: Hazard exposure statistics
+    description: Population and child exposure to each hazard per administrative unit (ADM2, with ADM1 and ADM0 roll-ups), from the GCHD exposure pipeline. Join to the boundaries on the unit codes.
+  reference:
+    title: Reference grids
+    description: Auxiliary grids used to build the indicators, such as the land/sea mask of the ERA5 0.1° grid.
+
+# Extra raster layers, in the config/layers.yaml schema (03_convert_cog, 07_thumbnails and 08 treat them like
+# the xlsx layers). `collection` is the top-level group here, `stac_id` the collection id.
+layers:
+- id: MHI_climate
+  stac_id: mhi_climate
+  collection: multi_hazard
+  title: Multi-Hazard Intensity (MHI) - climate
+  hazard: Multi-hazard
+  description: Pixel-based multi-hazard intensity score (0-10) combining the climate hazard layers (PCA, min-max scaled), on the ERA5 0.1 deg grid. NoData (NaN) over sea. Global land percentiles for the mhi_pNN exposure metrics are in GCHD:mhi_percentiles. Built by multi_hazard_indicators/mhi/.
+  notes: null
+  hazard_phase: Preparedness/Planning
+  data_type: Index
+  resolution: 0.1 deg (~10km)
+  coverage: Global (land)
+  units: index (0-10)
+  legend_label: MHI (0-10)
+  threshold: null
+  classes: null
+  range: [0.0, 10.0]
+  source_provider: null
+  alternate_sources: null
+  gee_asset: null
+  start_year: null
+  end_year: null
+  source: {type: file, href: "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/multi_hazard/MHI_climate.tif"}
+  nodata: .nan
+  dtype: null
+  overview_resampling: average
+  palette: ['#ffffb2', '#fecc5c', '#fd8d3c', '#f03b20', '#bd0026']
+  transparent_zero: false
+  thumb_range: [0.0, 10.0]
+  extra_properties:
+    GCHD:mhi_percentiles: {p75: 5.202352, p80: 5.56949, p85: 5.935779, p90: 6.362279, p95: 6.890319, n_land_pixels: 2123439,
+                           method: "unweighted pixel percentile over landSeaMask==1 on the native ERA5 0.1deg grid"}
+- id: landSeaMask
+  stac_id: land_sea_mask
+  collection: reference
+  title: Land/sea mask (ERA5 0.1 deg grid)
+  hazard: null
+  description: 1 = land (painted from ADM0 boundaries), 0 = sea, on the ERA5 0.1 deg reference grid shared with MHI_climate. Built by multi_hazard_indicators/mhi/MHI_input_gee.js.
+  notes: null
+  hazard_phase: null
+  data_type: Mask
+  resolution: 0.1 deg (~10km)
+  coverage: Global
+  units: 1 = land, 0 = sea
+  legend_label: land (1) / sea (0)
+  threshold: null
+  classes: null
+  range: [0, 1]
+  source_provider: null
+  alternate_sources: null
+  gee_asset: null
+  start_year: null
+  end_year: null
+  source: {type: file, href: "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/reference/landSeaMask.tif"}
+  nodata: null
+  dtype: null
+  overview_resampling: nearest
+  palette: ['#dbe7f2', '#7d9b62']
+  transparent_zero: false
+  thumb_range: [0, 1]
+
+# Table collections: data stay on Azure (base + <id>/<file>), referenced by absolute URL. file:checksum is the
+# sha256 multihash of the published bytes (computed when they were built); 09_check verifies file:size.
+tables:
+  base: https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan
+  release: "2026-08-31"
+  boundaries:
+  - id: adm0
+    title: Administrative boundaries - ADM0 (countries and territories)
+    description: UNICEF GeoRepo ADM0 (2025-10-14); Mali replaced by MLI_V2 dissolved from ADM2. `has_exposure` marks units present in the exposure tables.
+    checksum: {parquet: 12200d87df459f30e01d724e18ec8d3fa7ad3f30e675232670af9fc239c6e454aa18, pmtiles: 12204b7309f660648ff5ced05b9e535f49b33ee78b20ca408703f5b363b0d74715ba}
+    pmtiles: {min_zoom: 0, max_zoom: 10, center: [-77.1679687, 26.5884192, 10]}
+  - id: adm1
+    title: Administrative boundaries - ADM1
+    description: UNICEF GeoRepo ADM1 (2025-10-14); Mali replaced by MLI_V2 dissolved from ADM2. `has_exposure` marks units present in the exposure tables.
+    checksum: {parquet: 1220080212a7628664368a080f8f66ed6d5ad25986270b7a497b6a28cc0a136bb438, pmtiles: 1220521425ff452365b52e9f537f02de59292eb6d355405ed4ba527547243926fb9b}
+    pmtiles: {min_zoom: 0, max_zoom: 10, center: [-77.1679687, 26.5884192, 10]}
+  - id: adm2
+    title: Administrative boundaries - ADM2 (districts)
+    description: GEE admin2_pop_geom export (2026-06-04), the geometry the ADM2 exposure statistics were computed on (41,023 units), with WorldPop 2025 population totals.
+    checksum: {parquet: 1220ae2aecc9f775c0483455e1f4477fc43640ac85e65c0dbe98fdad62207b756254, pmtiles: 1220ec34e23d78326075a2f089dc544f0a3e44a6828998751cdb09baf02748533bb6}
+    pmtiles: {min_zoom: 0, max_zoom: 10, center: [-88.7695312, 13.4109331, 10]}
+  exposure:
+  - id: adm2_hazard
+    level: adm2
+    title: Hazard exposure by district (ADM2), per hazard
+    description: One row per (adm2_ucode, hazard_code). Columns follow the ' Data Schema' sheet of Global Hazard Data catalog.xlsx. Computed by the GEE exposure pipeline (CSV release 2026-08-31); for some hazards (heatwave, extreme heat, ASI, malaria, SPI/SPEI drought) GEE used a different version of the layer than the hazard COGs in this catalog, so the numbers can differ from a recomputation on the COGs. Join to adm2 on adm2_ucode = ucode.
+    checksum: {parquet: 122026843e49440ea8135250136b86adc679fae9c69531ae51d11d10e5ac98e65724}
+  - id: adm1_hazard
+    level: adm1
+    title: Hazard exposure by ADM1, per hazard (roll-up)
+    description: Roll-up of adm2_hazard following each column's Aggregation Logic. Counts are summed, percentages recomputed, max/min kept, hazs_mean and severity indices population-weighted (provisional); medians, std and the exposure indices and classes are null. Same GEE provenance as adm2_hazard. Join to adm1 on adm1_ucode = ucode.
+    checksum: {parquet: 12201f2ace0a75dbe2c006ed217819473fd50f193557c5cb2ba97e0832d857626c93}
+  - id: adm0_hazard
+    level: adm0
+    title: Hazard exposure by country (ADM0), per hazard (roll-up)
+    description: Roll-up of adm2_hazard to country level, with the same rules and GEE provenance as adm1_hazard. Join to adm0 on adm0_ucode = ucode.
+    checksum: {parquet: 12208bac0a12d09941b5aa09014319d2f985d2f9fbbe0afc9f43e62c767b1737f837}
+
+# Landing pages of data producers that config/layers.yaml / web_app/config.py give no URL for (rel:via, providers).
+provider_urls:
+  ACLED: https://acleddata.com/
+  GEM: https://www.globalquakemodel.org/
+  World Bank/GFDRR: https://www.gfdrr.org/
+  Smithsonian Institution - Global Volcanism Program: https://volcano.si.edu/

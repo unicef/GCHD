@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_pyf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -154.72333343444,
+          -7.898332965740014
+        ],
+        [
+          -134.45833351550002,
+          -7.898332965740014
+        ],
+        [
+          -134.45833351550002,
+          -27.899999552400015
+        ],
+        [
+          -154.72333343444,
+          -27.899999552400015
+        ],
+        [
+          -154.72333343444,
+          -7.898332965740014
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -154.72333343444,
+    -27.899999552400015,
+    -134.45833351550002,
+    -7.898332965740014
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – French Polynesia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PYF",
+    "GCHD:country": "French Polynesia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -154.72333343444,
+            -27.899999552400015
+          ],
+          [
+            -134.45833351550002,
+            -27.899999552400015
+          ],
+          [
+            -134.45833351550002,
+            -7.898332965740014
+          ],
+          [
+            -154.72333343444,
+            -7.898332965740014
+          ],
+          [
+            -154.72333343444,
+            -27.899999552400015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -154.72333343444,
+      -27.899999552400015,
+      -134.45833351550002,
+      -7.898332965740014
+    ],
+    "proj:shape": [
+      24002,
+      24318
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -154.72333343444,
+      0.0,
+      -0.00083333333,
+      -7.898332965740014,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/pyf_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – French Polynesia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15452438,
+      "file:checksum": "d501106af1635ddcefb9854210176e98b1bbdd",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.3362232044430598,
+            "minimum": 0.015710320323705673,
+            "maximum": 11.616012573242188,
+            "stddev": 1.550996842368889,
+            "valid_percent": 0.06297910484668645
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.015710320323705673,
+            "max": 11.616012573242188,
+            "buckets": [
+              408,
+              149,
+              44,
+              20,
+              12,
+              7,
+              8,
+              1,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 905,
+      "file:checksum": "12206ba943379ccc41f6eb260f633bef1715fa462569cf4f9a8fcd91d57e853c694d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 762,
+      "file:checksum": "12206dc8126a23ad427f2fc3c74e1c9fccb19cd04870004276dc94c03df961d9cd62"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

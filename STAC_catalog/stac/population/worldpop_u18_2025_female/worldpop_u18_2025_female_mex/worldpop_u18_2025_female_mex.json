@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_mex",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -118.36416691321,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          32.718333538459994
+        ],
+        [
+          -86.71083370649,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          14.534166944529993
+        ],
+        [
+          -118.36416691321,
+          32.718333538459994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -118.36416691321,
+    14.534166944529993,
+    -86.71083370649,
+    32.718333538459994
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Mexico",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MEX",
+    "GCHD:country": "Mexico",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -118.36416691321,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            14.534166944529993
+          ],
+          [
+            -86.71083370649,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            32.718333538459994
+          ],
+          [
+            -118.36416691321,
+            14.534166944529993
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -118.36416691321,
+      14.534166944529993,
+      -86.71083370649,
+      32.718333538459994
+    ],
+    "proj:shape": [
+      21821,
+      37984
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -118.36416691321,
+      0.0,
+      -0.00083333333,
+      32.718333538459994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/mex_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Mexico (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 232872159,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.13967662444206488,
+            "minimum": 0.0,
+            "maximum": 22.212661743164062,
+            "stddev": 0.5801396979563025,
+            "valid_percent": 26.670767455432937
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 22.212661743164062,
+            "buckets": [
+              159486,
+              711,
+              310,
+              180,
+              102,
+              37,
+              19,
+              8,
+              6,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4271,
+      "file:checksum": "122075e8df3bdee2ac300ce77fabc3baf37695bc6c613804c4474fb382f6466a7019"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3321,
+      "file:checksum": "1220bb313ea31f5164093cb1e1426a859f2b704bc364873082dfcc2316b2721974f9"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

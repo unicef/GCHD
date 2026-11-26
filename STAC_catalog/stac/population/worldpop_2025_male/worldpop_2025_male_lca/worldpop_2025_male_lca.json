@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_lca",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -61.07916714235,
+          14.110000279559985
+        ],
+        [
+          -60.873333809840005,
+          14.110000279559985
+        ],
+        [
+          -60.873333809840005,
+          13.708333614499985
+        ],
+        [
+          -61.07916714235,
+          13.708333614499985
+        ],
+        [
+          -61.07916714235,
+          14.110000279559985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -61.07916714235,
+    13.708333614499985,
+    -60.873333809840005,
+    14.110000279559985
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Saint Lucia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LCA",
+    "GCHD:country": "Saint Lucia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.07916714235,
+            13.708333614499985
+          ],
+          [
+            -60.873333809840005,
+            13.708333614499985
+          ],
+          [
+            -60.873333809840005,
+            14.110000279559985
+          ],
+          [
+            -61.07916714235,
+            14.110000279559985
+          ],
+          [
+            -61.07916714235,
+            13.708333614499985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -61.07916714235,
+      13.708333614499985,
+      -60.873333809840005,
+      14.110000279559985
+    ],
+    "proj:shape": [
+      482,
+      247
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -61.07916714235,
+      0.0,
+      -0.00083333333,
+      14.110000279559985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/lca_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Saint Lucia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 156125,
+      "file:checksum": "d50110c93d1b9e10ae69c2fbe1c6462449e9f8",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.8613312713448034,
+            "minimum": 0.0,
+            "maximum": 24.24182891845703,
+            "stddev": 3.484490937377876,
+            "valid_percent": 26.070522619987567
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 24.24182891845703,
+            "buckets": [
+              20393,
+              5089,
+              2460,
+              1445,
+              757,
+              389,
+              147,
+              120,
+              98,
+              140
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9256,
+      "file:checksum": "12201bd803158376e94d2300313e8b7d74a1a41d98010ded51fc65d8add9a347e238"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 24009,
+      "file:checksum": "12201c28ff25e5299c7ec5e5898708926a7dcc80752944479f4b92e0906eafa94829"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

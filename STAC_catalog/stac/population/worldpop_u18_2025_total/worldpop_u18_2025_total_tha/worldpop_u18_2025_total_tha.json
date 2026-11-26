@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_tha",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          97.34333222395999,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          20.465833587469987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    97.34333222395999,
+    5.612500313549987,
+    105.63749885745,
+    20.465833587469987
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Thailand",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "THA",
+    "GCHD:country": "Thailand",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            97.34333222395999,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            5.612500313549987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      97.34333222395999,
+      5.612500313549987,
+      105.63749885745,
+      20.465833587469987
+    ],
+    "proj:shape": [
+      17824,
+      9953
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      97.34333222395999,
+      0.0,
+      -0.00083333333,
+      20.465833587469987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/tha_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Thailand (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 152799687,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3295654150352948,
+            "minimum": 0.0,
+            "maximum": 31.66977310180664,
+            "stddev": 0.9053611503168356,
+            "valid_percent": 29.869666466346157
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 31.66977310180664,
+            "buckets": [
+              173074,
+              1082,
+              391,
+              190,
+              115,
+              48,
+              28,
+              17,
+              8,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7866,
+      "file:checksum": "1220cc8e82a889070b34c8350a9db77467cac05d64d91e4596237b8b52d1e472d9f3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 19443,
+      "file:checksum": "1220f40c35d4f3256955e041484c93a6d469a08c9acf2ab84433f475417d20d836c2"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_gmb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.814167319410004,
+          13.824166947369987
+        ],
+        [
+          -13.791667331500005,
+          13.824166947369987
+        ],
+        [
+          -13.791667331500005,
+          13.064166950409987
+        ],
+        [
+          -16.814167319410004,
+          13.064166950409987
+        ],
+        [
+          -16.814167319410004,
+          13.824166947369987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.814167319410004,
+    13.064166950409987,
+    -13.791667331500005,
+    13.824166947369987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Gambia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GMB",
+    "GCHD:country": "Gambia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -16.814167319410004,
+            13.064166950409987
+          ],
+          [
+            -13.791667331500005,
+            13.064166950409987
+          ],
+          [
+            -13.791667331500005,
+            13.824166947369987
+          ],
+          [
+            -16.814167319410004,
+            13.824166947369987
+          ],
+          [
+            -16.814167319410004,
+            13.064166950409987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -16.814167319410004,
+      13.064166950409987,
+      -13.791667331500005,
+      13.824166947369987
+    ],
+    "proj:shape": [
+      912,
+      3627
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -16.814167319410004,
+      0.0,
+      -0.00083333333,
+      13.824166947369987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/gmb_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Gambia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2296366,
+      "file:checksum": "d501109c3ac350ea44b484537250ea66c62f15",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.898280580133175,
+            "minimum": 0.002110711531713605,
+            "maximum": 423.76983642578125,
+            "stddev": 13.304257951694606,
+            "valid_percent": 20.748167999031008
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.002110711531713605,
+            "max": 423.76983642578125,
+            "buckets": [
+              53730,
+              801,
+              188,
+              40,
+              36,
+              11,
+              4,
+              2,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4821,
+      "file:checksum": "12203071f3b9a223f19bdee798366cc7d4abf5d0a41e4ca5ade1138ccdc2064ce668"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4506,
+      "file:checksum": "12209ab906c34e1038483324a77484bea78a310178cbf17561ab0124bd29d979be63"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

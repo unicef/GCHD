@@ -1,0 +1,42 @@
+{
+  "type": "Catalog",
+  "id": "multi_hazard",
+  "stac_version": "1.1.0",
+  "description": "Indicators that combine several hazard layers, such as the Multi-Hazard Intensity (MHI) index.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./mhi_climate/collection.json",
+      "type": "application/json",
+      "title": "Multi-Hazard Intensity (MHI) - climate"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "title": "Multi-hazard indicators",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

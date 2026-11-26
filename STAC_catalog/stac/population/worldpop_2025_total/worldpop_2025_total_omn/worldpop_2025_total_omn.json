@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_omn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          52.000832405329994,
+          26.507500229969985
+        ],
+        [
+          59.839165707309995,
+          26.507500229969985
+        ],
+        [
+          59.839165707309995,
+          16.650833602729985
+        ],
+        [
+          52.000832405329994,
+          16.650833602729985
+        ],
+        [
+          52.000832405329994,
+          26.507500229969985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    52.000832405329994,
+    16.650833602729985,
+    59.839165707309995,
+    26.507500229969985
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Oman",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "OMN",
+    "GCHD:country": "Oman",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.000832405329994,
+            16.650833602729985
+          ],
+          [
+            59.839165707309995,
+            16.650833602729985
+          ],
+          [
+            59.839165707309995,
+            26.507500229969985
+          ],
+          [
+            52.000832405329994,
+            26.507500229969985
+          ],
+          [
+            52.000832405329994,
+            16.650833602729985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      52.000832405329994,
+      16.650833602729985,
+      59.839165707309995,
+      26.507500229969985
+    ],
+    "proj:shape": [
+      11828,
+      9406
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      52.000832405329994,
+      0.0,
+      -0.00083333333,
+      26.507500229969985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/omn_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Oman (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 13559297,
+      "file:checksum": "d50110295f808774f39ad5347d521bcc202870",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.4298957850353542,
+            "minimum": 0.0,
+            "maximum": 65.8417739868164,
+            "stddev": 3.435367925972384,
+            "valid_percent": 5.168591832822086
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 65.8417739868164,
+            "buckets": [
+              41160,
+              1342,
+              331,
+              164,
+              41,
+              33,
+              23,
+              28,
+              8,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7316,
+      "file:checksum": "1220c63b871f6b23e3e53d79083834098d23537dde7c71fdcab8ce21f1e329092ecc"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 8947,
+      "file:checksum": "12206ca736ffbaba6c13ea8c10539ca4b8ab179018d506155aebfcb207f4659a7ae1"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

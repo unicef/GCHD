@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_cmr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.497499246009998,
+          13.083333616999987
+        ],
+        [
+          16.194165881889997,
+          13.083333616999987
+        ],
+        [
+          16.194165881889997,
+          1.656666996039986
+        ],
+        [
+          8.497499246009998,
+          1.656666996039986
+        ],
+        [
+          8.497499246009998,
+          13.083333616999987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    8.497499246009998,
+    1.656666996039986,
+    16.194165881889997,
+    13.083333616999987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Cameroon",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CMR",
+    "GCHD:country": "Cameroon",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            8.497499246009998,
+            1.656666996039986
+          ],
+          [
+            16.194165881889997,
+            1.656666996039986
+          ],
+          [
+            16.194165881889997,
+            13.083333616999987
+          ],
+          [
+            8.497499246009998,
+            13.083333616999987
+          ],
+          [
+            8.497499246009998,
+            1.656666996039986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      8.497499246009998,
+      1.656666996039986,
+      16.194165881889997,
+      13.083333616999987
+    ],
+    "proj:shape": [
+      13712,
+      9236
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      8.497499246009998,
+      0.0,
+      -0.00083333333,
+      13.083333616999987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/cmr_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Cameroon (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 40201075,
+      "file:checksum": "d50110a116ba2747cac5fa73ce6b524b0b6f28",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.2861388960990805,
+            "minimum": 0.0,
+            "maximum": 308.673095703125,
+            "stddev": 7.479661837197027,
+            "valid_percent": 22.900815217391305
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 308.673095703125,
+            "buckets": [
+              160988,
+              406,
+              155,
+              79,
+              63,
+              48,
+              38,
+              15,
+              8,
+              8
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9920,
+      "file:checksum": "12207398af1c0a62e212e512e125855968533decbe03c58c79ee9d01d3a744fb4645"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 19450,
+      "file:checksum": "12205c484e9526b38e0c6ec13a86ca4afefd97901d471dfbd55deba9c68bd0b99465"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

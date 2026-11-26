@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_gin",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -15.351667325260003,
+          12.674166951969987
+        ],
+        [
+          -7.637500689450003,
+          12.674166951969987
+        ],
+        [
+          -7.637500689450003,
+          7.191666973899987
+        ],
+        [
+          -15.351667325260003,
+          7.191666973899987
+        ],
+        [
+          -15.351667325260003,
+          12.674166951969987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -15.351667325260003,
+    7.191666973899987,
+    -7.637500689450003,
+    12.674166951969987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Guinea",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GIN",
+    "GCHD:country": "Guinea",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -15.351667325260003,
+            7.191666973899987
+          ],
+          [
+            -7.637500689450003,
+            7.191666973899987
+          ],
+          [
+            -7.637500689450003,
+            12.674166951969987
+          ],
+          [
+            -15.351667325260003,
+            12.674166951969987
+          ],
+          [
+            -15.351667325260003,
+            7.191666973899987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -15.351667325260003,
+      7.191666973899987,
+      -7.637500689450003,
+      12.674166951969987
+    ],
+    "proj:shape": [
+      6579,
+      9257
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -15.351667325260003,
+      0.0,
+      -0.00083333333,
+      12.674166951969987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/gin_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Guinea (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 33155789,
+      "file:checksum": "d50110a1bdd6e787c9cabb1b57c8225fd2d637",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.8480346798568956,
+            "minimum": 0.0,
+            "maximum": 79.87200164794922,
+            "stddev": 2.7365347742770894,
+            "valid_percent": 26.584097055288463
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 79.87200164794922,
+            "buckets": [
+              196462,
+              826,
+              318,
+              184,
+              119,
+              55,
+              77,
+              65,
+              58,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12602,
+      "file:checksum": "12206daabea80eb41cba9b2c1b217648e73ca1af215ed5fe364872529149e72799b8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11986,
+      "file:checksum": "1220fab1f668ac03f75c0fac763159ad5ae61ccbe2ebcbabef96999e883f3d2fd92d"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

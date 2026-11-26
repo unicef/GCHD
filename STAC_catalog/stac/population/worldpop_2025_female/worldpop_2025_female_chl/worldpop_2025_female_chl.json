@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_chl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -109.45416694885,
+          -17.499166260669995
+        ],
+        [
+          -66.41583378767001,
+          -17.499166260669995
+        ],
+        [
+          -66.41583378767001,
+          -56.52583277122999
+        ],
+        [
+          -109.45416694885,
+          -56.52583277122999
+        ],
+        [
+          -109.45416694885,
+          -17.499166260669995
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -109.45416694885,
+    -56.52583277122999,
+    -66.41583378767001,
+    -17.499166260669995
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Chile",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CHL",
+    "GCHD:country": "Chile",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -109.45416694885,
+            -56.52583277122999
+          ],
+          [
+            -66.41583378767001,
+            -56.52583277122999
+          ],
+          [
+            -66.41583378767001,
+            -17.499166260669995
+          ],
+          [
+            -109.45416694885,
+            -17.499166260669995
+          ],
+          [
+            -109.45416694885,
+            -56.52583277122999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -109.45416694885,
+      -56.52583277122999,
+      -66.41583378767001,
+      -17.499166260669995
+    ],
+    "proj:shape": [
+      46832,
+      51646
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -109.45416694885,
+      0.0,
+      -0.00083333333,
+      -17.499166260669995,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/chl_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Chile (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 112262825,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.17298433516387082,
+            "minimum": 2.8000000384054147e-05,
+            "maximum": 63.330535888671875,
+            "stddev": 1.5723538674293964,
+            "valid_percent": 3.556201224434876
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 2.8000000384054147e-05,
+            "max": 63.330535888671875,
+            "buckets": [
+              33689,
+              63,
+              31,
+              12,
+              10,
+              5,
+              6,
+              6,
+              5,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2334,
+      "file:checksum": "1220490f4e25869be6be220cb4777c40578d5cbbe96b36d7e479050f06011c73c1f3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1452,
+      "file:checksum": "12206b3a946425994518d2b499c982c6ded2c60f42f16d4ebde1f184aad229e59021"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

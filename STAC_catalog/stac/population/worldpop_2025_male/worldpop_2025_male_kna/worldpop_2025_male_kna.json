@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_kna",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -62.86416713521,
+          17.418333599659988
+        ],
+        [
+          -62.53916713651,
+          17.418333599659988
+        ],
+        [
+          -62.53916713651,
+          17.094166934289987
+        ],
+        [
+          -62.86416713521,
+          17.094166934289987
+        ],
+        [
+          -62.86416713521,
+          17.418333599659988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -62.86416713521,
+    17.094166934289987,
+    -62.53916713651,
+    17.418333599659988
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Saint Kitts and Nevis",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KNA",
+    "GCHD:country": "Saint Kitts and Nevis",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.86416713521,
+            17.094166934289987
+          ],
+          [
+            -62.53916713651,
+            17.094166934289987
+          ],
+          [
+            -62.53916713651,
+            17.418333599659988
+          ],
+          [
+            -62.86416713521,
+            17.418333599659988
+          ],
+          [
+            -62.86416713521,
+            17.094166934289987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -62.86416713521,
+      17.094166934289987,
+      -62.53916713651,
+      17.418333599659988
+    ],
+    "proj:shape": [
+      389,
+      390
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -62.86416713521,
+      0.0,
+      -0.00083333333,
+      17.418333599659988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/kna_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Saint Kitts and Nevis (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 74885,
+      "file:checksum": "d5011014263cde5787866ece5117dc5f2ccbf5",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.5104720856623342,
+            "minimum": 0.0,
+            "maximum": 16.281118392944336,
+            "stddev": 2.087600810980784,
+            "valid_percent": 9.787752949706677
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 16.281118392944336,
+            "buckets": [
+              11071,
+              1744,
+              833,
+              522,
+              298,
+              225,
+              104,
+              33,
+              13,
+              6
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6742,
+      "file:checksum": "122096afa2007a6d11a7db6f83d3bf6523463e0c24d0c8eca48dee54e596b45a72eb"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5945,
+      "file:checksum": "12203bf85ffc675b08fdf063b99df3780a206bfdca10b2d7abe21e5a162eda5f265c"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

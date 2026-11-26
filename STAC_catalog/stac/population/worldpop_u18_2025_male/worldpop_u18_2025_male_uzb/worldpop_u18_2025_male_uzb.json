@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_uzb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          55.99749905601,
+          45.59083348696999
+        ],
+        [
+          73.21916565379,
+          45.59083348696999
+        ],
+        [
+          73.21916565379,
+          37.17166685397999
+        ],
+        [
+          55.99749905601,
+          37.17166685397999
+        ],
+        [
+          55.99749905601,
+          45.59083348696999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    55.99749905601,
+    37.17166685397999,
+    73.21916565379,
+    45.59083348696999
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Uzbekistan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "UZB",
+    "GCHD:country": "Uzbekistan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            55.99749905601,
+            37.17166685397999
+          ],
+          [
+            73.21916565379,
+            37.17166685397999
+          ],
+          [
+            73.21916565379,
+            45.59083348696999
+          ],
+          [
+            55.99749905601,
+            45.59083348696999
+          ],
+          [
+            55.99749905601,
+            37.17166685397999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      55.99749905601,
+      37.17166685397999,
+      73.21916565379,
+      45.59083348696999
+    ],
+    "proj:shape": [
+      10103,
+      20666
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      55.99749905601,
+      0.0,
+      -0.00083333333,
+      45.59083348696999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/uzb_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Uzbekistan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 47760736,
+      "file:checksum": "d50110ffc0519d798798f207f31beb93953caf",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.4285303071754151,
+            "minimum": 0.0,
+            "maximum": 38.22734832763672,
+            "stddev": 0.9905434412275046,
+            "valid_percent": 10.77649388722555
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 38.22734832763672,
+            "buckets": [
+              54559,
+              554,
+              123,
+              24,
+              9,
+              10,
+              3,
+              2,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4022,
+      "file:checksum": "1220fe4bba37bd405591ea652f59ebd94f1a0246d2095ead7539c8ff8ca1a70dcae7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4022,
+      "file:checksum": "122081e5b71321ef761166acb9d093d93840d4aaa55d69dbbc9344c024b9f56a50c9"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_nzl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -177.97000000812,
+          -29.243332880360022
+        ],
+        [
+          178.80333189812,
+          -29.243332880360022
+        ],
+        [
+          178.80333189812,
+          -52.61916612019002
+        ],
+        [
+          -177.97000000812,
+          -52.61916612019002
+        ],
+        [
+          -177.97000000812,
+          -29.243332880360022
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -177.97000000812,
+    -52.61916612019002,
+    178.80333189812,
+    -29.243332880360022
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – New Zealand",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NZL",
+    "GCHD:country": "New Zealand",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -177.97000000812,
+            -52.61916612019002
+          ],
+          [
+            178.80333189812,
+            -52.61916612019002
+          ],
+          [
+            178.80333189812,
+            -29.243332880360022
+          ],
+          [
+            -177.97000000812,
+            -29.243332880360022
+          ],
+          [
+            -177.97000000812,
+            -52.61916612019002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -177.97000000812,
+      -52.61916612019002,
+      178.80333189812,
+      -29.243332880360022
+    ],
+    "proj:shape": [
+      28051,
+      428128
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -177.97000000812,
+      0.0,
+      -0.00083333333,
+      -29.243332880360022,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/nzl_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – New Zealand (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 332731999,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.09724262314061381,
+            "minimum": 1.2005449207208585e-05,
+            "maximum": 2.6205801963806152,
+            "stddev": 0.2676794526491612,
+            "valid_percent": 0.5012063419117647
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 1.2005449207208585e-05,
+            "max": 2.6205801963806152,
+            "buckets": [
+              328,
+              9,
+              4,
+              2,
+              0,
+              2,
+              1,
+              1,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 607,
+      "file:checksum": "1220c9d5d27507a1b6133ebcc62fed8a32dfc44867f190076595f77a60c64169daf8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 403,
+      "file:checksum": "1220735c358c2216b423df067ec5c72c457efa4aa2564728c373744689e3a805fb20"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

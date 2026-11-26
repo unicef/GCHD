@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_pcn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -130.75083353033,
+          -23.92166623498002
+        ],
+        [
+          -124.77250022091,
+          -23.92166623498002
+        ],
+        [
+          -124.77250022091,
+          -25.07999956368002
+        ],
+        [
+          -130.75083353033,
+          -25.07999956368002
+        ],
+        [
+          -130.75083353033,
+          -23.92166623498002
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -130.75083353033,
+    -25.07999956368002,
+    -124.77250022091,
+    -23.92166623498002
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Pitcairn",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PCN",
+    "GCHD:country": "Pitcairn",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -130.75083353033,
+            -25.07999956368002
+          ],
+          [
+            -124.77250022091,
+            -25.07999956368002
+          ],
+          [
+            -124.77250022091,
+            -23.92166623498002
+          ],
+          [
+            -130.75083353033,
+            -23.92166623498002
+          ],
+          [
+            -130.75083353033,
+            -25.07999956368002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -130.75083353033,
+      -25.07999956368002,
+      -124.77250022091,
+      -23.92166623498002
+    ],
+    "proj:shape": [
+      1390,
+      7174
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -130.75083353033,
+      0.0,
+      -0.00083333333,
+      -23.92166623498002,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/pcn_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Pitcairn (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 292724,
+      "file:checksum": "d5011019fccd198a9e7305e4a77284331ce8e0",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.07196265856424967,
+            "minimum": 0.04854699969291687,
+            "maximum": 0.14617721736431122,
+            "stddev": 0.03142815845567618,
+            "valid_percent": 0.007361023869346733
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.04854699969291687,
+            "max": 0.14617721736431122,
+            "buckets": [
+              9,
+              1,
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 401,
+      "file:checksum": "12207785a196e6f543df4913618a2468056f3394e1114545b7a9f82c0acf6a939cc4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 375,
+      "file:checksum": "1220fd888d0487416c9ce48ceba8f64d116a39d0f5a69686e7c79384f12bdbb975e1"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_spm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -56.405000494380005,
+          47.144166814089985
+        ],
+        [
+          -56.125833828830004,
+          47.144166814089985
+        ],
+        [
+          -56.125833828830004,
+          46.75083348232999
+        ],
+        [
+          -56.405000494380005,
+          46.75083348232999
+        ],
+        [
+          -56.405000494380005,
+          47.144166814089985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -56.405000494380005,
+    46.75083348232999,
+    -56.125833828830004,
+    47.144166814089985
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Saint Pierre et Miquelon",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SPM",
+    "GCHD:country": "Saint Pierre et Miquelon",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -56.405000494380005,
+            46.75083348232999
+          ],
+          [
+            -56.125833828830004,
+            46.75083348232999
+          ],
+          [
+            -56.125833828830004,
+            47.144166814089985
+          ],
+          [
+            -56.405000494380005,
+            47.144166814089985
+          ],
+          [
+            -56.405000494380005,
+            46.75083348232999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -56.405000494380005,
+      46.75083348232999,
+      -56.125833828830004,
+      47.144166814089985
+    ],
+    "proj:shape": [
+      472,
+      335
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -56.405000494380005,
+      0.0,
+      -0.00083333333,
+      47.144166814089985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/spm_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Saint Pierre et Miquelon (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16115,
+      "file:checksum": "d5011050eb642d1248160e2da5a1b95058b309",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.8144593730006398,
+            "minimum": 0.0,
+            "maximum": 10.483738899230957,
+            "stddev": 2.3822294973581823,
+            "valid_percent": 0.9884897546167467
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 10.483738899230957,
+            "buckets": [
+              841,
+              233,
+              183,
+              174,
+              6,
+              16,
+              27,
+              5,
+              1,
+              77
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2081,
+      "file:checksum": "1220d35b2f87e2655f09c5be8ea21311b34d2a2fdeada509ae928076aacbb5005c51"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1474,
+      "file:checksum": "12206036a6aabcfabec4421633459266ad70bcb8ee43ffeca0ad5f3dd1b14d6bb268"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

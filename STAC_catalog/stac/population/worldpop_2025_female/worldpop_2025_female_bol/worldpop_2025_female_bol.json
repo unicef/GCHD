@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_bol",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -69.64416710809,
+          -9.669999625320019
+        ],
+        [
+          -57.454167156850005,
+          -9.669999625320019
+        ],
+        [
+          -57.454167156850005,
+          -22.89749957241002
+        ],
+        [
+          -69.64416710809,
+          -22.89749957241002
+        ],
+        [
+          -69.64416710809,
+          -9.669999625320019
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -69.64416710809,
+    -22.89749957241002,
+    -57.454167156850005,
+    -9.669999625320019
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Bolivia (Plurinational State of)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BOL",
+    "GCHD:country": "Bolivia (Plurinational State of)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -69.64416710809,
+            -22.89749957241002
+          ],
+          [
+            -57.454167156850005,
+            -22.89749957241002
+          ],
+          [
+            -57.454167156850005,
+            -9.669999625320019
+          ],
+          [
+            -69.64416710809,
+            -9.669999625320019
+          ],
+          [
+            -69.64416710809,
+            -22.89749957241002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -69.64416710809,
+      -22.89749957241002,
+      -57.454167156850005,
+      -9.669999625320019
+    ],
+    "proj:shape": [
+      15873,
+      14628
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -69.64416710809,
+      0.0,
+      -0.00083333333,
+      -9.669999625320019,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/bol_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Bolivia (Plurinational State of) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 52384377,
+      "file:checksum": "d50110c35041895717fb8d724262b88bf77d3c",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.41638866973106475,
+            "minimum": 0.0,
+            "maximum": 78.22602844238281,
+            "stddev": 1.4625320623229396,
+            "valid_percent": 20.73333222987288
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 78.22602844238281,
+            "buckets": [
+              199736,
+              293,
+              143,
+              92,
+              92,
+              53,
+              6,
+              1,
+              1,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14209,
+      "file:checksum": "1220820cb434f863df6c081f97d97bcbb49e2a077550dd812d929108e18806c0597b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 16448,
+      "file:checksum": "12206ea66a200a8eeb9b93eaf18b3fd5b7f209e9b7db57df51ebb09bdb0bcf802c6a"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

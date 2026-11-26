@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_gum",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          144.61833203486,
+          13.654166948049985
+        ],
+        [
+          144.95666536684,
+          13.654166948049985
+        ],
+        [
+          144.95666536684,
+          13.234166949729985
+        ],
+        [
+          144.61833203486,
+          13.234166949729985
+        ],
+        [
+          144.61833203486,
+          13.654166948049985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    144.61833203486,
+    13.234166949729985,
+    144.95666536684,
+    13.654166948049985
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Guam (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GUM",
+    "GCHD:country": "Guam (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            144.61833203486,
+            13.234166949729985
+          ],
+          [
+            144.95666536684,
+            13.234166949729985
+          ],
+          [
+            144.95666536684,
+            13.654166948049985
+          ],
+          [
+            144.61833203486,
+            13.654166948049985
+          ],
+          [
+            144.61833203486,
+            13.234166949729985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      144.61833203486,
+      13.234166949729985,
+      144.95666536684,
+      13.654166948049985
+    ],
+    "proj:shape": [
+      504,
+      406
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      144.61833203486,
+      0.0,
+      -0.00083333333,
+      13.654166948049985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/gum_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Guam (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 126042,
+      "file:checksum": "d50110725dee8cdd835808cb8f88a4d475bff2",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.9148314231241232,
+            "minimum": 0.0,
+            "maximum": 8.818774223327637,
+            "stddev": 2.1998303000415027,
+            "valid_percent": 13.937759011650638
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 8.818774223327637,
+            "buckets": [
+              6730,
+              3072,
+              4683,
+              5337,
+              1840,
+              1652,
+              1782,
+              1956,
+              1134,
+              334
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6861,
+      "file:checksum": "1220b046148124d6091793860b0081d591d2af39857b4261b6321210338c1a6845f9"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 8437,
+      "file:checksum": "1220684a1df0900326911be7eb722e5ecf7a7736c15ba20928ed7a8fa2173bd1d1fc"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

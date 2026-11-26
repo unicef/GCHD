@@ -1,0 +1,1592 @@
+{
+  "type": "Collection",
+  "id": "worldpop_2025_male",
+  "stac_version": "1.1.0",
+  "description": "Estimated number of males (all ages) per ~100 m grid cell in 2025 (WorldPop R2025A, constrained), one item per country.\n\nEstimated number of people (all ages) per ~100 m grid cell (3 arc-seconds) in 2025, from the WorldPop R2025A constrained (`CN`) population estimates. Constrained means people are only allocated to cells mapped as built settlement; all other cells are nodata.\n\nThe data are one Cloud-Optimized GeoTIFF per country, served from their original location on Azure, with one STAC item per country. The collection's `data` asset is a GDAL VRT over all country files, with virtual overviews, for global access with a single URL.\n\nUnits: people per grid cell. Nodata: -99999. License: CC-BY-4.0. Citation: WorldPop (www.worldpop.org), R2025A.\n\nNot available for FJI, GRL, RUS: WorldPop R2025A has no male file for them (the total layer covers them).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_abw/worldpop_2025_male_abw.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Aruba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_afg/worldpop_2025_male_afg.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Afghanistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ago/worldpop_2025_male_ago.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Angola"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_aia/worldpop_2025_male_aia.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Anguilla"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ala/worldpop_2025_male_ala.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Åland Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_alb/worldpop_2025_male_alb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Albania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_and/worldpop_2025_male_and.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Andorra"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_are/worldpop_2025_male_are.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – United Arab Emirates"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_arg/worldpop_2025_male_arg.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Argentina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_arm/worldpop_2025_male_arm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Armenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_asm/worldpop_2025_male_asm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – American Samoa (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_atg/worldpop_2025_male_atg.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Antigua and Barbuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_aus/worldpop_2025_male_aus.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ashmore and Cartier Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_aut/worldpop_2025_male_aut.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Austria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_aze/worldpop_2025_male_aze.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Azerbaijan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bdi/worldpop_2025_male_bdi.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Burundi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bel/worldpop_2025_male_bel.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Belgium"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ben/worldpop_2025_male_ben.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Benin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bes/worldpop_2025_male_bes.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bonaire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bfa/worldpop_2025_male_bfa.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Burkina Faso"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bgd/worldpop_2025_male_bgd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bangladesh"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bgr/worldpop_2025_male_bgr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bulgaria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bhr/worldpop_2025_male_bhr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bahrain"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bhs/worldpop_2025_male_bhs.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bahamas"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bih/worldpop_2025_male_bih.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bosnia and Herzegovina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_blm/worldpop_2025_male_blm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Barthélemy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_blr/worldpop_2025_male_blr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Belarus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_blz/worldpop_2025_male_blz.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Belize"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bmu/worldpop_2025_male_bmu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bermuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bol/worldpop_2025_male_bol.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bolivia (Plurinational State of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bra/worldpop_2025_male_bra.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Brazil"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_brb/worldpop_2025_male_brb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Barbados"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_brn/worldpop_2025_male_brn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Brunei Darussalam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_btn/worldpop_2025_male_btn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bhutan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_bwa/worldpop_2025_male_bwa.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Botswana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_caf/worldpop_2025_male_caf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Central African Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_can/worldpop_2025_male_can.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Canada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_che/worldpop_2025_male_che.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Switzerland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_chl/worldpop_2025_male_chl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Chile"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_chn/worldpop_2025_male_chn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – China"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_civ/worldpop_2025_male_civ.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Côte d'Ivoire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cmr/worldpop_2025_male_cmr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cameroon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cod/worldpop_2025_male_cod.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Democratic Republic of the Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cog/worldpop_2025_male_cog.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cok/worldpop_2025_male_cok.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cook Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_col/worldpop_2025_male_col.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Colombia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_com/worldpop_2025_male_com.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Comoros"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cpv/worldpop_2025_male_cpv.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cape Verde"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cri/worldpop_2025_male_cri.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Costa Rica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cub/worldpop_2025_male_cub.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cuba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cuw/worldpop_2025_male_cuw.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Curaçao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cym/worldpop_2025_male_cym.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cayman Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cyp/worldpop_2025_male_cyp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cyprus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_cze/worldpop_2025_male_cze.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Czechia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_deu/worldpop_2025_male_deu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Germany"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_dji/worldpop_2025_male_dji.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Djibouti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_dma/worldpop_2025_male_dma.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Dominica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_dnk/worldpop_2025_male_dnk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Denmark"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_dom/worldpop_2025_male_dom.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Dominican Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_dza/worldpop_2025_male_dza.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Algeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ecu/worldpop_2025_male_ecu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ecuador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_egy/worldpop_2025_male_egy.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Egypt"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_eri/worldpop_2025_male_eri.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Eritrea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_esh/worldpop_2025_male_esh.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Western Sahara"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_esp/worldpop_2025_male_esp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Canary Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_est/worldpop_2025_male_est.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Estonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_eth/worldpop_2025_male_eth.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ethiopia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_fin/worldpop_2025_male_fin.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Finland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_flk/worldpop_2025_male_flk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Falkland Islands (Malvinas)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_fra/worldpop_2025_male_fra.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – France"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_fro/worldpop_2025_male_fro.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Faroe Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_fsm/worldpop_2025_male_fsm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Micronesia (Federated States of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gab/worldpop_2025_male_gab.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Gabon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gbr/worldpop_2025_male_gbr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – United Kingdom of Great Britain & Northern Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_geo/worldpop_2025_male_geo.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Georgia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ggy/worldpop_2025_male_ggy.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guernsey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gha/worldpop_2025_male_gha.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ghana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gib/worldpop_2025_male_gib.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Gibraltar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gin/worldpop_2025_male_gin.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_glp/worldpop_2025_male_glp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guadeloupe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gmb/worldpop_2025_male_gmb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Gambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gnb/worldpop_2025_male_gnb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guinea-Bissau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gnq/worldpop_2025_male_gnq.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Equatorial Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_grc/worldpop_2025_male_grc.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Greece"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_grd/worldpop_2025_male_grd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Grenada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gtm/worldpop_2025_male_gtm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guatemala"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_guf/worldpop_2025_male_guf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – French Guiana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_gum/worldpop_2025_male_gum.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guam (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_guy/worldpop_2025_male_guy.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Guyana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_hkg/worldpop_2025_male_hkg.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Hong Kong"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_hnd/worldpop_2025_male_hnd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Honduras"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_hrv/worldpop_2025_male_hrv.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Croatia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_hti/worldpop_2025_male_hti.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Haiti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_hun/worldpop_2025_male_hun.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Hungary"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_idn/worldpop_2025_male_idn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Indonesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_imn/worldpop_2025_male_imn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Isle of Man"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ind/worldpop_2025_male_ind.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – India"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_irl/worldpop_2025_male_irl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_irn/worldpop_2025_male_irn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Iran (Islamic Republic of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_irq/worldpop_2025_male_irq.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Iraq"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_isl/worldpop_2025_male_isl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Iceland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_isr/worldpop_2025_male_isr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Israel"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ita/worldpop_2025_male_ita.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Italy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_jam/worldpop_2025_male_jam.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Jamaica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_jey/worldpop_2025_male_jey.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Jersey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_jor/worldpop_2025_male_jor.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Jordan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_jpn/worldpop_2025_male_jpn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Japan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kaz/worldpop_2025_male_kaz.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kazakhstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ken/worldpop_2025_male_ken.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kenya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kgz/worldpop_2025_male_kgz.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kyrgyzstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_khm/worldpop_2025_male_khm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Cambodia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kir/worldpop_2025_male_kir.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kiribati"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kna/worldpop_2025_male_kna.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Kitts and Nevis"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kor/worldpop_2025_male_kor.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_kwt/worldpop_2025_male_kwt.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kuwait"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lao/worldpop_2025_male_lao.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Lao People's Democratic Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lbn/worldpop_2025_male_lbn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Lebanon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lbr/worldpop_2025_male_lbr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Liberia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lby/worldpop_2025_male_lby.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Libya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lca/worldpop_2025_male_lca.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Lucia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lie/worldpop_2025_male_lie.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Liechtenstein"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lka/worldpop_2025_male_lka.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sri Lanka"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lso/worldpop_2025_male_lso.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Lesotho"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ltu/worldpop_2025_male_ltu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Lithuania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lux/worldpop_2025_male_lux.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Luxembourg"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_lva/worldpop_2025_male_lva.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Latvia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mac/worldpop_2025_male_mac.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Macao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_maf/worldpop_2025_male_maf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Martin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mar/worldpop_2025_male_mar.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Morocco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mco/worldpop_2025_male_mco.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Monaco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mda/worldpop_2025_male_mda.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Moldova"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mdg/worldpop_2025_male_mdg.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Madagascar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mdv/worldpop_2025_male_mdv.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Maldives"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mex/worldpop_2025_male_mex.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mexico"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mhl/worldpop_2025_male_mhl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Marshall Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mkd/worldpop_2025_male_mkd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – North Macedonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mli/worldpop_2025_male_mli.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mali"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mlt/worldpop_2025_male_mlt.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Malta"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mmr/worldpop_2025_male_mmr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Myanmar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mne/worldpop_2025_male_mne.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Montenegro"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mng/worldpop_2025_male_mng.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mongolia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mnp/worldpop_2025_male_mnp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Northern Mariana Is. (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_moz/worldpop_2025_male_moz.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mozambique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mrt/worldpop_2025_male_mrt.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mauritania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_msr/worldpop_2025_male_msr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Montserrat"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mtq/worldpop_2025_male_mtq.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Martinique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mus/worldpop_2025_male_mus.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mauritius"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mwi/worldpop_2025_male_mwi.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Malawi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_mys/worldpop_2025_male_mys.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Malaysia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_myt/worldpop_2025_male_myt.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Mayotte"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nam/worldpop_2025_male_nam.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Namibia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ncl/worldpop_2025_male_ncl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – New Caledonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ner/worldpop_2025_male_ner.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Niger"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nfk/worldpop_2025_male_nfk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Norfolk Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nga/worldpop_2025_male_nga.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Nigeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nic/worldpop_2025_male_nic.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Nicaragua"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_niu/worldpop_2025_male_niu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Niue"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nld/worldpop_2025_male_nld.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Netherlands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nor/worldpop_2025_male_nor.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Norway"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_npl/worldpop_2025_male_npl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Nepal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nru/worldpop_2025_male_nru.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Nauru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_nzl/worldpop_2025_male_nzl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – New Zealand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_omn/worldpop_2025_male_omn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Oman"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pak/worldpop_2025_male_pak.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Pakistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pan/worldpop_2025_male_pan.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Panama"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pcn/worldpop_2025_male_pcn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Pitcairn"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_per/worldpop_2025_male_per.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Peru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_phl/worldpop_2025_male_phl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Philippines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_plw/worldpop_2025_male_plw.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Palau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_png/worldpop_2025_male_png.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Papua New Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pol/worldpop_2025_male_pol.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Poland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pri/worldpop_2025_male_pri.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Puerto Rico (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_prk/worldpop_2025_male_prk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Democratic People's Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_prt/worldpop_2025_male_prt.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Madeira Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pry/worldpop_2025_male_pry.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Paraguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pse/worldpop_2025_male_pse.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – State of Palestine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_pyf/worldpop_2025_male_pyf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – French Polynesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_qat/worldpop_2025_male_qat.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Qatar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_reu/worldpop_2025_male_reu.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Réunion"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_rou/worldpop_2025_male_rou.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Romania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_rwa/worldpop_2025_male_rwa.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Rwanda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sau/worldpop_2025_male_sau.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saudi Arabia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sdn/worldpop_2025_male_sdn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sen/worldpop_2025_male_sen.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sgp/worldpop_2025_male_sgp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Singapore"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_shn/worldpop_2025_male_shn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Helena"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sjm/worldpop_2025_male_sjm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Svalbard and Jan Mayen Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_slb/worldpop_2025_male_slb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Solomon Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sle/worldpop_2025_male_sle.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sierra Leone"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_slv/worldpop_2025_male_slv.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – El Salvador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_smr/worldpop_2025_male_smr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – San Marino"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_som/worldpop_2025_male_som.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Somalia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_spm/worldpop_2025_male_spm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Pierre et Miquelon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_srb/worldpop_2025_male_srb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Serbia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ssd/worldpop_2025_male_ssd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – South Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_stp/worldpop_2025_male_stp.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sao Tome and Principe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sur/worldpop_2025_male_sur.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Suriname"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_svk/worldpop_2025_male_svk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Slovakia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_svn/worldpop_2025_male_svn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Slovenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_swe/worldpop_2025_male_swe.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sweden"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_swz/worldpop_2025_male_swz.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Eswatini"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_sxm/worldpop_2025_male_sxm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Sint Maarten"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_syc/worldpop_2025_male_syc.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Seychelles"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_syr/worldpop_2025_male_syr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Syrian Arab Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tca/worldpop_2025_male_tca.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Turks and Caicos Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tcd/worldpop_2025_male_tcd.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Chad"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tgo/worldpop_2025_male_tgo.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Togo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tha/worldpop_2025_male_tha.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Thailand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tjk/worldpop_2025_male_tjk.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Tajikistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tkl/worldpop_2025_male_tkl.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Tokelau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tkm/worldpop_2025_male_tkm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Turkmenistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tls/worldpop_2025_male_tls.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Timor-Leste"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ton/worldpop_2025_male_ton.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Tonga"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tto/worldpop_2025_male_tto.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Trinidad and Tobago"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tun/worldpop_2025_male_tun.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Tunisia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tur/worldpop_2025_male_tur.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Republic of Türkiye"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tuv/worldpop_2025_male_tuv.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Tuvalu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_twn/worldpop_2025_male_twn.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Taiwan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_tza/worldpop_2025_male_tza.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – United Republic of Tanzania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_uga/worldpop_2025_male_uga.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Uganda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ukr/worldpop_2025_male_ukr.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Ukraine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ury/worldpop_2025_male_ury.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Uruguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_usa/worldpop_2025_male_usa.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – United States of America"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_uzb/worldpop_2025_male_uzb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Uzbekistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_vct/worldpop_2025_male_vct.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Saint Vincent and the Grenadines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_ven/worldpop_2025_male_ven.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Bird Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_vgb/worldpop_2025_male_vgb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – British Virgin Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_vir/worldpop_2025_male_vir.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – United States Virgin Islands (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_vnm/worldpop_2025_male_vnm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Viet Nam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_vut/worldpop_2025_male_vut.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Vanuatu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_wlf/worldpop_2025_male_wlf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Wallis and Futuna"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_wsm/worldpop_2025_male_wsm.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Samoa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_xkx/worldpop_2025_male_xkx.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Kosovo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_yem/worldpop_2025_male_yem.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Yemen"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_zaf/worldpop_2025_male_zaf.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – South Africa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_zmb/worldpop_2025_male_zmb.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Zambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_male_zwe/worldpop_2025_male_zwe.json",
+      "type": "application/geo+json",
+      "title": "Male population 2025, all ages – Zimbabwe"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Population"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC-BY-4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.worldpop.org/",
+      "type": "text/html",
+      "title": "Original source (WorldPop, University of Southampton)"
+    }
+  ],
+  "GCHD:units": "people per grid cell",
+  "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+  "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+  "GCHD:source_release": "R2025A",
+  "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+  "GCHD:missing_countries": [
+    "FJI",
+    "GRL",
+    "RUS"
+  ],
+  "title": "Male population 2025, all ages (WorldPop R2025A)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -178.18166667394001,
+          -56.52583277122999,
+          179.81833189406,
+          83.10916667023
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "population",
+    "WorldPop",
+    "exposure",
+    "all ages",
+    "Male"
+  ],
+  "providers": [
+    {
+      "name": "WorldPop, University of Southampton",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.worldpop.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/male/mosaic_ovr.vrt",
+      "type": "application/xml",
+      "title": "Male population 2025, all ages (WorldPop R2025A) – global mosaic (GDAL VRT)",
+      "description": "GDAL VRT mosaic of the per-country WorldPop R2025A COGs (worldpop_2025/R2025A/2025/100m/T_M/), with virtual overviews (OverviewList 2-512) built from the country COGs' own overviews",
+      "bands": [
+        {
+          "data_type": "float32",
+          "nodata": -99999.0,
+          "raster:sampling": "area",
+          "unit": "people per grid cell"
+        }
+      ],
+      "roles": [
+        "data"
+      ],
+      "file:size": 132075,
+      "file:checksum": "d50110e65b09f346f36c7631af0f1a3ae0ce65"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 21998,
+      "file:checksum": "12205f2902f4009f97bdbf446484f9c4c71021789419902f9ef6df1e73f890190e23"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 77876,
+      "file:checksum": "12207e115fddd57daafd106b578172e087fb1deede56749f434377b74310f827662e"
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all items)",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 166520,
+      "file:checksum": "122043a0e218b9745cf26b9c24f392f5315563a3cfb05d4c3479c40762e4de15f3a3"
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1000387,
+      "file:checksum": "122047f4a46a3e3e83dd3e01ccba27912a95ae6110c2929108dc2a1515723c9b4d70"
+    }
+  },
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "updated": "2026-11-26T16:19:09Z"
+}

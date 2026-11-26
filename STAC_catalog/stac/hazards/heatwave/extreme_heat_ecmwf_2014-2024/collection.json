@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "id": "extreme_heat_ecmwf_2014-2024",
+  "stac_version": "1.1.0",
+  "description": "Extremely high temperatures (extremely hot days) are estimated when a day exceeds 35 degrees Celsius.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/heat_extreme/extreme_heat_ecmwf_2014-2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Heatwaves and Extreme Heat"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.ecmwf.int/",
+      "type": "text/html",
+      "title": "Original source (ECMWF)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Heatwaves",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "10km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Number of days with extreme temperature (>35°C)",
+  "GCHD:threshold": "35 days",
+  "GCHD:classes": "Use natural breaks/quantile",
+  "GCHD:value_range": [
+    0.0,
+    365.0
+  ],
+  "GCHD:alternate_sources": "NOAA CDR, NASA MERRA2, MODIS for SIDS",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/high_temp_degree_days_return_level_100yr",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "extreme_heat_days",
+      "app_name": "extreme_heat_ecmwf_2014-2024",
+      "unicef_code": "ET",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 35,
+      "default": true
+    }
+  ],
+  "title": "Extreme hot days",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -60.15000000000104,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2014-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Heatwaves and Extreme Heat",
+    "HW"
+  ],
+  "providers": [
+    {
+      "name": "ECMWF",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.ecmwf.int/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/extreme_heat_ecmwf_2014-2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Extreme hot days (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        1502,
+        3601
+      ],
+      "proj:transform": [
+        0.1000000000000007,
+        0.0,
+        -180.05,
+        0.0,
+        -0.1000000000000007,
+        90.05,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.05,
+        -60.15000000000104,
+        180.0500000000025,
+        90.05
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 38.39866902841208,
+            "minimum": 0.0,
+            "maximum": 364.5079040527344,
+            "stddev": 69.2810946439924,
+            "valid_percent": 32.07460207359813
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 364.5079040527344,
+            "buckets": [
+              103195,
+              9689,
+              7273,
+              5602,
+              4436,
+              4322,
+              3500,
+              1654,
+              765,
+              138
+            ]
+          }
+        }
+      ],
+      "file:size": 4065484,
+      "file:checksum": "d50110882a8472f739c0e1398019b74c5671ff"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 92015,
+      "file:checksum": "12202fe9c612f63b3b3c9d925837eab298a56c50a07b9dc10494673e11bd021300a2"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 203968,
+      "file:checksum": "122099b9dd49a75e1d1246f2b3018c352b472f461464c3b2607f111062d696183561"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

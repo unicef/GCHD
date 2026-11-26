@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_gbr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -8.649167352070002,
+          60.85583342590999
+        ],
+        [
+          1.7633326062799988,
+          60.85583342590999
+        ],
+        [
+          1.7633326062799988,
+          49.86666680319999
+        ],
+        [
+          -8.649167352070002,
+          49.86666680319999
+        ],
+        [
+          -8.649167352070002,
+          60.85583342590999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -8.649167352070002,
+    49.86666680319999,
+    1.7633326062799988,
+    60.85583342590999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – United Kingdom of Great Britain & Northern Ireland",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GBR",
+    "GCHD:country": "United Kingdom of Great Britain & Northern Ireland",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -8.649167352070002,
+            49.86666680319999
+          ],
+          [
+            1.7633326062799988,
+            49.86666680319999
+          ],
+          [
+            1.7633326062799988,
+            60.85583342590999
+          ],
+          [
+            -8.649167352070002,
+            60.85583342590999
+          ],
+          [
+            -8.649167352070002,
+            49.86666680319999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -8.649167352070002,
+      49.86666680319999,
+      1.7633326062799988,
+      60.85583342590999
+    ],
+    "proj:shape": [
+      13187,
+      12495
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -8.649167352070002,
+      0.0,
+      -0.00083333333,
+      60.85583342590999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/gbr_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – United Kingdom of Great Britain & Northern Ireland (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 112866957,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.9639552888250101,
+            "minimum": 0.0,
+            "maximum": 74.90463256835938,
+            "stddev": 2.877055224178974,
+            "valid_percent": 24.211307608135943
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 74.90463256835938,
+            "buckets": [
+              231630,
+              6879,
+              1695,
+              305,
+              104,
+              69,
+              36,
+              4,
+              8,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11830,
+      "file:checksum": "1220992ed523468ce7aa0079f356e688690cf9251afdaec2ead2e57b86ceef65b69b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10779,
+      "file:checksum": "1220af6afd10cd340bf59979e2dc6f4db260c8e78cd3b3e8090f7f03ebf1816a77c9"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

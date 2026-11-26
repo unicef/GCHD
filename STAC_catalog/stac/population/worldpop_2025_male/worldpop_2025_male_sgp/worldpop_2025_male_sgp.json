@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_sgp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          103.60583219891,
+          1.4708336634499855
+        ],
+        [
+          104.08833219697999,
+          1.4708336634499855
+        ],
+        [
+          104.08833219697999,
+          1.1666669979999855
+        ],
+        [
+          103.60583219891,
+          1.1666669979999855
+        ],
+        [
+          103.60583219891,
+          1.4708336634499855
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    103.60583219891,
+    1.1666669979999855,
+    104.08833219697999,
+    1.4708336634499855
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Singapore",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SGP",
+    "GCHD:country": "Singapore",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            103.60583219891,
+            1.1666669979999855
+          ],
+          [
+            104.08833219697999,
+            1.1666669979999855
+          ],
+          [
+            104.08833219697999,
+            1.4708336634499855
+          ],
+          [
+            103.60583219891,
+            1.4708336634499855
+          ],
+          [
+            103.60583219891,
+            1.1666669979999855
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      103.60583219891,
+      1.1666669979999855,
+      104.08833219697999,
+      1.4708336634499855
+    ],
+    "proj:shape": [
+      365,
+      579
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      103.60583219891,
+      0.0,
+      -0.00083333333,
+      1.4708336634499855,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/sgp_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Singapore (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 270698,
+      "file:checksum": "d50110993e5fa9d2d283e56f25ee9c666530ed",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 61.09498019561879,
+            "minimum": 0.0,
+            "maximum": 682.0432739257812,
+            "stddev": 103.28527027276863,
+            "valid_percent": 23.41495729528947
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 682.0432739257812,
+            "buckets": [
+              36412,
+              4448,
+              2803,
+              2353,
+              1848,
+              1054,
+              410,
+              114,
+              34,
+              8
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6193,
+      "file:checksum": "1220f10340ba993c0f376fea6289df903246b98214c37accd1098b0a46a2d2fa9fbd"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5183,
+      "file:checksum": "12207c1524ff2849535240ffaabc6637458bf24fce1f6f5fc718fde15b109f90b80f"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

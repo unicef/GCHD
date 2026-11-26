@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_nru",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          166.90916527903,
+          -0.502499661990015
+        ],
+        [
+          166.95916527883,
+          -0.502499661990015
+        ],
+        [
+          166.95916527883,
+          -0.5541663284500149
+        ],
+        [
+          166.90916527903,
+          -0.5541663284500149
+        ],
+        [
+          166.90916527903,
+          -0.502499661990015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    166.90916527903,
+    -0.5541663284500149,
+    166.95916527883,
+    -0.502499661990015
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Nauru",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NRU",
+    "GCHD:country": "Nauru",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            166.90916527903,
+            -0.5541663284500149
+          ],
+          [
+            166.95916527883,
+            -0.5541663284500149
+          ],
+          [
+            166.95916527883,
+            -0.502499661990015
+          ],
+          [
+            166.90916527903,
+            -0.502499661990015
+          ],
+          [
+            166.90916527903,
+            -0.5541663284500149
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      166.90916527903,
+      -0.5541663284500149,
+      166.95916527883,
+      -0.502499661990015
+    ],
+    "proj:shape": [
+      62,
+      60
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      166.90916527903,
+      0.0,
+      -0.00083333333,
+      -0.502499661990015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/nru_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Nauru (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10047,
+      "file:checksum": "d50110625d51577c6f0b94c397b1bf05655d32",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.095136383580343,
+            "minimum": 0.0,
+            "maximum": 10.389806747436523,
+            "stddev": 1.7994215739785036,
+            "valid_percent": 34.46236559139785
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 10.389806747436523,
+            "buckets": [
+              400,
+              323,
+              303,
+              132,
+              57,
+              32,
+              8,
+              1,
+              8,
+              18
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4500,
+      "file:checksum": "1220cbe63859aca1bf0d3141ea2b0b6d8cd21b8ee5293c2c5d775ab3440fb3a06bb4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3443,
+      "file:checksum": "122054b17c7f9c897b082f9facb24acb4161c7f3853574ee2cbc303e7e91add1a470"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_ncl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          158.24916531367,
+          -18.036666258520015
+        ],
+        [
+          172.08999859164,
+          -18.036666258520015
+        ],
+        [
+          172.08999859164,
+          -22.881666239140014
+        ],
+        [
+          158.24916531367,
+          -22.881666239140014
+        ],
+        [
+          158.24916531367,
+          -18.036666258520015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    158.24916531367,
+    -22.881666239140014,
+    172.08999859164,
+    -18.036666258520015
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – New Caledonia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NCL",
+    "GCHD:country": "New Caledonia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            158.24916531367,
+            -22.881666239140014
+          ],
+          [
+            172.08999859164,
+            -22.881666239140014
+          ],
+          [
+            172.08999859164,
+            -18.036666258520015
+          ],
+          [
+            158.24916531367,
+            -18.036666258520015
+          ],
+          [
+            158.24916531367,
+            -22.881666239140014
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      158.24916531367,
+      -22.881666239140014,
+      172.08999859164,
+      -18.036666258520015
+    ],
+    "proj:shape": [
+      5814,
+      16609
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      158.24916531367,
+      0.0,
+      -0.00083333333,
+      -18.036666258520015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/ncl_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – New Caledonia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4247517,
+      "file:checksum": "d50110871237060f3cf128efedf87557d679a8",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.2594326897890853,
+            "minimum": 0.0027360001113265753,
+            "maximum": 11.08598518371582,
+            "stddev": 0.6657632487546615,
+            "valid_percent": 1.3062543523676882
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0027360001113265753,
+            "max": 11.08598518371582,
+            "buckets": [
+              4669,
+              71,
+              24,
+              8,
+              10,
+              4,
+              2,
+              6,
+              4,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1116,
+      "file:checksum": "12201cb12c7a1e17f9d7cae4780dbd08b930fe1d0e3994ad828264ce94f9439a8595"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 922,
+      "file:checksum": "1220266a3d6e6ac9fa8cc70805eafc16c4f39f65fa60b817026abbd19638df40f9d7"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

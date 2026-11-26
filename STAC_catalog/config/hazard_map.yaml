@@ -1,0 +1,217 @@
+# Single source of truth linking the three naming systems used across GCHD:
+#   code       - ADM2 pipeline code (CSV file stem in GCHD_2025/.../global/CSV/{code}_{release}.csv)
+#   app_name   - hazard name used by the Dash app (hazard_database_app/app/config.py HAZARDS)
+#   stac_collection - collection id in the GCHD STAC catalog (STAC_catalog/stac/, served at
+#                     https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json), the CANONICAL source.
+#                     08_build_stac.py writes each hazard's rules below into its collection as
+#                     GCHD:exposure_rules; tests/test_catalog.py checks that every code lands in a collection.
+#                     (Ported from the GCHD_portolan project, 2026-11-26.)
+# plus the exposure rule (ported from gee_core._exposed_for_hazard):
+#   valid      - pixel is "has data" (coverage) when this holds
+#   op/threshold - pixel is "exposed" when `value <op> threshold`
+#   overview   - resampling for the MAX/MIN-overview display copy used for threshold tiles
+#
+# unicef_code: "UNICEF Proposed Code" (or GLIDE code) from the "Hazard Codes" tab of
+# Global Hazard Data catalog.xlsx.
+
+release: "2026-08-31"
+csv_base: "GCHD_2025/latest_september_2026/global/CSV"
+
+topics:
+  # code: [display name, unicef/glide code, member hazard codes, in_mhc]
+  river_flood:     {name: "River Flood",         unicef_code: FL_RIV, hazards: [river_flood_100yr],                                   mhc: true}
+  coastal_flood:   {name: "Coastal Flood",       unicef_code: FL_COA, hazards: [coastal_flood_100yr],                                 mhc: true}
+  tropical_storm:  {name: "Tropical Storm",      unicef_code: TC,     hazards: [tropical_storm_100yr],                                mhc: true}
+  drought:         {name: "Drought",             unicef_code: DR,     hazards: [drought_asi, drought_spei_tc, drought_spi_tc],        mhc: true}
+  heatwave:        {name: "Heatwave",            unicef_code: HW,     hazards: [heatwave_frequency, heatwave_duration, heatwave_severity], mhc: true}
+  extreme_heat:    {name: "Extreme Heat",        unicef_code: ET,     hazards: [extreme_heat_days],                                   mhc: true}
+  fire:            {name: "Fire",                unicef_code: FR,     hazards: [fire_intensity, fire_frequency],                      mhc: true}
+  sand_dust_storm: {name: "Sand and Dust Storm", unicef_code: SD,     hazards: [sand_dust_storm_susc],                                mhc: true}
+  air_pollution:   {name: "Air Pollution",       unicef_code: AP,     hazards: [air_pollution_pm25],                                  mhc: false}
+  malaria:         {name: "Malaria",             unicef_code: ML,     hazards: [epidemics_malaria_pv, epidemics_malaria_pf],          mhc: false}
+  landslide:       {name: "Landslide",           unicef_code: LS,     hazards: [landslides_0p1],                                      mhc: false}
+  earthquake:      {name: "Earthquake",          unicef_code: EQ,     hazards: [earthquake_pga_0p09],                                 mhc: false}
+  volcano:         {name: "Volcanoes",           unicef_code: VO,     hazards: [volcano_100km_buff],                                  mhc: false}
+
+hazards:
+  river_flood_100yr:
+    unicef_code: FL_RIV
+    app_name: river_flood_100yr_jrc_2024
+    stac_collection: river_flood_100yr_jrc_2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.01
+    overview: max
+  coastal_flood_100yr:
+    unicef_code: FL_COA
+    app_name: coastal_flood_100yr_jrc_2024
+    stac_collection: coastal_flood_100yr_jrc_2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 0
+    binary: true
+    overview: max
+  tropical_storm_100yr:
+    unicef_code: TC
+    app_name: tropical_storm_100yr_giri_2024
+    stac_collection: tropical_storm_100yr_giri_2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 17.5
+    overview: max
+  drought_asi:
+    unicef_code: DR_AGR
+    app_name: agricultural_drought_fao_1984-2023
+    stac_collection: agricultural_drought_fao_1984-2023
+    valid: "<= 100"
+    op: ">"
+    threshold: 30
+    overview: max
+  drought_spei_tc:
+    unicef_code: DR_SPEI
+    app_name: drought_spei_terraclimate_1958-2025
+    stac_collection: drought_spei_terraclimate_1958-2025
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.0650162152126539
+    overview: max
+  drought_spi_tc:
+    unicef_code: DR_SPI
+    app_name: drought_spi_terraclimate_1958-2025
+    stac_collection: drought_spi_terraclimate_1958-2025
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.0912838950900999
+    overview: max
+  heatwave_frequency:
+    unicef_code: HW_FRQ
+    app_name: heatwave_frequency_ecmwf_2014-2024
+    stac_collection: heatwave_frequency_ecmwf_2014-2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 16.02581287445288   # workbook / UNICEF STAC threshold
+    overview: max
+  heatwave_duration:
+    unicef_code: HW_DUR
+    app_name: heatwave_duration_ecmwf_2014-2024
+    stac_collection: heatwave_duration_ecmwf_2014-2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 94.01266417971051   # workbook / UNICEF STAC threshold
+    overview: max
+  heatwave_severity:
+    unicef_code: HW_SEV
+    app_name: heatwave_severity_ecmwf_2014-2024
+    stac_collection: heatwave_severity_ecmwf_2014-2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 3.659148767122408   # workbook / UNICEF STAC threshold
+    overview: max
+  extreme_heat_days:
+    unicef_code: ET
+    app_name: extreme_heat_ecmwf_2014-2024
+    stac_collection: extreme_heat_ecmwf_2014-2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 35
+    overview: max
+  fire_intensity:
+    unicef_code: FR_INT
+    app_name: fire_FRP_nasa_2001-2024
+    stac_collection: fire_frp_nasa_2001-2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 37.89412565331788
+    overview: max
+  fire_frequency:
+    unicef_code: FR_FRQ
+    app_name: fire_frequency_nasa_2001-2023
+    stac_collection: fire_frequency_nasa_2001-2023
+    valid: "> -1000"
+    op: ">"
+    threshold: 4.9134115164042935
+    overview: max
+  sand_dust_storm_susc:
+    unicef_code: SD
+    app_name: sand_dust_storm_unccd_2024
+    stac_collection: sand_dust_storm_unccd_2024
+    valid: "> -1000"
+    op: ">"
+    threshold: 0
+    binary: true
+    overview: max
+  air_pollution_pm25:
+    unicef_code: AP
+    app_name: air_pollution_pm25_1998-2023
+    stac_collection: air_pollution_pm25_2012-2022
+    valid: "> -1000"
+    op: ">"
+    threshold: 5
+    overview: max
+  epidemics_malaria_pv:
+    unicef_code: ML_PV
+    app_name: vectorborne_malariapv_2012-2022
+    stac_collection: vectorborne_malariapv_2012-2022
+    valid: "> 0"
+    op: ">"
+    threshold: 0.001
+    overview: max
+  epidemics_malaria_pf:
+    unicef_code: ML_PF
+    app_name: vectorborne_malariapf_2012-2022
+    stac_collection: vectorborne_malariapf_2012-2022
+    valid: "> 0"
+    op: ">"
+    threshold: 0.001
+    overview: max
+  earthquake_pga_0p09:
+    unicef_code: EQ
+    app_name: earthquake_pga_gem_2023
+    stac_collection: earthquake_v2023_1_pga_475_rock_3min
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.09
+    overview: max
+  earthquake_pga_0p34:          # second threshold variant; published in tables, not an app default
+    unicef_code: EQ
+    app_name: null
+    stac_collection: earthquake_v2023_1_pga_475_rock_3min
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.34
+    overview: max
+  volcano_100km_buff:
+    unicef_code: VO
+    app_name: volcanoes_gvp_1800-2025
+    stac_collection: gvp_hol_volcanoes_1800
+    # values are distance in metres (371..100000) inside the 100 km buffer, NaN outside;
+    # pipeline "<= 100000" and app "> 0" select the same pixels.
+    valid: "> -1000"
+    op: ">"
+    threshold: 0
+    binary: true
+    overview: min
+  landslides_0p1:
+    unicef_code: LS_RIN
+    app_name: landslide_rainfall_worldbank_1980-2018
+    stac_collection: ls_rf_mean_1980-2018
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.1              # decided: app value. hazard_info.json says 0.01 - CSV to be verified
+    overview: max
+  landslides_0p01:              # second threshold variant; published in tables, not an app default
+    unicef_code: LS_RIN
+    app_name: null
+    stac_collection: ls_rf_mean_1980-2018
+    valid: "> -1000"
+    op: ">"
+    threshold: 0.01
+    overview: max
+  complex_emergencies_acled_0p01_grid:
+    unicef_code: CE
+    app_name: null              # not an app topic today
+    stac_collection: unicef_acled_ci_sep2020_aug2025
+    valid: "> -1000"
+    op: ">="
+    threshold: 0                # as published (CSV used >= 0; workbook says >= 0.01) - published values prioritised 2026-11-13
+    overview: max

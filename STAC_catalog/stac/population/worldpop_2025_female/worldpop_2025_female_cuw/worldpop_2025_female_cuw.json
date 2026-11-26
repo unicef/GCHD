@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_cuw",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -69.16250044335,
+          12.393333619759986
+        ],
+        [
+          -68.63916711211,
+          12.393333619759986
+        ],
+        [
+          -68.63916711211,
+          11.978333621419985
+        ],
+        [
+          -69.16250044335,
+          11.978333621419985
+        ],
+        [
+          -69.16250044335,
+          12.393333619759986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -69.16250044335,
+    11.978333621419985,
+    -68.63916711211,
+    12.393333619759986
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Curaçao",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CUW",
+    "GCHD:country": "Curaçao",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -69.16250044335,
+            11.978333621419985
+          ],
+          [
+            -68.63916711211,
+            11.978333621419985
+          ],
+          [
+            -68.63916711211,
+            12.393333619759986
+          ],
+          [
+            -69.16250044335,
+            12.393333619759986
+          ],
+          [
+            -69.16250044335,
+            11.978333621419985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -69.16250044335,
+      11.978333621419985,
+      -68.63916711211,
+      12.393333619759986
+    ],
+    "proj:shape": [
+      498,
+      628
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -69.16250044335,
+      0.0,
+      -0.00083333333,
+      12.393333619759986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/cuw_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Curaçao (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 162185,
+      "file:checksum": "d50110c87518511bcd2ebb59b4304cfac3767e",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.873320532048471,
+            "minimum": 0.0,
+            "maximum": 35.71569061279297,
+            "stddev": 5.078447974075616,
+            "valid_percent": 8.021576752871358
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 35.71569061279297,
+            "buckets": [
+              16181,
+              3055,
+              2672,
+              2080,
+              742,
+              189,
+              50,
+              60,
+              53,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4712,
+      "file:checksum": "12209a2705d3b6c1e05fc27e80ab4e1ef43ebe430ce2e35ad0d529358ba1b6c4c15b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4032,
+      "file:checksum": "12200f759dbafc6335e9ff39aab45eeda02a2f75723ad7965458f5e593a906b33deb"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_pyf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -154.72333343444,
+          -7.898332965740014
+        ],
+        [
+          -134.45833351550002,
+          -7.898332965740014
+        ],
+        [
+          -134.45833351550002,
+          -27.899999552400015
+        ],
+        [
+          -154.72333343444,
+          -27.899999552400015
+        ],
+        [
+          -154.72333343444,
+          -7.898332965740014
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -154.72333343444,
+    -27.899999552400015,
+    -134.45833351550002,
+    -7.898332965740014
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – French Polynesia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PYF",
+    "GCHD:country": "French Polynesia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -154.72333343444,
+            -27.899999552400015
+          ],
+          [
+            -134.45833351550002,
+            -27.899999552400015
+          ],
+          [
+            -134.45833351550002,
+            -7.898332965740014
+          ],
+          [
+            -154.72333343444,
+            -7.898332965740014
+          ],
+          [
+            -154.72333343444,
+            -27.899999552400015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -154.72333343444,
+      -27.899999552400015,
+      -134.45833351550002,
+      -7.898332965740014
+    ],
+    "proj:shape": [
+      24002,
+      24318
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -154.72333343444,
+      0.0,
+      -0.00083333333,
+      -7.898332965740014,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/pyf_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – French Polynesia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 15452778,
+      "file:checksum": "d501103c9da0b327137333f069f1c53ba8442c",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.3066329487993673,
+            "minimum": 0.015362209640443325,
+            "maximum": 11.358779907226562,
+            "stddev": 1.5166505493628266,
+            "valid_percent": 0.06297910484668645
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.015362209640443325,
+            "max": 11.358779907226562,
+            "buckets": [
+              408,
+              149,
+              44,
+              20,
+              12,
+              7,
+              8,
+              1,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 905,
+      "file:checksum": "1220262c9dcbffc568c723ce2927a55bfda45ee8bfda0a607ef997dc05345083e58a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 765,
+      "file:checksum": "1220847a3425933277098b82d65d6a95f68276a5806f3320276965b2815c6f4a96d5"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

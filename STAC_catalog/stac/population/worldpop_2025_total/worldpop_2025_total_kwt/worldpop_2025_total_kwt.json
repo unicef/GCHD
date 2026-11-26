@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_kwt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          46.55333242712,
+          30.104166882249988
+        ],
+        [
+          48.65416575205,
+          30.104166882249988
+        ],
+        [
+          48.65416575205,
+          28.525000221899987
+        ],
+        [
+          46.55333242712,
+          28.525000221899987
+        ],
+        [
+          46.55333242712,
+          30.104166882249988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    46.55333242712,
+    28.525000221899987,
+    48.65416575205,
+    30.104166882249988
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Kuwait",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KWT",
+    "GCHD:country": "Kuwait",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.55333242712,
+            28.525000221899987
+          ],
+          [
+            48.65416575205,
+            28.525000221899987
+          ],
+          [
+            48.65416575205,
+            30.104166882249988
+          ],
+          [
+            46.55333242712,
+            30.104166882249988
+          ],
+          [
+            46.55333242712,
+            28.525000221899987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      46.55333242712,
+      28.525000221899987,
+      48.65416575205,
+      30.104166882249988
+    ],
+    "proj:shape": [
+      1895,
+      2521
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      46.55333242712,
+      0.0,
+      -0.00083333333,
+      30.104166882249988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/kwt_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Kuwait (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2215841,
+      "file:checksum": "d501106f1ce3c48a53faaacd7ef7c469516297",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 12.25142690278269,
+            "minimum": 0.0,
+            "maximum": 158.34620666503906,
+            "stddev": 26.94206427952212,
+            "valid_percent": 8.604910714285714
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 158.34620666503906,
+            "buckets": [
+              55615,
+              3456,
+              2835,
+              2308,
+              868,
+              295,
+              454,
+              941,
+              709,
+              367
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8072,
+      "file:checksum": "12207e6c1c4f57d052aea41c520f864e98866938ca2e995dc4bd6bc00b5d2b8625d3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7191,
+      "file:checksum": "1220436bbe12b94e8d8b98bac93270ca9e09e54d9d41ff59b4a689a5f77f63a67536"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

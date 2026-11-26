@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_ury",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -58.43916715291,
+          -30.084999543660025
+        ],
+        [
+          -53.077500507690004,
+          -30.084999543660025
+        ],
+        [
+          -53.077500507690004,
+          -35.03166619054002
+        ],
+        [
+          -58.43916715291,
+          -35.03166619054002
+        ],
+        [
+          -58.43916715291,
+          -30.084999543660025
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -58.43916715291,
+    -35.03166619054002,
+    -53.077500507690004,
+    -30.084999543660025
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Uruguay",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "URY",
+    "GCHD:country": "Uruguay",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -58.43916715291,
+            -35.03166619054002
+          ],
+          [
+            -53.077500507690004,
+            -35.03166619054002
+          ],
+          [
+            -53.077500507690004,
+            -30.084999543660025
+          ],
+          [
+            -58.43916715291,
+            -30.084999543660025
+          ],
+          [
+            -58.43916715291,
+            -35.03166619054002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -58.43916715291,
+      -35.03166619054002,
+      -53.077500507690004,
+      -30.084999543660025
+    ],
+    "proj:shape": [
+      5936,
+      6434
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -58.43916715291,
+      0.0,
+      -0.00083333333,
+      -30.084999543660025,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/ury_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Uruguay (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17504532,
+      "file:checksum": "d501106c76f7f8c46c71cb9fdf96c24cd206e4",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.36963362008129624,
+            "minimum": 0.0,
+            "maximum": 168.14007568359375,
+            "stddev": 2.7478789628695792,
+            "valid_percent": 12.81322337962963
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 168.14007568359375,
+            "buckets": [
+              123192,
+              629,
+              127,
+              29,
+              6,
+              7,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8903,
+      "file:checksum": "1220986d8a4bb130ad7350386e9323b0a88f7c252b510d196bbe90f6c40d1062002a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 8093,
+      "file:checksum": "1220c8074a6268ee84ae82f39023d9904ffc4077746e7eda0ce9ad18b0b35606ec1f"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

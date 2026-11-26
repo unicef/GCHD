@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_lbn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          35.104165806249995,
+          34.69166686389999
+        ],
+        [
+          36.62333246684,
+          34.69166686389999
+        ],
+        [
+          36.62333246684,
+          33.05500020377999
+        ],
+        [
+          35.104165806249995,
+          33.05500020377999
+        ],
+        [
+          35.104165806249995,
+          34.69166686389999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    35.104165806249995,
+    33.05500020377999,
+    36.62333246684,
+    34.69166686389999
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Lebanon",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LBN",
+    "GCHD:country": "Lebanon",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.104165806249995,
+            33.05500020377999
+          ],
+          [
+            36.62333246684,
+            33.05500020377999
+          ],
+          [
+            36.62333246684,
+            34.69166686389999
+          ],
+          [
+            35.104165806249995,
+            34.69166686389999
+          ],
+          [
+            35.104165806249995,
+            33.05500020377999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      35.104165806249995,
+      33.05500020377999,
+      36.62333246684,
+      34.69166686389999
+    ],
+    "proj:shape": [
+      1964,
+      1823
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      35.104165806249995,
+      0.0,
+      -0.00083333333,
+      34.69166686389999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/lbn_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Lebanon (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4138306,
+      "file:checksum": "d50110633e062c4bc761ad7893d50ce25f2e45",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.1974226727820947,
+            "minimum": 0.0,
+            "maximum": 299.9539489746094,
+            "stddev": 5.875549725510859,
+            "valid_percent": 22.545552379074657
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 299.9539489746094,
+            "buckets": [
+              218171,
+              850,
+              408,
+              61,
+              18,
+              12,
+              16,
+              12,
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11567,
+      "file:checksum": "122055a867a2ad45758039b3413351c9da9b31858cd514aabd67e3e61aeba3d38a1f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 12461,
+      "file:checksum": "12205eb704ceebdcd92810088d78403b2e5bf263c0317d3b40720b628f40d72b8100"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

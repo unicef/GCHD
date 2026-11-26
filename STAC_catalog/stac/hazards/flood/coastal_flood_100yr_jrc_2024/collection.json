@@ -1,0 +1,217 @@
+{
+  "type": "Collection",
+  "id": "coastal_flood_100yr_jrc_2024",
+  "stac_version": "1.1.0",
+  "description": "Coastal flooding is most frequently the result of storm surges and high winds coinciding with high tides",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/flood/coastal_flood_100yr_jrc_2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Floods"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://global-flood-maps.jrc.ec.europa.eu/",
+      "type": "text/html",
+      "title": "Original source (JRC)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Floods",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Probabilistic - 100 year return period",
+  "GCHD:nominal_resolution": "90m",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Binary",
+  "GCHD:value_range": [
+    0.0,
+    1.0
+  ],
+  "GCHD:notes": "While 1000 year return period is available, it might be easier to keep the same as floods. Note WRI coastal flood is average annual impact of storm surge (a good indicator to be considered for others as well with different return periods) and UNEP GRID is only available as a point layer; SIDS might not be well represented and more discussions needed on the added value",
+  "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/coastal_flood_r100",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "coastal_flood_100yr",
+      "app_name": "coastal_flood_100yr_jrc_2024",
+      "unicef_code": "FL_COA",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0,
+      "default": true
+    }
+  ],
+  "title": "Coastal flood hazard",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.999583333335,
+          -56.393958774339666,
+          179.99868766760153,
+          83.67622999987842
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Floods",
+    "FL"
+  ],
+  "providers": [
+    {
+      "name": "JRC",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/coastal_flood_100yr_jrc_2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Coastal flood hazard (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        168157,
+        432178
+      ],
+      "proj:transform": [
+        0.0008329861098920735,
+        0.0,
+        -179.999583333335,
+        0.0,
+        -0.0008329726908437833,
+        83.67622999987842,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -179.999583333335,
+        -56.393958774339666,
+        179.99868766760153,
+        83.67622999987842
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "uint8",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": 255.0,
+          "statistics": {
+            "mean": 0.0007464951441102757,
+            "minimum": 0,
+            "maximum": 1,
+            "stddev": 0.027311863523203524,
+            "valid_percent": 100.0
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.0,
+            "buckets": [
+              408271,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              305
+            ]
+          }
+        }
+      ],
+      "file:size": 132612954,
+      "file:checksum": "1220d6a1fc388f33ba8fbffc95cf8e5f553e8776cc4768de77a9b5c3ac8967ce2084"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 45444,
+      "file:checksum": "1220105e83f62610f961f88bc6b70316b78ba80600756a84d42a3ccd1d4ba7c513d8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 14946,
+      "file:checksum": "1220ef89c8ef25847e464b81ae9cbad86be69319829fa99a7d8425a59182e1e1b952"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

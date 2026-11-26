@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_cok",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -159.83833341398,
+          -8.916666295000015
+        ],
+        [
+          -157.32166675738,
+          -8.916666295000015
+        ],
+        [
+          -157.32166675738,
+          -21.959166242830015
+        ],
+        [
+          -159.83833341398,
+          -21.959166242830015
+        ],
+        [
+          -159.83833341398,
+          -8.916666295000015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -159.83833341398,
+    -21.959166242830015,
+    -157.32166675738,
+    -8.916666295000015
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Cook Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "COK",
+    "GCHD:country": "Cook Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -159.83833341398,
+            -21.959166242830015
+          ],
+          [
+            -157.32166675738,
+            -21.959166242830015
+          ],
+          [
+            -157.32166675738,
+            -8.916666295000015
+          ],
+          [
+            -159.83833341398,
+            -8.916666295000015
+          ],
+          [
+            -159.83833341398,
+            -21.959166242830015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -159.83833341398,
+      -21.959166242830015,
+      -157.32166675738,
+      -8.916666295000015
+    ],
+    "proj:shape": [
+      15651,
+      3020
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -159.83833341398,
+      0.0,
+      -0.00083333333,
+      -8.916666295000015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/cok_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Cook Islands (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1333365,
+      "file:checksum": "d50110792bfc1af35e863ab47c288f42d0d5db",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.5734843939123019,
+            "minimum": 0.04398038610816002,
+            "maximum": 2.511841297149658,
+            "stddev": 0.535182512202902,
+            "valid_percent": 0.0700363005050505
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.04398038610816002,
+            "max": 2.511841297149658,
+            "buckets": [
+              63,
+              23,
+              14,
+              15,
+              13,
+              4,
+              1,
+              7,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 433,
+      "file:checksum": "12200c36c9be54217bae83d4e0033b8a6264d1c86964d4e3ff80d0f95f7207465cf2"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 500,
+      "file:checksum": "122050415ce8517733100847be38424cac96412093166896de5d1c11c88faafdc670"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,36 @@
+group,id,title,items,data
+boundaries,adm0,Administrative boundaries - ADM0 (countries and territories),0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0/adm0.parquet
+boundaries,adm1,Administrative boundaries - ADM1,0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm1/adm1.parquet
+boundaries,adm2,Administrative boundaries - ADM2 (districts),0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2/adm2.parquet
+exposure,adm0_hazard,"Hazard exposure by country (ADM0), per hazard (roll-up)",0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm0_hazard/adm0_hazard.parquet
+exposure,adm1_hazard,"Hazard exposure by ADM1, per hazard (roll-up)",0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm1_hazard/adm1_hazard.parquet
+exposure,adm2_hazard,"Hazard exposure by district (ADM2), per hazard",0,https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2_hazard/adm2_hazard.parquet
+hazards/air_pollution,air_pollution_pm25_2012-2022,PM 2.5,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/air_pollution/air_pollution_pm25_2012-2022.tif
+hazards/conflict,unicef_acled_ci_sep2020_aug2025,Conflict,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.tif
+hazards/drought,agricultural_drought_fao_1984-2023,Agricultural Drought (Agricultural Stress Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/agricultural_drought_fao_1984-2023.tif
+hazards/drought,drought_spei_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Evapotranspiration Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif
+hazards/drought,drought_spi_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spi_terraclimate_1958-2025.tif
+hazards/earthquake,earthquake_v2023_1_pga_475_rock_3min,Earthquake,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif
+hazards/fire,fire_frequency_nasa_2001-2023,Fire Frequency,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_frequency_nasa_2001-2023.tif
+hazards/fire,fire_frp_nasa_2001-2024,Fire Intensity,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_FRP_nasa_2001-2024.tif
+hazards/flood,coastal_flood_100yr_jrc_2024,Coastal flood hazard,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/coastal_flood_100yr_jrc_2024.tif
+hazards/flood,river_flood_100yr_jrc_2024,Riverine flood hazard (original JRC tiles),264,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/mosaic.vrt
+hazards/heatwave,extreme_heat_ecmwf_2014-2024,Extreme hot days,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/extreme_heat_ecmwf_2014-2024.tif
+hazards/heatwave,heatwave_duration_ecmwf_2014-2024,Heatwave duration,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/heatwave_duration_ecmwf_2014-2024.tif
+hazards/heatwave,heatwave_frequency_ecmwf_2014-2024,Heatwave frequency,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/heatwave_frequency_ecmwf_2014-2024.tif
+hazards/heatwave,heatwave_severity_ecmwf_2014-2024,Heatwave severity,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/heatwave/heatwave_severity_ecmwf_2014-2024.tif
+hazards/landslide,landslides_trig_earthquakes,Landslide (earthquake induced),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/landslide/landslides_trig_earthquakes.tif
+hazards/landslide,ls_rf_mean_1980-2018,Landslide (rainfall induced),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/landslide/LS_RF_Mean_1980-2018.tif
+hazards/malaria,vectorborne_malariapf_2012-2022,Malaria Plasmodium Falciparum,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/malaria/vectorborne_malariapf_2012-2022.tif
+hazards/malaria,vectorborne_malariapv_2012-2022,Malaria Plasmodium Vivax,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/malaria/vectorborne_malariapv_2012-2022.tif
+hazards/sand_dust_storm,sand_dust_storm_unccd_2024,SDS Susceptiblity,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/sand_dust_storm/sand_dust_storm_unccd_2024.tif
+hazards/tropical_storm,tropical_storm_100yr_giri_2024,Wind speed,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/tropical_storm/tropical_storm_100yr_giri_2024.tif
+hazards/volcano,gvp_hol_volcanoes_1800,Volcanoes,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/volcano/GVP_Hol_volcanoes_1800.tif
+multi_hazard,mhi_climate,Multi-Hazard Intensity (MHI) - climate,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/multi_hazard/MHI_climate.tif
+population,worldpop_2025_female,"Female population 2025, all ages (WorldPop R2025A)",237,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/female/mosaic_ovr.vrt
+population,worldpop_2025_male,"Male population 2025, all ages (WorldPop R2025A)",237,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/male/mosaic_ovr.vrt
+population,worldpop_2025_total,"Total population 2025, all ages (WorldPop R2025A)",240,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/total/mosaic_ovr.vrt
+population,worldpop_u18_2025_female,Female U18 population 2025 (WorldPop R2025A),240,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_u18_2025/female/mosaic_ovr.vrt
+population,worldpop_u18_2025_male,Male U18 population 2025 (WorldPop R2025A),240,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_u18_2025/male/mosaic_ovr.vrt
+population,worldpop_u18_2025_total,Total U18 population 2025 (WorldPop R2025A),240,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_u18_2025/total/mosaic_ovr.vrt
+reference,land_sea_mask,Land/sea mask (ERA5 0.1 deg grid),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/reference/landSeaMask.tif

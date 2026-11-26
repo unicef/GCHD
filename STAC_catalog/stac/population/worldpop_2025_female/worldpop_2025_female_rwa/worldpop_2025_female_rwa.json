@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_rwa",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          28.861665831219998,
+          -1.048332993140015
+        ],
+        [
+          30.89833248974,
+          -1.048332993140015
+        ],
+        [
+          30.89833248974,
+          -2.8399996526400146
+        ],
+        [
+          28.861665831219998,
+          -2.8399996526400146
+        ],
+        [
+          28.861665831219998,
+          -1.048332993140015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    28.861665831219998,
+    -2.8399996526400146,
+    30.89833248974,
+    -1.048332993140015
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Rwanda",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "RWA",
+    "GCHD:country": "Rwanda",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            28.861665831219998,
+            -2.8399996526400146
+          ],
+          [
+            30.89833248974,
+            -2.8399996526400146
+          ],
+          [
+            30.89833248974,
+            -1.048332993140015
+          ],
+          [
+            28.861665831219998,
+            -1.048332993140015
+          ],
+          [
+            28.861665831219998,
+            -2.8399996526400146
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      28.861665831219998,
+      -2.8399996526400146,
+      30.89833248974,
+      -1.048332993140015
+    ],
+    "proj:shape": [
+      2150,
+      2444
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      28.861665831219998,
+      0.0,
+      -0.00083333333,
+      -1.048332993140015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/rwa_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Rwanda (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10438686,
+      "file:checksum": "d50110486179a5ee2b24d019e77a73b14679e9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.5258110336998025,
+            "minimum": 0.0,
+            "maximum": 114.10525512695312,
+            "stddev": 4.881947424870334,
+            "valid_percent": 40.47954529689235
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 114.10525512695312,
+            "buckets": [
+              357040,
+              12442,
+              2505,
+              809,
+              404,
+              148,
+              60,
+              15,
+              21,
+              30
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16441,
+      "file:checksum": "1220768d08a285e4944c032afe900be1a3b781d5cba80e1f53874e68eb20b6741210"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 16441,
+      "file:checksum": "12201d0bd2d525e0b321fd713c8afd5deab85a70fb41456488ac759647e4c00f12e2"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

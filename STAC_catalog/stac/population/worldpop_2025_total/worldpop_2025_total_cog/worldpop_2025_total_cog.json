@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_cog",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          11.153332568719998,
+          3.7083336544999854
+        ],
+        [
+          18.650832538729997,
+          3.7083336544999854
+        ],
+        [
+          18.650832538729997,
+          -5.040832977170015
+        ],
+        [
+          11.153332568719998,
+          -5.040832977170015
+        ],
+        [
+          11.153332568719998,
+          3.7083336544999854
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    11.153332568719998,
+    -5.040832977170015,
+    18.650832538729997,
+    3.7083336544999854
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Congo",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "COG",
+    "GCHD:country": "Congo",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            11.153332568719998,
+            -5.040832977170015
+          ],
+          [
+            18.650832538729997,
+            -5.040832977170015
+          ],
+          [
+            18.650832538729997,
+            3.7083336544999854
+          ],
+          [
+            11.153332568719998,
+            3.7083336544999854
+          ],
+          [
+            11.153332568719998,
+            -5.040832977170015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      11.153332568719998,
+      -5.040832977170015,
+      18.650832538729997,
+      3.7083336544999854
+    ],
+    "proj:shape": [
+      10499,
+      8997
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      11.153332568719998,
+      0.0,
+      -0.00083333333,
+      3.7083336544999854,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/cog_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Congo (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10410580,
+      "file:checksum": "d501108faba4e282379fba0bce0d4ed1c79dbd",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.0722010617512976,
+            "minimum": 0.0,
+            "maximum": 247.41015625,
+            "stddev": 10.315154888862825,
+            "valid_percent": 5.635922373291572
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 247.41015625,
+            "buckets": [
+              50131,
+              189,
+              108,
+              72,
+              47,
+              40,
+              39,
+              24,
+              10,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9375,
+      "file:checksum": "1220eddaa70332d843b80540dff56c5807bbca37f165dc653b3ea60ae623d56a799d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11803,
+      "file:checksum": "1220b3aabae69c4e4cd4082007b0dd8793fd0ae74bc377e579f90e1643d703dcf82e"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

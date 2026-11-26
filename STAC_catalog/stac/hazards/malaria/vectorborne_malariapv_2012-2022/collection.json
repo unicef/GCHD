@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "id": "vectorborne_malariapv_2012-2022",
+  "stac_version": "1.1.0",
+  "description": "P. vivax is the dominant malaria parasite in most countries outside of sub-Saharan Africa. Malaria is a life-threatening disease caused by parasites transmitted to humans through the bites of infected female Anopheles mosquitoes.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/malaria/vectorborne_malariapv_2012-2022.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vector Borne Diseases (Malaria)"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://malariaatlas.org/",
+      "type": "text/html",
+      "title": "Original source (MAP)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Vector Borne Diseases",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Modelled",
+  "GCHD:nominal_resolution": "5km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "# per 1000 people",
+  "GCHD:threshold": "> 0,001",
+  "GCHD:classes": "Use natural breaks/quantile",
+  "GCHD:value_range": [
+    0.0,
+    1.0
+  ],
+  "GCHD:notes": "This layer map provides estimates of newly diagnosed Plasmodium falciparum cases per 1,000 population, on a given year. To produce these estimates, we apply geostatistical models to response datasets consisting of PR points and routine surveillance reports, and a rich set of geospatial covariates that characterise habitat for Anopheles mosquitos that spread the disease. The maps cover all malaria-endemic countries and are produced annually from year 2000 at a 5x5 km resolution. The rasters may be downloaded as a series of multi-band GeoTiffs. The first band consists of the modelled estimates as rates per person [0-1]. The second band is a mask consisting of the values zero and 1; the 1 values represent pixels that we mask out because they are sparsely populated. This masking is only applied to South America, and we define \"sparsely populated\" as areas that have a modelled estimate of >0 and a population of ≤5 people per pixel.",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/Pv_average_2013_2022",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "epidemics_malaria_pv",
+      "app_name": "vectorborne_malariapv_2012-2022",
+      "unicef_code": "ML_PV",
+      "valid": "> 0",
+      "op": ">",
+      "threshold": 0.001,
+      "default": true
+    }
+  ],
+  "title": "Malaria Plasmodium Vivax",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -118.375,
+          -55.08337678331782,
+          170.25000000000023,
+          53.54162321668227
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2013-01-01T00:00:00Z",
+          "2022-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Vector Borne Diseases (Malaria)",
+    "EP"
+  ],
+  "providers": [
+    {
+      "name": "MAP",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://malariaatlas.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/malaria/vectorborne_malariapv_2012-2022.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Malaria Plasmodium Vivax (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        2607,
+        6927
+      ],
+      "proj:transform": [
+        0.0416666666666667,
+        0.0,
+        -118.375,
+        0.0,
+        -0.0416666666666667,
+        53.54162321668227,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -118.375,
+        -55.08337678331782,
+        170.25000000000023,
+        53.54162321668227
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": -0.02229750243278212,
+            "minimum": -666.596923828125,
+            "maximum": 0.17330379784107208,
+            "stddev": 3.7200234803012435,
+            "valid_percent": 15.899753076424872
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": -666.596923828125,
+            "max": 0.17330379784107208,
+            "buckets": [
+              1,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              1,
+              1,
+              62841
+            ]
+          }
+        }
+      ],
+      "file:size": 8508354,
+      "file:checksum": "d501100225c6a5488d13e3d67153e775de9730"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 57902,
+      "file:checksum": "12207a531a3eeb3453f10df3b766f1985eaf9af77c015b19f7b44b46ce1316c35a2a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 117443,
+      "file:checksum": "12205540767bdcf7cbdc7b671407a8f44a93f20afe607d5a535f0c32c504eefab9e7"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

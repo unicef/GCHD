@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_lao",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          100.08416554633,
+          22.50916691262999
+        ],
+        [
+          107.63499884946,
+          22.50916691262999
+        ],
+        [
+          107.63499884946,
+          13.90916694702999
+        ],
+        [
+          100.08416554633,
+          13.90916694702999
+        ],
+        [
+          100.08416554633,
+          22.50916691262999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    100.08416554633,
+    13.90916694702999,
+    107.63499884946,
+    22.50916691262999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Lao People's Democratic Republic",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LAO",
+    "GCHD:country": "Lao People's Democratic Republic",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            100.08416554633,
+            13.90916694702999
+          ],
+          [
+            107.63499884946,
+            13.90916694702999
+          ],
+          [
+            107.63499884946,
+            22.50916691262999
+          ],
+          [
+            100.08416554633,
+            22.50916691262999
+          ],
+          [
+            100.08416554633,
+            13.90916694702999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      100.08416554633,
+      13.90916694702999,
+      107.63499884946,
+      22.50916691262999
+    ],
+    "proj:shape": [
+      10320,
+      9061
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      100.08416554633,
+      0.0,
+      -0.00083333333,
+      22.50916691262999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/lao_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Lao People's Democratic Republic (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 27932629,
+      "file:checksum": "d50110fe5cdce295660af3c1bd0c0d51625fdc",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.8916782842298699,
+            "minimum": 0.0,
+            "maximum": 32.939842224121094,
+            "stddev": 1.0598869708746155,
+            "valid_percent": 14.525499131944445
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 32.939842224121094,
+            "buckets": [
+              130988,
+              2268,
+              319,
+              137,
+              59,
+              37,
+              22,
+              24,
+              12,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9714,
+      "file:checksum": "122086c3033ac7f59c5c8acb3804bcdbfc5084b8c463c832d1e62b3b9e9a5db2fa3a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11344,
+      "file:checksum": "122070233d33d89ae5df5b44eed2466f1733f1cce39b147bcddece301f8113960839"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

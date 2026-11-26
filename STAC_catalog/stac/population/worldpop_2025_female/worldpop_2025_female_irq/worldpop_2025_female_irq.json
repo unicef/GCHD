@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_irq",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          38.794165791489995,
+          37.38000018647999
+        ],
+        [
+          48.62083241884999,
+          37.38000018647999
+        ],
+        [
+          48.62083241884999,
+          29.06166688641999
+        ],
+        [
+          38.794165791489995,
+          29.06166688641999
+        ],
+        [
+          38.794165791489995,
+          37.38000018647999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    38.794165791489995,
+    29.06166688641999,
+    48.62083241884999,
+    37.38000018647999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Iraq",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "IRQ",
+    "GCHD:country": "Iraq",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            38.794165791489995,
+            29.06166688641999
+          ],
+          [
+            48.62083241884999,
+            29.06166688641999
+          ],
+          [
+            48.62083241884999,
+            37.38000018647999
+          ],
+          [
+            38.794165791489995,
+            37.38000018647999
+          ],
+          [
+            38.794165791489995,
+            29.06166688641999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      38.794165791489995,
+      29.06166688641999,
+      48.62083241884999,
+      37.38000018647999
+    ],
+    "proj:shape": [
+      9982,
+      11792
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      38.794165791489995,
+      0.0,
+      -0.00083333333,
+      37.38000018647999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/irq_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Iraq (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 37843465,
+      "file:checksum": "d501103b50b3afe8e32b5c0dc95adab57789b5",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.9587640171503957,
+            "minimum": 0.0,
+            "maximum": 208.91371154785156,
+            "stddev": 6.481065974815432,
+            "valid_percent": 12.806823096885815
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 208.91371154785156,
+            "buckets": [
+              111651,
+              1235,
+              615,
+              146,
+              21,
+              8,
+              2,
+              2,
+              11,
+              9
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10425,
+      "file:checksum": "12206c80e083cdcc1e00a8102bab2a46f32482c0a4580d5297f8a61431f12c85107e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10242,
+      "file:checksum": "122013d83c683f7bc4ae5463703604934fc8ac2a4d17bfa1acd8ab4f2024c681cc76"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

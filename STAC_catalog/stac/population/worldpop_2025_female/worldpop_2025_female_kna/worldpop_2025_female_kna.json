@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_kna",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -62.86416713521,
+          17.418333599659988
+        ],
+        [
+          -62.53916713651,
+          17.418333599659988
+        ],
+        [
+          -62.53916713651,
+          17.094166934289987
+        ],
+        [
+          -62.86416713521,
+          17.094166934289987
+        ],
+        [
+          -62.86416713521,
+          17.418333599659988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -62.86416713521,
+    17.094166934289987,
+    -62.53916713651,
+    17.418333599659988
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Saint Kitts and Nevis",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KNA",
+    "GCHD:country": "Saint Kitts and Nevis",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -62.86416713521,
+            17.094166934289987
+          ],
+          [
+            -62.53916713651,
+            17.094166934289987
+          ],
+          [
+            -62.53916713651,
+            17.418333599659988
+          ],
+          [
+            -62.86416713521,
+            17.418333599659988
+          ],
+          [
+            -62.86416713521,
+            17.094166934289987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -62.86416713521,
+      17.094166934289987,
+      -62.53916713651,
+      17.418333599659988
+    ],
+    "proj:shape": [
+      389,
+      390
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -62.86416713521,
+      0.0,
+      -0.00083333333,
+      17.418333599659988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/kna_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Saint Kitts and Nevis (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 75055,
+      "file:checksum": "d50110d361cd2c7dc579f5fd3c8baa3d3c6b5d",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.6468449053808338,
+            "minimum": 0.0,
+            "maximum": 17.598058700561523,
+            "stddev": 2.2955750160945896,
+            "valid_percent": 9.787752949706677
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 17.598058700561523,
+            "buckets": [
+              11052,
+              1784,
+              811,
+              490,
+              319,
+              217,
+              94,
+              58,
+              18,
+              6
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6752,
+      "file:checksum": "12203288915110d89bed09e21bc969b7c5ccd76dcea953cd054fa586ecb5e9ae6ddf"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5957,
+      "file:checksum": "122007c8d5d9b299670a9a91266c6199285f1e50ebc5c45c6354cd6e74d1eee223ab"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

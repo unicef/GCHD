@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_syc",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          46.20333242852,
+          -3.713332982480016
+        ],
+        [
+          56.289999054839996,
+          -3.713332982480016
+        ],
+        [
+          56.289999054839996,
+          -10.227499623090015
+        ],
+        [
+          46.20333242852,
+          -10.227499623090015
+        ],
+        [
+          46.20333242852,
+          -3.713332982480016
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    46.20333242852,
+    -10.227499623090015,
+    56.289999054839996,
+    -3.713332982480016
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Seychelles",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SYC",
+    "GCHD:country": "Seychelles",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            46.20333242852,
+            -10.227499623090015
+          ],
+          [
+            56.289999054839996,
+            -10.227499623090015
+          ],
+          [
+            56.289999054839996,
+            -3.713332982480016
+          ],
+          [
+            46.20333242852,
+            -3.713332982480016
+          ],
+          [
+            46.20333242852,
+            -10.227499623090015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      46.20333242852,
+      -10.227499623090015,
+      56.289999054839996,
+      -3.713332982480016
+    ],
+    "proj:shape": [
+      7817,
+      12104
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      46.20333242852,
+      0.0,
+      -0.00083333333,
+      -3.713332982480016,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/syc_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Seychelles (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2601157,
+      "file:checksum": "d501100b300998de24b4e4822b60471364cc76",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 5.125173662293632,
+            "minimum": 0.0523420013487339,
+            "maximum": 53.03261947631836,
+            "stddev": 7.019582633248079,
+            "valid_percent": 0.03909200339879154
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0523420013487339,
+            "max": 53.03261947631836,
+            "buckets": [
+              192,
+              42,
+              13,
+              6,
+              4,
+              3,
+              4,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 541,
+      "file:checksum": "1220140282fe1f1f3115863da3e0a7f8edaf65e1ad84b2e6935d96c2bd9e93c524f7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 532,
+      "file:checksum": "12200ea9cb03d687db475cfcf7dc4a1516c587f7aa87b668df6a0f151739c42d5b6c"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

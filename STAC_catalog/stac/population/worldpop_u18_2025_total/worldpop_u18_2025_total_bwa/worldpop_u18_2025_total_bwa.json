@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_bwa",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          19.999165866669998,
+          -17.778332926220017
+        ],
+        [
+          29.372499162509996,
+          -17.778332926220017
+        ],
+        [
+          29.372499162509996,
+          -26.905832889710016
+        ],
+        [
+          19.999165866669998,
+          -26.905832889710016
+        ],
+        [
+          19.999165866669998,
+          -17.778332926220017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    19.999165866669998,
+    -26.905832889710016,
+    29.372499162509996,
+    -17.778332926220017
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Botswana",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BWA",
+    "GCHD:country": "Botswana",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.999165866669998,
+            -26.905832889710016
+          ],
+          [
+            29.372499162509996,
+            -26.905832889710016
+          ],
+          [
+            29.372499162509996,
+            -17.778332926220017
+          ],
+          [
+            19.999165866669998,
+            -17.778332926220017
+          ],
+          [
+            19.999165866669998,
+            -26.905832889710016
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      19.999165866669998,
+      -26.905832889710016,
+      29.372499162509996,
+      -17.778332926220017
+    ],
+    "proj:shape": [
+      10953,
+      11248
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      19.999165866669998,
+      0.0,
+      -0.00083333333,
+      -17.778332926220017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/bwa_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Botswana (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 27071968,
+      "file:checksum": "d5011017c3fa0e9981ed8450a0876de72f67eb",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.13095382059644642,
+            "minimum": 0.0,
+            "maximum": 17.608972549438477,
+            "stddev": 0.4928140578620789,
+            "valid_percent": 8.464585420841683
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 17.608972549438477,
+            "buckets": [
+              85179,
+              939,
+              236,
+              57,
+              65,
+              26,
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7367,
+      "file:checksum": "122067bafa43d2a78c931ed9ffdc7a37fc34bf45ff584e1d21d6d0546db9106428a6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7367,
+      "file:checksum": "12208ceb54638789ef125a3aaab360e7eec05778f088e1c549de0493ada206f88a32"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

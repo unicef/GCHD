@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_tto",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -61.93083380561,
+          11.361666957219986
+        ],
+        [
+          -60.49250047803,
+          11.361666957219986
+        ],
+        [
+          -60.49250047803,
+          10.042500295829987
+        ],
+        [
+          -61.93083380561,
+          10.042500295829987
+        ],
+        [
+          -61.93083380561,
+          11.361666957219986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -61.93083380561,
+    10.042500295829987,
+    -60.49250047803,
+    11.361666957219986
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Trinidad and Tobago",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "TTO",
+    "GCHD:country": "Trinidad and Tobago",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.93083380561,
+            10.042500295829987
+          ],
+          [
+            -60.49250047803,
+            10.042500295829987
+          ],
+          [
+            -60.49250047803,
+            11.361666957219986
+          ],
+          [
+            -61.93083380561,
+            11.361666957219986
+          ],
+          [
+            -61.93083380561,
+            10.042500295829987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -61.93083380561,
+      10.042500295829987,
+      -60.49250047803,
+      11.361666957219986
+    ],
+    "proj:shape": [
+      1583,
+      1726
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -61.93083380561,
+      0.0,
+      -0.00083333333,
+      11.361666957219986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/tto_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Trinidad and Tobago (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1442330,
+      "file:checksum": "d50110fefab0fb7091a9904ee37cfce32270e2",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.2615616950936048,
+            "minimum": 0.0,
+            "maximum": 12.308601379394531,
+            "stddev": 1.8726008049111833,
+            "valid_percent": 9.922290558510639
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 12.308601379394531,
+            "buckets": [
+              71042,
+              10059,
+              5018,
+              3167,
+              2156,
+              1749,
+              1261,
+              528,
+              314,
+              214
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7462,
+      "file:checksum": "1220796b9fb9bec5a9a3cf8f7177fe57797154f14443163416dd1e243fc071a86fde"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6753,
+      "file:checksum": "1220fcb72caa194cf5b0fda7a369e1988a58336ac628cef1521d3acf855a48c0493e"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

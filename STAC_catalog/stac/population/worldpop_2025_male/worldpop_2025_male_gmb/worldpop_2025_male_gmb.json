@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_gmb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.814167319410004,
+          13.824166947369987
+        ],
+        [
+          -13.791667331500005,
+          13.824166947369987
+        ],
+        [
+          -13.791667331500005,
+          13.064166950409987
+        ],
+        [
+          -16.814167319410004,
+          13.064166950409987
+        ],
+        [
+          -16.814167319410004,
+          13.824166947369987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.814167319410004,
+    13.064166950409987,
+    -13.791667331500005,
+    13.824166947369987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Gambia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GMB",
+    "GCHD:country": "Gambia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -16.814167319410004,
+            13.064166950409987
+          ],
+          [
+            -13.791667331500005,
+            13.064166950409987
+          ],
+          [
+            -13.791667331500005,
+            13.824166947369987
+          ],
+          [
+            -16.814167319410004,
+            13.824166947369987
+          ],
+          [
+            -16.814167319410004,
+            13.064166950409987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -16.814167319410004,
+      13.064166950409987,
+      -13.791667331500005,
+      13.824166947369987
+    ],
+    "proj:shape": [
+      912,
+      3627
+    ],
+    "proj:transform": [
+      0.0008333333299999997,
+      0.0,
+      -16.814167319410004,
+      0.0,
+      -0.0008333333299999995,
+      13.824166947369987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/gmb_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Gambia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2296282,
+      "file:checksum": "d50110ecb49cffff6f85fd93636fc719e58177",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.436860348444769,
+            "minimum": 0.0010456728050485253,
+            "maximum": 226.66123962402344,
+            "stddev": 6.718932342586147,
+            "valid_percent": 20.748167999031008
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0010456728050485253,
+            "max": 226.66123962402344,
+            "buckets": [
+              53842,
+              755,
+              130,
+              40,
+              37,
+              2,
+              4,
+              2,
+              1,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4689,
+      "file:checksum": "122068d69581a126278f4556c314a27e932e0763bdb987786c5f14e2b33e5d432010"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4389,
+      "file:checksum": "1220d8c3161af3c76c44c39250ad01650eeb3e0e460bb36c9a829abd5fab2d540f54"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

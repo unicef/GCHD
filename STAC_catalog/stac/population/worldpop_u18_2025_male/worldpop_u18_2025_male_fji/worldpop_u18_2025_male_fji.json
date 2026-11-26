@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_fji",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179.99999856,
+          -12.461666280819998
+        ],
+        [
+          179.99999856,
+          -21.043332913159997
+        ],
+        [
+          -180.0,
+          -21.043332913159997
+        ],
+        [
+          -180.0,
+          -12.461666280819998
+        ],
+        [
+          179.99999856,
+          -12.461666280819998
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180.0,
+    -21.043332913159997,
+    179.99999856,
+    -12.461666280819998
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Fiji",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "FJI",
+    "GCHD:country": "Fiji",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -180.0,
+            -21.043332913159997
+          ],
+          [
+            179.99999856,
+            -21.043332913159997
+          ],
+          [
+            179.99999856,
+            -12.461666280819998
+          ],
+          [
+            -180.0,
+            -12.461666280819998
+          ],
+          [
+            -180.0,
+            -21.043332913159997
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -180.0,
+      -21.043332913159997,
+      179.99999856,
+      -12.461666280819998
+    ],
+    "proj:shape": [
+      10298,
+      432000
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -180.0,
+      0.0,
+      -0.0008333333299999999,
+      -12.461666280819998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/fji_M_Under_18_2024_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Fiji (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 115735754,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3528928106481379,
+            "minimum": 0.01770924963057041,
+            "maximum": 1.3964345455169678,
+            "stddev": 0.30071183988747474,
+            "valid_percent": 0.171875
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.01770924963057041,
+            "max": 1.3964345455169678,
+            "buckets": [
+              10,
+              14,
+              9,
+              3,
+              3,
+              2,
+              0,
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 503,
+      "file:checksum": "1220a45ebe433e33ed8997c51a8c4612eb6017ae6dc0eb8ec2f18c299496a971a900"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 369,
+      "file:checksum": "12208b226c053ac0ff05c10c9588cd944102fba8ca5f2176d0c8ae13e22cba9cf607"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

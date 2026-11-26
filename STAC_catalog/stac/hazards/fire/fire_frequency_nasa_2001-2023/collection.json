@@ -1,0 +1,219 @@
+{
+  "type": "Collection",
+  "id": "fire_frequency_nasa_2001-2023",
+  "stac_version": "1.1.0",
+  "description": "Wildfires are uncontrolled burns of vegetation, including forests, shrublands, grasslands, savannas, and croplands. Fire Radiative Power (FRP) is a measure of the energy released by a fire in the form of radiation.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/fire/fire_frequency_nasa_2001-2023.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Fire"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://firms.modaps.eosdis.nasa.gov/",
+      "type": "text/html",
+      "title": "Original source (NASA FIRMS)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Fire",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "250 m",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "km⁻² · yr⁻¹",
+  "GCHD:threshold": 4.91,
+  "GCHD:classes": "Use natural breaks/quantile",
+  "GCHD:value_range": [
+    0.0,
+    1500.0
+  ],
+  "GCHD:notes": "*World Bank's modelled data link is not up-to-date; FIRMS data of average Fire count  between 2014-2024 >1",
+  "GCHD:alternate_sources": "JRC Global Wildfire Information System, NASA FIRMS, World Bank",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/FIRMS_count_90th_percentile",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "fire_frequency",
+      "app_name": "fire_frequency_nasa_2001-2023",
+      "unicef_code": "FR_FRQ",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 4.9134115164042935,
+      "default": true
+    }
+  ],
+  "title": "Fire Frequency",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2001-01-01T00:00:00Z",
+          "2023-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Fire",
+    "FR"
+  ],
+  "providers": [
+    {
+      "name": "NASA FIRMS",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://firms.modaps.eosdis.nasa.gov/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_frequency_nasa_2001-2023.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fire Frequency (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        3600,
+        7200
+      ],
+      "proj:transform": [
+        0.05,
+        0.0,
+        -180.0,
+        0.0,
+        -0.05,
+        90.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 3.881156423630509,
+            "minimum": 1.0,
+            "maximum": 165.4375,
+            "stddev": 3.9824146558848845,
+            "valid_percent": 18.77765655517578
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 1.0,
+            "max": 165.4375,
+            "buckets": [
+              97019,
+              1347,
+              78,
+              3,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ],
+      "file:size": 11157676,
+      "file:checksum": "d50110758ca95b52397f01fbd3ca36c151830d"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 131524,
+      "file:checksum": "1220ac8bdeb8df6517946960a5724d1446544f16f94915e4a8c6d9c1c8daaa0da85b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 418726,
+      "file:checksum": "1220edec93637188daefebfcab64173bf3d345d77c77a3b8a96e3c01a431af9c1911"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_ssd",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          24.152499183389995,
+          12.236666953719986
+        ],
+        [
+          35.94916580287,
+          12.236666953719986
+        ],
+        [
+          35.94916580287,
+          3.490000322039986
+        ],
+        [
+          24.152499183389995,
+          3.490000322039986
+        ],
+        [
+          24.152499183389995,
+          12.236666953719986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    24.152499183389995,
+    3.490000322039986,
+    35.94916580287,
+    12.236666953719986
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – South Sudan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SSD",
+    "GCHD:country": "South Sudan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            24.152499183389995,
+            3.490000322039986
+          ],
+          [
+            35.94916580287,
+            3.490000322039986
+          ],
+          [
+            35.94916580287,
+            12.236666953719986
+          ],
+          [
+            24.152499183389995,
+            12.236666953719986
+          ],
+          [
+            24.152499183389995,
+            3.490000322039986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      24.152499183389995,
+      3.490000322039986,
+      35.94916580287,
+      12.236666953719986
+    ],
+    "proj:shape": [
+      10496,
+      14156
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      24.152499183389995,
+      0.0,
+      -0.00083333333,
+      12.236666953719986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/ssd_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – South Sudan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 30832702,
+      "file:checksum": "d501100b170d6b04527d888e8d337c8664412d",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.6512146630408884,
+            "minimum": 0.0,
+            "maximum": 386.3772888183594,
+            "stddev": 4.9944434281697365,
+            "valid_percent": 15.640547902960527
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 386.3772888183594,
+            "buckets": [
+              121402,
+              259,
+              44,
+              11,
+              0,
+              1,
+              2,
+              0,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12797,
+      "file:checksum": "1220a045c8cc265b5a9f84c49da0407d1183d75d8e53166be05b623b305f256c8642"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 12797,
+      "file:checksum": "1220c1297d3a430af4dc5ccc6cb9706bfc261f355d3b066cfa58f28ef6e0e5dfec59"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

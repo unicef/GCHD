@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_bdi",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          29.00166583066,
+          -2.3108329880900156
+        ],
+        [
+          30.84749915661,
+          -2.3108329880900156
+        ],
+        [
+          30.84749915661,
+          -4.469166312790016
+        ],
+        [
+          29.00166583066,
+          -4.469166312790016
+        ],
+        [
+          29.00166583066,
+          -2.3108329880900156
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    29.00166583066,
+    -4.469166312790016,
+    30.84749915661,
+    -2.3108329880900156
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Burundi",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BDI",
+    "GCHD:country": "Burundi",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            29.00166583066,
+            -4.469166312790016
+          ],
+          [
+            30.84749915661,
+            -4.469166312790016
+          ],
+          [
+            30.84749915661,
+            -2.3108329880900156
+          ],
+          [
+            29.00166583066,
+            -2.3108329880900156
+          ],
+          [
+            29.00166583066,
+            -4.469166312790016
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      29.00166583066,
+      -4.469166312790016,
+      30.84749915661,
+      -2.3108329880900156
+    ],
+    "proj:shape": [
+      2590,
+      2215
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      29.00166583066,
+      0.0,
+      -0.00083333333,
+      -2.3108329880900156,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/bdi_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Burundi (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 11624211,
+      "file:checksum": "d5011073e33dd329d043974ae424582c2c59d6",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 6.056154643058957,
+            "minimum": 0.0,
+            "maximum": 619.5504150390625,
+            "stddev": 12.39433606128001,
+            "valid_percent": 42.61290667808219
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 619.5504150390625,
+            "buckets": [
+              380447,
+              1322,
+              214,
+              99,
+              39,
+              13,
+              30,
+              58,
+              13,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15275,
+      "file:checksum": "1220d67fb25fb6771ff5c4ef342fcc3198616e41c3c5ba61022565f58cecd77fbc05"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 20792,
+      "file:checksum": "1220789179d7951b9b5147efdd52839de166bad9167fe70f8af95005cabd06a7202a"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

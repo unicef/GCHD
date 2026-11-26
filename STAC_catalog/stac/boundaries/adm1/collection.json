@@ -1,0 +1,197 @@
+{
+  "type": "Collection",
+  "id": "adm1",
+  "stac_version": "1.1.0",
+  "description": "UNICEF GeoRepo ADM1 (2025-10-14); Mali replaced by MLI_V2 dissolved from ADM2. `has_exposure` marks units present in the exposure tables.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm1/adm1.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "ADM1 vector tiles",
+      "pmtiles:layers": [
+        "adm1"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Administrative boundaries"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "ucode",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "name_en",
+      "type": "string"
+    },
+    {
+      "name": "adm0_ucode",
+      "type": "string"
+    },
+    {
+      "name": "adm0_type",
+      "type": "string"
+    },
+    {
+      "name": "pcode",
+      "type": "string"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "iso3",
+      "type": "string"
+    },
+    {
+      "name": "adm0_name",
+      "type": "string"
+    },
+    {
+      "name": "has_exposure",
+      "type": "bool"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "table:row_count": 3578,
+  "table:primary_geometry": "geometry",
+  "GCHD:geometry_types": [
+    "GeometryCollection",
+    "MultiPolygon",
+    "Polygon"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 10,
+  "pmtiles:layers": [
+    "adm1"
+  ],
+  "title": "Administrative boundaries - ADM1",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -89.90000153,
+          180.0,
+          83.62741852
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "administrative boundaries",
+    "ADM1"
+  ],
+  "providers": [
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm1/adm1.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Administrative boundaries - ADM1 (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 243882647,
+      "file:checksum": "1220080212a7628664368a080f8f66ed6d5ad25986270b7a497b6a28cc0a136bb438"
+    },
+    "tiles": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm1/adm1.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Administrative boundaries - ADM1 (PMTiles vector tiles)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 106475829,
+      "file:checksum": "1220521425ff452365b52e9f537f02de59292eb6d355405ed4ba527547243926fb9b"
+    },
+    "style": {
+      "href": "./style.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default MapLibre style (PMTiles)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 688,
+      "file:checksum": "122075323d31caab189d017cfa342c080086638c81b779ee3ac8849a6ec5575e4dc5"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29928,
+      "file:checksum": "122000099925295f85977920c6a81075857100ccf030bd2d879a9bb675dc4b0381ff"
+    }
+  }
+}

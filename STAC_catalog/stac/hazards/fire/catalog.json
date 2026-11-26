@@ -1,0 +1,49 @@
+{
+  "type": "Catalog",
+  "id": "fire",
+  "stac_version": "1.1.0",
+  "description": "Fire hazard layers of the Global Child Hazard Database. GLIDE code: FR.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./fire_frp_nasa_2001-2024/collection.json",
+      "type": "application/json",
+      "title": "Fire Intensity"
+    },
+    {
+      "rel": "child",
+      "href": "./fire_frequency_nasa_2001-2023/collection.json",
+      "type": "application/json",
+      "title": "Fire Frequency"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hazards"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "GCHD:glide_code": "FR",
+  "title": "Fire",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

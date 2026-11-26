@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_rou",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.262499198949996,
+          48.26583347627
+        ],
+        [
+          29.761665827619996,
+          48.26583347627
+        ],
+        [
+          29.761665827619996,
+          43.61916682819
+        ],
+        [
+          20.262499198949996,
+          43.61916682819
+        ],
+        [
+          20.262499198949996,
+          48.26583347627
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    20.262499198949996,
+    43.61916682819,
+    29.761665827619996,
+    48.26583347627
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Romania",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ROU",
+    "GCHD:country": "Romania",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.262499198949996,
+            43.61916682819
+          ],
+          [
+            29.761665827619996,
+            43.61916682819
+          ],
+          [
+            29.761665827619996,
+            48.26583347627
+          ],
+          [
+            20.262499198949996,
+            48.26583347627
+          ],
+          [
+            20.262499198949996,
+            43.61916682819
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      20.262499198949996,
+      43.61916682819,
+      29.761665827619996,
+      48.26583347627
+    ],
+    "proj:shape": [
+      5576,
+      11399
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      20.262499198949996,
+      0.0,
+      -0.00083333333,
+      48.26583347627,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/rou_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Romania (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 52140296,
+      "file:checksum": "d50110d9f0e0cf69eea9f98800db5944895c9a",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.0076012588746486,
+            "minimum": 0.0,
+            "maximum": 109.20349884033203,
+            "stddev": 3.681561695960101,
+            "valid_percent": 33.8245384231537
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 109.20349884033203,
+            "buckets": [
+              171343,
+              1137,
+              452,
+              307,
+              158,
+              37,
+              38,
+              28,
+              19,
+              9
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11298,
+      "file:checksum": "1220ab85f28d536a27b16f06b18310a99b500be7621120e3c1c24db83c79690d39a6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11069,
+      "file:checksum": "12202574b6363b6d6cc0951ce3cbb7160761ea8f13c24b90cec0eff6bfa4310dcff6"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

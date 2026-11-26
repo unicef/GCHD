@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_bwa",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          19.999165866669998,
+          -17.778332926220017
+        ],
+        [
+          29.372499162509996,
+          -17.778332926220017
+        ],
+        [
+          29.372499162509996,
+          -26.905832889710016
+        ],
+        [
+          19.999165866669998,
+          -26.905832889710016
+        ],
+        [
+          19.999165866669998,
+          -17.778332926220017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    19.999165866669998,
+    -26.905832889710016,
+    29.372499162509996,
+    -17.778332926220017
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Botswana",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BWA",
+    "GCHD:country": "Botswana",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.999165866669998,
+            -26.905832889710016
+          ],
+          [
+            29.372499162509996,
+            -26.905832889710016
+          ],
+          [
+            29.372499162509996,
+            -17.778332926220017
+          ],
+          [
+            19.999165866669998,
+            -17.778332926220017
+          ],
+          [
+            19.999165866669998,
+            -26.905832889710016
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      19.999165866669998,
+      -26.905832889710016,
+      29.372499162509996,
+      -17.778332926220017
+    ],
+    "proj:shape": [
+      10953,
+      11248
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      19.999165866669998,
+      0.0,
+      -0.00083333333,
+      -17.778332926220017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/bwa_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Botswana (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 27068334,
+      "file:checksum": "d501106f8ea7d0962c7eb6fe3732ac0ab690f4",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.06500663535067742,
+            "minimum": 0.0,
+            "maximum": 8.742461204528809,
+            "stddev": 0.24463827662880283,
+            "valid_percent": 8.464585420841683
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 8.742461204528809,
+            "buckets": [
+              85179,
+              939,
+              236,
+              57,
+              65,
+              26,
+              0,
+              0,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6554,
+      "file:checksum": "1220e8ac33c008bb75b03e67da72705962e13a1951d08ee153f10dbf777ab8306dfe"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6554,
+      "file:checksum": "1220b116a34de2faac6f0ed678d6efddff8e1b052000b37a99b105a7d0ed5dc2fb08"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

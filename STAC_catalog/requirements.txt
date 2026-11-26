@@ -10,3 +10,9 @@ pyyaml
 matplotlib
 azure-storage-blob>=12.19
 python-dotenv
+portolan-cli==0.9.0
+duckdb
+fsspec[http]
+pyarrow
+pytest
+# 05_boundaries.py only: geoparquet-io (gpio CLI)

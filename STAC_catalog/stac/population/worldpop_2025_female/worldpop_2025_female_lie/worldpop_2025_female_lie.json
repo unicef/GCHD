@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_lie",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          9.471665908779997,
+          47.27083348025
+        ],
+        [
+          9.635832574789998,
+          47.27083348025
+        ],
+        [
+          9.635832574789998,
+          47.04833348114
+        ],
+        [
+          9.471665908779997,
+          47.04833348114
+        ],
+        [
+          9.471665908779997,
+          47.27083348025
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    9.471665908779997,
+    47.04833348114,
+    9.635832574789998,
+    47.27083348025
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Liechtenstein",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LIE",
+    "GCHD:country": "Liechtenstein",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.471665908779997,
+            47.04833348114
+          ],
+          [
+            9.635832574789998,
+            47.04833348114
+          ],
+          [
+            9.635832574789998,
+            47.27083348025
+          ],
+          [
+            9.471665908779997,
+            47.27083348025
+          ],
+          [
+            9.471665908779997,
+            47.04833348114
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      9.471665908779997,
+      47.04833348114,
+      9.635832574789998,
+      47.27083348025
+    ],
+    "proj:shape": [
+      267,
+      197
+    ],
+    "proj:transform": [
+      0.0008333333300000038,
+      0.0,
+      9.471665908779997,
+      0.0,
+      -0.000833333329999997,
+      47.27083348025,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/lie_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Liechtenstein (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 57504,
+      "file:checksum": "d50110b65eb9bbf58d5d25ff2d2f4060e71ef0",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.916753976569197,
+            "minimum": 0.0,
+            "maximum": 20.858495712280273,
+            "stddev": 2.7246166641702247,
+            "valid_percent": 19.960455521968097
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 20.858495712280273,
+            "buckets": [
+              7121,
+              1744,
+              668,
+              547,
+              243,
+              96,
+              55,
+              20,
+              3,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6578,
+      "file:checksum": "1220624511e0d3c0ad223d65a7fab787d004e7ab4423710c90a954fe72b8104c36b4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10007,
+      "file:checksum": "1220026edb6acb7fc3bfdb83b225b72db4c8c4ad3f97a2bc6c1acaaddd95807f1a57"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

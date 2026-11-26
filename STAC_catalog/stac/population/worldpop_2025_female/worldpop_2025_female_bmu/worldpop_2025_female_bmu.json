@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_bmu",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -64.88666712712,
+          32.39083353976999
+        ],
+        [
+          -64.64750046141,
+          32.39083353976999
+        ],
+        [
+          -64.64750046141,
+          32.24750020700999
+        ],
+        [
+          -64.88666712712,
+          32.24750020700999
+        ],
+        [
+          -64.88666712712,
+          32.39083353976999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -64.88666712712,
+    32.24750020700999,
+    -64.64750046141,
+    32.39083353976999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Bermuda",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BMU",
+    "GCHD:country": "Bermuda",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -64.88666712712,
+            32.24750020700999
+          ],
+          [
+            -64.64750046141,
+            32.24750020700999
+          ],
+          [
+            -64.64750046141,
+            32.39083353976999
+          ],
+          [
+            -64.88666712712,
+            32.39083353976999
+          ],
+          [
+            -64.88666712712,
+            32.24750020700999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -64.88666712712,
+      32.24750020700999,
+      -64.64750046141,
+      32.39083353976999
+    ],
+    "proj:shape": [
+      172,
+      287
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -64.88666712712,
+      0.0,
+      -0.00083333333,
+      32.39083353976999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/bmu_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Bermuda (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 36116,
+      "file:checksum": "d501104df7e542feba6c5141199bf4ac4c6cc1",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.425010052271813,
+            "minimum": 0.0,
+            "maximum": 11.180134773254395,
+            "stddev": 2.5609955892564438,
+            "valid_percent": 15.11425330200146
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 11.180134773254395,
+            "buckets": [
+              996,
+              669,
+              801,
+              1039,
+              1707,
+              965,
+              907,
+              17,
+              21,
+              339
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4711,
+      "file:checksum": "12207f5cf3386291b0a3198e9552e21439f650d98518ef665e1fd2b642907bfc9259"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4079,
+      "file:checksum": "1220a630a8245c7a24c2402966ceec66154425afa5487e1fa94ce3d97388e30bc4a8"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

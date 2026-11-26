@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_est",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          21.764165859609996,
+          59.820000096719994
+        ],
+        [
+          28.209165833829996,
+          59.820000096719994
+        ],
+        [
+          28.209165833829996,
+          57.510000105959996
+        ],
+        [
+          21.764165859609996,
+          57.510000105959996
+        ],
+        [
+          21.764165859609996,
+          59.820000096719994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    21.764165859609996,
+    57.510000105959996,
+    28.209165833829996,
+    59.820000096719994
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Estonia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "EST",
+    "GCHD:country": "Estonia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.764165859609996,
+            57.510000105959996
+          ],
+          [
+            28.209165833829996,
+            57.510000105959996
+          ],
+          [
+            28.209165833829996,
+            59.820000096719994
+          ],
+          [
+            21.764165859609996,
+            59.820000096719994
+          ],
+          [
+            21.764165859609996,
+            57.510000105959996
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      21.764165859609996,
+      57.510000105959996,
+      28.209165833829996,
+      59.820000096719994
+    ],
+    "proj:shape": [
+      2772,
+      7734
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      21.764165859609996,
+      0.0,
+      -0.00083333333,
+      59.820000096719994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/est_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Estonia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14497524,
+      "file:checksum": "d50110dcfcee67ab423a7f4c0f28f2372b0eb8",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.04623623420374317,
+            "minimum": 0.0,
+            "maximum": 8.490530014038086,
+            "stddev": 0.27472926125693203,
+            "valid_percent": 32.24991508152174
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 8.490530014038086,
+            "buckets": [
+              120256,
+              642,
+              271,
+              124,
+              106,
+              43,
+              49,
+              26,
+              4,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2555,
+      "file:checksum": "1220fca19dc35092e7b4a60815c5130c425f119a48c361f29af7a15e0351b3411573"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1887,
+      "file:checksum": "122040c19435c988cf0d2b11a11e1c17ff68cce9a4a239bcfc77f1dd405950a6f576"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_stp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.460832587489997,
+          1.7008336625299854
+        ],
+        [
+          7.462499250149997,
+          1.7008336625299854
+        ],
+        [
+          7.462499250149997,
+          -0.013332997280014691
+        ],
+        [
+          6.460832587489997,
+          -0.013332997280014691
+        ],
+        [
+          6.460832587489997,
+          1.7008336625299854
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    6.460832587489997,
+    -0.013332997280014691,
+    7.462499250149997,
+    1.7008336625299854
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Sao Tome and Principe",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "STP",
+    "GCHD:country": "Sao Tome and Principe",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            6.460832587489997,
+            -0.013332997280014691
+          ],
+          [
+            7.462499250149997,
+            -0.013332997280014691
+          ],
+          [
+            7.462499250149997,
+            1.7008336625299854
+          ],
+          [
+            6.460832587489997,
+            1.7008336625299854
+          ],
+          [
+            6.460832587489997,
+            -0.013332997280014691
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      6.460832587489997,
+      -0.013332997280014691,
+      7.462499250149997,
+      1.7008336625299854
+    ],
+    "proj:shape": [
+      2057,
+      1202
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      6.460832587489997,
+      0.0,
+      -0.00083333333,
+      1.7008336625299854,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/stp_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Sao Tome and Principe (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 257709,
+      "file:checksum": "d501106be3af251fc36178c72ef220e12e9b3b",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.3575393795758397,
+            "minimum": 0.004428999964147806,
+            "maximum": 20.823123931884766,
+            "stddev": 3.2480578289518287,
+            "valid_percent": 1.0243309161101837
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.004428999964147806,
+            "max": 20.823123931884766,
+            "buckets": [
+              4276,
+              1072,
+              335,
+              166,
+              101,
+              101,
+              163,
+              49,
+              9,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1538,
+      "file:checksum": "1220b53ce00ab4136e8964f3092a12729bac25e942629226d2efdceba004fd5e6a75"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2288,
+      "file:checksum": "1220fbd54f03f6c9fdb9eefa2b75041c1bcbac3d4860f91ad1902ffabfcf6c61136a"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_swz",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          30.790832490169997,
+          -25.71833289446002
+        ],
+        [
+          32.13499915145999,
+          -25.71833289446002
+        ],
+        [
+          32.13499915145999,
+          -27.31666622140002
+        ],
+        [
+          30.790832490169997,
+          -27.31666622140002
+        ],
+        [
+          30.790832490169997,
+          -25.71833289446002
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    30.790832490169997,
+    -27.31666622140002,
+    32.13499915145999,
+    -25.71833289446002
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Eswatini",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SWZ",
+    "GCHD:country": "Eswatini",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            30.790832490169997,
+            -27.31666622140002
+          ],
+          [
+            32.13499915145999,
+            -27.31666622140002
+          ],
+          [
+            32.13499915145999,
+            -25.71833289446002
+          ],
+          [
+            30.790832490169997,
+            -25.71833289446002
+          ],
+          [
+            30.790832490169997,
+            -27.31666622140002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      30.790832490169997,
+      -27.31666622140002,
+      32.13499915145999,
+      -25.71833289446002
+    ],
+    "proj:shape": [
+      1918,
+      1613
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      30.790832490169997,
+      0.0,
+      -0.00083333333,
+      -25.71833289446002,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/swz_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Eswatini (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5516228,
+      "file:checksum": "d50110bf7596ecab3b317121e78014f446538b",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.24070646547908647,
+            "minimum": 0.0,
+            "maximum": 3.7489871978759766,
+            "stddev": 0.3821839678933002,
+            "valid_percent": 34.55558475928074
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 3.7489871978759766,
+            "buckets": [
+              249246,
+              36983,
+              9571,
+              3906,
+              1646,
+              882,
+              817,
+              918,
+              804,
+              245
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14345,
+      "file:checksum": "12205e1cb7548daa3a9e6912ca04665f4d3a3e95c353b5782f4c9d45f3f5f0a00f61"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 20213,
+      "file:checksum": "1220eeed55ba6c589347ea864bbb9381b0656d316acd05c1c28b82c8a4a9748894ae"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

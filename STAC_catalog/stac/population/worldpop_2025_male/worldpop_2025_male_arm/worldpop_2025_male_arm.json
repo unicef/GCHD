@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_arm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          43.447499106209996,
+          41.30083350412999
+        ],
+        [
+          46.633332426799996,
+          41.30083350412999
+        ],
+        [
+          46.633332426799996,
+          38.84083351396999
+        ],
+        [
+          43.447499106209996,
+          38.84083351396999
+        ],
+        [
+          43.447499106209996,
+          41.30083350412999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    43.447499106209996,
+    38.84083351396999,
+    46.633332426799996,
+    41.30083350412999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Armenia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ARM",
+    "GCHD:country": "Armenia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            43.447499106209996,
+            38.84083351396999
+          ],
+          [
+            46.633332426799996,
+            38.84083351396999
+          ],
+          [
+            46.633332426799996,
+            41.30083350412999
+          ],
+          [
+            43.447499106209996,
+            41.30083350412999
+          ],
+          [
+            43.447499106209996,
+            38.84083351396999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      43.447499106209996,
+      38.84083351396999,
+      46.633332426799996,
+      41.30083350412999
+    ],
+    "proj:shape": [
+      2952,
+      3823
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      43.447499106209996,
+      0.0,
+      -0.00083333333,
+      41.30083350412999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/arm_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Armenia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3624296,
+      "file:checksum": "d50110e80bcca3b57758346df73ba053c46bc4",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.580000083802628,
+            "minimum": 0.0,
+            "maximum": 55.44528579711914,
+            "stddev": 4.588159088547595,
+            "valid_percent": 8.286830357142858
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 55.44528579711914,
+            "buckets": [
+              62758,
+              1886,
+              922,
+              601,
+              378,
+              242,
+              179,
+              102,
+              41,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7753,
+      "file:checksum": "1220571839d0cfac353309040ad8e60380e53caee960471ec511d2c3df1c2c3e8d67"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7753,
+      "file:checksum": "1220c42261ba6bc3f11c4a66a556dcc61cf72984d148fde8a403b21436b03811fea8"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

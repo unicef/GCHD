@@ -1,0 +1,220 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "river_flood_100yr_jrc_2024_N50_E90",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          89.97708484993753,
+          50.00373333333333
+        ],
+        [
+          99.97541821088306,
+          50.00373333333333
+        ],
+        [
+          99.97541821088306,
+          40.00540000000909
+        ],
+        [
+          89.97708484993753,
+          40.00540000000909
+        ],
+        [
+          89.97708484993753,
+          50.00373333333333
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    89.97708484993753,
+    40.00540000000909,
+    99.97541821088306,
+    50.00373333333333
+  ],
+  "properties": {
+    "title": "Riverine flood hazard – tile N50 E90",
+    "description": "A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak from which the water level recedes at a slower rate.",
+    "GCHD:hazard": "Floods",
+    "GCHD:hazard_phase": "Preparedness/Planning",
+    "GCHD:data_type": "Probabilistic - 100 year return period",
+    "GCHD:nominal_resolution": "90m",
+    "GCHD:coverage": "Global",
+    "GCHD:units": "Depth in m",
+    "GCHD:threshold": "0.01",
+    "GCHD:classes": "0.01 - 0.15 - 0.5 - 1.5 - 2+",
+    "GCHD:value_range": [
+      0.0,
+      50.0
+    ],
+    "GCHD:notes": "JRC currently has 90m and plans to release 30 m in the coming years which could be useful for sub-national and localized analysis in the future - also includes SSP based projections. CCRI 2021 used GAR 2015 which is quite outdated. GRID 2023 has some inconsistencies (comment from CCRI-DRM team). WRI is also a good alternative with projections - but yet to identify the future update frequencies and resolutions; it might also be good to align with INFORM data sources. Highest return period chosen to capture the maximum exposure.",
+    "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/hazrards/river_flood_r100",
+    "start_datetime": "2024-01-01T00:00:00+00:00",
+    "end_datetime": "2024-12-31T23:59:59+00:00",
+    "GCHD:tile": "ID197_N50_E90_RP100_depth",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            89.97708484993753,
+            40.00540000000909
+          ],
+          [
+            99.97541821088306,
+            40.00540000000909
+          ],
+          [
+            99.97541821088306,
+            50.00373333333333
+          ],
+          [
+            89.97708484993753,
+            50.00373333333333
+          ],
+          [
+            89.97708484993753,
+            40.00540000000909
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      89.97708484993753,
+      40.00540000000909,
+      99.97541821088306,
+      50.00373333333333
+    ],
+    "proj:shape": [
+      11998,
+      11998
+    ],
+    "proj:transform": [
+      0.0008333333356347339,
+      0.0,
+      89.97708484993753,
+      0.0,
+      -0.0008333333333325754,
+      50.00373333333333,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "JRC",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Riverine flood hazard (original JRC tiles)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/tiles/ID197_N50_E90_RP100_depth.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Riverine flood hazard (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 26233771,
+      "file:checksum": "d5011005c6fb3a0a4318e540d7537e784cb1ed",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -9999.0,
+          "statistics": {
+            "mean": 0.7873995116931848,
+            "minimum": 0.10000000149011612,
+            "maximum": 30.593870162963867,
+            "stddev": 0.876831193088962,
+            "valid_percent": 6.557273864746094
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.10000000149011612,
+            "max": 30.593870162963867,
+            "buckets": [
+              67367,
+              1213,
+              123,
+              31,
+              16,
+              2,
+              3,
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29035,
+      "file:checksum": "12205abadf57c89863a20e52c208d62e4f6cd7cb4089dd0fbbec231a234e214419a6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 27851,
+      "file:checksum": "122064186b3c67587e4e937371e987d6f4a1ecc56cb6503518fb01285af85c37a82d"
+    }
+  },
+  "collection": "river_flood_100yr_jrc_2024"
+}

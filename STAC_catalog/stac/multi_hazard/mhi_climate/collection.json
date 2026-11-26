@@ -1,0 +1,198 @@
+{
+  "type": "Collection",
+  "id": "mhi_climate",
+  "stac_version": "1.1.0",
+  "description": "Pixel-based multi-hazard intensity score (0-10) combining the climate hazard layers (PCA, min-max scaled), on the ERA5 0.1 deg grid. NoData (NaN) over sea. Global land percentiles for the mhi_pNN exposure metrics are in GCHD:mhi_percentiles. Built by multi_hazard_indicators/mhi/.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/multi_hazard/MHI_climate.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Multi-hazard indicators"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Multi-hazard",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Index",
+  "GCHD:nominal_resolution": "0.1 deg (~10km)",
+  "GCHD:coverage": "Global (land)",
+  "GCHD:units": "index (0-10)",
+  "GCHD:value_range": [
+    0.0,
+    10.0
+  ],
+  "GCHD:datetime_source": "source file modified date",
+  "GCHD:mhi_percentiles": {
+    "p75": 5.202352,
+    "p80": 5.56949,
+    "p85": 5.935779,
+    "p90": 6.362279,
+    "p95": 6.890319,
+    "n_land_pixels": 2123439,
+    "method": "unweighted pixel percentile over landSeaMask==1 on the native ERA5 0.1deg grid"
+  },
+  "title": "Multi-Hazard Intensity (MHI) - climate",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-05-27T12:05:07Z",
+          "2026-05-27T12:05:07Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "Multi-hazard",
+    "multi hazard"
+  ],
+  "providers": [
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/multi_hazard/MHI_climate.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Multi-Hazard Intensity (MHI) - climate (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        1800,
+        3600
+      ],
+      "proj:transform": [
+        0.10000045742818513,
+        0.0,
+        -180.00082337073323,
+        0.0,
+        -0.10000045742818513,
+        90.00041168536663,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.00082337073323,
+        -90.0004116853666,
+        180.00082337073323,
+        90.00041168536663
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 3.1544096689322516,
+            "minimum": 0.06221342086791992,
+            "maximum": 8.715343475341797,
+            "stddev": 2.1301780893308213,
+            "valid_percent": 34.79766845703125
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.06221342086791992,
+            "max": 8.715343475341797,
+            "buckets": [
+              44588,
+              7768,
+              28271,
+              26433,
+              17941,
+              17634,
+              21024,
+              14117,
+              4329,
+              335
+            ]
+          }
+        }
+      ],
+      "file:size": 8663188,
+      "file:checksum": "d501106ab571cffb41e981584afaaf025cae56"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 152004,
+      "file:checksum": "1220e800332cfd823a6619e2e1c9196ec40bbd541cda49fddb1edbe5fb9eda68031d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 576706,
+      "file:checksum": "122062bda054c371fb373fedfd3962b68b548f02c267d828cb91afca7a61b3ed0dcb"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_bhr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          50.30999907875999,
+          26.423333563639986
+        ],
+        [
+          50.824999076699996,
+          26.423333563639986
+        ],
+        [
+          50.824999076699996,
+          25.576666900359985
+        ],
+        [
+          50.30999907875999,
+          25.576666900359985
+        ],
+        [
+          50.30999907875999,
+          26.423333563639986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    50.30999907875999,
+    25.576666900359985,
+    50.824999076699996,
+    26.423333563639986
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Bahrain",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BHR",
+    "GCHD:country": "Bahrain",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            50.30999907875999,
+            25.576666900359985
+          ],
+          [
+            50.824999076699996,
+            25.576666900359985
+          ],
+          [
+            50.824999076699996,
+            26.423333563639986
+          ],
+          [
+            50.30999907875999,
+            26.423333563639986
+          ],
+          [
+            50.30999907875999,
+            25.576666900359985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      50.30999907875999,
+      25.576666900359985,
+      50.824999076699996,
+      26.423333563639986
+    ],
+    "proj:shape": [
+      1016,
+      618
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      50.30999907875999,
+      0.0,
+      -0.00083333333,
+      26.423333563639986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/bhr_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Bahrain (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 384718,
+      "file:checksum": "d501104ad2a284714b974c27872d872aecb4a1",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 9.483665798531083,
+            "minimum": 0.0,
+            "maximum": 158.1416473388672,
+            "stddev": 17.64759285294293,
+            "valid_percent": 10.365224371225441
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 158.1416473388672,
+            "buckets": [
+              51496,
+              7411,
+              3510,
+              1227,
+              687,
+              259,
+              162,
+              174,
+              132,
+              24
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4805,
+      "file:checksum": "12203d4dc4c15bf42141f8bfbebf038437b30e69b49894816cec4efcb6a3a3ee2dff"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9365,
+      "file:checksum": "1220cc64dd54d7b6274a2b076df4a4031e31a66cb082b994aeaa5434c8f57224cf3e"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}
