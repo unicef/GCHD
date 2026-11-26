@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_slv",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -90.13166702614001,
+          14.450833611529987
+        ],
+        [
+          -87.68416703593,
+          14.450833611529987
+        ],
+        [
+          -87.68416703593,
+          13.155000283379987
+        ],
+        [
+          -90.13166702614001,
+          13.155000283379987
+        ],
+        [
+          -90.13166702614001,
+          14.450833611529987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -90.13166702614001,
+    13.155000283379987,
+    -87.68416703593,
+    14.450833611529987
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – El Salvador",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SLV",
+    "GCHD:country": "El Salvador",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -90.13166702614001,
+            13.155000283379987
+          ],
+          [
+            -87.68416703593,
+            13.155000283379987
+          ],
+          [
+            -87.68416703593,
+            14.450833611529987
+          ],
+          [
+            -90.13166702614001,
+            14.450833611529987
+          ],
+          [
+            -90.13166702614001,
+            13.155000283379987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -90.13166702614001,
+      13.155000283379987,
+      -87.68416703593,
+      14.450833611529987
+    ],
+    "proj:shape": [
+      1555,
+      2937
+    ],
+    "proj:transform": [
+      0.0008333333300000017,
+      0.0,
+      -90.13166702614001,
+      0.0,
+      -0.0008333333299999998,
+      14.450833611529987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/slv_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – El Salvador (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 7138696,
+      "file:checksum": "d501106f6eddd3850ae05c568cec72c85cb697",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.4760588487487873,
+            "minimum": 0.0,
+            "maximum": 102.68087005615234,
+            "stddev": 6.563111581071118,
+            "valid_percent": 31.880898941068143
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 102.68087005615234,
+            "buckets": [
+              168579,
+              3950,
+              2113,
+              1430,
+              551,
+              295,
+              202,
+              109,
+              27,
+              12
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11659,
+      "file:checksum": "1220b7402f7e10a745d3b9410a96d97442cc54a67dda05add5773f7e84e4512d24f3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11225,
+      "file:checksum": "1220675f93128e2d44d68ff1d1227db55dba1cc5648fb60f461e99ad3bae92ac404b"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

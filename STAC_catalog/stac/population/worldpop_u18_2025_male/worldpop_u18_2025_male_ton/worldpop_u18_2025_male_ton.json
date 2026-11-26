@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_ton",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -175.68000001728,
+          -15.566666268400017
+        ],
+        [
+          -173.73666669172002,
+          -15.566666268400017
+        ],
+        [
+          -173.73666669172002,
+          -21.474166244770018
+        ],
+        [
+          -175.68000001728,
+          -21.474166244770018
+        ],
+        [
+          -175.68000001728,
+          -15.566666268400017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -175.68000001728,
+    -21.474166244770018,
+    -173.73666669172002,
+    -15.566666268400017
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Tonga",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "TON",
+    "GCHD:country": "Tonga",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -175.68000001728,
+            -21.474166244770018
+          ],
+          [
+            -173.73666669172002,
+            -21.474166244770018
+          ],
+          [
+            -173.73666669172002,
+            -15.566666268400017
+          ],
+          [
+            -175.68000001728,
+            -15.566666268400017
+          ],
+          [
+            -175.68000001728,
+            -21.474166244770018
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -175.68000001728,
+      -21.474166244770018,
+      -173.73666669172002,
+      -15.566666268400017
+    ],
+    "proj:shape": [
+      7089,
+      2332
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -175.68000001728,
+      0.0,
+      -0.00083333333,
+      -15.566666268400017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/ton_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Tonga (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 693912,
+      "file:checksum": "d50110ec33e645cec813032de312deb637fe72",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.6176663877352463,
+            "minimum": 0.0,
+            "maximum": 4.733805179595947,
+            "stddev": 0.657008768931825,
+            "valid_percent": 0.3897556565281899
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 4.733805179595947,
+            "buckets": [
+              750,
+              343,
+              131,
+              51,
+              33,
+              11,
+              8,
+              11,
+              5,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 714,
+      "file:checksum": "1220e7bd463fecd2f9069a035e693d44305cfff1094a0cdc41ef5f045da9d264701b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1026,
+      "file:checksum": "12205b16070972aa7c48e71c21a0acb5c5c7a25b09702dc78dad927af5631fac3c63"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

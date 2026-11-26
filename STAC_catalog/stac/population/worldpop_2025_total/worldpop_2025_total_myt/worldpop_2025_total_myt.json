@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_myt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          45.01833243326,
+          -12.63666628012002
+        ],
+        [
+          45.2999990988,
+          -12.63666628012002
+        ],
+        [
+          45.2999990988,
+          -13.00499961198002
+        ],
+        [
+          45.01833243326,
+          -13.00499961198002
+        ],
+        [
+          45.01833243326,
+          -12.63666628012002
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    45.01833243326,
+    -13.00499961198002,
+    45.2999990988,
+    -12.63666628012002
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Mayotte",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MYT",
+    "GCHD:country": "Mayotte",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            45.01833243326,
+            -13.00499961198002
+          ],
+          [
+            45.2999990988,
+            -13.00499961198002
+          ],
+          [
+            45.2999990988,
+            -12.63666628012002
+          ],
+          [
+            45.01833243326,
+            -12.63666628012002
+          ],
+          [
+            45.01833243326,
+            -13.00499961198002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      45.01833243326,
+      -13.00499961198002,
+      45.2999990988,
+      -12.63666628012002
+    ],
+    "proj:shape": [
+      442,
+      338
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      45.01833243326,
+      0.0,
+      -0.00083333333,
+      -12.63666628012002,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/myt_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Mayotte (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 83221,
+      "file:checksum": "d50110ed803f705ef4a988d7cac725654c7a99",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 23.183717679944095,
+            "minimum": 0.0,
+            "maximum": 152.31492614746094,
+            "stddev": 29.653140076743377,
+            "valid_percent": 9.57856970735495
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 152.31492614746094,
+            "buckets": [
+              8526,
+              1806,
+              1272,
+              1014,
+              757,
+              339,
+              225,
+              122,
+              116,
+              133
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7417,
+      "file:checksum": "12202b116ed409c345fe3515e825ba9f9f38892200eb814ee80745dc02eb7b804c5f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9283,
+      "file:checksum": "1220425d0dc5a9f2f530c149d3fbc47b3b45311bde4dc77b8df4620587a8bb009d9c"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

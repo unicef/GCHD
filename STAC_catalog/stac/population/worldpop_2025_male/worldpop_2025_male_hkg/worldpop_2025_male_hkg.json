@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_hkg",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          113.83499882465999,
+          22.562500245749987
+        ],
+        [
+          114.44166548889999,
+          22.562500245749987
+        ],
+        [
+          114.44166548889999,
+          22.153333580719988
+        ],
+        [
+          113.83499882465999,
+          22.153333580719988
+        ],
+        [
+          113.83499882465999,
+          22.562500245749987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    113.83499882465999,
+    22.153333580719988,
+    114.44166548889999,
+    22.562500245749987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Hong Kong",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "HKG",
+    "GCHD:country": "Hong Kong",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            113.83499882465999,
+            22.153333580719988
+          ],
+          [
+            114.44166548889999,
+            22.153333580719988
+          ],
+          [
+            114.44166548889999,
+            22.562500245749987
+          ],
+          [
+            113.83499882465999,
+            22.562500245749987
+          ],
+          [
+            113.83499882465999,
+            22.153333580719988
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      113.83499882465999,
+      22.153333580719988,
+      114.44166548889999,
+      22.562500245749987
+    ],
+    "proj:shape": [
+      491,
+      728
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      113.83499882465999,
+      0.0,
+      -0.00083333333,
+      22.562500245749987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/hkg_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Hong Kong (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 413800,
+      "file:checksum": "d50110b246bfafea8fef7b23b4bc0464b2425d",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 48.119313912490604,
+            "minimum": 0.0,
+            "maximum": 517.4232177734375,
+            "stddev": 69.37247462768748,
+            "valid_percent": 19.360578321881782
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 517.4232177734375,
+            "buckets": [
+              49192,
+              9282,
+              4774,
+              3495,
+              876,
+              665,
+              436,
+              255,
+              146,
+              83
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9696,
+      "file:checksum": "1220622f27acf33daf56a3a66eb7068f79bd98294846dfe3da9e58dc35271a6d34b4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 8494,
+      "file:checksum": "1220c3ec2eb3c17bfb65610752fe86b7d6c7aa98948639d015974cf2913c07104e8c"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

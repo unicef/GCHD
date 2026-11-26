@@ -1,0 +1,241 @@
+{
+  "type": "Collection",
+  "id": "adm2",
+  "stac_version": "1.1.0",
+  "description": "GEE admin2_pop_geom export (2026-06-04), the geometry the ADM2 exposure statistics were computed on (41,023 units), with WorldPop 2025 population totals.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2/adm2.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "ADM2 vector tiles",
+      "pmtiles:layers": [
+        "adm2"
+      ]
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Administrative boundaries"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "ucode",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "name_en",
+      "type": "string"
+    },
+    {
+      "name": "name_fr",
+      "type": "string"
+    },
+    {
+      "name": "adm1_ucode",
+      "type": "string"
+    },
+    {
+      "name": "adm1_name",
+      "type": "string"
+    },
+    {
+      "name": "adm0_ucode",
+      "type": "string"
+    },
+    {
+      "name": "adm0_name",
+      "type": "string"
+    },
+    {
+      "name": "iso3",
+      "type": "string"
+    },
+    {
+      "name": "adm0_type",
+      "type": "string"
+    },
+    {
+      "name": "pcode",
+      "type": "string"
+    },
+    {
+      "name": "unicef_region",
+      "type": "string"
+    },
+    {
+      "name": "unicef_region_full",
+      "type": "string"
+    },
+    {
+      "name": "pop_total",
+      "type": "int64"
+    },
+    {
+      "name": "pop_total_male",
+      "type": "int64"
+    },
+    {
+      "name": "pop_total_female",
+      "type": "int64"
+    },
+    {
+      "name": "pop_under_18_total",
+      "type": "int64"
+    },
+    {
+      "name": "pop_under_18_male",
+      "type": "int64"
+    },
+    {
+      "name": "pop_under_18_female",
+      "type": "int64"
+    },
+    {
+      "name": "source",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary"
+    },
+    {
+      "name": "has_exposure",
+      "type": "bool"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+    }
+  ],
+  "table:row_count": 41023,
+  "table:primary_geometry": "geometry",
+  "GCHD:geometry_types": [
+    "GeometryCollection",
+    "MultiPolygon",
+    "Polygon"
+  ],
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 10,
+  "pmtiles:layers": [
+    "adm2"
+  ],
+  "title": "Administrative boundaries - ADM2 (districts)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -55.980446438894354,
+          180.0,
+          83.62741697793635
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "administrative boundaries",
+    "ADM2"
+  ],
+  "providers": [
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2/adm2.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Administrative boundaries - ADM2 (districts) (GeoParquet)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 572110829,
+      "file:checksum": "1220ae2aecc9f775c0483455e1f4477fc43640ac85e65c0dbe98fdad62207b756254"
+    },
+    "tiles": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2/adm2.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Administrative boundaries - ADM2 (districts) (PMTiles vector tiles)",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 279054644,
+      "file:checksum": "1220ec34e23d78326075a2f089dc544f0a3e44a6828998751cdb09baf02748533bb6"
+    },
+    "style": {
+      "href": "./style.json",
+      "type": "application/vnd.mapbox.style+json",
+      "title": "Default MapLibre style (PMTiles)",
+      "roles": [
+        "style"
+      ],
+      "file:size": 688,
+      "file:checksum": "1220a7e303d7cb4853d34db130497a160bf5fd11d48e50bb7973d23ce36c464abc7e"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 24873,
+      "file:checksum": "1220fc0944269bb8d42b21bf0bc5a3015494240bca093bdf42c42c1aff4de5cf78ca"
+    }
+  }
+}

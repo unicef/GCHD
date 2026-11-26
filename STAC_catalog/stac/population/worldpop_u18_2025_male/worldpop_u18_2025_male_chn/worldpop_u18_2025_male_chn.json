@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_chn",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          73.49999898600001,
+          53.560833455090005
+        ],
+        [
+          134.7749987409,
+          53.560833455090005
+        ],
+        [
+          134.7749987409,
+          15.780000272880002
+        ],
+        [
+          73.49999898600001,
+          15.780000272880002
+        ],
+        [
+          73.49999898600001,
+          53.560833455090005
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    73.49999898600001,
+    15.780000272880002,
+    134.7749987409,
+    53.560833455090005
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – China",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CHN",
+    "GCHD:country": "China",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            73.49999898600001,
+            15.780000272880002
+          ],
+          [
+            134.7749987409,
+            15.780000272880002
+          ],
+          [
+            134.7749987409,
+            53.560833455090005
+          ],
+          [
+            73.49999898600001,
+            53.560833455090005
+          ],
+          [
+            73.49999898600001,
+            15.780000272880002
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      73.49999898600001,
+      15.780000272880002,
+      134.7749987409,
+      53.560833455090005
+    ],
+    "proj:shape": [
+      45337,
+      73530
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      73.49999898600001,
+      0.0,
+      -0.00083333333,
+      53.560833455090005,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/chn_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – China (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1206503082,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.2733171467732095,
+            "minimum": 0.0,
+            "maximum": 75.25916290283203,
+            "stddev": 0.7218907441259885,
+            "valid_percent": 27.35271212420886
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 75.25916290283203,
+            "buckets": [
+              176750,
+              251,
+              11,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7427,
+      "file:checksum": "122009fdf6c5982919eae770bc17877037d395d02cb2b3340de9c443c4b72f7dee59"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6461,
+      "file:checksum": "1220a1742800f6c4f5b1804f5cf014172d95149fffde9d66937b7b29c525bd705f55"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_nga",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          2.663332602679997,
+          13.885833613789988
+        ],
+        [
+          14.678332554619997,
+          13.885833613789988
+        ],
+        [
+          14.678332554619997,
+          4.270000318919987
+        ],
+        [
+          2.663332602679997,
+          4.270000318919987
+        ],
+        [
+          2.663332602679997,
+          13.885833613789988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    2.663332602679997,
+    4.270000318919987,
+    14.678332554619997,
+    13.885833613789988
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Nigeria",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NGA",
+    "GCHD:country": "Nigeria",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            2.663332602679997,
+            4.270000318919987
+          ],
+          [
+            14.678332554619997,
+            4.270000318919987
+          ],
+          [
+            14.678332554619997,
+            13.885833613789988
+          ],
+          [
+            2.663332602679997,
+            13.885833613789988
+          ],
+          [
+            2.663332602679997,
+            4.270000318919987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      2.663332602679997,
+      4.270000318919987,
+      14.678332554619997,
+      13.885833613789988
+    ],
+    "proj:shape": [
+      11539,
+      14418
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      2.663332602679997,
+      0.0,
+      -0.00083333333,
+      13.885833613789988,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/nga_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Nigeria (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 217460906,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.6757484677276462,
+            "minimum": 0.0,
+            "maximum": 142.3925018310547,
+            "stddev": 5.027091199645417,
+            "valid_percent": 59.14729420731707
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 142.3925018310547,
+            "buckets": [
+              488346,
+              4670,
+              1813,
+              868,
+              423,
+              226,
+              224,
+              55,
+              13,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16588,
+      "file:checksum": "122078f435493424e1f04d582062901c3cfe11d97a777521fcd434802b83170c115c"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 16278,
+      "file:checksum": "122079b849a3440433aacaa0194c064588b45947457353fa5e932f8cc501de9bb69d"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

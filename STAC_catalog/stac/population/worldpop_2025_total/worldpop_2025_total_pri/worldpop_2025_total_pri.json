@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_pri",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -67.95166711486,
+          18.515833595269985
+        ],
+        [
+          -65.22166712578,
+          18.515833595269985
+        ],
+        [
+          -65.22166712578,
+          17.881666931139986
+        ],
+        [
+          -67.95166711486,
+          17.881666931139986
+        ],
+        [
+          -67.95166711486,
+          18.515833595269985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -67.95166711486,
+    17.881666931139986,
+    -65.22166712578,
+    18.515833595269985
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Puerto Rico (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PRI",
+    "GCHD:country": "Puerto Rico (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -67.95166711486,
+            17.881666931139986
+          ],
+          [
+            -65.22166712578,
+            17.881666931139986
+          ],
+          [
+            -65.22166712578,
+            18.515833595269985
+          ],
+          [
+            -67.95166711486,
+            18.515833595269985
+          ],
+          [
+            -67.95166711486,
+            17.881666931139986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -67.95166711486,
+      17.881666931139986,
+      -65.22166712578,
+      18.515833595269985
+    ],
+    "proj:shape": [
+      761,
+      3276
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -67.95166711486,
+      0.0,
+      -0.00083333333,
+      18.515833595269985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/pri_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Puerto Rico (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3957787,
+      "file:checksum": "d50110b633b6a31de2ca8f1d54da2e3591de10",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.151937350308029,
+            "minimum": 0.0,
+            "maximum": 194.4191436767578,
+            "stddev": 8.150527801502346,
+            "valid_percent": 32.036584164915965
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 194.4191436767578,
+            "buckets": [
+              73417,
+              3880,
+              647,
+              92,
+              27,
+              12,
+              0,
+              1,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4950,
+      "file:checksum": "122073aeba03efdb5aa726e12708ab7ac4f9521c0e44b736d50e799b5d19bc93b502"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4585,
+      "file:checksum": "1220d1406c16de731da2fece33a65eead40201a64e356395c4578f58f90fb99e35f9"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

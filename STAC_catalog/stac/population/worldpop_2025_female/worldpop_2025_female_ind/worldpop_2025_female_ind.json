@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_ind",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          68.19583234055,
+          35.51166686061998
+        ],
+        [
+          97.39583222375,
+          35.51166686061998
+        ],
+        [
+          97.39583222375,
+          6.755833642309984
+        ],
+        [
+          68.19583234055,
+          6.755833642309984
+        ],
+        [
+          68.19583234055,
+          35.51166686061998
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    68.19583234055,
+    6.755833642309984,
+    97.39583222375,
+    35.51166686061998
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – India",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "IND",
+    "GCHD:country": "India",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            68.19583234055,
+            6.755833642309984
+          ],
+          [
+            97.39583222375,
+            6.755833642309984
+          ],
+          [
+            97.39583222375,
+            35.51166686061998
+          ],
+          [
+            68.19583234055,
+            35.51166686061998
+          ],
+          [
+            68.19583234055,
+            6.755833642309984
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      68.19583234055,
+      6.755833642309984,
+      97.39583222375,
+      35.51166686061998
+    ],
+    "proj:shape": [
+      34507,
+      35040
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      68.19583234055,
+      0.0,
+      -0.00083333333,
+      35.51166686061998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/ind_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – India (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 982159186,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.5712091595598645,
+            "minimum": 0.0,
+            "maximum": 131.36349487304688,
+            "stddev": 4.351286410319128,
+            "valid_percent": 31.515868898662042
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 131.36349487304688,
+            "buckets": [
+              320416,
+              3251,
+              1019,
+              473,
+              214,
+              104,
+              75,
+              41,
+              26,
+              8
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12671,
+      "file:checksum": "122018831a442905d590cd9008ab8d55859e7bf64c3d71741c6f161874da385efdc3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11381,
+      "file:checksum": "1220b61d6c4d27a3ca16049943214a185fb19e67e5bfaa84fe5852bc83e98039805a"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_syr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          35.7166658038,
+          37.320000186719994
+        ],
+        [
+          42.37666577716,
+          37.320000186719994
+        ],
+        [
+          42.37666577716,
+          32.310833540089995
+        ],
+        [
+          35.7166658038,
+          32.310833540089995
+        ],
+        [
+          35.7166658038,
+          37.320000186719994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    35.7166658038,
+    32.310833540089995,
+    42.37666577716,
+    37.320000186719994
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Syrian Arab Republic",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SYR",
+    "GCHD:country": "Syrian Arab Republic",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            35.7166658038,
+            32.310833540089995
+          ],
+          [
+            42.37666577716,
+            32.310833540089995
+          ],
+          [
+            42.37666577716,
+            37.320000186719994
+          ],
+          [
+            35.7166658038,
+            37.320000186719994
+          ],
+          [
+            35.7166658038,
+            32.310833540089995
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      35.7166658038,
+      32.310833540089995,
+      42.37666577716,
+      37.320000186719994
+    ],
+    "proj:shape": [
+      6011,
+      7992
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      35.7166658038,
+      0.0,
+      -0.00083333333,
+      37.320000186719994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/syr_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Syrian Arab Republic (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 25007677,
+      "file:checksum": "d501101269521cd534bda8dc26d83d16676896",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.575017420789721,
+            "minimum": 0.0,
+            "maximum": 192.1646728515625,
+            "stddev": 7.122921197102543,
+            "valid_percent": 19.676404426070036
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 192.1646728515625,
+            "buckets": [
+              153124,
+              1125,
+              453,
+              274,
+              160,
+              98,
+              55,
+              30,
+              20,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10491,
+      "file:checksum": "1220d8929c9247d893baf0e6e8256ce7e3608a949080b598902365119289a848a698"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10190,
+      "file:checksum": "1220093caeeacc2c1afe05c1ebea9881a292260bb9b210b0db9c33bb11b0ef5baafc"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

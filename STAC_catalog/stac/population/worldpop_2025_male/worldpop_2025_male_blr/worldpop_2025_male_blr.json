@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_blr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          23.179999187279996,
+          56.17166677797999
+        ],
+        [
+          32.776665815559994,
+          56.17166677797999
+        ],
+        [
+          32.776665815559994,
+          51.263333464279995
+        ],
+        [
+          23.179999187279996,
+          51.263333464279995
+        ],
+        [
+          23.179999187279996,
+          56.17166677797999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    23.179999187279996,
+    51.263333464279995,
+    32.776665815559994,
+    56.17166677797999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Belarus",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BLR",
+    "GCHD:country": "Belarus",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            23.179999187279996,
+            51.263333464279995
+          ],
+          [
+            32.776665815559994,
+            51.263333464279995
+          ],
+          [
+            32.776665815559994,
+            56.17166677797999
+          ],
+          [
+            23.179999187279996,
+            56.17166677797999
+          ],
+          [
+            23.179999187279996,
+            51.263333464279995
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      23.179999187279996,
+      51.263333464279995,
+      32.776665815559994,
+      56.17166677797999
+    ],
+    "proj:shape": [
+      5890,
+      11516
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      23.179999187279996,
+      0.0,
+      -0.00083333333,
+      56.17166677797999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/blr_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Belarus (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 38552438,
+      "file:checksum": "d50110062752d232590f8a7d11f360f9a27ee0",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3169757886020853,
+            "minimum": 0.0,
+            "maximum": 39.37366485595703,
+            "stddev": 1.3728551245443126,
+            "valid_percent": 26.418252027671755
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 39.37366485595703,
+            "buckets": [
+              140129,
+              731,
+              357,
+              253,
+              128,
+              47,
+              50,
+              25,
+              20,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7349,
+      "file:checksum": "1220dad300cedeb93b57be2eea9d91bf61a99025c9cf75c06dd32f3fe5d5dee0cf8d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7349,
+      "file:checksum": "12201a10755eb94f9a1e9ff050721a8ed691f5985f085adc65935afeebe624dd9e95"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

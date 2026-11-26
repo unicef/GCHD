@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_esp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -18.160833980690004,
+          43.79000016083998
+        ],
+        [
+          4.327499262689997,
+          43.79000016083998
+        ],
+        [
+          4.327499262689997,
+          27.63750022544998
+        ],
+        [
+          -18.160833980690004,
+          27.63750022544998
+        ],
+        [
+          -18.160833980690004,
+          43.79000016083998
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -18.160833980690004,
+    27.63750022544998,
+    4.327499262689997,
+    43.79000016083998
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Canary Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ESP",
+    "GCHD:country": "Canary Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -18.160833980690004,
+            27.63750022544998
+          ],
+          [
+            4.327499262689997,
+            27.63750022544998
+          ],
+          [
+            4.327499262689997,
+            43.79000016083998
+          ],
+          [
+            -18.160833980690004,
+            43.79000016083998
+          ],
+          [
+            -18.160833980690004,
+            27.63750022544998
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -18.160833980690004,
+      27.63750022544998,
+      4.327499262689997,
+      43.79000016083998
+    ],
+    "proj:shape": [
+      19383,
+      26986
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -18.160833980690004,
+      0.0,
+      -0.00083333333,
+      43.79000016083998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/esp_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Canary Islands (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 132593462,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3827831131351025,
+            "minimum": 0.0,
+            "maximum": 100.7412109375,
+            "stddev": 2.5613797766989563,
+            "valid_percent": 13.174969217051629
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 100.7412109375,
+            "buckets": [
+              98587,
+              377,
+              142,
+              85,
+              45,
+              31,
+              18,
+              4,
+              3,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3877,
+      "file:checksum": "12200d2e0c4e1de901719f5e14b00275487dbff7b2b2ea7fbe8648dfa5f1649f5a4f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2983,
+      "file:checksum": "1220fa5ef386c227c42c05fe18aba3de605ebaf21e1010541482a8bdeb959b6f602a"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_xkx",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.014165866609996,
+          43.26833349625999
+        ],
+        [
+          21.789999192839996,
+          43.26833349625999
+        ],
+        [
+          21.789999192839996,
+          41.85750016856999
+        ],
+        [
+          20.014165866609996,
+          41.85750016856999
+        ],
+        [
+          20.014165866609996,
+          43.26833349625999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    20.014165866609996,
+    41.85750016856999,
+    21.789999192839996,
+    43.26833349625999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Kosovo",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "XKX",
+    "GCHD:country": "Kosovo",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.014165866609996,
+            41.85750016856999
+          ],
+          [
+            21.789999192839996,
+            41.85750016856999
+          ],
+          [
+            21.789999192839996,
+            43.26833349625999
+          ],
+          [
+            20.014165866609996,
+            43.26833349625999
+          ],
+          [
+            20.014165866609996,
+            41.85750016856999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      20.014165866609996,
+      41.85750016856999,
+      21.789999192839996,
+      43.26833349625999
+    ],
+    "proj:shape": [
+      1693,
+      2131
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      20.014165866609996,
+      0.0,
+      -0.00083333333,
+      43.26833349625999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/xkx_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Kosovo (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2556729,
+      "file:checksum": "d5011086f916f522d7d147f6b9760f3faafdef",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.7865356716163168,
+            "minimum": 0.0,
+            "maximum": 35.16958236694336,
+            "stddev": 3.1251131620707375,
+            "valid_percent": 13.355271997850124
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 35.16958236694336,
+            "buckets": [
+              94404,
+              10869,
+              2982,
+              1349,
+              800,
+              517,
+              253,
+              111,
+              25,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9823,
+      "file:checksum": "12204337ad81e1ee574dd690a64cab172bd7b5cc4281961f0b8a29fdc1667b3bcd67"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9823,
+      "file:checksum": "1220bbb33645287e99f04a233e539e5651fd5cc18eadb11595960c9f70dd5ece6acc"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

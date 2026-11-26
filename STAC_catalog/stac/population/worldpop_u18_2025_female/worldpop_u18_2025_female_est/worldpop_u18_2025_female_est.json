@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_est",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          21.764165859609996,
+          59.820000096719994
+        ],
+        [
+          28.209165833829996,
+          59.820000096719994
+        ],
+        [
+          28.209165833829996,
+          57.510000105959996
+        ],
+        [
+          21.764165859609996,
+          57.510000105959996
+        ],
+        [
+          21.764165859609996,
+          59.820000096719994
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    21.764165859609996,
+    57.510000105959996,
+    28.209165833829996,
+    59.820000096719994
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Estonia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "EST",
+    "GCHD:country": "Estonia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            21.764165859609996,
+            57.510000105959996
+          ],
+          [
+            28.209165833829996,
+            57.510000105959996
+          ],
+          [
+            28.209165833829996,
+            59.820000096719994
+          ],
+          [
+            21.764165859609996,
+            59.820000096719994
+          ],
+          [
+            21.764165859609996,
+            57.510000105959996
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      21.764165859609996,
+      57.510000105959996,
+      28.209165833829996,
+      59.820000096719994
+    ],
+    "proj:shape": [
+      2772,
+      7734
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      21.764165859609996,
+      0.0,
+      -0.00083333333,
+      59.820000096719994,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/est_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Estonia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14279108,
+      "file:checksum": "d501103edd7fe59bcb2a75c45cba13c7eb8922",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.022424330870509265,
+            "minimum": 0.0,
+            "maximum": 4.066537380218506,
+            "stddev": 0.13415304731013034,
+            "valid_percent": 32.24991508152174
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 4.066537380218506,
+            "buckets": [
+              120255,
+              627,
+              276,
+              129,
+              107,
+              42,
+              44,
+              36,
+              5,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2335,
+      "file:checksum": "122015c1482a4e0bd9b110b9398981db4ec2cb8deba6c13c0d2c2d78ce3cd26750a0"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1695,
+      "file:checksum": "122011fe60cb8fcecee9ecf0954debe11b367e0eb7c1bf851635e6f288e930e138ee"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_sxm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -63.139167134110004,
+          18.064166930409986
+        ],
+        [
+          -63.014167134610005,
+          18.064166930409986
+        ],
+        [
+          -63.014167134610005,
+          18.005000263979987
+        ],
+        [
+          -63.139167134110004,
+          18.005000263979987
+        ],
+        [
+          -63.139167134110004,
+          18.064166930409986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -63.139167134110004,
+    18.005000263979987,
+    -63.014167134610005,
+    18.064166930409986
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Sint Maarten",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SXM",
+    "GCHD:country": "Sint Maarten",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -63.139167134110004,
+            18.005000263979987
+          ],
+          [
+            -63.014167134610005,
+            18.005000263979987
+          ],
+          [
+            -63.014167134610005,
+            18.064166930409986
+          ],
+          [
+            -63.139167134110004,
+            18.064166930409986
+          ],
+          [
+            -63.139167134110004,
+            18.005000263979987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -63.139167134110004,
+      18.005000263979987,
+      -63.014167134610005,
+      18.064166930409986
+    ],
+    "proj:shape": [
+      71,
+      150
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -63.139167134110004,
+      0.0,
+      -0.00083333333,
+      18.064166930409986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/sxm_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Sint Maarten (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 19695,
+      "file:checksum": "d50110f80c25b676ba18fce5b29d6866df832e",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 5.907319788477595,
+            "minimum": 0.009027999825775623,
+            "maximum": 31.477815628051758,
+            "stddev": 6.66443844730095,
+            "valid_percent": 33.737089201877936
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.009027999825775623,
+            "max": 31.477815628051758,
+            "buckets": [
+              1865,
+              543,
+              308,
+              246,
+              201,
+              189,
+              124,
+              74,
+              33,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6407,
+      "file:checksum": "1220b0e6e3a6bae5be929ba5536bec89a512d4e5c89fe938f039d5cf4db0a0afb626"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5941,
+      "file:checksum": "12204db3698d158811a3cf9d2899c5df210fd7b397c21903580cc6d4e08331566f5a"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

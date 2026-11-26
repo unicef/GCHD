@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_nor",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          4.503332595319997,
+          71.18500005126
+        ],
+        [
+          31.168332488659996,
+          71.18500005126
+        ],
+        [
+          31.168332488659996,
+          57.95916677083
+        ],
+        [
+          4.503332595319997,
+          57.95916677083
+        ],
+        [
+          4.503332595319997,
+          71.18500005126
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    4.503332595319997,
+    57.95916677083,
+    31.168332488659996,
+    71.18500005126
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Norway",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NOR",
+    "GCHD:country": "Norway",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            4.503332595319997,
+            57.95916677083
+          ],
+          [
+            31.168332488659996,
+            57.95916677083
+          ],
+          [
+            31.168332488659996,
+            71.18500005126
+          ],
+          [
+            4.503332595319997,
+            71.18500005126
+          ],
+          [
+            4.503332595319997,
+            57.95916677083
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      4.503332595319997,
+      57.95916677083,
+      31.168332488659996,
+      71.18500005126
+    ],
+    "proj:shape": [
+      15871,
+      31998
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      4.503332595319997,
+      0.0,
+      -0.00083333333,
+      71.18500005126,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/nor_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Norway (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 51613644,
+      "file:checksum": "d50110b645144cea3751223b064745f3016a0a",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.140952620157127,
+            "minimum": 0.0,
+            "maximum": 36.62388229370117,
+            "stddev": 0.4640433916978725,
+            "valid_percent": 11.95308655265748
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 36.62388229370117,
+            "buckets": [
+              62018,
+              126,
+              22,
+              5,
+              4,
+              1,
+              2,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4180,
+      "file:checksum": "12209d098547d547d1510d0dd23f220f8ed7bf44a551ae3b7350c6d82e3fabaf8a5b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2594,
+      "file:checksum": "12207b2d1144cda3ac19bc3ca5da095749639073fc2905c3e50bd45d14aa65bebb2d"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

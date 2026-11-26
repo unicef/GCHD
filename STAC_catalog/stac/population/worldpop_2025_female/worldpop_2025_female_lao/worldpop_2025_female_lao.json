@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_lao",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          100.08416554633,
+          22.50916691262999
+        ],
+        [
+          107.63499884946,
+          22.50916691262999
+        ],
+        [
+          107.63499884946,
+          13.90916694702999
+        ],
+        [
+          100.08416554633,
+          13.90916694702999
+        ],
+        [
+          100.08416554633,
+          22.50916691262999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    100.08416554633,
+    13.90916694702999,
+    107.63499884946,
+    22.50916691262999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Lao People's Democratic Republic",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LAO",
+    "GCHD:country": "Lao People's Democratic Republic",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            100.08416554633,
+            13.90916694702999
+          ],
+          [
+            107.63499884946,
+            13.90916694702999
+          ],
+          [
+            107.63499884946,
+            22.50916691262999
+          ],
+          [
+            100.08416554633,
+            22.50916691262999
+          ],
+          [
+            100.08416554633,
+            13.90916694702999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      100.08416554633,
+      13.90916694702999,
+      107.63499884946,
+      22.50916691262999
+    ],
+    "proj:shape": [
+      10320,
+      9061
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      100.08416554633,
+      0.0,
+      -0.00083333333,
+      22.50916691262999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/lao_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Lao People's Democratic Republic (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 27937969,
+      "file:checksum": "d501106fa7aaa265f83afbc23f879f87601bed",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.8799513346269058,
+            "minimum": 0.0,
+            "maximum": 30.482608795166016,
+            "stddev": 1.0549486669558128,
+            "valid_percent": 14.525499131944445
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 30.482608795166016,
+            "buckets": [
+              130523,
+              2640,
+              377,
+              141,
+              81,
+              33,
+              26,
+              17,
+              22,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9704,
+      "file:checksum": "1220e69c5b8885b2b6d10ed9aac0deb69202001f1f34dd67aeb665a916f643e590c4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 11371,
+      "file:checksum": "12201ce7c7002aef51ad582f3900be7b7fa3de2e6a185145a46783d5f14d9843d249"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

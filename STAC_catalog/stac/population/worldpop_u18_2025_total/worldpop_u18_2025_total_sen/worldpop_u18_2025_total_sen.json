@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_sen",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -17.53000064988,
+          16.69333360255999
+        ],
+        [
+          -11.345000674620001,
+          16.69333360255999
+        ],
+        [
+          -11.345000674620001,
+          12.306666953439988
+        ],
+        [
+          -17.53000064988,
+          12.306666953439988
+        ],
+        [
+          -17.53000064988,
+          16.69333360255999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -17.53000064988,
+    12.306666953439988,
+    -11.345000674620001,
+    16.69333360255999
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Senegal",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SEN",
+    "GCHD:country": "Senegal",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -17.53000064988,
+            12.306666953439988
+          ],
+          [
+            -11.345000674620001,
+            12.306666953439988
+          ],
+          [
+            -11.345000674620001,
+            16.69333360255999
+          ],
+          [
+            -17.53000064988,
+            16.69333360255999
+          ],
+          [
+            -17.53000064988,
+            12.306666953439988
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -17.53000064988,
+      12.306666953439988,
+      -11.345000674620001,
+      16.69333360255999
+    ],
+    "proj:shape": [
+      5264,
+      7422
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -17.53000064988,
+      0.0,
+      -0.00083333333,
+      16.69333360255999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/sen_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Senegal (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 26446965,
+      "file:checksum": "d501105d5d9d280e879fc8b22408ac2c1a6956",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.0079739204684584,
+            "minimum": 0.0,
+            "maximum": 162.3571319580078,
+            "stddev": 4.4318588821231195,
+            "valid_percent": 31.817131619669876
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 162.3571319580078,
+            "buckets": [
+              235000,
+              887,
+              441,
+              274,
+              119,
+              53,
+              40,
+              13,
+              19,
+              16
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15258,
+      "file:checksum": "12203fbaa1cd0d91bcd783da232a3075a98d567d3e2e4ffa1623565b00a6eda417e9"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 14633,
+      "file:checksum": "12200dd6c56d71970d5c4e8eaa03f2f07cb9cb200d8ef8f4858f215885c340d87ab3"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

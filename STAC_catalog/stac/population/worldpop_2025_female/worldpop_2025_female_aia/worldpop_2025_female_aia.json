@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_aia",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -63.42916713295,
+          18.59500026161999
+        ],
+        [
+          -62.92666713496,
+          18.59500026161999
+        ],
+        [
+          -62.92666713496,
+          18.15500026337999
+        ],
+        [
+          -63.42916713295,
+          18.15500026337999
+        ],
+        [
+          -63.42916713295,
+          18.59500026161999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -63.42916713295,
+    18.15500026337999,
+    -62.92666713496,
+    18.59500026161999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Anguilla",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AIA",
+    "GCHD:country": "Anguilla",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -63.42916713295,
+            18.15500026337999
+          ],
+          [
+            -62.92666713496,
+            18.15500026337999
+          ],
+          [
+            -62.92666713496,
+            18.59500026161999
+          ],
+          [
+            -63.42916713295,
+            18.59500026161999
+          ],
+          [
+            -63.42916713295,
+            18.15500026337999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -63.42916713295,
+      18.15500026337999,
+      -62.92666713496,
+      18.59500026161999
+    ],
+    "proj:shape": [
+      528,
+      603
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -63.42916713295,
+      0.0,
+      -0.00083333333,
+      18.59500026161999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/aia_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Anguilla (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 66552,
+      "file:checksum": "d50110e9c6754ca3e18baad8f07de3c1c5da44",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.9140019379844961,
+            "minimum": 0.001032999949529767,
+            "maximum": 7.876514911651611,
+            "stddev": 0.8971438973701806,
+            "valid_percent": 2.5930951304085634
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.001032999949529767,
+            "max": 7.876514911651611,
+            "buckets": [
+              5198,
+              1458,
+              923,
+              451,
+              128,
+              67,
+              15,
+              9,
+              4,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1982,
+      "file:checksum": "122007f192772e11d355dae6af335ee6da89e430e4ae3787169a67994ba9de3c0a89"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1785,
+      "file:checksum": "1220705601ba996181faae5e403b48a80dc0c39e665561fefc460aa51021087926fe"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

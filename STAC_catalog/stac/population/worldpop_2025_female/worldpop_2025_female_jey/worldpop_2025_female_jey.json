@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_jey",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -2.2541673776500026,
+          49.29916680546999
+        ],
+        [
+          -1.9250007123000026,
+          49.29916680546999
+        ],
+        [
+          -1.9250007123000026,
+          48.970000140119986
+        ],
+        [
+          -2.2541673776500026,
+          48.970000140119986
+        ],
+        [
+          -2.2541673776500026,
+          49.29916680546999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -2.2541673776500026,
+    48.970000140119986,
+    -1.9250007123000026,
+    49.29916680546999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Jersey",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "JEY",
+    "GCHD:country": "Jersey",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2.2541673776500026,
+            48.970000140119986
+          ],
+          [
+            -1.9250007123000026,
+            48.970000140119986
+          ],
+          [
+            -1.9250007123000026,
+            49.29916680546999
+          ],
+          [
+            -2.2541673776500026,
+            49.29916680546999
+          ],
+          [
+            -2.2541673776500026,
+            48.970000140119986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -2.2541673776500026,
+      48.970000140119986,
+      -1.9250007123000026,
+      49.29916680546999
+    ],
+    "proj:shape": [
+      395,
+      395
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -2.2541673776500026,
+      0.0,
+      -0.00083333333,
+      49.29916680546999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/jey_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Jersey (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 81778,
+      "file:checksum": "d501105d8929a1c56dccac6a4b49af8c371b9a",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.7888853570671754,
+            "minimum": 0.0,
+            "maximum": 109.1401138305664,
+            "stddev": 6.717531827377811,
+            "valid_percent": 12.098061208139722
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 109.1401138305664,
+            "buckets": [
+              17911,
+              540,
+              297,
+              40,
+              14,
+              10,
+              34,
+              18,
+              9,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6124,
+      "file:checksum": "122010f8c464c79c31578886c8ec2d81ed359c7c312c9684af9a2f67c45a4af5914e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5687,
+      "file:checksum": "1220f0633c11172a9cb2b6773752dd39518785912b76cf73a62cbc23be6222c8e2de"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

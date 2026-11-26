@@ -1,0 +1,209 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_tha",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          97.34333222395999,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          20.465833587469987
+        ],
+        [
+          105.63749885745,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          5.612500313549987
+        ],
+        [
+          97.34333222395999,
+          20.465833587469987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    97.34333222395999,
+    5.612500313549987,
+    105.63749885745,
+    20.465833587469987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Thailand",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "THA",
+    "GCHD:country": "Thailand",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            97.34333222395999,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            5.612500313549987
+          ],
+          [
+            105.63749885745,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            20.465833587469987
+          ],
+          [
+            97.34333222395999,
+            5.612500313549987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      97.34333222395999,
+      5.612500313549987,
+      105.63749885745,
+      20.465833587469987
+    ],
+    "proj:shape": [
+      17824,
+      9953
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      97.34333222395999,
+      0.0,
+      -0.00083333333,
+      20.465833587469987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/tha_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Thailand (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 152670939,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.7382246506244463,
+            "minimum": 0.0,
+            "maximum": 280.31011962890625,
+            "stddev": 6.18727512142227,
+            "valid_percent": 29.869666466346157
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 280.31011962890625,
+            "buckets": [
+              173756,
+              682,
+              284,
+              124,
+              54,
+              30,
+              12,
+              8,
+              3,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8698,
+      "file:checksum": "1220cf00f6cda78cbdd0c30cb51b698b505aa38399f28daa043387d9fb35d02c7469"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 21868,
+      "file:checksum": "122031d2d18ef6b598bef2f792965f659f2eaa52ebb79a15d441286bf062adbfb1b3"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_xkx",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.014165866609996,
+          43.26833349625999
+        ],
+        [
+          21.789999192839996,
+          43.26833349625999
+        ],
+        [
+          21.789999192839996,
+          41.85750016856999
+        ],
+        [
+          20.014165866609996,
+          41.85750016856999
+        ],
+        [
+          20.014165866609996,
+          43.26833349625999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    20.014165866609996,
+    41.85750016856999,
+    21.789999192839996,
+    43.26833349625999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Kosovo",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "XKX",
+    "GCHD:country": "Kosovo",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            20.014165866609996,
+            41.85750016856999
+          ],
+          [
+            21.789999192839996,
+            41.85750016856999
+          ],
+          [
+            21.789999192839996,
+            43.26833349625999
+          ],
+          [
+            20.014165866609996,
+            43.26833349625999
+          ],
+          [
+            20.014165866609996,
+            41.85750016856999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      20.014165866609996,
+      41.85750016856999,
+      21.789999192839996,
+      43.26833349625999
+    ],
+    "proj:shape": [
+      1693,
+      2131
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      20.014165866609996,
+      0.0,
+      -0.00083333333,
+      43.26833349625999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/xkx_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Kosovo (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2556269,
+      "file:checksum": "d50110006b48efdcb5cba69592cfa7329f97a7",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.845699037019071,
+            "minimum": 0.0,
+            "maximum": 36.18253707885742,
+            "stddev": 3.2431814487181976,
+            "valid_percent": 13.355271997850124
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 36.18253707885742,
+            "buckets": [
+              94343,
+              10891,
+              3004,
+              1336,
+              777,
+              546,
+              264,
+              122,
+              27,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9828,
+      "file:checksum": "12209565179f5dfd43ca97e893a29e646710918e9192dd6913bd57f509ede8f75b0f"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9828,
+      "file:checksum": "1220b8c189f56d53e7e89a0a1d2b4213b5be3932e7294581fcec3620b96da3734ec5"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

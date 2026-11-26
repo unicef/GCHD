@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_khm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          102.33499887066,
+          14.690000277239989
+        ],
+        [
+          107.62749884949,
+          14.690000277239989
+        ],
+        [
+          107.62749884949,
+          9.91333362967999
+        ],
+        [
+          102.33499887066,
+          9.91333362967999
+        ],
+        [
+          102.33499887066,
+          14.690000277239989
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    102.33499887066,
+    9.91333362967999,
+    107.62749884949,
+    14.690000277239989
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Cambodia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KHM",
+    "GCHD:country": "Cambodia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.33499887066,
+            9.91333362967999
+          ],
+          [
+            107.62749884949,
+            9.91333362967999
+          ],
+          [
+            107.62749884949,
+            14.690000277239989
+          ],
+          [
+            102.33499887066,
+            14.690000277239989
+          ],
+          [
+            102.33499887066,
+            9.91333362967999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      102.33499887066,
+      9.91333362967999,
+      107.62749884949,
+      14.690000277239989
+    ],
+    "proj:shape": [
+      5732,
+      6351
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      102.33499887066,
+      0.0,
+      -0.00083333333,
+      14.690000277239989,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/khm_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Cambodia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 28856799,
+      "file:checksum": "d50110a12c532ceb8f9c479ff3c94d66c6a138",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.4294092625771775,
+            "minimum": 0.0,
+            "maximum": 360.1094055175781,
+            "stddev": 3.758900440109185,
+            "valid_percent": 24.571684966216218
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 360.1094055175781,
+            "buckets": [
+              232402,
+              235,
+              61,
+              29,
+              10,
+              3,
+              0,
+              1,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 17441,
+      "file:checksum": "12205ccb0c0661107ca5e9f732bf786654d8cc80a9bbde38fe18f19d128171006bdc"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 16520,
+      "file:checksum": "122095958199339f7c538eb0f3a2c72331707ab1539dc513a309b26c1226bcab2e6c"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

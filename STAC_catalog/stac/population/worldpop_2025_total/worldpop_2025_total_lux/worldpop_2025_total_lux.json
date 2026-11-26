@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_lux",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.7349992570599975,
+          50.18333346859999
+        ],
+        [
+          6.529999253879997,
+          50.18333346859999
+        ],
+        [
+          6.529999253879997,
+          49.44750013820999
+        ],
+        [
+          5.7349992570599975,
+          49.44750013820999
+        ],
+        [
+          5.7349992570599975,
+          50.18333346859999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.7349992570599975,
+    49.44750013820999,
+    6.529999253879997,
+    50.18333346859999
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Luxembourg",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LUX",
+    "GCHD:country": "Luxembourg",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.7349992570599975,
+            49.44750013820999
+          ],
+          [
+            6.529999253879997,
+            49.44750013820999
+          ],
+          [
+            6.529999253879997,
+            50.18333346859999
+          ],
+          [
+            5.7349992570599975,
+            50.18333346859999
+          ],
+          [
+            5.7349992570599975,
+            49.44750013820999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      5.7349992570599975,
+      49.44750013820999,
+      6.529999253879997,
+      50.18333346859999
+    ],
+    "proj:shape": [
+      883,
+      954
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      5.7349992570599975,
+      0.0,
+      -0.00083333333,
+      50.18333346859999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/lux_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Luxembourg (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1028769,
+      "file:checksum": "d50110bab138c94c698db3ee1a9ef3062e3306",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.234580181803395,
+            "minimum": 0.0,
+            "maximum": 35.65351486206055,
+            "stddev": 6.2520945016221425,
+            "valid_percent": 18.975120551008924
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 35.65351486206055,
+            "buckets": [
+              108503,
+              22624,
+              10917,
+              5911,
+              3327,
+              2606,
+              1861,
+              1270,
+              2012,
+              812
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 15332,
+      "file:checksum": "122031de367adaaa4be38f19e9cd56c956f13285d4a90a9e94983809bd75dd528247"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 15332,
+      "file:checksum": "1220f29692a7d6a08288f6acc7c2a69f1f8aacc7614b7d4d4c9e3507a00968bace79"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

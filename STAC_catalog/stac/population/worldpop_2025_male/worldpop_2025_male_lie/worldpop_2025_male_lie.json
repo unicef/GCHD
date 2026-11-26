@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_lie",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          9.471665908779997,
+          47.27083348025
+        ],
+        [
+          9.635832574789998,
+          47.27083348025
+        ],
+        [
+          9.635832574789998,
+          47.04833348114
+        ],
+        [
+          9.471665908779997,
+          47.04833348114
+        ],
+        [
+          9.471665908779997,
+          47.27083348025
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    9.471665908779997,
+    47.04833348114,
+    9.635832574789998,
+    47.27083348025
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Liechtenstein",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LIE",
+    "GCHD:country": "Liechtenstein",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            9.471665908779997,
+            47.04833348114
+          ],
+          [
+            9.635832574789998,
+            47.04833348114
+          ],
+          [
+            9.635832574789998,
+            47.27083348025
+          ],
+          [
+            9.471665908779997,
+            47.27083348025
+          ],
+          [
+            9.471665908779997,
+            47.04833348114
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      9.471665908779997,
+      47.04833348114,
+      9.635832574789998,
+      47.27083348025
+    ],
+    "proj:shape": [
+      267,
+      197
+    ],
+    "proj:transform": [
+      0.0008333333300000038,
+      0.0,
+      9.471665908779997,
+      0.0,
+      -0.000833333329999997,
+      47.27083348025,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/lie_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Liechtenstein (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 57515,
+      "file:checksum": "d50110c8b8c843f9e806ce4f242303c4d92131",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.893513667968378,
+            "minimum": 0.0,
+            "maximum": 20.39165496826172,
+            "stddev": 2.6758382082421037,
+            "valid_percent": 19.960455521968097
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 20.39165496826172,
+            "buckets": [
+              7078,
+              1768,
+              673,
+              538,
+              266,
+              94,
+              55,
+              21,
+              4,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6568,
+      "file:checksum": "1220bc131bd549ef794fec296b70e0f90aeb15274a882ffd071fea31d8966f4b7170"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10052,
+      "file:checksum": "12208b58916a3b78510f1bcf5e15f0ba51ed24bd39f33bf354c66767a1101efd9f4e"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

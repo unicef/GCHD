@@ -1,0 +1,218 @@
+{
+  "type": "Collection",
+  "id": "sand_dust_storm_unccd_2024",
+  "stac_version": "1.1.0",
+  "description": "Sand and dust storms (SDS) are caused by intense winds over areas of arid soil that pick up large amounts of ground material into the atmosphere.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/SDS/sand_dust_storm_unccd_2024.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Sand and Dust Storm"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.unccd.int/",
+      "type": "text/html",
+      "title": "Original source (UNCCD)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Sand and Dust Storm",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "1km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Index",
+  "GCHD:threshold": "All",
+  "GCHD:classes": "0-0.2-0.4-0.6-0.8-1",
+  "GCHD:value_range": [
+    0.0,
+    1.0
+  ],
+  "GCHD:notes": "SDS susceptibility only shows the areas of sds source and classes are consolidated from the UNCCD index -",
+  "GCHD:alternate_sources": "WMO",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/sand_dust_storm_annual",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "sand_dust_storm_susc",
+      "app_name": "sand_dust_storm_unccd_2024",
+      "unicef_code": "SD",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0,
+      "default": true
+    }
+  ],
+  "title": "SDS Susceptiblity",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -60.00376905010006,
+          179.99440198990013,
+          89.99563454989999
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Sand and Dust Storm"
+  ],
+  "providers": [
+    {
+      "name": "UNCCD",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.unccd.int/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/sand_dust_storm/sand_dust_storm_unccd_2024.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "SDS Susceptiblity (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        18000,
+        43200
+      ],
+      "proj:transform": [
+        0.008333300200000003,
+        0.0,
+        -180.00416665010002,
+        0.0,
+        -0.008333300200000003,
+        89.99563454989999,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.00416665010002,
+        -60.00376905010006,
+        179.99440198990013,
+        89.99563454989999
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -999000000.0,
+          "statistics": {
+            "mean": 0.0827590065864636,
+            "minimum": 0.0,
+            "maximum": 0.999999463558197,
+            "stddev": 0.1818782002110629,
+            "valid_percent": 31.42884587236534
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 0.999999463558197,
+            "buckets": [
+              111142,
+              3071,
+              3896,
+              5338,
+              5798,
+              3926,
+              2484,
+              1139,
+              500,
+              128
+            ]
+          }
+        }
+      ],
+      "file:size": 219502992,
+      "file:checksum": "1220670f4a7b528a005f5b0b9b05b6e9a787805a998ec291c063eb922b06371beb07"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 90697,
+      "file:checksum": "122009d081f25fee72e765688b2af3b77f16aa73460130d84a76ea3922334a82eb01"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 218868,
+      "file:checksum": "1220b61f9a4d616248a56a822f75829677e265651cbe28322138a5826b75a5acb499"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

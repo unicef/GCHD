@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_kor",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          124.60999878156,
+          38.61583351486999
+        ],
+        [
+          130.94083208957,
+          38.61583351486999
+        ],
+        [
+          130.94083208957,
+          33.11333353687999
+        ],
+        [
+          124.60999878156,
+          33.11333353687999
+        ],
+        [
+          124.60999878156,
+          38.61583351486999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    124.60999878156,
+    33.11333353687999,
+    130.94083208957,
+    38.61583351486999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Republic of Korea",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "KOR",
+    "GCHD:country": "Republic of Korea",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            124.60999878156,
+            33.11333353687999
+          ],
+          [
+            130.94083208957,
+            33.11333353687999
+          ],
+          [
+            130.94083208957,
+            38.61583351486999
+          ],
+          [
+            124.60999878156,
+            38.61583351486999
+          ],
+          [
+            124.60999878156,
+            33.11333353687999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      124.60999878156,
+      33.11333353687999,
+      130.94083208957,
+      38.61583351486999
+    ],
+    "proj:shape": [
+      6603,
+      7597
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      124.60999878156,
+      0.0,
+      -0.00083333333,
+      38.61583351486999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/kor_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Republic of Korea (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 46254305,
+      "file:checksum": "d501100e07bb49034f9cac2cf6c0902fef88a9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.9759230838860453,
+            "minimum": 0.0,
+            "maximum": 165.7684326171875,
+            "stddev": 9.434818350016611,
+            "valid_percent": 26.638345258136926
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 165.7684326171875,
+            "buckets": [
+              235644,
+              2961,
+              1723,
+              1120,
+              694,
+              487,
+              234,
+              122,
+              49,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10505,
+      "file:checksum": "1220992b858a031d9cbd032d53ef46c57417d416a46a183b3d2f121da3ed004f3023"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9048,
+      "file:checksum": "1220edb9a1bcf17b489f4586b82831487d27b0fcce4a0352d68677aa5c207b574ee4"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

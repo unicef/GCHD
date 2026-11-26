@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_deu",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          5.866665923199998,
+          55.05916678242999
+        ],
+        [
+          15.041665886499997,
+          55.05916678242999
+        ],
+        [
+          15.041665886499997,
+          47.27000014691999
+        ],
+        [
+          5.866665923199998,
+          47.27000014691999
+        ],
+        [
+          5.866665923199998,
+          55.05916678242999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    5.866665923199998,
+    47.27000014691999,
+    15.041665886499997,
+    55.05916678242999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Germany",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "DEU",
+    "GCHD:country": "Germany",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            5.866665923199998,
+            47.27000014691999
+          ],
+          [
+            15.041665886499997,
+            47.27000014691999
+          ],
+          [
+            15.041665886499997,
+            55.05916678242999
+          ],
+          [
+            5.866665923199998,
+            55.05916678242999
+          ],
+          [
+            5.866665923199998,
+            47.27000014691999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      5.866665923199998,
+      47.27000014691999,
+      15.041665886499997,
+      55.05916678242999
+    ],
+    "proj:shape": [
+      9347,
+      11010
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      5.866665923199998,
+      0.0,
+      -0.00083333333,
+      55.05916678242999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/deu_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Germany (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 153937086,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.820282326668387,
+            "minimum": 0.0,
+            "maximum": 28.19329261779785,
+            "stddev": 2.111353259648592,
+            "valid_percent": 53.505859375
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 28.19329261779785,
+            "buckets": [
+              441753,
+              17221,
+              8388,
+              4453,
+              2410,
+              1273,
+              543,
+              409,
+              159,
+              64
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 19350,
+      "file:checksum": "1220d0e339ac47105128b7ab6df52c7f46976c7b8c9de8e9fd6ed597a221940459ad"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 18534,
+      "file:checksum": "12205d813c94a59e86481ca3194c7977befbecf292758c7b936a35204cc4b3c9d598"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

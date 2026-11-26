@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_sau",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          34.49499914202,
+          32.155000207379985
+        ],
+        [
+          55.66749905733,
+          32.155000207379985
+        ],
+        [
+          55.66749905733,
+          16.380000270479982
+        ],
+        [
+          34.49499914202,
+          16.380000270479982
+        ],
+        [
+          34.49499914202,
+          32.155000207379985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    34.49499914202,
+    16.380000270479982,
+    55.66749905733,
+    32.155000207379985
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Saudi Arabia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SAU",
+    "GCHD:country": "Saudi Arabia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            34.49499914202,
+            16.380000270479982
+          ],
+          [
+            55.66749905733,
+            16.380000270479982
+          ],
+          [
+            55.66749905733,
+            32.155000207379985
+          ],
+          [
+            34.49499914202,
+            32.155000207379985
+          ],
+          [
+            34.49499914202,
+            16.380000270479982
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      34.49499914202,
+      16.380000270479982,
+      55.66749905733,
+      32.155000207379985
+    ],
+    "proj:shape": [
+      18930,
+      25407
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      34.49499914202,
+      0.0,
+      -0.00083333333,
+      32.155000207379985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/sau_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Saudi Arabia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 85390667,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.2595197540227872,
+            "minimum": 0.0,
+            "maximum": 22.813264846801758,
+            "stddev": 0.9558440081910262,
+            "valid_percent": 12.42423001310616
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 22.813264846801758,
+            "buckets": [
+              95435,
+              784,
+              352,
+              174,
+              119,
+              86,
+              70,
+              48,
+              2,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 7418,
+      "file:checksum": "1220f3efe63b9be03412dbe2da1ee1006a1bf3ad5523f55a47973948b27a79fe0b98"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 6315,
+      "file:checksum": "122090df80604849e14ccf61dd25fd90f3b0b051d69f8d950f4b74db58d2f6298d3a"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

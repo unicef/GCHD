@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_brb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -59.65083381473,
+          13.335000282659987
+        ],
+        [
+          -59.42000048232,
+          13.335000282659987
+        ],
+        [
+          -59.42000048232,
+          13.045000283819986
+        ],
+        [
+          -59.65083381473,
+          13.045000283819986
+        ],
+        [
+          -59.65083381473,
+          13.335000282659987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -59.65083381473,
+    13.045000283819986,
+    -59.42000048232,
+    13.335000282659987
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Barbados",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BRB",
+    "GCHD:country": "Barbados",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -59.65083381473,
+            13.045000283819986
+          ],
+          [
+            -59.42000048232,
+            13.045000283819986
+          ],
+          [
+            -59.42000048232,
+            13.335000282659987
+          ],
+          [
+            -59.65083381473,
+            13.335000282659987
+          ],
+          [
+            -59.65083381473,
+            13.045000283819986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -59.65083381473,
+      13.045000283819986,
+      -59.42000048232,
+      13.335000282659987
+    ],
+    "proj:shape": [
+      348,
+      277
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -59.65083381473,
+      0.0,
+      -0.00083333333,
+      13.335000282659987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/brb_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Barbados (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 168136,
+      "file:checksum": "d501103aa78fc2d61e88b7fc6e4a77a81e5f5b",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7383929533412766,
+            "minimum": 0.0,
+            "maximum": 3.610482931137085,
+            "stddev": 0.8694643528298439,
+            "valid_percent": 40.92078509481721
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 3.610482931137085,
+            "buckets": [
+              20203,
+              5094,
+              3766,
+              3165,
+              2279,
+              1647,
+              988,
+              571,
+              563,
+              1170
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 12556,
+      "file:checksum": "1220ece9afc0e4683b9d892eece7a810f027e220779e0f6757137b2630b3336fd4d5"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 16808,
+      "file:checksum": "122038442acb926b9066e14c1b48f3e7b57e7278ead9481ee0320708137c2f95d5bb"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

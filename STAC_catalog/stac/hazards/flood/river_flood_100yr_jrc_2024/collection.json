@@ -1,0 +1,1761 @@
+{
+  "type": "Collection",
+  "id": "river_flood_100yr_jrc_2024",
+  "stac_version": "1.1.0",
+  "description": "A fluvial or riverine flood is a rise, usually brief, in the water level of a stream or water body to a peak from which the water level recedes at a slower rate.\n\nOriginal ~90 m (3 arc-second) JRC tiles of 10°x10°, one item per tile. The collection's `data` asset is a GDAL VRT over all tiles, for full-resolution access with a single URL; the `items_parquet` asset indexes the tiles for area-of-interest queries.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W20/river_flood_100yr_jrc_2024_N70_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W20/river_flood_100yr_jrc_2024_N60_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W20/river_flood_100yr_jrc_2024_N30_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W20/river_flood_100yr_jrc_2024_N20_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W20/river_flood_100yr_jrc_2024_N10_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W10/river_flood_100yr_jrc_2024_N60_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W10/river_flood_100yr_jrc_2024_N50_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W10/river_flood_100yr_jrc_2024_N40_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W10/river_flood_100yr_jrc_2024_N30_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W10/river_flood_100yr_jrc_2024_N20_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W140/river_flood_100yr_jrc_2024_N80_W140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W10/river_flood_100yr_jrc_2024_N10_W10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W0/river_flood_100yr_jrc_2024_N70_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W0/river_flood_100yr_jrc_2024_N60_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W0/river_flood_100yr_jrc_2024_N50_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W0/river_flood_100yr_jrc_2024_N40_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W0/river_flood_100yr_jrc_2024_N30_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W0/river_flood_100yr_jrc_2024_N20_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W0/river_flood_100yr_jrc_2024_N10_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W0/river_flood_100yr_jrc_2024_N0_W0.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W0"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E10/river_flood_100yr_jrc_2024_N70_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W140/river_flood_100yr_jrc_2024_N70_W140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E10/river_flood_100yr_jrc_2024_N60_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E10/river_flood_100yr_jrc_2024_N50_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E10/river_flood_100yr_jrc_2024_N40_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E10/river_flood_100yr_jrc_2024_N30_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E10/river_flood_100yr_jrc_2024_N20_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E10/river_flood_100yr_jrc_2024_N10_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E10/river_flood_100yr_jrc_2024_N0_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E10/river_flood_100yr_jrc_2024_S10_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E10/river_flood_100yr_jrc_2024_S20_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E10/river_flood_100yr_jrc_2024_S30_E10.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E10"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W140/river_flood_100yr_jrc_2024_N60_W140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E20/river_flood_100yr_jrc_2024_N80_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E20/river_flood_100yr_jrc_2024_N70_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E20/river_flood_100yr_jrc_2024_N60_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E20/river_flood_100yr_jrc_2024_N50_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E20/river_flood_100yr_jrc_2024_N40_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E20/river_flood_100yr_jrc_2024_N30_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E20/river_flood_100yr_jrc_2024_N20_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E20/river_flood_100yr_jrc_2024_N10_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E20/river_flood_100yr_jrc_2024_N0_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E20/river_flood_100yr_jrc_2024_S10_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W130/river_flood_100yr_jrc_2024_N80_W130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E20/river_flood_100yr_jrc_2024_S20_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E20/river_flood_100yr_jrc_2024_S30_E20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E30/river_flood_100yr_jrc_2024_N80_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E30/river_flood_100yr_jrc_2024_N70_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E30/river_flood_100yr_jrc_2024_N60_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E30/river_flood_100yr_jrc_2024_N50_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E30/river_flood_100yr_jrc_2024_N40_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E30/river_flood_100yr_jrc_2024_N30_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E30/river_flood_100yr_jrc_2024_N20_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E30/river_flood_100yr_jrc_2024_N10_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W130/river_flood_100yr_jrc_2024_N70_W130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E30/river_flood_100yr_jrc_2024_N0_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E30/river_flood_100yr_jrc_2024_S10_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E30/river_flood_100yr_jrc_2024_S20_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E30/river_flood_100yr_jrc_2024_S30_E30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E40/river_flood_100yr_jrc_2024_N70_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E40/river_flood_100yr_jrc_2024_N60_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E40/river_flood_100yr_jrc_2024_N50_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E40/river_flood_100yr_jrc_2024_N40_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E40/river_flood_100yr_jrc_2024_N30_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E40/river_flood_100yr_jrc_2024_N20_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W130/river_flood_100yr_jrc_2024_N60_W130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E40/river_flood_100yr_jrc_2024_N10_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E40/river_flood_100yr_jrc_2024_N0_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E40/river_flood_100yr_jrc_2024_S10_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E40/river_flood_100yr_jrc_2024_S20_E40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E50/river_flood_100yr_jrc_2024_N70_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E50/river_flood_100yr_jrc_2024_N60_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E50/river_flood_100yr_jrc_2024_N50_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E50/river_flood_100yr_jrc_2024_N40_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E50/river_flood_100yr_jrc_2024_N30_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E50/river_flood_100yr_jrc_2024_N20_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W130/river_flood_100yr_jrc_2024_N50_W130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E50/river_flood_100yr_jrc_2024_N10_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E50/river_flood_100yr_jrc_2024_S10_E50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E60/river_flood_100yr_jrc_2024_N80_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E60/river_flood_100yr_jrc_2024_N70_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E60/river_flood_100yr_jrc_2024_N60_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E60/river_flood_100yr_jrc_2024_N50_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E60/river_flood_100yr_jrc_2024_N40_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E60/river_flood_100yr_jrc_2024_N30_E60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E70/river_flood_100yr_jrc_2024_N80_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E70/river_flood_100yr_jrc_2024_N70_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W130/river_flood_100yr_jrc_2024_N40_W130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E70/river_flood_100yr_jrc_2024_N60_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E70/river_flood_100yr_jrc_2024_N50_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E70/river_flood_100yr_jrc_2024_N40_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E70/river_flood_100yr_jrc_2024_N30_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E70/river_flood_100yr_jrc_2024_N20_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E70/river_flood_100yr_jrc_2024_N10_E70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E80/river_flood_100yr_jrc_2024_N80_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E80/river_flood_100yr_jrc_2024_N70_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E80/river_flood_100yr_jrc_2024_N60_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E80/river_flood_100yr_jrc_2024_N50_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W120/river_flood_100yr_jrc_2024_N80_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E80/river_flood_100yr_jrc_2024_N40_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E80/river_flood_100yr_jrc_2024_N30_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E80/river_flood_100yr_jrc_2024_N20_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E80/river_flood_100yr_jrc_2024_N10_E80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E90/river_flood_100yr_jrc_2024_N80_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E90/river_flood_100yr_jrc_2024_N70_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E90/river_flood_100yr_jrc_2024_N60_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E90/river_flood_100yr_jrc_2024_N50_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E90/river_flood_100yr_jrc_2024_N40_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E90/river_flood_100yr_jrc_2024_N30_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W120/river_flood_100yr_jrc_2024_N70_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W170/river_flood_100yr_jrc_2024_N80_W170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E90/river_flood_100yr_jrc_2024_N20_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E90/river_flood_100yr_jrc_2024_N10_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E90/river_flood_100yr_jrc_2024_N0_E90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E100/river_flood_100yr_jrc_2024_N80_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E100/river_flood_100yr_jrc_2024_N70_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E100/river_flood_100yr_jrc_2024_N60_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E100/river_flood_100yr_jrc_2024_N50_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E100/river_flood_100yr_jrc_2024_N40_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E100/river_flood_100yr_jrc_2024_N30_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E100/river_flood_100yr_jrc_2024_N20_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W120/river_flood_100yr_jrc_2024_N60_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E100/river_flood_100yr_jrc_2024_N10_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E100/river_flood_100yr_jrc_2024_N0_E100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E110/river_flood_100yr_jrc_2024_N80_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E110/river_flood_100yr_jrc_2024_N70_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E110/river_flood_100yr_jrc_2024_N60_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E110/river_flood_100yr_jrc_2024_N50_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E110/river_flood_100yr_jrc_2024_N40_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E110/river_flood_100yr_jrc_2024_N30_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E110/river_flood_100yr_jrc_2024_N20_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E110/river_flood_100yr_jrc_2024_N10_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W120/river_flood_100yr_jrc_2024_N50_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E110/river_flood_100yr_jrc_2024_N0_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E110/river_flood_100yr_jrc_2024_S10_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E110/river_flood_100yr_jrc_2024_S20_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E110/river_flood_100yr_jrc_2024_S30_E110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E120/river_flood_100yr_jrc_2024_N80_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E120/river_flood_100yr_jrc_2024_N70_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E120/river_flood_100yr_jrc_2024_N60_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E120/river_flood_100yr_jrc_2024_N50_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E120/river_flood_100yr_jrc_2024_N40_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_E120/river_flood_100yr_jrc_2024_N30_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W120/river_flood_100yr_jrc_2024_N40_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_E120/river_flood_100yr_jrc_2024_N20_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_E120/river_flood_100yr_jrc_2024_N10_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E120/river_flood_100yr_jrc_2024_N0_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E120/river_flood_100yr_jrc_2024_S10_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E120/river_flood_100yr_jrc_2024_S20_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E120/river_flood_100yr_jrc_2024_S30_E120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E130/river_flood_100yr_jrc_2024_N80_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E130/river_flood_100yr_jrc_2024_N70_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E130/river_flood_100yr_jrc_2024_N60_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E130/river_flood_100yr_jrc_2024_N50_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W120/river_flood_100yr_jrc_2024_N30_W120.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W120"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E130/river_flood_100yr_jrc_2024_N40_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E130/river_flood_100yr_jrc_2024_N0_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E130/river_flood_100yr_jrc_2024_S10_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E130/river_flood_100yr_jrc_2024_S20_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E130/river_flood_100yr_jrc_2024_S30_E130.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E130"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E140/river_flood_100yr_jrc_2024_N80_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E140/river_flood_100yr_jrc_2024_N70_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E140/river_flood_100yr_jrc_2024_N60_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_E140/river_flood_100yr_jrc_2024_N50_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_E140/river_flood_100yr_jrc_2024_N40_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W110/river_flood_100yr_jrc_2024_N80_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E140/river_flood_100yr_jrc_2024_N0_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E140/river_flood_100yr_jrc_2024_S10_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E140/river_flood_100yr_jrc_2024_S20_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E140/river_flood_100yr_jrc_2024_S30_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E140/river_flood_100yr_jrc_2024_S40_E140.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S40 E140"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E150/river_flood_100yr_jrc_2024_N80_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E150/river_flood_100yr_jrc_2024_N70_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E150/river_flood_100yr_jrc_2024_N60_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_E150/river_flood_100yr_jrc_2024_N0_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_E150/river_flood_100yr_jrc_2024_S10_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W110/river_flood_100yr_jrc_2024_N70_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_E150/river_flood_100yr_jrc_2024_S20_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E150/river_flood_100yr_jrc_2024_S30_E150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E160/river_flood_100yr_jrc_2024_N80_E160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E160/river_flood_100yr_jrc_2024_N70_E160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E160/river_flood_100yr_jrc_2024_N60_E160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E160/river_flood_100yr_jrc_2024_S40_E160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S40 E160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_E170/river_flood_100yr_jrc_2024_N80_E170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 E170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_E170/river_flood_100yr_jrc_2024_N70_E170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 E170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_E170/river_flood_100yr_jrc_2024_N60_E170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 E170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_E170/river_flood_100yr_jrc_2024_S30_E170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 E170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W110/river_flood_100yr_jrc_2024_N60_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_E170/river_flood_100yr_jrc_2024_S40_E170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S40 E170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W110/river_flood_100yr_jrc_2024_N50_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W110/river_flood_100yr_jrc_2024_N40_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W110/river_flood_100yr_jrc_2024_N30_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W170/river_flood_100yr_jrc_2024_N70_W170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W110/river_flood_100yr_jrc_2024_N20_W110.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W110"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W100/river_flood_100yr_jrc_2024_N80_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W100/river_flood_100yr_jrc_2024_N70_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W100/river_flood_100yr_jrc_2024_N60_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W100/river_flood_100yr_jrc_2024_N50_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W100/river_flood_100yr_jrc_2024_N40_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W100/river_flood_100yr_jrc_2024_N30_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W100/river_flood_100yr_jrc_2024_N20_W100.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W100"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W170/river_flood_100yr_jrc_2024_N60_W170.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W170"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W90/river_flood_100yr_jrc_2024_N80_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W90/river_flood_100yr_jrc_2024_N70_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W90/river_flood_100yr_jrc_2024_N60_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W90/river_flood_100yr_jrc_2024_N50_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W90/river_flood_100yr_jrc_2024_N40_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W90/river_flood_100yr_jrc_2024_N30_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W90/river_flood_100yr_jrc_2024_N20_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W90/river_flood_100yr_jrc_2024_N10_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W90/river_flood_100yr_jrc_2024_N0_W90.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W90"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W160/river_flood_100yr_jrc_2024_N80_W160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W80/river_flood_100yr_jrc_2024_N80_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W80/river_flood_100yr_jrc_2024_N70_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W80/river_flood_100yr_jrc_2024_N60_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W80/river_flood_100yr_jrc_2024_N50_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N40_W80/river_flood_100yr_jrc_2024_N40_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N40 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N30_W80/river_flood_100yr_jrc_2024_N30_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N30 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W80/river_flood_100yr_jrc_2024_N20_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W80/river_flood_100yr_jrc_2024_N10_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W80/river_flood_100yr_jrc_2024_N0_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W80/river_flood_100yr_jrc_2024_S10_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W160/river_flood_100yr_jrc_2024_N70_W160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W80/river_flood_100yr_jrc_2024_S20_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W80/river_flood_100yr_jrc_2024_S30_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_W80/river_flood_100yr_jrc_2024_S40_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S40 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S50_W80/river_flood_100yr_jrc_2024_S50_W80.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S50 W80"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W70/river_flood_100yr_jrc_2024_N80_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W70/river_flood_100yr_jrc_2024_N70_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W70/river_flood_100yr_jrc_2024_N60_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W70/river_flood_100yr_jrc_2024_N50_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N20_W70/river_flood_100yr_jrc_2024_N20_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N20 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W160/river_flood_100yr_jrc_2024_N60_W160.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W160"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W70/river_flood_100yr_jrc_2024_N10_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W70/river_flood_100yr_jrc_2024_N0_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W70/river_flood_100yr_jrc_2024_S10_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W70/river_flood_100yr_jrc_2024_S20_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W70/river_flood_100yr_jrc_2024_S30_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S40_W70/river_flood_100yr_jrc_2024_S40_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S40 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S50_W70/river_flood_100yr_jrc_2024_S50_W70.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S50 W70"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W60/river_flood_100yr_jrc_2024_N80_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W60/river_flood_100yr_jrc_2024_N70_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W60/river_flood_100yr_jrc_2024_N60_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W150/river_flood_100yr_jrc_2024_N80_W150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N50_W60/river_flood_100yr_jrc_2024_N50_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N50 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W60/river_flood_100yr_jrc_2024_N10_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W60/river_flood_100yr_jrc_2024_N0_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W60/river_flood_100yr_jrc_2024_S10_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W60/river_flood_100yr_jrc_2024_S20_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S30_W60/river_flood_100yr_jrc_2024_S30_W60.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S30 W60"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W50/river_flood_100yr_jrc_2024_N70_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W50/river_flood_100yr_jrc_2024_N60_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N10_W50/river_flood_100yr_jrc_2024_N10_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N10 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W150/river_flood_100yr_jrc_2024_N70_W150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W150"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W50/river_flood_100yr_jrc_2024_N0_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W50/river_flood_100yr_jrc_2024_S10_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S20_W50/river_flood_100yr_jrc_2024_S20_W50.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S20 W50"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W40/river_flood_100yr_jrc_2024_N70_W40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N0_W40/river_flood_100yr_jrc_2024_N0_W40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N0 W40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_S10_W40/river_flood_100yr_jrc_2024_S10_W40.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile S10 W40"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W30/river_flood_100yr_jrc_2024_N80_W30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N70_W30/river_flood_100yr_jrc_2024_N70_W30.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N70 W30"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N80_W20/river_flood_100yr_jrc_2024_N80_W20.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N80 W20"
+    },
+    {
+      "rel": "item",
+      "href": "./river_flood_100yr_jrc_2024_N60_W150/river_flood_100yr_jrc_2024_N60_W150.json",
+      "type": "application/geo+json",
+      "title": "Riverine flood hazard – tile N60 W150"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Floods"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://global-flood-maps.jrc.ec.europa.eu/",
+      "type": "text/html",
+      "title": "Original source (JRC)"
+    }
+  ],
+  "GCHD:hazard": "Floods",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Probabilistic - 100 year return period",
+  "GCHD:nominal_resolution": "90m",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Depth in m",
+  "GCHD:threshold": "0.01",
+  "GCHD:classes": "0.01 - 0.15 - 0.5 - 1.5 - 2+",
+  "GCHD:value_range": [
+    0.0,
+    50.0
+  ],
+  "GCHD:notes": "JRC currently has 90m and plans to release 30 m in the coming years which could be useful for sub-national and localized analysis in the future - also includes SSP based projections. CCRI 2021 used GAR 2015 which is quite outdated. GRID 2023 has some inconsistencies (comment from CCRI-DRM team). WRI is also a good alternative with projections - but yet to identify the future update frequencies and resolutions; it might also be good to align with INFORM data sources. Highest return period chosen to capture the maximum exposure.",
+  "GCHD:alternate_sources": "WRI, UNEP GRID 2023",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazrards/river_flood_r100",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "river_flood_100yr",
+      "app_name": "river_flood_100yr_jrc_2024",
+      "unicef_code": "FL_RIV",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0.01,
+      "default": true
+    }
+  ],
+  "title": "Riverine flood hazard (original JRC tiles)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -170.00124920555788,
+          -59.986266666657585,
+          179.9687517664201,
+          80.00123333333333
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          "2024-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Floods",
+    "FL",
+    "JRC"
+  ],
+  "providers": [
+    {
+      "name": "JRC",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://global-flood-maps.jrc.ec.europa.eu/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/mosaic.vrt",
+      "type": "application/xml",
+      "title": "Global mosaic (GDAL VRT over the tile COGs)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 150077,
+      "file:checksum": "d50110cbf86a14a62f3492ed6ccbea6eb83264"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 100308,
+      "file:checksum": "12202aeb0367c45731b6d9bf995a3dac7469f9df42d5c0fb715580cc62e4aae0564b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 216690,
+      "file:checksum": "12207af3bd8d096ffd60cd59bb0c9047e7a45e62f789addd31a4fffc6596adb83d8c"
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all items)",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 147323,
+      "file:checksum": "12203395e4d9ff2d270059ec859fbf9ee923fea5e21a501bb910e0ce7e59305c7382"
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1387415,
+      "file:checksum": "122094d24f4fd0704b666fb32c350644d011647d3456060f2ff84dee6b6668e38afe"
+    }
+  },
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "updated": "2026-11-26T16:19:09Z"
+}

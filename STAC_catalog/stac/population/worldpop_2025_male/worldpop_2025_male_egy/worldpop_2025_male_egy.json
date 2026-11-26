@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_egy",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          24.69749918121,
+          31.670833542649987
+        ],
+        [
+          36.89499913242,
+          31.670833542649987
+        ],
+        [
+          36.89499913242,
+          21.999166914669985
+        ],
+        [
+          24.69749918121,
+          21.999166914669985
+        ],
+        [
+          24.69749918121,
+          31.670833542649987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    24.69749918121,
+    21.999166914669985,
+    36.89499913242,
+    31.670833542649987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Egypt",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "EGY",
+    "GCHD:country": "Egypt",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            24.69749918121,
+            21.999166914669985
+          ],
+          [
+            36.89499913242,
+            21.999166914669985
+          ],
+          [
+            36.89499913242,
+            31.670833542649987
+          ],
+          [
+            24.69749918121,
+            31.670833542649987
+          ],
+          [
+            24.69749918121,
+            21.999166914669985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      24.69749918121,
+      21.999166914669985,
+      36.89499913242,
+      31.670833542649987
+    ],
+    "proj:shape": [
+      11606,
+      14637
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      24.69749918121,
+      0.0,
+      -0.00083333333,
+      31.670833542649987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/egy_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Egypt (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 42568670,
+      "file:checksum": "d50110b36e25b580db458d4c30c0713de39ec6",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.503796886151182,
+            "minimum": 0.0,
+            "maximum": 438.35894775390625,
+            "stddev": 14.48748780200092,
+            "valid_percent": 10.27952297567734
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 438.35894775390625,
+            "buckets": [
+              84302,
+              712,
+              219,
+              97,
+              67,
+              37,
+              17,
+              14,
+              5,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5551,
+      "file:checksum": "12202323706bff0daf25035c91cb66108a67de269aec2fb141bb81f0b118166a40a7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4639,
+      "file:checksum": "12205cb8ba9d476bcccf35342c04d26e740747dc4210fb3a2f5d7fc1822af9402244"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

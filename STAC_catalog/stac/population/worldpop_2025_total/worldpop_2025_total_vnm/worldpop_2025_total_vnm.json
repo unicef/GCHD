@@ -1,0 +1,209 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_vnm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          102.14333220476,
+          23.393333575759982
+        ],
+        [
+          109.46916550879,
+          23.393333575759982
+        ],
+        [
+          109.46916550879,
+          8.412500302349983
+        ],
+        [
+          102.14333220476,
+          8.412500302349983
+        ],
+        [
+          102.14333220476,
+          23.393333575759982
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    102.14333220476,
+    8.412500302349983,
+    109.46916550879,
+    23.393333575759982
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Viet Nam",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VNM",
+    "GCHD:country": "Viet Nam",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            102.14333220476,
+            8.412500302349983
+          ],
+          [
+            109.46916550879,
+            8.412500302349983
+          ],
+          [
+            109.46916550879,
+            23.393333575759982
+          ],
+          [
+            102.14333220476,
+            23.393333575759982
+          ],
+          [
+            102.14333220476,
+            8.412500302349983
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      102.14333220476,
+      8.412500302349983,
+      109.46916550879,
+      23.393333575759982
+    ],
+    "proj:shape": [
+      17977,
+      8791
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      102.14333220476,
+      0.0,
+      -0.00083333333,
+      23.393333575759982,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/vnm_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Viet Nam (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 95085308,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 3.7727729325892008,
+            "minimum": 0.0,
+            "maximum": 403.3233947753906,
+            "stddev": 10.118496396537248,
+            "valid_percent": 23.540224239021956
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 403.3233947753906,
+            "buckets": [
+              119926,
+              515,
+              160,
+              68,
+              32,
+              20,
+              14,
+              17,
+              10,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6425,
+      "file:checksum": "122018211999511e1d2d5f375fa343b2a9248836ba3ccf0107d12e583b52cd6bf34b"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 19099,
+      "file:checksum": "1220632d86a300eae81e5b95465d4d6d491ff21f3de78c7acb94aa40a5e120523d7e"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

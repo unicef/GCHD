@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_nor",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          4.503332595319997,
+          71.18500005126
+        ],
+        [
+          31.168332488659996,
+          71.18500005126
+        ],
+        [
+          31.168332488659996,
+          57.95916677083
+        ],
+        [
+          4.503332595319997,
+          57.95916677083
+        ],
+        [
+          4.503332595319997,
+          71.18500005126
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    4.503332595319997,
+    57.95916677083,
+    31.168332488659996,
+    71.18500005126
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Norway",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NOR",
+    "GCHD:country": "Norway",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            4.503332595319997,
+            57.95916677083
+          ],
+          [
+            31.168332488659996,
+            57.95916677083
+          ],
+          [
+            31.168332488659996,
+            71.18500005126
+          ],
+          [
+            4.503332595319997,
+            71.18500005126
+          ],
+          [
+            4.503332595319997,
+            57.95916677083
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      4.503332595319997,
+      57.95916677083,
+      31.168332488659996,
+      71.18500005126
+    ],
+    "proj:shape": [
+      15871,
+      31998
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      4.503332595319997,
+      0.0,
+      -0.00083333333,
+      71.18500005126,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/nor_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Norway (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 51611959,
+      "file:checksum": "d50110bcf18d6338ac6243f3ff605bac25fb0f",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.13644123091196383,
+            "minimum": 0.0,
+            "maximum": 36.873321533203125,
+            "stddev": 0.4560521997728013,
+            "valid_percent": 11.95308655265748
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 36.873321533203125,
+            "buckets": [
+              62026,
+              120,
+              21,
+              4,
+              4,
+              1,
+              2,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4139,
+      "file:checksum": "1220b5b4450da19cada398e11d6a6030698dc67bc3fee10c5e1470703da0a3e2f48d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 2562,
+      "file:checksum": "1220f45aa4e199339fb5bd8f0fe1cf7f8c199e9ec70b46d1f46cd019388f93c00a58"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_can",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -141.00166682266,
+          83.10916667023
+        ],
+        [
+          -52.61916717619002,
+          83.10916667023
+        ],
+        [
+          -52.61916717619002,
+          41.67666683596
+        ],
+        [
+          -141.00166682266,
+          41.67666683596
+        ],
+        [
+          -141.00166682266,
+          83.10916667023
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -141.00166682266,
+    41.67666683596,
+    -52.61916717619002,
+    83.10916667023
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Canada",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "CAN",
+    "GCHD:country": "Canada",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -141.00166682266,
+            41.67666683596
+          ],
+          [
+            -52.61916717619002,
+            41.67666683596
+          ],
+          [
+            -52.61916717619002,
+            83.10916667023
+          ],
+          [
+            -141.00166682266,
+            83.10916667023
+          ],
+          [
+            -141.00166682266,
+            41.67666683596
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -141.00166682266,
+      41.67666683596,
+      -52.61916717619002,
+      83.10916667023
+    ],
+    "proj:shape": [
+      49719,
+      106059
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -141.00166682266,
+      0.0,
+      -0.00083333333,
+      83.10916667023,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/can_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Canada (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 367530872,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.06167260177134458,
+            "minimum": 0.0,
+            "maximum": 24.53658103942871,
+            "stddev": 0.505981786510522,
+            "valid_percent": 8.14932270010395
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 24.53658103942871,
+            "buckets": [
+              39947,
+              92,
+              47,
+              30,
+              10,
+              4,
+              6,
+              2,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4034,
+      "file:checksum": "1220bed19a64403ba42f8e091a936d0781a56cbe640413fc76f9e7ad012b2697a62c"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1939,
+      "file:checksum": "1220908a01fac77fe4a48a0368d8f5cfb9a8423dcd7f2d4a1512ff9ecf13e6a28cde"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_bes",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -68.42083377965,
+          17.650000265399985
+        ],
+        [
+          -62.945833801549995,
+          17.650000265399985
+        ],
+        [
+          -62.945833801549995,
+          12.025000287899985
+        ],
+        [
+          -68.42083377965,
+          12.025000287899985
+        ],
+        [
+          -68.42083377965,
+          17.650000265399985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -68.42083377965,
+    12.025000287899985,
+    -62.945833801549995,
+    17.650000265399985
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Bonaire",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BES",
+    "GCHD:country": "Bonaire",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -68.42083377965,
+            12.025000287899985
+          ],
+          [
+            -62.945833801549995,
+            12.025000287899985
+          ],
+          [
+            -62.945833801549995,
+            17.650000265399985
+          ],
+          [
+            -68.42083377965,
+            17.650000265399985
+          ],
+          [
+            -68.42083377965,
+            12.025000287899985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -68.42083377965,
+      12.025000287899985,
+      -62.945833801549995,
+      17.650000265399985
+    ],
+    "proj:shape": [
+      6750,
+      6570
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -68.42083377965,
+      0.0,
+      -0.00083333333,
+      17.650000265399985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/bes_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Bonaire (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1276074,
+      "file:checksum": "d50110177e64dd8b7f76e9ee7e10fa25a536e9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.15902663912465706,
+            "minimum": 0.0014923966955393553,
+            "maximum": 1.9452861547470093,
+            "stddev": 0.23888962607963626,
+            "valid_percent": 0.07140562311935808
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0014923966955393553,
+            "max": 1.9452861547470093,
+            "buckets": [
+              596,
+              66,
+              28,
+              11,
+              10,
+              9,
+              3,
+              3,
+              0,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 523,
+      "file:checksum": "12201b75ef547d847a566609b769af49ee0a8f618221dd94b4aa93b10c06b5772f46"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 497,
+      "file:checksum": "1220409d417b3b94bab15da3b4d49331c30bb3a47596e006721e30bce446d088ae5c"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_and",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          1.4141659410099972,
+          42.655000165379995
+        ],
+        [
+          1.7849992728599973,
+          42.655000165379995
+        ],
+        [
+          1.7849992728599973,
+          42.429166832949996
+        ],
+        [
+          1.4141659410099972,
+          42.429166832949996
+        ],
+        [
+          1.4141659410099972,
+          42.655000165379995
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    1.4141659410099972,
+    42.429166832949996,
+    1.7849992728599973,
+    42.655000165379995
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Andorra",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AND",
+    "GCHD:country": "Andorra",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            1.4141659410099972,
+            42.429166832949996
+          ],
+          [
+            1.7849992728599973,
+            42.429166832949996
+          ],
+          [
+            1.7849992728599973,
+            42.655000165379995
+          ],
+          [
+            1.4141659410099972,
+            42.655000165379995
+          ],
+          [
+            1.4141659410099972,
+            42.429166832949996
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      1.4141659410099972,
+      42.429166832949996,
+      1.7849992728599973,
+      42.655000165379995
+    ],
+    "proj:shape": [
+      271,
+      445
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      1.4141659410099972,
+      0.0,
+      -0.00083333333,
+      42.655000165379995,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/and_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Andorra (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 61997,
+      "file:checksum": "d50110a141a5436fa39dbdcfe1053faffda357",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 4.020513309798683,
+            "minimum": 0.0,
+            "maximum": 91.8568115234375,
+            "stddev": 9.536539524397588,
+            "valid_percent": 8.691073427588208
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 91.8568115234375,
+            "buckets": [
+              9255,
+              671,
+              235,
+              118,
+              66,
+              26,
+              46,
+              35,
+              15,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4162,
+      "file:checksum": "122077663dc65016b94cdc40f37fff29f6dadedf1e6bfc6d0b8e5c2f60f58b882839"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4162,
+      "file:checksum": "12200b8fbedea362784a8c69eea667a567e26576a9c71c253705bf7f53bb9efe403d"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

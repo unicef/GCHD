@@ -1,0 +1,226 @@
+{
+  "type": "Collection",
+  "id": "earthquake_v2023_1_pga_475_rock_3min",
+  "stac_version": "1.1.0",
+  "description": "Earthquake exposure is derived from the GEM Global Seismic Hazard Map (v2023.1, June 2023), which maps peak ground acceleration (PGA) on reference rock for a 10% probability of exceedance in 50 years (475-year return period; Vs30 = 760–800 m/s). Exposed children and population are identified using two thresholds linked to Mercalli intensities: Strong shaking (VI; PGA ≥ 0.09 g) and Severe shaking (VIII; PGA ≥ 0.34 g). Outputs include absolute and relative exposure and normalized scores (0–10).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Earthquake"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.globalquakemodel.org/",
+      "type": "text/html",
+      "title": "Original source (GEM)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Geophysical",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Observed",
+  "GCHD:nominal_resolution": "3 arc-minutes",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "PGA (g)",
+  "GCHD:threshold": ">0.09 g or >0.34g",
+  "GCHD:classes": "Use natural breaks/quantile",
+  "GCHD:value_range": [
+    0.0,
+    2.0
+  ],
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/hazards/earthquake_v2023_1_pga_475_rock_3min",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "earthquake_pga_0p09",
+      "app_name": "earthquake_pga_gem_2023",
+      "unicef_code": "EQ",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0.09,
+      "default": true
+    },
+    {
+      "hazard_code": "earthquake_pga_0p34",
+      "app_name": null,
+      "unicef_code": "EQ",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0.34,
+      "default": false
+    }
+  ],
+  "title": "Earthquake",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -60.00000000000101,
+          180.0,
+          89.99
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-01-01T00:00:00Z",
+          "2023-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Earthquake",
+    "EQ"
+  ],
+  "providers": [
+    {
+      "name": "GEM",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.globalquakemodel.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Earthquake (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        3000,
+        7200
+      ],
+      "proj:transform": [
+        0.05,
+        0.0,
+        -180.0,
+        0.0,
+        -0.049996666666667,
+        89.99,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000101,
+        180.0,
+        89.99
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": 0.07592131341993967,
+            "minimum": 0.0,
+            "maximum": 1.7157574892044067,
+            "stddev": 0.1295447300927963,
+            "valid_percent": 30.17463773419204
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.7157574892044067,
+            "buckets": [
+              113657,
+              11630,
+              4156,
+              1647,
+              532,
+              186,
+              56,
+              42,
+              28,
+              4
+            ]
+          }
+        }
+      ],
+      "file:size": 18100550,
+      "file:checksum": "d5011083bce07d1d4492f7aa0372ef45161d37"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 100034,
+      "file:checksum": "1220fd378e8da4db2bade8dd9a37db2db5c4a404d043daa9e821848930180ee4cab7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 256696,
+      "file:checksum": "1220d1da4dd938e7eb63dd87d0317f7f40f8325bf92efd15a8334e4c128e9cdcfbca"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

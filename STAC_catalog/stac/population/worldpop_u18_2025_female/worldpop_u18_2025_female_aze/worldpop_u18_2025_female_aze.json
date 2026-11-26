@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_aze",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.764165767609995,
+          41.911666835019986
+        ],
+        [
+          50.92333240964,
+          41.911666835019986
+        ],
+        [
+          50.92333240964,
+          38.392500182429984
+        ],
+        [
+          44.764165767609995,
+          38.392500182429984
+        ],
+        [
+          44.764165767609995,
+          41.911666835019986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    44.764165767609995,
+    38.392500182429984,
+    50.92333240964,
+    41.911666835019986
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Azerbaijan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AZE",
+    "GCHD:country": "Azerbaijan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            44.764165767609995,
+            38.392500182429984
+          ],
+          [
+            50.92333240964,
+            38.392500182429984
+          ],
+          [
+            50.92333240964,
+            41.911666835019986
+          ],
+          [
+            44.764165767609995,
+            41.911666835019986
+          ],
+          [
+            44.764165767609995,
+            38.392500182429984
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      44.764165767609995,
+      38.392500182429984,
+      50.92333240964,
+      41.911666835019986
+    ],
+    "proj:shape": [
+      4223,
+      7391
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      44.764165767609995,
+      0.0,
+      -0.00083333333,
+      41.911666835019986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/aze_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Azerbaijan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 13516943,
+      "file:checksum": "d501101630d1b79719efb8eca4c24c5d11fee8",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.2622387449521508,
+            "minimum": 0.0,
+            "maximum": 17.99138832092285,
+            "stddev": 0.6926301308151901,
+            "valid_percent": 20.757452538395903
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 17.99138832092285,
+            "buckets": [
+              121373,
+              2089,
+              663,
+              228,
+              99,
+              58,
+              21,
+              14,
+              8,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5962,
+      "file:checksum": "12209f483046830c285427cbcdebdbfe6c6117ce46a8eb47bbd1b6509aa848b7fe38"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5962,
+      "file:checksum": "12203eb941eded06a4bab57cffffbd76567f4deb52ca8116d3555f1b40e2f9076d49"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

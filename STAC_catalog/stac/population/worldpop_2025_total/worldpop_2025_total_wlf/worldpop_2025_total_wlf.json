@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_wlf",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -178.18166667394001,
+          -13.183332944600018
+        ],
+        [
+          -176.12416668217003,
+          -13.183332944600018
+        ],
+        [
+          -176.12416668217003,
+          -14.362499606550017
+        ],
+        [
+          -178.18166667394001,
+          -14.362499606550017
+        ],
+        [
+          -178.18166667394001,
+          -13.183332944600018
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -178.18166667394001,
+    -14.362499606550017,
+    -176.12416668217003,
+    -13.183332944600018
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Wallis and Futuna",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "WLF",
+    "GCHD:country": "Wallis and Futuna",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -178.18166667394001,
+            -14.362499606550017
+          ],
+          [
+            -176.12416668217003,
+            -14.362499606550017
+          ],
+          [
+            -176.12416668217003,
+            -13.183332944600018
+          ],
+          [
+            -178.18166667394001,
+            -13.183332944600018
+          ],
+          [
+            -178.18166667394001,
+            -14.362499606550017
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -178.18166667394001,
+      -14.362499606550017,
+      -176.12416668217003,
+      -13.183332944600018
+    ],
+    "proj:shape": [
+      1415,
+      2469
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -178.18166667394001,
+      0.0,
+      -0.00083333333,
+      -13.183332944600018,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/wlf_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Wallis and Futuna (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 146571,
+      "file:checksum": "d50110a9e3ee2a690b328f6be8aefb19df8e06",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.3229244562080185,
+            "minimum": 0.053296998143196106,
+            "maximum": 3.73240065574646,
+            "stddev": 0.9536085439040771,
+            "valid_percent": 0.19814070485519591
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.053296998143196106,
+            "max": 3.73240065574646,
+            "buckets": [
+              304,
+              145,
+              116,
+              150,
+              155,
+              119,
+              57,
+              54,
+              57,
+              34
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 685,
+      "file:checksum": "12200193e6a6bd9d44090010f97c053dfef76d9cd3937b7d325696315db51605fec0"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 554,
+      "file:checksum": "1220a075f12545efe888427a74bfc4bd3ee02fc6520afb4fd4da6b7da97f44675088"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

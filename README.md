@@ -32,7 +32,7 @@ GCHD/
 ├── multi_hazard_indicators/ # Multi-Hazard Count (MHC) and Multi-Hazard Intensity (MHI)
 ├── exposure_analysis/       # Population and boundary data for exposure computation
 ├── web_app/                 # Interactive dashboard (Python Dash + Google Earth Engine)
-├── STAC_catalog/            # STAC catalog of the hazard and U18 population layers (COGs) and its STAC Browser
+├── STAC_catalog/            # STAC catalog (hazards, MHI, population, boundaries, exposure tables) and its STAC Browser
 └── index.html               # Public landing page
 ```
 
@@ -76,12 +76,12 @@ Source code is in [`web_app/`](web_app/).
 
 ## Data Catalog (STAC)
 
-All hazard layers, and the WorldPop 2025 under-18 population grids (female, male and total, 100 m, one file per country), are published as Cloud-Optimized GeoTIFFs in a [STAC](https://stacspec.org/) catalog, with metadata, previews and direct download links:
+All hazard layers, the Multi-Hazard Intensity (MHI) index, the WorldPop 2025 population grids (under 18 and all ages, female, male and total, 100 m), the administrative boundaries (ADM0/1/2) and the hazard-exposure statistics per administrative unit are published in a [STAC](https://stacspec.org/) catalog that conforms to the [Portolan](https://portolan-sdi.org) profile, with metadata, previews, direct download links, and a `README.md` and `AGENTS.md` for every collection:
 
 - **Browse:** [unicef.github.io/GCHD/STAC_catalog/browser/](https://unicef.github.io/GCHD/STAC_catalog/browser/)
 - **STAC root:** [`catalog.json`](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json)
 
-The COGs can be streamed straight into GIS tools or code without downloading whole files. See [`STAC_catalog/`](STAC_catalog/) for how the catalog is built and for Python examples, including how to read the ~90 m river flood tiles over an area of interest.
+Rasters are Cloud-Optimized GeoTIFFs and tables are (Geo)Parquet, so both can be streamed straight into GIS tools, DuckDB or code without downloading whole files. See [`STAC_catalog/`](STAC_catalog/) for how the catalog is built and for examples, including how to read the ~90 m river flood tiles over an area of interest and how to query the exposure tables.
 
 ---
 

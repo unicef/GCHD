@@ -1,0 +1,108 @@
+{
+  "type": "Catalog",
+  "id": "hazards",
+  "stac_version": "1.1.0",
+  "description": "Global gridded hazard layers, grouped by hazard theme. Each layer is one collection whose `data` asset is a Cloud-Optimized GeoTIFF (the river flood layer is 264 tiles with a VRT mosaic).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./flood/catalog.json",
+      "type": "application/json",
+      "title": "Floods"
+    },
+    {
+      "rel": "child",
+      "href": "./tropical_storm/catalog.json",
+      "type": "application/json",
+      "title": "Tropical Storm"
+    },
+    {
+      "rel": "child",
+      "href": "./drought/catalog.json",
+      "type": "application/json",
+      "title": "Droughts"
+    },
+    {
+      "rel": "child",
+      "href": "./heatwave/catalog.json",
+      "type": "application/json",
+      "title": "Heatwaves and Extreme Heat"
+    },
+    {
+      "rel": "child",
+      "href": "./fire/catalog.json",
+      "type": "application/json",
+      "title": "Fire"
+    },
+    {
+      "rel": "child",
+      "href": "./sand_dust_storm/catalog.json",
+      "type": "application/json",
+      "title": "Sand and Dust Storm"
+    },
+    {
+      "rel": "child",
+      "href": "./air_pollution/catalog.json",
+      "type": "application/json",
+      "title": "Air Pollution"
+    },
+    {
+      "rel": "child",
+      "href": "./malaria/catalog.json",
+      "type": "application/json",
+      "title": "Vector Borne Diseases (Malaria)"
+    },
+    {
+      "rel": "child",
+      "href": "./landslide/catalog.json",
+      "type": "application/json",
+      "title": "Landslides"
+    },
+    {
+      "rel": "child",
+      "href": "./earthquake/catalog.json",
+      "type": "application/json",
+      "title": "Earthquake"
+    },
+    {
+      "rel": "child",
+      "href": "./conflict/catalog.json",
+      "type": "application/json",
+      "title": "Complex Emergencies (Conflict)"
+    },
+    {
+      "rel": "child",
+      "href": "./volcano/catalog.json",
+      "type": "application/json",
+      "title": "Volcanoes"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "title": "Hazards",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

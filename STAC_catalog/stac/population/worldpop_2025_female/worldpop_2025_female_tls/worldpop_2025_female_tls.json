@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_tls",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          124.04166545049999,
+          -8.126666298160016
+        ],
+        [
+          127.34249877062999,
+          -8.126666298160016
+        ],
+        [
+          127.34249877062999,
+          -9.504166292650016
+        ],
+        [
+          124.04166545049999,
+          -9.504166292650016
+        ],
+        [
+          124.04166545049999,
+          -8.126666298160016
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    124.04166545049999,
+    -9.504166292650016,
+    127.34249877062999,
+    -8.126666298160016
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Timor-Leste",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "TLS",
+    "GCHD:country": "Timor-Leste",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            124.04166545049999,
+            -9.504166292650016
+          ],
+          [
+            127.34249877062999,
+            -9.504166292650016
+          ],
+          [
+            127.34249877062999,
+            -8.126666298160016
+          ],
+          [
+            124.04166545049999,
+            -8.126666298160016
+          ],
+          [
+            124.04166545049999,
+            -9.504166292650016
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      124.04166545049999,
+      -9.504166292650016,
+      127.34249877062999,
+      -8.126666298160016
+    ],
+    "proj:shape": [
+      1653,
+      3961
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      124.04166545049999,
+      0.0,
+      -0.00083333333,
+      -8.126666298160016,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/tls_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Timor-Leste (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3093456,
+      "file:checksum": "d501105ecaeaa593c863264de4ffe05704933d",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.2250965765359374,
+            "minimum": 0.0,
+            "maximum": 63.6636962890625,
+            "stddev": 2.7992478002761962,
+            "valid_percent": 12.898154570677569
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 63.6636962890625,
+            "buckets": [
+              55582,
+              622,
+              96,
+              47,
+              31,
+              27,
+              49,
+              48,
+              22,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5183,
+      "file:checksum": "1220c1264a728d2d33487e2e01bb201da454af157310bcf747c3b7aeba756cb61125"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4436,
+      "file:checksum": "12208e1ad345014957007acc7eb5ed028170cd842c2190d41c933a6744adb38219aa"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

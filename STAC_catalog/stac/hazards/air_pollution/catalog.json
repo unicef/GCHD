@@ -1,0 +1,43 @@
+{
+  "type": "Catalog",
+  "id": "air_pollution",
+  "stac_version": "1.1.0",
+  "description": "Air Pollution hazard layers of the Global Child Hazard Database. GLIDE code: AP.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./air_pollution_pm25_2012-2022/collection.json",
+      "type": "application/json",
+      "title": "PM 2.5"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hazards"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "GCHD:glide_code": "AP",
+  "title": "Air Pollution",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

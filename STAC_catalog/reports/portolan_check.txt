@@ -1,0 +1,598 @@
+→ Warnings (297):
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: group the children under thematic subcatalogs, each with its own catalog.json, and relink this object to those subcatalogs
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+    Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
+✓ Catalog conforms (1752 file(s) checked)
+    290 fixable by `portolan check --fix`
+    34 need a decision (see Requires: lines)
+⚠ PTL-CAT-001 hazards/flood/river_flood_100yr_jrc_2024/collection.json: collection holds 264 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-CAT-001 population/worldpop_2025_female/collection.json: collection holds 237 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ago/worldpop_2025_female_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_arg/worldpop_2025_female_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_aus/worldpop_2025_female_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_bfa/worldpop_2025_female_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_bra/worldpop_2025_female_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_can/worldpop_2025_female_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_chl/worldpop_2025_female_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_chn/worldpop_2025_female_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_cod/worldpop_2025_female_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_col/worldpop_2025_female_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_deu/worldpop_2025_female_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_dza/worldpop_2025_female_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_esp/worldpop_2025_female_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_eth/worldpop_2025_female_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_fin/worldpop_2025_female_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_fra/worldpop_2025_female_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_gbr/worldpop_2025_female_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_idn/worldpop_2025_female_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ind/worldpop_2025_female_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_irn/worldpop_2025_female_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ita/worldpop_2025_female_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_jpn/worldpop_2025_female_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_kaz/worldpop_2025_female_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ken/worldpop_2025_female_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_kir/worldpop_2025_female_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_mdg/worldpop_2025_female_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_mex/worldpop_2025_female_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_moz/worldpop_2025_female_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_nga/worldpop_2025_female_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_nzl/worldpop_2025_female_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_pak/worldpop_2025_female_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_per/worldpop_2025_female_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_phl/worldpop_2025_female_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_pol/worldpop_2025_female_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_sau/worldpop_2025_female_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_sdn/worldpop_2025_female_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_swe/worldpop_2025_female_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_tha/worldpop_2025_female_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_tur/worldpop_2025_female_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_tza/worldpop_2025_female_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_uga/worldpop_2025_female_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ukr/worldpop_2025_female_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_usa/worldpop_2025_female_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_vnm/worldpop_2025_female_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_zaf/worldpop_2025_female_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_zmb/worldpop_2025_female_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_zwe/worldpop_2025_female_zwe.json: asset 'data' has no file:checksum
+⚠ PTL-CAT-001 population/worldpop_2025_male/collection.json: collection holds 237 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_ago/worldpop_2025_male_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_arg/worldpop_2025_male_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_aus/worldpop_2025_male_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_bfa/worldpop_2025_male_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_bra/worldpop_2025_male_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_can/worldpop_2025_male_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_chl/worldpop_2025_male_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_chn/worldpop_2025_male_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_cod/worldpop_2025_male_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_col/worldpop_2025_male_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_deu/worldpop_2025_male_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_dza/worldpop_2025_male_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_esp/worldpop_2025_male_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_eth/worldpop_2025_male_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_fin/worldpop_2025_male_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_fra/worldpop_2025_male_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_gbr/worldpop_2025_male_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_idn/worldpop_2025_male_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_ind/worldpop_2025_male_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_irn/worldpop_2025_male_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_ita/worldpop_2025_male_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_jpn/worldpop_2025_male_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_kaz/worldpop_2025_male_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_ken/worldpop_2025_male_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_kir/worldpop_2025_male_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_mdg/worldpop_2025_male_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_mex/worldpop_2025_male_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_moz/worldpop_2025_male_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_nga/worldpop_2025_male_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_nzl/worldpop_2025_male_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_pak/worldpop_2025_male_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_per/worldpop_2025_male_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_phl/worldpop_2025_male_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_pol/worldpop_2025_male_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_sau/worldpop_2025_male_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_sdn/worldpop_2025_male_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_swe/worldpop_2025_male_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_tha/worldpop_2025_male_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_tur/worldpop_2025_male_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_tza/worldpop_2025_male_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_uga/worldpop_2025_male_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_ukr/worldpop_2025_male_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_usa/worldpop_2025_male_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_vnm/worldpop_2025_male_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_zaf/worldpop_2025_male_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_zmb/worldpop_2025_male_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_male/worldpop_2025_male_zwe/worldpop_2025_male_zwe.json: asset 'data' has no file:checksum
+⚠ PTL-CAT-001 population/worldpop_2025_total/collection.json: collection holds 240 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_ago/worldpop_2025_total_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_arg/worldpop_2025_total_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_aus/worldpop_2025_total_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_bfa/worldpop_2025_total_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_bra/worldpop_2025_total_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_can/worldpop_2025_total_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_chl/worldpop_2025_total_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_chn/worldpop_2025_total_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_cod/worldpop_2025_total_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_col/worldpop_2025_total_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_deu/worldpop_2025_total_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_dza/worldpop_2025_total_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_esp/worldpop_2025_total_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_eth/worldpop_2025_total_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_fin/worldpop_2025_total_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_fji/worldpop_2025_total_fji.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_fra/worldpop_2025_total_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_gbr/worldpop_2025_total_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_idn/worldpop_2025_total_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_ind/worldpop_2025_total_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_irn/worldpop_2025_total_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_ita/worldpop_2025_total_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_jpn/worldpop_2025_total_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_kaz/worldpop_2025_total_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_ken/worldpop_2025_total_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_kir/worldpop_2025_total_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_mdg/worldpop_2025_total_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_mex/worldpop_2025_total_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_moz/worldpop_2025_total_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_nga/worldpop_2025_total_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_nzl/worldpop_2025_total_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_pak/worldpop_2025_total_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_per/worldpop_2025_total_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_phl/worldpop_2025_total_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_pol/worldpop_2025_total_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_rus/worldpop_2025_total_rus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_sau/worldpop_2025_total_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_sdn/worldpop_2025_total_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_swe/worldpop_2025_total_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_tha/worldpop_2025_total_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_tur/worldpop_2025_total_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_tza/worldpop_2025_total_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_uga/worldpop_2025_total_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_ukr/worldpop_2025_total_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_usa/worldpop_2025_total_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_vnm/worldpop_2025_total_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_zaf/worldpop_2025_total_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_zmb/worldpop_2025_total_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_2025_total/worldpop_2025_total_zwe/worldpop_2025_total_zwe.json: asset 'data' has no file:checksum
+⚠ PTL-CAT-001 population/worldpop_u18_2025_female/collection.json: collection holds 240 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_ago/worldpop_u18_2025_female_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_arg/worldpop_u18_2025_female_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_aus/worldpop_u18_2025_female_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_bfa/worldpop_u18_2025_female_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_bra/worldpop_u18_2025_female_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_can/worldpop_u18_2025_female_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_chl/worldpop_u18_2025_female_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_chn/worldpop_u18_2025_female_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_cod/worldpop_u18_2025_female_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_col/worldpop_u18_2025_female_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_deu/worldpop_u18_2025_female_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_dza/worldpop_u18_2025_female_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_esp/worldpop_u18_2025_female_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_eth/worldpop_u18_2025_female_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_fin/worldpop_u18_2025_female_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_fji/worldpop_u18_2025_female_fji.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_fra/worldpop_u18_2025_female_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_gbr/worldpop_u18_2025_female_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_idn/worldpop_u18_2025_female_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_ind/worldpop_u18_2025_female_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_irn/worldpop_u18_2025_female_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_ita/worldpop_u18_2025_female_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_jpn/worldpop_u18_2025_female_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_kaz/worldpop_u18_2025_female_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_ken/worldpop_u18_2025_female_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_kir/worldpop_u18_2025_female_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_mdg/worldpop_u18_2025_female_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_mex/worldpop_u18_2025_female_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_moz/worldpop_u18_2025_female_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_nga/worldpop_u18_2025_female_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_nzl/worldpop_u18_2025_female_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_pak/worldpop_u18_2025_female_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_per/worldpop_u18_2025_female_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_phl/worldpop_u18_2025_female_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_pol/worldpop_u18_2025_female_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_rus/worldpop_u18_2025_female_rus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_sau/worldpop_u18_2025_female_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_sdn/worldpop_u18_2025_female_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_swe/worldpop_u18_2025_female_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_tha/worldpop_u18_2025_female_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_tur/worldpop_u18_2025_female_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_tza/worldpop_u18_2025_female_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_uga/worldpop_u18_2025_female_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_ukr/worldpop_u18_2025_female_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_usa/worldpop_u18_2025_female_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_vnm/worldpop_u18_2025_female_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_zaf/worldpop_u18_2025_female_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_zmb/worldpop_u18_2025_female_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_female/worldpop_u18_2025_female_zwe/worldpop_u18_2025_female_zwe.json: asset 'data' has no file:checksum
+⚠ PTL-CAT-001 population/worldpop_u18_2025_male/collection.json: collection holds 240 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_ago/worldpop_u18_2025_male_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_arg/worldpop_u18_2025_male_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_aus/worldpop_u18_2025_male_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_bfa/worldpop_u18_2025_male_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_bra/worldpop_u18_2025_male_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_can/worldpop_u18_2025_male_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_chl/worldpop_u18_2025_male_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_chn/worldpop_u18_2025_male_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_cod/worldpop_u18_2025_male_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_col/worldpop_u18_2025_male_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_deu/worldpop_u18_2025_male_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_dza/worldpop_u18_2025_male_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_esp/worldpop_u18_2025_male_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_eth/worldpop_u18_2025_male_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_fin/worldpop_u18_2025_male_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_fji/worldpop_u18_2025_male_fji.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_fra/worldpop_u18_2025_male_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_gbr/worldpop_u18_2025_male_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_idn/worldpop_u18_2025_male_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_ind/worldpop_u18_2025_male_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_irn/worldpop_u18_2025_male_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_ita/worldpop_u18_2025_male_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_jpn/worldpop_u18_2025_male_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_kaz/worldpop_u18_2025_male_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_ken/worldpop_u18_2025_male_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_kir/worldpop_u18_2025_male_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_mdg/worldpop_u18_2025_male_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_mex/worldpop_u18_2025_male_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_moz/worldpop_u18_2025_male_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_nga/worldpop_u18_2025_male_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_nzl/worldpop_u18_2025_male_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_pak/worldpop_u18_2025_male_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_per/worldpop_u18_2025_male_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_phl/worldpop_u18_2025_male_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_pol/worldpop_u18_2025_male_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_rus/worldpop_u18_2025_male_rus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_sau/worldpop_u18_2025_male_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_sdn/worldpop_u18_2025_male_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_swe/worldpop_u18_2025_male_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_tha/worldpop_u18_2025_male_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_tur/worldpop_u18_2025_male_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_tza/worldpop_u18_2025_male_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_uga/worldpop_u18_2025_male_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_ukr/worldpop_u18_2025_male_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_usa/worldpop_u18_2025_male_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_vnm/worldpop_u18_2025_male_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_zaf/worldpop_u18_2025_male_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_zmb/worldpop_u18_2025_male_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_male/worldpop_u18_2025_male_zwe/worldpop_u18_2025_male_zwe.json: asset 'data' has no file:checksum
+⚠ PTL-CAT-001 population/worldpop_u18_2025_total/collection.json: collection holds 240 children with no subcatalog grouping them; a flat list this long is hard to browse
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_ago/worldpop_u18_2025_total_ago.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_arg/worldpop_u18_2025_total_arg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_aus/worldpop_u18_2025_total_aus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_bfa/worldpop_u18_2025_total_bfa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_bra/worldpop_u18_2025_total_bra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_can/worldpop_u18_2025_total_can.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_chl/worldpop_u18_2025_total_chl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_chn/worldpop_u18_2025_total_chn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_cod/worldpop_u18_2025_total_cod.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_col/worldpop_u18_2025_total_col.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_deu/worldpop_u18_2025_total_deu.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_dza/worldpop_u18_2025_total_dza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_esp/worldpop_u18_2025_total_esp.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_eth/worldpop_u18_2025_total_eth.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_fin/worldpop_u18_2025_total_fin.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_fji/worldpop_u18_2025_total_fji.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_fra/worldpop_u18_2025_total_fra.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_gbr/worldpop_u18_2025_total_gbr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_idn/worldpop_u18_2025_total_idn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_ind/worldpop_u18_2025_total_ind.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_irn/worldpop_u18_2025_total_irn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_ita/worldpop_u18_2025_total_ita.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_jpn/worldpop_u18_2025_total_jpn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_kaz/worldpop_u18_2025_total_kaz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_ken/worldpop_u18_2025_total_ken.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_kir/worldpop_u18_2025_total_kir.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_mdg/worldpop_u18_2025_total_mdg.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_mex/worldpop_u18_2025_total_mex.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_moz/worldpop_u18_2025_total_moz.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_nga/worldpop_u18_2025_total_nga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_nzl/worldpop_u18_2025_total_nzl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_pak/worldpop_u18_2025_total_pak.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_per/worldpop_u18_2025_total_per.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_phl/worldpop_u18_2025_total_phl.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_pol/worldpop_u18_2025_total_pol.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_rus/worldpop_u18_2025_total_rus.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_sau/worldpop_u18_2025_total_sau.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_sdn/worldpop_u18_2025_total_sdn.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_swe/worldpop_u18_2025_total_swe.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_tha/worldpop_u18_2025_total_tha.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_tur/worldpop_u18_2025_total_tur.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_tza/worldpop_u18_2025_total_tza.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_uga/worldpop_u18_2025_total_uga.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_ukr/worldpop_u18_2025_total_ukr.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_usa/worldpop_u18_2025_total_usa.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_vnm/worldpop_u18_2025_total_vnm.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_zaf/worldpop_u18_2025_total_zaf.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_zmb/worldpop_u18_2025_total_zmb.json: asset 'data' has no file:checksum
+⚠ PTL-AST-003 population/worldpop_u18_2025_total/worldpop_u18_2025_total_zwe/worldpop_u18_2025_total_zwe.json: asset 'data' has no file:checksum

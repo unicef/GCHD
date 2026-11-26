@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_cod",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          12.20166589786001,
+          5.392500314429995
+        ],
+        [
+          31.31416582141001,
+          5.392500314429995
+        ],
+        [
+          31.31416582141001,
+          -13.458332943500004
+        ],
+        [
+          12.20166589786001,
+          -13.458332943500004
+        ],
+        [
+          12.20166589786001,
+          5.392500314429995
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    12.20166589786001,
+    -13.458332943500004,
+    31.31416582141001,
+    5.392500314429995
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Democratic Republic of the Congo",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "COD",
+    "GCHD:country": "Democratic Republic of the Congo",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            12.20166589786001,
+            -13.458332943500004
+          ],
+          [
+            31.31416582141001,
+            -13.458332943500004
+          ],
+          [
+            31.31416582141001,
+            5.392500314429995
+          ],
+          [
+            12.20166589786001,
+            5.392500314429995
+          ],
+          [
+            12.20166589786001,
+            -13.458332943500004
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      12.20166589786001,
+      -13.458332943500004,
+      31.31416582141001,
+      5.392500314429995
+    ],
+    "proj:shape": [
+      22621,
+      22935
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      12.20166589786001,
+      0.0,
+      -0.00083333333,
+      5.392500314429995,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/cod_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Democratic Republic of the Congo (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 142355404,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.5109057961400343,
+            "minimum": 0.006457999814301729,
+            "maximum": 156.45460510253906,
+            "stddev": 3.085854527760104,
+            "valid_percent": 27.328763149752476
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.006457999814301729,
+            "max": 156.45460510253906,
+            "buckets": [
+              281677,
+              493,
+              215,
+              98,
+              53,
+              36,
+              29,
+              17,
+              16,
+              11
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 16246,
+      "file:checksum": "122002ed3d5497de03bd0a6d3ce7423bf66094328b715667ac6dcd612ee45946186a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 15859,
+      "file:checksum": "1220a49cf52e604423df732b6f3afcf07d670cf6de9158983112ca78b969d0a09263"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

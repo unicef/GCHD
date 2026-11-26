@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_lbr",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -11.491667340700003,
+          8.553333635119987
+        ],
+        [
+          -7.369167357190003,
+          8.553333635119987
+        ],
+        [
+          -7.369167357190003,
+          4.354166985249988
+        ],
+        [
+          -11.491667340700003,
+          4.354166985249988
+        ],
+        [
+          -11.491667340700003,
+          8.553333635119987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -11.491667340700003,
+    4.354166985249988,
+    -7.369167357190003,
+    8.553333635119987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Liberia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "LBR",
+    "GCHD:country": "Liberia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -11.491667340700003,
+            4.354166985249988
+          ],
+          [
+            -7.369167357190003,
+            4.354166985249988
+          ],
+          [
+            -7.369167357190003,
+            8.553333635119987
+          ],
+          [
+            -11.491667340700003,
+            8.553333635119987
+          ],
+          [
+            -11.491667340700003,
+            4.354166985249988
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -11.491667340700003,
+      4.354166985249988,
+      -7.369167357190003,
+      8.553333635119987
+    ],
+    "proj:shape": [
+      5039,
+      4947
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -11.491667340700003,
+      0.0,
+      -0.00083333333,
+      8.553333635119987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/lbr_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Liberia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 8824610,
+      "file:checksum": "d50110ca4a79803b21e60e70e75a94fea4f38f",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.4609651752015707,
+            "minimum": 0.0,
+            "maximum": 100.59532928466797,
+            "stddev": 4.1097346977592135,
+            "valid_percent": 13.400165413767395
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 100.59532928466797,
+            "buckets": [
+              135632,
+              1077,
+              540,
+              348,
+              188,
+              151,
+              68,
+              32,
+              3,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13654,
+      "file:checksum": "12204694e0a5667dc5d16fa22f08fa742c32bd7a2bda592b41367084f76cb6e1bde6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 13604,
+      "file:checksum": "122041563ffb6cd96d1f894040a5261d022a93b908993559ca40c21ece8f62f1a014"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

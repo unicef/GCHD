@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_ner",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.16166594601999726,
+          23.515000241939987
+        ],
+        [
+          15.999165882669997,
+          23.515000241939987
+        ],
+        [
+          15.999165882669997,
+          11.694166955889987
+        ],
+        [
+          0.16166594601999726,
+          11.694166955889987
+        ],
+        [
+          0.16166594601999726,
+          23.515000241939987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    0.16166594601999726,
+    11.694166955889987,
+    15.999165882669997,
+    23.515000241939987
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Niger",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NER",
+    "GCHD:country": "Niger",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.16166594601999726,
+            11.694166955889987
+          ],
+          [
+            15.999165882669997,
+            11.694166955889987
+          ],
+          [
+            15.999165882669997,
+            23.515000241939987
+          ],
+          [
+            0.16166594601999726,
+            23.515000241939987
+          ],
+          [
+            0.16166594601999726,
+            11.694166955889987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      0.16166594601999726,
+      11.694166955889987,
+      15.999165882669997,
+      23.515000241939987
+    ],
+    "proj:shape": [
+      14185,
+      19005
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      0.16166594601999726,
+      0.0,
+      -0.00083333333,
+      23.515000241939987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/ner_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Niger (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 66366035,
+      "file:checksum": "d50110b01a964f70d1d0764a04f4c6cd0a3c72",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.7436428854200459,
+            "minimum": 0.0,
+            "maximum": 112.69303894042969,
+            "stddev": 1.4579547354506353,
+            "valid_percent": 23.21703941993464
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 112.69303894042969,
+            "buckets": [
+              181531,
+              198,
+              73,
+              28,
+              34,
+              3,
+              4,
+              1,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10523,
+      "file:checksum": "1220cdc0a8a3e68d66cb3e6abc6d9f7db4f65995d7d649119a977ba171f8aecd9592"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10523,
+      "file:checksum": "1220b0987f6c926c62dd9d8b88eee0bc3b21614748d7379945ed272d7c845fb1d1d2"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

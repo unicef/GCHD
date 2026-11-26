@@ -1,0 +1,54 @@
+{
+  "type": "Catalog",
+  "id": "exposure",
+  "stac_version": "1.1.0",
+  "description": "Population and child exposure to each hazard per administrative unit (ADM2, with ADM1 and ADM0 roll-ups), from the GCHD exposure pipeline. Join to the boundaries on the unit codes.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./adm2_hazard/collection.json",
+      "type": "application/json",
+      "title": "Hazard exposure by district (ADM2), per hazard"
+    },
+    {
+      "rel": "child",
+      "href": "./adm1_hazard/collection.json",
+      "type": "application/json",
+      "title": "Hazard exposure by ADM1, per hazard (roll-up)"
+    },
+    {
+      "rel": "child",
+      "href": "./adm0_hazard/collection.json",
+      "type": "application/json",
+      "title": "Hazard exposure by country (ADM0), per hazard (roll-up)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "title": "Hazard exposure statistics",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

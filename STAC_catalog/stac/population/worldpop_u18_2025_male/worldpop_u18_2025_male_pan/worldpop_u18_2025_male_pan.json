@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_pan",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -83.05333372112,
+          9.646666964079985
+        ],
+        [
+          -77.1583337447,
+          9.646666964079985
+        ],
+        [
+          -77.1583337447,
+          7.203333640519985
+        ],
+        [
+          -83.05333372112,
+          7.203333640519985
+        ],
+        [
+          -83.05333372112,
+          9.646666964079985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -83.05333372112,
+    7.203333640519985,
+    -77.1583337447,
+    9.646666964079985
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Panama",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PAN",
+    "GCHD:country": "Panama",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -83.05333372112,
+            7.203333640519985
+          ],
+          [
+            -77.1583337447,
+            7.203333640519985
+          ],
+          [
+            -77.1583337447,
+            9.646666964079985
+          ],
+          [
+            -83.05333372112,
+            9.646666964079985
+          ],
+          [
+            -83.05333372112,
+            7.203333640519985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -83.05333372112,
+      7.203333640519985,
+      -77.1583337447,
+      9.646666964079985
+    ],
+    "proj:shape": [
+      2932,
+      7074
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -83.05333372112,
+      0.0,
+      -0.00083333333,
+      9.646666964079985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/pan_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Panama (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 9694191,
+      "file:checksum": "d501106ba47b60beb653420c19407ad32d4bf3",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.3288132464766803,
+            "minimum": 0.0,
+            "maximum": 32.59150314331055,
+            "stddev": 0.8792275286479254,
+            "valid_percent": 22.874770220588236
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 32.59150314331055,
+            "buckets": [
+              98413,
+              653,
+              293,
+              116,
+              38,
+              21,
+              10,
+              3,
+              2,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6250,
+      "file:checksum": "1220204eb5dc4e860875dc3c8224bfdd5bf036bd3d2b3e0b8105549afe0ecf96e6a3"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5384,
+      "file:checksum": "1220cd139e0764687356dc444ced826dde87768ebec29f0a7eae9afe088b75a1dadd"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

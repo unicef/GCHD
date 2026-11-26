@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_reu",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          55.2166657258,
+          -20.871666247180016
+        ],
+        [
+          55.836665723319996,
+          -20.871666247180016
+        ],
+        [
+          55.836665723319996,
+          -21.389166245110015
+        ],
+        [
+          55.2166657258,
+          -21.389166245110015
+        ],
+        [
+          55.2166657258,
+          -20.871666247180016
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    55.2166657258,
+    -21.389166245110015,
+    55.836665723319996,
+    -20.871666247180016
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Réunion",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "REU",
+    "GCHD:country": "Réunion",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            55.2166657258,
+            -21.389166245110015
+          ],
+          [
+            55.836665723319996,
+            -21.389166245110015
+          ],
+          [
+            55.836665723319996,
+            -20.871666247180016
+          ],
+          [
+            55.2166657258,
+            -20.871666247180016
+          ],
+          [
+            55.2166657258,
+            -21.389166245110015
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      55.2166657258,
+      -21.389166245110015,
+      55.836665723319996,
+      -20.871666247180016
+    ],
+    "proj:shape": [
+      621,
+      744
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      55.2166657258,
+      0.0,
+      -0.00083333333,
+      -20.871666247180016,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/reu_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Réunion (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 717280,
+      "file:checksum": "d5011066d315ddb6c4f12f4dc7b3822d27de01",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 7.375657564081085,
+            "minimum": 0.0,
+            "maximum": 250.63108825683594,
+            "stddev": 13.758863576031313,
+            "valid_percent": 25.83848458088757
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 250.63108825683594,
+            "buckets": [
+              108442,
+              9059,
+              1195,
+              386,
+              141,
+              91,
+              30,
+              19,
+              11,
+              6
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 14649,
+      "file:checksum": "1220c19e6c06779302f003f68ab31f2a06976268970fda8eb3a044ce9da055050913"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 13458,
+      "file:checksum": "122080a6439c300ece74091d959e29324ff08268646c18651d6c779e14780bbe0487"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_tkm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          52.44666573688,
+          42.79750016480999
+        ],
+        [
+          66.70666567984,
+          42.79750016480999
+        ],
+        [
+          66.70666567984,
+          35.12833352881999
+        ],
+        [
+          52.44666573688,
+          35.12833352881999
+        ],
+        [
+          52.44666573688,
+          42.79750016480999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    52.44666573688,
+    35.12833352881999,
+    66.70666567984,
+    42.79750016480999
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Turkmenistan",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "TKM",
+    "GCHD:country": "Turkmenistan",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            52.44666573688,
+            35.12833352881999
+          ],
+          [
+            66.70666567984,
+            35.12833352881999
+          ],
+          [
+            66.70666567984,
+            42.79750016480999
+          ],
+          [
+            52.44666573688,
+            42.79750016480999
+          ],
+          [
+            52.44666573688,
+            35.12833352881999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      52.44666573688,
+      35.12833352881999,
+      66.70666567984,
+      42.79750016480999
+    ],
+    "proj:shape": [
+      9203,
+      17112
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      52.44666573688,
+      0.0,
+      -0.00083333333,
+      42.79750016480999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/tkm_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Turkmenistan (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 17675707,
+      "file:checksum": "d50110d4b5018123ef865c2ca5ada89ca2074f",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.191498909883721,
+            "minimum": 0.0,
+            "maximum": 51.968772888183594,
+            "stddev": 2.7531170183292804,
+            "valid_percent": 6.858977994555354
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 51.968772888183594,
+            "buckets": [
+              37126,
+              998,
+              282,
+              133,
+              72,
+              34,
+              19,
+              16,
+              6,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 5749,
+      "file:checksum": "1220e95d42d24e96644fdab47ad358e44de3e3d1ac5df39ff7cface9d72dc4ba7b1e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5723,
+      "file:checksum": "12201a3e96bbe4a077dccef5749e42ecd8362230fc8cde20b797ba13321d6cef790b"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_mnp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          144.88999870044,
+          20.54666692047999
+        ],
+        [
+          145.84666536328,
+          20.54666692047999
+        ],
+        [
+          145.84666536328,
+          14.11000027955999
+        ],
+        [
+          144.88999870044,
+          14.11000027955999
+        ],
+        [
+          144.88999870044,
+          20.54666692047999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    144.88999870044,
+    14.11000027955999,
+    145.84666536328,
+    20.54666692047999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Northern Mariana Is. (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MNP",
+    "GCHD:country": "Northern Mariana Is. (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            144.88999870044,
+            14.11000027955999
+          ],
+          [
+            145.84666536328,
+            14.11000027955999
+          ],
+          [
+            145.84666536328,
+            20.54666692047999
+          ],
+          [
+            144.88999870044,
+            20.54666692047999
+          ],
+          [
+            144.88999870044,
+            14.11000027955999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      144.88999870044,
+      14.11000027955999,
+      145.84666536328,
+      20.54666692047999
+    ],
+    "proj:shape": [
+      7724,
+      1148
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      144.88999870044,
+      0.0,
+      -0.00083333333,
+      20.54666692047999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/mnp_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Northern Mariana Is. (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 429930,
+      "file:checksum": "d50110eff3ccfe3159179236bfeefb104ce1df",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.035657886590938,
+            "minimum": 0.0,
+            "maximum": 10.041388511657715,
+            "stddev": 1.7341124253393478,
+            "valid_percent": 0.3121170343137255
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 10.041388511657715,
+            "buckets": [
+              349,
+              56,
+              37,
+              15,
+              10,
+              6,
+              6,
+              3,
+              3,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 517,
+      "file:checksum": "122016c162f1eb2c1eef921c9d67d60312602542232be99bfb79e5e204d403a8061d"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 551,
+      "file:checksum": "1220d146e0620e2e215b93d625f3732a50b454c8e55015d3f6792aef1c5fc7fd236f"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

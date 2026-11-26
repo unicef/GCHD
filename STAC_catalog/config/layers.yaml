@@ -955,7 +955,7 @@ layers:
   - 0.0
   - 84950.0
   nodata_note: nan
-  source_provider: Smithsnian Institute- Global Volcanism Program
+  source_provider: Smithsonian Institution - Global Volcanism Program
   alternate_sources: null
   gee_asset: projects/unicef-ccri/assets/hazards/hol_volcanoes_1800_100kmbuff
   naming_convention: GVP_Hol_volcanoes_1800

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_bhs",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -80.47166706478001,
+          27.270833560249987
+        ],
+        [
+          -72.71250042915001,
+          27.270833560249987
+        ],
+        [
+          -72.71250042915001,
+          20.912500252349986
+        ],
+        [
+          -80.47166706478001,
+          20.912500252349986
+        ],
+        [
+          -80.47166706478001,
+          27.270833560249987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -80.47166706478001,
+    20.912500252349986,
+    -72.71250042915001,
+    27.270833560249987
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Bahamas",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BHS",
+    "GCHD:country": "Bahamas",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -80.47166706478001,
+            20.912500252349986
+          ],
+          [
+            -72.71250042915001,
+            20.912500252349986
+          ],
+          [
+            -72.71250042915001,
+            27.270833560249987
+          ],
+          [
+            -80.47166706478001,
+            27.270833560249987
+          ],
+          [
+            -80.47166706478001,
+            20.912500252349986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -80.47166706478001,
+      20.912500252349986,
+      -72.71250042915001,
+      27.270833560249987
+    ],
+    "proj:shape": [
+      7630,
+      9311
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -80.47166706478001,
+      0.0,
+      -0.00083333333,
+      27.270833560249987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/bhs_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Bahamas (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 3002398,
+      "file:checksum": "d5011032ef11e8b2e4c833d39ea7434fe7f2d0",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.4607365136403154,
+            "minimum": 0.0,
+            "maximum": 27.746997833251953,
+            "stddev": 1.7792635152413732,
+            "valid_percent": 0.8274042038690477
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 27.746997833251953,
+            "buckets": [
+              6907,
+              90,
+              30,
+              20,
+              25,
+              22,
+              13,
+              5,
+              2,
+              3
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3026,
+      "file:checksum": "1220f467cf0711cfa05c9485bfebaf90381e7a94f671e0f6502f398103f480586210"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1569,
+      "file:checksum": "122035d9b711a74f6eaaf7d963f47c32f8f364312c553add0b241fa686e6c93e7d12"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

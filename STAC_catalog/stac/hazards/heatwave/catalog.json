@@ -1,0 +1,61 @@
+{
+  "type": "Catalog",
+  "id": "heatwave",
+  "stac_version": "1.1.0",
+  "description": "Heatwaves and Extreme Heat hazard layers of the Global Child Hazard Database. GLIDE code: HW.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./heatwave_frequency_ecmwf_2014-2024/collection.json",
+      "type": "application/json",
+      "title": "Heatwave frequency"
+    },
+    {
+      "rel": "child",
+      "href": "./heatwave_duration_ecmwf_2014-2024/collection.json",
+      "type": "application/json",
+      "title": "Heatwave duration"
+    },
+    {
+      "rel": "child",
+      "href": "./heatwave_severity_ecmwf_2014-2024/collection.json",
+      "type": "application/json",
+      "title": "Heatwave severity"
+    },
+    {
+      "rel": "child",
+      "href": "./extreme_heat_ecmwf_2014-2024/collection.json",
+      "type": "application/json",
+      "title": "Extreme hot days"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Hazards"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "GCHD:glide_code": "HW",
+  "title": "Heatwaves and Extreme Heat",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

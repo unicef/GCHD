@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_geo",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          40.00749911997,
+          43.58583349498999
+        ],
+        [
+          46.73666575972,
+          43.58583349498999
+        ],
+        [
+          46.73666575972,
+          41.055000171779994
+        ],
+        [
+          40.00749911997,
+          41.055000171779994
+        ],
+        [
+          40.00749911997,
+          43.58583349498999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    40.00749911997,
+    41.055000171779994,
+    46.73666575972,
+    43.58583349498999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Georgia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GEO",
+    "GCHD:country": "Georgia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            40.00749911997,
+            41.055000171779994
+          ],
+          [
+            46.73666575972,
+            41.055000171779994
+          ],
+          [
+            46.73666575972,
+            43.58583349498999
+          ],
+          [
+            40.00749911997,
+            43.58583349498999
+          ],
+          [
+            40.00749911997,
+            41.055000171779994
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      40.00749911997,
+      41.055000171779994,
+      46.73666575972,
+      43.58583349498999
+    ],
+    "proj:shape": [
+      3037,
+      8075
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      40.00749911997,
+      0.0,
+      -0.00083333333,
+      43.58583349498999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/geo_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Georgia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 12143517,
+      "file:checksum": "d50110d79f5a3cee1b8ca7cb150fd4b039cca5",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.43164430150589683,
+            "minimum": 0.0,
+            "maximum": 33.53535842895508,
+            "stddev": 1.624248881320024,
+            "valid_percent": 19.757174951424872
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 33.53535842895508,
+            "buckets": [
+              76640,
+              639,
+              249,
+              150,
+              154,
+              133,
+              87,
+              25,
+              10,
+              6
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4506,
+      "file:checksum": "12206dc5903bceb7a53c5ad732b382e01607eaf627c04b31951e240abaf607924cad"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4173,
+      "file:checksum": "12203d6447b78192853e279b3fdbefee14b22b374307be246412bb88854f953fe7ff"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

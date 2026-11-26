@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_asm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -170.84583336995001,
+          -14.155832940710017
+        ],
+        [
+          -169.41833337566,
+          -14.155832940710017
+        ],
+        [
+          -169.41833337566,
+          -14.373332939840017
+        ],
+        [
+          -170.84583336995001,
+          -14.373332939840017
+        ],
+        [
+          -170.84583336995001,
+          -14.155832940710017
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -170.84583336995001,
+    -14.373332939840017,
+    -169.41833337566,
+    -14.155832940710017
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – American Samoa (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ASM",
+    "GCHD:country": "American Samoa (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -170.84583336995001,
+            -14.373332939840017
+          ],
+          [
+            -169.41833337566,
+            -14.373332939840017
+          ],
+          [
+            -169.41833337566,
+            -14.155832940710017
+          ],
+          [
+            -170.84583336995001,
+            -14.155832940710017
+          ],
+          [
+            -170.84583336995001,
+            -14.373332939840017
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -170.84583336995001,
+      -14.373332939840017,
+      -169.41833337566,
+      -14.155832940710017
+    ],
+    "proj:shape": [
+      261,
+      1713
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -170.84583336995001,
+      0.0,
+      -0.00083333333,
+      -14.155832940710017,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/asm_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – American Samoa (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 79692,
+      "file:checksum": "d5011004a60dcbd7307ad6628cf7dd97481852",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.275609662576687,
+            "minimum": 0.0,
+            "maximum": 13.246253967285156,
+            "stddev": 2.219330083825248,
+            "valid_percent": 2.5347083996815285
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 13.246253967285156,
+            "buckets": [
+              1933,
+              695,
+              628,
+              361,
+              257,
+              103,
+              67,
+              13,
+              5,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 817,
+      "file:checksum": "1220c5dc164a113917b77f7f214f4e40571b33f059c5e61a14fdf13828080657c8e6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 741,
+      "file:checksum": "12209b96420c538b2e99691ac1d4847c420e850049c2b0ca815fa07278f0f1787ab6"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

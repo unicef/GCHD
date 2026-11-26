@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_vir",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -65.08500045966001,
+          18.413333595679987
+        ],
+        [
+          -64.56500046174001,
+          18.413333595679987
+        ],
+        [
+          -64.56500046174001,
+          17.674166931969985
+        ],
+        [
+          -65.08500045966001,
+          17.674166931969985
+        ],
+        [
+          -65.08500045966001,
+          18.413333595679987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -65.08500045966001,
+    17.674166931969985,
+    -64.56500046174001,
+    18.413333595679987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – United States Virgin Islands (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VIR",
+    "GCHD:country": "United States Virgin Islands (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -65.08500045966001,
+            17.674166931969985
+          ],
+          [
+            -64.56500046174001,
+            17.674166931969985
+          ],
+          [
+            -64.56500046174001,
+            18.413333595679987
+          ],
+          [
+            -65.08500045966001,
+            18.413333595679987
+          ],
+          [
+            -65.08500045966001,
+            17.674166931969985
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -65.08500045966001,
+      17.674166931969985,
+      -64.56500046174001,
+      18.413333595679987
+    ],
+    "proj:shape": [
+      887,
+      624
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -65.08500045966001,
+      0.0,
+      -0.00083333333,
+      18.413333595679987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/vir_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – United States Virgin Islands (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 188368,
+      "file:checksum": "d501108f01dc54a0184612935a655527c3c206",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.9092192233544476,
+            "minimum": 0.0,
+            "maximum": 35.257911682128906,
+            "stddev": 4.1564885281616695,
+            "valid_percent": 5.248171595409476
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 35.257911682128906,
+            "buckets": [
+              21379,
+              4236,
+              1919,
+              695,
+              342,
+              215,
+              93,
+              81,
+              56,
+              32
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 3245,
+      "file:checksum": "122070194a6158838d6247463b5e8ca4e809ebccffbdda0440c8a6dd1488360a7d5e"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4922,
+      "file:checksum": "12202866202767114a7582e684716eb820cdb8cbfce0f3dc2289e073102ea5c6529b"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_mnp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          144.88999870044,
+          20.54666692047999
+        ],
+        [
+          145.84666536328,
+          20.54666692047999
+        ],
+        [
+          145.84666536328,
+          14.11000027955999
+        ],
+        [
+          144.88999870044,
+          14.11000027955999
+        ],
+        [
+          144.88999870044,
+          20.54666692047999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    144.88999870044,
+    14.11000027955999,
+    145.84666536328,
+    20.54666692047999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Northern Mariana Is. (USA)",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MNP",
+    "GCHD:country": "Northern Mariana Is. (USA)",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            144.88999870044,
+            14.11000027955999
+          ],
+          [
+            145.84666536328,
+            14.11000027955999
+          ],
+          [
+            145.84666536328,
+            20.54666692047999
+          ],
+          [
+            144.88999870044,
+            20.54666692047999
+          ],
+          [
+            144.88999870044,
+            14.11000027955999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      144.88999870044,
+      14.11000027955999,
+      145.84666536328,
+      20.54666692047999
+    ],
+    "proj:shape": [
+      7724,
+      1148
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      144.88999870044,
+      0.0,
+      -0.00083333333,
+      20.54666692047999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/mnp_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Northern Mariana Is. (USA) (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 429863,
+      "file:checksum": "d50110e4670a83da8af8e7a0cf12fe9a4f80ee",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.1688575666618737,
+            "minimum": 0.0,
+            "maximum": 11.686351776123047,
+            "stddev": 1.9830714701862926,
+            "valid_percent": 0.3121170343137255
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 11.686351776123047,
+            "buckets": [
+              351,
+              59,
+              32,
+              18,
+              8,
+              4,
+              8,
+              2,
+              3,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 519,
+      "file:checksum": "122098bfbd3dad9f541a271732f51b00b25ba2f5a3926e30eae16b8ea70f2ce8dc34"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 554,
+      "file:checksum": "122046a6ad6a9cb5489cf0d8ba9189e293c51f1c784164f8a1df5b887a231b4f82d4"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}

@@ -1,0 +1,54 @@
+{
+  "type": "Catalog",
+  "id": "boundaries",
+  "stac_version": "1.1.0",
+  "description": "Harmonised administrative boundaries (ADM0 countries and territories, ADM1, ADM2 districts) as GeoParquet, with PMTiles vector tiles for maps. These are the units of the exposure tables.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "child",
+      "href": "./adm0/collection.json",
+      "type": "application/json",
+      "title": "Administrative boundaries - ADM0 (countries and territories)"
+    },
+    {
+      "rel": "child",
+      "href": "./adm1/collection.json",
+      "type": "application/json",
+      "title": "Administrative boundaries - ADM1"
+    },
+    {
+      "rel": "child",
+      "href": "./adm2/collection.json",
+      "type": "application/json",
+      "title": "Administrative boundaries - ADM2 (districts)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "title": "Administrative boundaries",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json"
+  ]
+}

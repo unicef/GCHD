@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_mlt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          14.183332556599996,
+          36.082500191669986
+        ],
+        [
+          14.576665888359996,
+          36.082500191669986
+        ],
+        [
+          14.576665888359996,
+          35.78666685951998
+        ],
+        [
+          14.183332556599996,
+          35.78666685951998
+        ],
+        [
+          14.183332556599996,
+          36.082500191669986
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    14.183332556599996,
+    35.78666685951998,
+    14.576665888359996,
+    36.082500191669986
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Malta",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MLT",
+    "GCHD:country": "Malta",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            14.183332556599996,
+            35.78666685951998
+          ],
+          [
+            14.576665888359996,
+            35.78666685951998
+          ],
+          [
+            14.576665888359996,
+            36.082500191669986
+          ],
+          [
+            14.183332556599996,
+            36.082500191669986
+          ],
+          [
+            14.183332556599996,
+            35.78666685951998
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      14.183332556599996,
+      35.78666685951998,
+      14.576665888359996,
+      36.082500191669986
+    ],
+    "proj:shape": [
+      355,
+      472
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      14.183332556599996,
+      0.0,
+      -0.00083333333,
+      36.082500191669986,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/mlt_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Malta (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 162522,
+      "file:checksum": "d5011010a32d725ac2b62f4e1f2a5edb05a7a3",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 6.081380177997297,
+            "minimum": 0.0,
+            "maximum": 83.15253448486328,
+            "stddev": 10.20490767374471,
+            "valid_percent": 25.615898782525665
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 83.15253448486328,
+            "buckets": [
+              34488,
+              3695,
+              1911,
+              1140,
+              815,
+              551,
+              151,
+              94,
+              43,
+              34
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 8699,
+      "file:checksum": "1220a28290abcdbc8e6cb145c715c0503c90a22276e7c2c4b4882690508d06270be5"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 7873,
+      "file:checksum": "1220debb5e840bb0cda5d00c30892aa6377d1d6f86c536d64598cc140a3c49bea5c4"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_dom",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -72.00666709864001,
+          19.93166692293999
+        ],
+        [
+          -68.32333378004,
+          19.93166692293999
+        ],
+        [
+          -68.32333378004,
+          17.47083359944999
+        ],
+        [
+          -72.00666709864001,
+          17.47083359944999
+        ],
+        [
+          -72.00666709864001,
+          19.93166692293999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -72.00666709864001,
+    17.47083359944999,
+    -68.32333378004,
+    19.93166692293999
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Dominican Republic",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "DOM",
+    "GCHD:country": "Dominican Republic",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -72.00666709864001,
+            17.47083359944999
+          ],
+          [
+            -68.32333378004,
+            17.47083359944999
+          ],
+          [
+            -68.32333378004,
+            19.93166692293999
+          ],
+          [
+            -72.00666709864001,
+            19.93166692293999
+          ],
+          [
+            -72.00666709864001,
+            17.47083359944999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -72.00666709864001,
+      17.47083359944999,
+      -68.32333378004,
+      19.93166692293999
+    ],
+    "proj:shape": [
+      2953,
+      4420
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -72.00666709864001,
+      0.0,
+      -0.00083333333,
+      19.93166692293999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/dom_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Dominican Republic (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 10772417,
+      "file:checksum": "d50110b11a3c4fdeea2f28668a216ba36b9bcb",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.510014893517995,
+            "minimum": 0.0,
+            "maximum": 75.510009765625,
+            "stddev": 6.480639560544206,
+            "valid_percent": 21.44174840328467
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 75.510009765625,
+            "buckets": [
+              141267,
+              4077,
+              1816,
+              1102,
+              549,
+              408,
+              491,
+              443,
+              185,
+              63
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11140,
+      "file:checksum": "12205707fe54438c000cd7972f1c0aa6dca458f5c2a1f0e62f5eeed901a778c7933a"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10470,
+      "file:checksum": "122099d5f4d6fd305a7798746d08c5f46631ec4a1a47e8f1a40e854597331965f20e"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

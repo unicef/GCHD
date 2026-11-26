@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_mco",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          7.408332583699997,
+          43.75250016098998
+        ],
+        [
+          7.439999250239997,
+          43.75250016098998
+        ],
+        [
+          7.439999250239997,
+          43.724166827769984
+        ],
+        [
+          7.408332583699997,
+          43.724166827769984
+        ],
+        [
+          7.408332583699997,
+          43.75250016098998
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    7.408332583699997,
+    43.724166827769984,
+    7.439999250239997,
+    43.75250016098998
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Monaco",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MCO",
+    "GCHD:country": "Monaco",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            7.408332583699997,
+            43.724166827769984
+          ],
+          [
+            7.439999250239997,
+            43.724166827769984
+          ],
+          [
+            7.439999250239997,
+            43.75250016098998
+          ],
+          [
+            7.408332583699997,
+            43.75250016098998
+          ],
+          [
+            7.408332583699997,
+            43.724166827769984
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      7.408332583699997,
+      43.724166827769984,
+      7.439999250239997,
+      43.75250016098998
+    ],
+    "proj:shape": [
+      34,
+      38
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      7.408332583699997,
+      0.0,
+      -0.00083333333,
+      43.75250016098998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/mco_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Monaco (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5056,
+      "file:checksum": "d5011069d223391f96a6bacd4861cffd7667f9",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 46.37028301886792,
+            "minimum": 1.4000000192027073e-05,
+            "maximum": 143.9689483642578,
+            "stddev": 33.477727248071275,
+            "valid_percent": 32.81733746130031
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 1.4000000192027073e-05,
+            "max": 143.9689483642578,
+            "buckets": [
+              93,
+              64,
+              37,
+              60,
+              86,
+              35,
+              20,
+              11,
+              6,
+              12
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1788,
+      "file:checksum": "12200a2714c8d8b8e27d1d269425fbb705bc69500206a52d50b21e46f55bda8b41e7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1389,
+      "file:checksum": "122048f3f48fdb396c88f7abce690de04a27ec2847bb67c9ca8ac74cd7d7cb87e120"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_ala",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          19.134165870129998,
+          60.66500009333999
+        ],
+        [
+          21.311665861419996,
+          60.66500009333999
+        ],
+        [
+          21.311665861419996,
+          59.76000009695999
+        ],
+        [
+          19.134165870129998,
+          59.76000009695999
+        ],
+        [
+          19.134165870129998,
+          60.66500009333999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    19.134165870129998,
+    59.76000009695999,
+    21.311665861419996,
+    60.66500009333999
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Åland Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "ALA",
+    "GCHD:country": "Åland Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            19.134165870129998,
+            59.76000009695999
+          ],
+          [
+            21.311665861419996,
+            59.76000009695999
+          ],
+          [
+            21.311665861419996,
+            60.66500009333999
+          ],
+          [
+            19.134165870129998,
+            60.66500009333999
+          ],
+          [
+            19.134165870129998,
+            59.76000009695999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      19.134165870129998,
+      59.76000009695999,
+      21.311665861419996,
+      60.66500009333999
+    ],
+    "proj:shape": [
+      1086,
+      2613
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      19.134165870129998,
+      0.0,
+      -0.00083333333,
+      60.66500009333999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/ala_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Åland Islands (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 741768,
+      "file:checksum": "d501102bb59ef08f1c5af0fafe1c0647311b66",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.06818988120719179,
+            "minimum": 0.0,
+            "maximum": 1.681023359298706,
+            "stddev": 0.17477955224452774,
+            "valid_percent": 3.7652673855633805
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 1.681023359298706,
+            "buckets": [
+              15284,
+              596,
+              134,
+              67,
+              72,
+              58,
+              61,
+              49,
+              78,
+              26
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2073,
+      "file:checksum": "1220f19a8c0f08d6696596c4935d697c4446e5a42ba5c3f0299be792f95ed8e43619"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1679,
+      "file:checksum": "122087ccbc800bda4229b299a28af0bb43e5321f0d27e6bf9afd1d6f44fcac916362"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

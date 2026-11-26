@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_ncl",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          158.24916531367,
+          -18.036666258520015
+        ],
+        [
+          172.08999859164,
+          -18.036666258520015
+        ],
+        [
+          172.08999859164,
+          -22.881666239140014
+        ],
+        [
+          158.24916531367,
+          -22.881666239140014
+        ],
+        [
+          158.24916531367,
+          -18.036666258520015
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    158.24916531367,
+    -22.881666239140014,
+    172.08999859164,
+    -18.036666258520015
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – New Caledonia",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NCL",
+    "GCHD:country": "New Caledonia",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            158.24916531367,
+            -22.881666239140014
+          ],
+          [
+            172.08999859164,
+            -22.881666239140014
+          ],
+          [
+            172.08999859164,
+            -18.036666258520015
+          ],
+          [
+            158.24916531367,
+            -18.036666258520015
+          ],
+          [
+            158.24916531367,
+            -22.881666239140014
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      158.24916531367,
+      -22.881666239140014,
+      172.08999859164,
+      -18.036666258520015
+    ],
+    "proj:shape": [
+      5814,
+      16609
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      158.24916531367,
+      0.0,
+      -0.00083333333,
+      -18.036666258520015,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/ncl_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – New Caledonia (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4248014,
+      "file:checksum": "d501102c088b6f6c584b03e0274e777eacf85b",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.06903010077994846,
+            "minimum": 0.0006890000076964498,
+            "maximum": 2.3390250205993652,
+            "stddev": 0.1516047621562837,
+            "valid_percent": 1.3062543523676882
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0006890000076964498,
+            "max": 2.3390250205993652,
+            "buckets": [
+              4622,
+              94,
+              40,
+              15,
+              8,
+              4,
+              3,
+              7,
+              5,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 988,
+      "file:checksum": "12204bf56d80b64897902650fad1bfeeeff542dcb68ef8c4f7463b4b9c0805d8d9c7"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 716,
+      "file:checksum": "122000ef5a125a73234dfa3fed5950c2037d8a71e541115ff400b3d3ccf3a6244afe"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_vct",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -61.460833807490005,
+          13.382500282469985
+        ],
+        [
+          -61.11500047554001,
+          13.382500282469985
+        ],
+        [
+          -61.11500047554001,
+          12.532500285869986
+        ],
+        [
+          -61.460833807490005,
+          12.532500285869986
+        ],
+        [
+          -61.460833807490005,
+          13.382500282469985
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -61.460833807490005,
+    12.532500285869986,
+    -61.11500047554001,
+    13.382500282469985
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Saint Vincent and the Grenadines",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "VCT",
+    "GCHD:country": "Saint Vincent and the Grenadines",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -61.460833807490005,
+            12.532500285869986
+          ],
+          [
+            -61.11500047554001,
+            12.532500285869986
+          ],
+          [
+            -61.11500047554001,
+            13.382500282469985
+          ],
+          [
+            -61.460833807490005,
+            13.382500282469985
+          ],
+          [
+            -61.460833807490005,
+            12.532500285869986
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -61.460833807490005,
+      12.532500285869986,
+      -61.11500047554001,
+      13.382500282469985
+    ],
+    "proj:shape": [
+      1020,
+      415
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -61.460833807490005,
+      0.0,
+      -0.00083333333,
+      13.382500282469985,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/vct_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Saint Vincent and the Grenadines (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 138041,
+      "file:checksum": "d50110746e5749aa28df413c247ce2f734b884",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 5.685625177204423,
+            "minimum": 0.0,
+            "maximum": 44.46670913696289,
+            "stddev": 6.973527153755657,
+            "valid_percent": 4.16607606898181
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 44.46670913696289,
+            "buckets": [
+              11360,
+              2450,
+              1461,
+              987,
+              631,
+              343,
+              215,
+              118,
+              56,
+              14
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2233,
+      "file:checksum": "1220ca3ada3832c350b006a397a3836df6b51ad95fabc4e39c81fe1f0968b37d4a60"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5515,
+      "file:checksum": "12205c400f1e0d4a7c20a8504f721142c2a1351c5d38b40d1f1999b1e75cb7975700"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

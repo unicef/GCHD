@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_gnb",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.715000653140002,
+          12.686666951919987
+        ],
+        [
+          -13.625833998830002,
+          12.686666951919987
+        ],
+        [
+          -13.625833998830002,
+          10.864166959209987
+        ],
+        [
+          -16.715000653140002,
+          10.864166959209987
+        ],
+        [
+          -16.715000653140002,
+          12.686666951919987
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.715000653140002,
+    10.864166959209987,
+    -13.625833998830002,
+    12.686666951919987
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Guinea-Bissau",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GNB",
+    "GCHD:country": "Guinea-Bissau",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -16.715000653140002,
+            10.864166959209987
+          ],
+          [
+            -13.625833998830002,
+            10.864166959209987
+          ],
+          [
+            -13.625833998830002,
+            12.686666951919987
+          ],
+          [
+            -16.715000653140002,
+            12.686666951919987
+          ],
+          [
+            -16.715000653140002,
+            10.864166959209987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -16.715000653140002,
+      10.864166959209987,
+      -13.625833998830002,
+      12.686666951919987
+    ],
+    "proj:shape": [
+      2187,
+      3707
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -16.715000653140002,
+      0.0,
+      -0.00083333333,
+      12.686666951919987,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/gnb_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Guinea-Bissau (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4028039,
+      "file:checksum": "d501101d7cdc66075cd06ec5d7875d0b16d857",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.7100071471936786,
+            "minimum": 0.0,
+            "maximum": 175.4366455078125,
+            "stddev": 7.121981033939637,
+            "valid_percent": 17.813468491735538
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 175.4366455078125,
+            "buckets": [
+              109170,
+              526,
+              203,
+              119,
+              98,
+              62,
+              63,
+              73,
+              26,
+              18
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 11484,
+      "file:checksum": "12202222fa4d02ac68512412e9dc85dfc7358c3b631876e44f55b54c6a8181b233ca"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10562,
+      "file:checksum": "122056a578cb77245957841b182a4755e565c715bb9eced91df8c77dc95476dd963d"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

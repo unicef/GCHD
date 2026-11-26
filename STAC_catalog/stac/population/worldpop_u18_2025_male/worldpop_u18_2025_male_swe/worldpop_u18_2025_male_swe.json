@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_male_swe",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          10.964165902809997,
+          69.06000005976
+        ],
+        [
+          24.166665849999998,
+          69.06000005976
+        ],
+        [
+          24.166665849999998,
+          55.33666678132
+        ],
+        [
+          10.964165902809997,
+          55.33666678132
+        ],
+        [
+          10.964165902809997,
+          69.06000005976
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    10.964165902809997,
+    55.33666678132,
+    24.166665849999998,
+    69.06000005976
+  ],
+  "properties": {
+    "title": "Male U18 population 2025 – Sweden",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "SWE",
+    "GCHD:country": "Sweden",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            10.964165902809997,
+            55.33666678132
+          ],
+          [
+            24.166665849999998,
+            55.33666678132
+          ],
+          [
+            24.166665849999998,
+            69.06000005976
+          ],
+          [
+            10.964165902809997,
+            69.06000005976
+          ],
+          [
+            10.964165902809997,
+            55.33666678132
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      10.964165902809997,
+      55.33666678132,
+      24.166665849999998,
+      69.06000005976
+    ],
+    "proj:shape": [
+      16468,
+      15843
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      10.964165902809997,
+      0.0,
+      -0.00083333333,
+      69.06000005976,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/M_U18/swe_M_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male U18 population 2025 – Sweden (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 75459976,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.03218310922153314,
+            "minimum": 0.0,
+            "maximum": 7.285192966461182,
+            "stddev": 0.14813155299983183,
+            "valid_percent": 21.7913087918357
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 7.285192966461182,
+            "buckets": [
+              218618,
+              892,
+              284,
+              120,
+              54,
+              22,
+              17,
+              6,
+              2,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6170,
+      "file:checksum": "12203bc3969fd57eca1371626626436c8376422891aaac7fd336ff45d780aa27acc8"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 4024,
+      "file:checksum": "122019b2f8676c1df7c42725319bc5ba448449aebee89082e71d751d6f1820640971"
+    }
+  },
+  "collection": "worldpop_u18_2025_male"
+}

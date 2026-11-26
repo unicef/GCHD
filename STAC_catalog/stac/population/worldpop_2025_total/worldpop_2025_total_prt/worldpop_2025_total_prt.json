@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_prt",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -31.268333928260002,
+          42.15500016737999
+        ],
+        [
+          -6.189167361910002,
+          42.15500016737999
+        ],
+        [
+          -6.189167361910002,
+          30.030833549209987
+        ],
+        [
+          -31.268333928260002,
+          30.030833549209987
+        ],
+        [
+          -31.268333928260002,
+          42.15500016737999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -31.268333928260002,
+    30.030833549209987,
+    -6.189167361910002,
+    42.15500016737999
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Madeira Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PRT",
+    "GCHD:country": "Madeira Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -31.268333928260002,
+            30.030833549209987
+          ],
+          [
+            -6.189167361910002,
+            30.030833549209987
+          ],
+          [
+            -6.189167361910002,
+            42.15500016737999
+          ],
+          [
+            -31.268333928260002,
+            42.15500016737999
+          ],
+          [
+            -31.268333928260002,
+            30.030833549209987
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -31.268333928260002,
+      30.030833549209987,
+      -6.189167361910002,
+      42.15500016737999
+    ],
+    "proj:shape": [
+      14549,
+      30095
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -31.268333928260002,
+      0.0,
+      -0.00083333333,
+      42.15500016737999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/prt_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Madeira Islands (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 41706152,
+      "file:checksum": "d50110ae5281d4d02972128697dc7ef0d15ee1",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.8227321307048535,
+            "minimum": 0.0037054356653243303,
+            "maximum": 77.76932525634766,
+            "stddev": 2.985280403085748,
+            "valid_percent": 3.399461315524194
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0037054356653243303,
+            "max": 77.76932525634766,
+            "buckets": [
+              16962,
+              174,
+              60,
+              28,
+              20,
+              7,
+              12,
+              1,
+              0,
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 1576,
+      "file:checksum": "12200055989f1e424398b80dfb427cc49d641374cf020008724c7f9e8678f4c15d5c"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 1263,
+      "file:checksum": "1220a8ef60924208b44e87d8671d30dd300b5dea0f47fb7b247894e6b53ce74fa844"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

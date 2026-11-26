@@ -1,0 +1,1607 @@
+{
+  "type": "Collection",
+  "id": "worldpop_u18_2025_male",
+  "stac_version": "1.1.0",
+  "description": "Estimated number of boys under 18 per ~100 m grid cell in 2025 (WorldPop R2025A, constrained), one item per country.\n\nEstimated number of children under 18 per ~100 m grid cell (3 arc-seconds) in 2025, from the WorldPop R2025A constrained (`CN`) population estimates. Constrained means people are only allocated to cells mapped as built settlement; all other cells are nodata.\n\nThe data are one Cloud-Optimized GeoTIFF per country, served from their original location on Azure, with one STAC item per country. The collection's `data` asset is a GDAL VRT over all country files, with virtual overviews, for global access with a single URL.\n\nUnits: people per grid cell. Nodata: -99999. License: CC-BY-4.0. Citation: WorldPop (www.worldpop.org), R2025A.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_abw/worldpop_u18_2025_male_abw.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Aruba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_afg/worldpop_u18_2025_male_afg.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Afghanistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ago/worldpop_u18_2025_male_ago.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Angola"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_aia/worldpop_u18_2025_male_aia.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Anguilla"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ala/worldpop_u18_2025_male_ala.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Åland Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_alb/worldpop_u18_2025_male_alb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Albania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_and/worldpop_u18_2025_male_and.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Andorra"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_are/worldpop_u18_2025_male_are.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – United Arab Emirates"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_arg/worldpop_u18_2025_male_arg.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Argentina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_arm/worldpop_u18_2025_male_arm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Armenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_asm/worldpop_u18_2025_male_asm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – American Samoa (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_atg/worldpop_u18_2025_male_atg.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Antigua and Barbuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_aus/worldpop_u18_2025_male_aus.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ashmore and Cartier Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_aut/worldpop_u18_2025_male_aut.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Austria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_aze/worldpop_u18_2025_male_aze.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Azerbaijan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bdi/worldpop_u18_2025_male_bdi.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Burundi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bel/worldpop_u18_2025_male_bel.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Belgium"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ben/worldpop_u18_2025_male_ben.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Benin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bes/worldpop_u18_2025_male_bes.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bonaire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bfa/worldpop_u18_2025_male_bfa.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Burkina Faso"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bgd/worldpop_u18_2025_male_bgd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bangladesh"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bgr/worldpop_u18_2025_male_bgr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bulgaria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bhr/worldpop_u18_2025_male_bhr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bahrain"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bhs/worldpop_u18_2025_male_bhs.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bahamas"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bih/worldpop_u18_2025_male_bih.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bosnia and Herzegovina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_blm/worldpop_u18_2025_male_blm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Barthélemy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_blr/worldpop_u18_2025_male_blr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Belarus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_blz/worldpop_u18_2025_male_blz.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Belize"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bmu/worldpop_u18_2025_male_bmu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bermuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bol/worldpop_u18_2025_male_bol.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bolivia (Plurinational State of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bra/worldpop_u18_2025_male_bra.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Brazil"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_brb/worldpop_u18_2025_male_brb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Barbados"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_brn/worldpop_u18_2025_male_brn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Brunei Darussalam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_btn/worldpop_u18_2025_male_btn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bhutan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_bwa/worldpop_u18_2025_male_bwa.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Botswana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_caf/worldpop_u18_2025_male_caf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Central African Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_can/worldpop_u18_2025_male_can.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Canada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_che/worldpop_u18_2025_male_che.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Switzerland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_chl/worldpop_u18_2025_male_chl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Chile"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_chn/worldpop_u18_2025_male_chn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – China"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_civ/worldpop_u18_2025_male_civ.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Côte d'Ivoire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cmr/worldpop_u18_2025_male_cmr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cameroon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cod/worldpop_u18_2025_male_cod.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Democratic Republic of the Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cog/worldpop_u18_2025_male_cog.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cok/worldpop_u18_2025_male_cok.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cook Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_col/worldpop_u18_2025_male_col.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Colombia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_com/worldpop_u18_2025_male_com.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Comoros"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cpv/worldpop_u18_2025_male_cpv.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cape Verde"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cri/worldpop_u18_2025_male_cri.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Costa Rica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cub/worldpop_u18_2025_male_cub.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cuba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cuw/worldpop_u18_2025_male_cuw.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Curaçao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cym/worldpop_u18_2025_male_cym.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cayman Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cyp/worldpop_u18_2025_male_cyp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cyprus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_cze/worldpop_u18_2025_male_cze.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Czechia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_deu/worldpop_u18_2025_male_deu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Germany"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_dji/worldpop_u18_2025_male_dji.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Djibouti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_dma/worldpop_u18_2025_male_dma.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Dominica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_dnk/worldpop_u18_2025_male_dnk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Denmark"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_dom/worldpop_u18_2025_male_dom.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Dominican Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_dza/worldpop_u18_2025_male_dza.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Algeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ecu/worldpop_u18_2025_male_ecu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ecuador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_egy/worldpop_u18_2025_male_egy.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Egypt"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_eri/worldpop_u18_2025_male_eri.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Eritrea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_esh/worldpop_u18_2025_male_esh.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Western Sahara"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_esp/worldpop_u18_2025_male_esp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Canary Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_est/worldpop_u18_2025_male_est.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Estonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_eth/worldpop_u18_2025_male_eth.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ethiopia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_fin/worldpop_u18_2025_male_fin.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Finland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_fji/worldpop_u18_2025_male_fji.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Fiji"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_flk/worldpop_u18_2025_male_flk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Falkland Islands (Malvinas)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_fra/worldpop_u18_2025_male_fra.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – France"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_fro/worldpop_u18_2025_male_fro.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Faroe Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_fsm/worldpop_u18_2025_male_fsm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Micronesia (Federated States of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gab/worldpop_u18_2025_male_gab.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Gabon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gbr/worldpop_u18_2025_male_gbr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – United Kingdom of Great Britain & Northern Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_geo/worldpop_u18_2025_male_geo.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Georgia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ggy/worldpop_u18_2025_male_ggy.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guernsey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gha/worldpop_u18_2025_male_gha.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ghana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gib/worldpop_u18_2025_male_gib.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Gibraltar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gin/worldpop_u18_2025_male_gin.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_glp/worldpop_u18_2025_male_glp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guadeloupe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gmb/worldpop_u18_2025_male_gmb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Gambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gnb/worldpop_u18_2025_male_gnb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guinea-Bissau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gnq/worldpop_u18_2025_male_gnq.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Equatorial Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_grc/worldpop_u18_2025_male_grc.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Greece"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_grd/worldpop_u18_2025_male_grd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Grenada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_grl/worldpop_u18_2025_male_grl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Greenland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gtm/worldpop_u18_2025_male_gtm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guatemala"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_guf/worldpop_u18_2025_male_guf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – French Guiana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_gum/worldpop_u18_2025_male_gum.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guam (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_guy/worldpop_u18_2025_male_guy.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Guyana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_hkg/worldpop_u18_2025_male_hkg.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Hong Kong"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_hnd/worldpop_u18_2025_male_hnd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Honduras"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_hrv/worldpop_u18_2025_male_hrv.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Croatia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_hti/worldpop_u18_2025_male_hti.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Haiti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_hun/worldpop_u18_2025_male_hun.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Hungary"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_idn/worldpop_u18_2025_male_idn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Indonesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_imn/worldpop_u18_2025_male_imn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Isle of Man"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ind/worldpop_u18_2025_male_ind.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – India"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_irl/worldpop_u18_2025_male_irl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_irn/worldpop_u18_2025_male_irn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Iran (Islamic Republic of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_irq/worldpop_u18_2025_male_irq.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Iraq"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_isl/worldpop_u18_2025_male_isl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Iceland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_isr/worldpop_u18_2025_male_isr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Israel"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ita/worldpop_u18_2025_male_ita.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Italy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_jam/worldpop_u18_2025_male_jam.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Jamaica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_jey/worldpop_u18_2025_male_jey.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Jersey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_jor/worldpop_u18_2025_male_jor.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Jordan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_jpn/worldpop_u18_2025_male_jpn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Japan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kaz/worldpop_u18_2025_male_kaz.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kazakhstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ken/worldpop_u18_2025_male_ken.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kenya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kgz/worldpop_u18_2025_male_kgz.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kyrgyzstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_khm/worldpop_u18_2025_male_khm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Cambodia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kir/worldpop_u18_2025_male_kir.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kiribati"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kna/worldpop_u18_2025_male_kna.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Kitts and Nevis"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kor/worldpop_u18_2025_male_kor.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_kwt/worldpop_u18_2025_male_kwt.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kuwait"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lao/worldpop_u18_2025_male_lao.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Lao People's Democratic Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lbn/worldpop_u18_2025_male_lbn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Lebanon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lbr/worldpop_u18_2025_male_lbr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Liberia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lby/worldpop_u18_2025_male_lby.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Libya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lca/worldpop_u18_2025_male_lca.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Lucia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lie/worldpop_u18_2025_male_lie.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Liechtenstein"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lka/worldpop_u18_2025_male_lka.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sri Lanka"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lso/worldpop_u18_2025_male_lso.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Lesotho"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ltu/worldpop_u18_2025_male_ltu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Lithuania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lux/worldpop_u18_2025_male_lux.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Luxembourg"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_lva/worldpop_u18_2025_male_lva.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Latvia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mac/worldpop_u18_2025_male_mac.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Macao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_maf/worldpop_u18_2025_male_maf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Martin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mar/worldpop_u18_2025_male_mar.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Morocco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mco/worldpop_u18_2025_male_mco.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Monaco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mda/worldpop_u18_2025_male_mda.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Moldova"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mdg/worldpop_u18_2025_male_mdg.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Madagascar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mdv/worldpop_u18_2025_male_mdv.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Maldives"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mex/worldpop_u18_2025_male_mex.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mexico"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mhl/worldpop_u18_2025_male_mhl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Marshall Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mkd/worldpop_u18_2025_male_mkd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – North Macedonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mli/worldpop_u18_2025_male_mli.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mali"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mlt/worldpop_u18_2025_male_mlt.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Malta"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mmr/worldpop_u18_2025_male_mmr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Myanmar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mne/worldpop_u18_2025_male_mne.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Montenegro"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mng/worldpop_u18_2025_male_mng.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mongolia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mnp/worldpop_u18_2025_male_mnp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Northern Mariana Is. (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_moz/worldpop_u18_2025_male_moz.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mozambique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mrt/worldpop_u18_2025_male_mrt.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mauritania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_msr/worldpop_u18_2025_male_msr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Montserrat"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mtq/worldpop_u18_2025_male_mtq.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Martinique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mus/worldpop_u18_2025_male_mus.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mauritius"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mwi/worldpop_u18_2025_male_mwi.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Malawi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_mys/worldpop_u18_2025_male_mys.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Malaysia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_myt/worldpop_u18_2025_male_myt.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Mayotte"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nam/worldpop_u18_2025_male_nam.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Namibia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ncl/worldpop_u18_2025_male_ncl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – New Caledonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ner/worldpop_u18_2025_male_ner.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Niger"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nfk/worldpop_u18_2025_male_nfk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Norfolk Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nga/worldpop_u18_2025_male_nga.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Nigeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nic/worldpop_u18_2025_male_nic.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Nicaragua"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_niu/worldpop_u18_2025_male_niu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Niue"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nld/worldpop_u18_2025_male_nld.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Netherlands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nor/worldpop_u18_2025_male_nor.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Norway"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_npl/worldpop_u18_2025_male_npl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Nepal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nru/worldpop_u18_2025_male_nru.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Nauru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_nzl/worldpop_u18_2025_male_nzl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – New Zealand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_omn/worldpop_u18_2025_male_omn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Oman"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pak/worldpop_u18_2025_male_pak.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Pakistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pan/worldpop_u18_2025_male_pan.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Panama"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pcn/worldpop_u18_2025_male_pcn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Pitcairn"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_per/worldpop_u18_2025_male_per.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Peru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_phl/worldpop_u18_2025_male_phl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Philippines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_plw/worldpop_u18_2025_male_plw.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Palau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_png/worldpop_u18_2025_male_png.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Papua New Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pol/worldpop_u18_2025_male_pol.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Poland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pri/worldpop_u18_2025_male_pri.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Puerto Rico (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_prk/worldpop_u18_2025_male_prk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Democratic People's Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_prt/worldpop_u18_2025_male_prt.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Madeira Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pry/worldpop_u18_2025_male_pry.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Paraguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pse/worldpop_u18_2025_male_pse.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – State of Palestine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_pyf/worldpop_u18_2025_male_pyf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – French Polynesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_qat/worldpop_u18_2025_male_qat.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Qatar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_reu/worldpop_u18_2025_male_reu.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Réunion"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_rou/worldpop_u18_2025_male_rou.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Romania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_rus/worldpop_u18_2025_male_rus.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Russian Federation"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_rwa/worldpop_u18_2025_male_rwa.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Rwanda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sau/worldpop_u18_2025_male_sau.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saudi Arabia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sdn/worldpop_u18_2025_male_sdn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sen/worldpop_u18_2025_male_sen.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sgp/worldpop_u18_2025_male_sgp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Singapore"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_shn/worldpop_u18_2025_male_shn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Helena"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sjm/worldpop_u18_2025_male_sjm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Svalbard and Jan Mayen Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_slb/worldpop_u18_2025_male_slb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Solomon Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sle/worldpop_u18_2025_male_sle.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sierra Leone"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_slv/worldpop_u18_2025_male_slv.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – El Salvador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_smr/worldpop_u18_2025_male_smr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – San Marino"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_som/worldpop_u18_2025_male_som.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Somalia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_spm/worldpop_u18_2025_male_spm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Pierre et Miquelon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_srb/worldpop_u18_2025_male_srb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Serbia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ssd/worldpop_u18_2025_male_ssd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – South Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_stp/worldpop_u18_2025_male_stp.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sao Tome and Principe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sur/worldpop_u18_2025_male_sur.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Suriname"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_svk/worldpop_u18_2025_male_svk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Slovakia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_svn/worldpop_u18_2025_male_svn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Slovenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_swe/worldpop_u18_2025_male_swe.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sweden"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_swz/worldpop_u18_2025_male_swz.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Eswatini"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_sxm/worldpop_u18_2025_male_sxm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Sint Maarten"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_syc/worldpop_u18_2025_male_syc.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Seychelles"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_syr/worldpop_u18_2025_male_syr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Syrian Arab Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tca/worldpop_u18_2025_male_tca.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Turks and Caicos Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tcd/worldpop_u18_2025_male_tcd.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Chad"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tgo/worldpop_u18_2025_male_tgo.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Togo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tha/worldpop_u18_2025_male_tha.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Thailand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tjk/worldpop_u18_2025_male_tjk.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Tajikistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tkl/worldpop_u18_2025_male_tkl.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Tokelau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tkm/worldpop_u18_2025_male_tkm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Turkmenistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tls/worldpop_u18_2025_male_tls.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Timor-Leste"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ton/worldpop_u18_2025_male_ton.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Tonga"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tto/worldpop_u18_2025_male_tto.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Trinidad and Tobago"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tun/worldpop_u18_2025_male_tun.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Tunisia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tur/worldpop_u18_2025_male_tur.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Republic of Türkiye"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tuv/worldpop_u18_2025_male_tuv.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Tuvalu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_twn/worldpop_u18_2025_male_twn.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Taiwan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_tza/worldpop_u18_2025_male_tza.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – United Republic of Tanzania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_uga/worldpop_u18_2025_male_uga.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Uganda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ukr/worldpop_u18_2025_male_ukr.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Ukraine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ury/worldpop_u18_2025_male_ury.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Uruguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_usa/worldpop_u18_2025_male_usa.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – United States of America"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_uzb/worldpop_u18_2025_male_uzb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Uzbekistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_vct/worldpop_u18_2025_male_vct.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Saint Vincent and the Grenadines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_ven/worldpop_u18_2025_male_ven.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Bird Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_vgb/worldpop_u18_2025_male_vgb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – British Virgin Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_vir/worldpop_u18_2025_male_vir.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – United States Virgin Islands (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_vnm/worldpop_u18_2025_male_vnm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Viet Nam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_vut/worldpop_u18_2025_male_vut.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Vanuatu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_wlf/worldpop_u18_2025_male_wlf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Wallis and Futuna"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_wsm/worldpop_u18_2025_male_wsm.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Samoa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_xkx/worldpop_u18_2025_male_xkx.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Kosovo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_yem/worldpop_u18_2025_male_yem.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Yemen"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_zaf/worldpop_u18_2025_male_zaf.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – South Africa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_zmb/worldpop_u18_2025_male_zmb.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Zambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_u18_2025_male_zwe/worldpop_u18_2025_male_zwe.json",
+      "type": "application/geo+json",
+      "title": "Male U18 population 2025 – Zimbabwe"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Population"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC-BY-4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.worldpop.org/",
+      "type": "text/html",
+      "title": "Original source (WorldPop, University of Southampton)"
+    }
+  ],
+  "GCHD:units": "people per grid cell",
+  "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+  "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+  "GCHD:source_release": "R2025A",
+  "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/M_U18/",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_M_U18_2025_CN_100m",
+  "title": "Male U18 population 2025 (WorldPop R2025A)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -56.52583277122999,
+          179.99999856,
+          83.66166666802
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "population",
+    "WorldPop",
+    "exposure",
+    "children",
+    "under 18",
+    "Male U18"
+  ],
+  "providers": [
+    {
+      "name": "WorldPop, University of Southampton",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.worldpop.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_u18_2025/male/mosaic_ovr.vrt",
+      "type": "application/xml",
+      "title": "Male U18 population 2025 (WorldPop R2025A) – global mosaic (GDAL VRT)",
+      "description": "GDAL VRT mosaic of the per-country WorldPop R2025A COGs (worldpop_2025/R2025A/2025/100m/M_U18/), with virtual overviews (OverviewList 2-512) built from the country COGs' own overviews",
+      "bands": [
+        {
+          "data_type": "float32",
+          "nodata": -99999.0,
+          "raster:sampling": "area",
+          "unit": "people per grid cell"
+        }
+      ],
+      "roles": [
+        "data"
+      ],
+      "file:size": 135912,
+      "file:checksum": "d5011083c78645909675c301f518856be08abf"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 19836,
+      "file:checksum": "12207589ea3235b63d57e1dbeee3a43080bb74b6340e00da1e5e8275f40136a71e4c"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 65238,
+      "file:checksum": "12205dae1ff24b0c45401f6ba5674bb5efc60d3753245f8c4003550707341318779f"
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all items)",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 168345,
+      "file:checksum": "122014483611ddaa50b0e7f040eafc422389b39142136aa198bdf164dfb76fbfc94e"
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1032561,
+      "file:checksum": "12206c709e8cb66a86dc32d5da3b241869d3c1c4d77a0bf4dcfcf82cbe85ebb7b754"
+    }
+  },
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "updated": "2026-11-26T16:19:09Z"
+}

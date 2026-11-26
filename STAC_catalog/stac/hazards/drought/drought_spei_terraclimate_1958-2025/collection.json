@@ -1,0 +1,219 @@
+{
+  "type": "Collection",
+  "id": "drought_spei_terraclimate_1958-2025",
+  "stac_version": "1.1.0",
+  "description": "SPEI adds the effect of evapotranspiration and is better suited to assess droughts under climate change scenarios where temperature changes are important. Probability values are computed from the full 1958–2025 record (804 monthly time steps) dividing the numbers of months lower than TH (1.5) with total months",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/SPEI12_return_level_100yr.tif",
+      "type": "image/tiff",
+      "title": "Source file (pre-COG)"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Droughts"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://github.com/unicef/GCHD",
+      "type": "text/html",
+      "title": "License and terms of use"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.climatologylab.org/terraclimate.html",
+      "type": "text/html",
+      "title": "Original source (TerraClimate)"
+    }
+  ],
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "GCHD:hazard": "Droughts",
+  "GCHD:hazard_phase": "Preparedness/Planning",
+  "GCHD:data_type": "Probabilistic - empirical",
+  "GCHD:nominal_resolution": "5km",
+  "GCHD:coverage": "Global",
+  "GCHD:units": "Index",
+  "GCHD:threshold": ">0.06 (global mean)",
+  "GCHD:classes": "Use quantile",
+  "GCHD:value_range": [
+    -10.0,
+    10.0
+  ],
+  "GCHD:notes": "The SPEI is an extension of the SPI and incorporates potential evapotranspiration to capture the impact of temperature on drought -12-month time scale. More details: https://github.com/dohyung-kim/precip-index/blob/main/README.md",
+  "GCHD:alternate_sources": "World Bank (GOST)",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025",
+  "GCHD:exposure_rules": [
+    {
+      "hazard_code": "drought_spei_tc",
+      "app_name": "drought_spei_terraclimate_1958-2025",
+      "unicef_code": "DR_SPEI",
+      "valid": "> -1000",
+      "op": ">",
+      "threshold": 0.0650162152126539,
+      "default": true
+    }
+  ],
+  "title": "Meteorological Drought (Standardized Precipitation Evapotranspiration Index)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          179.875,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1958-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "hazard",
+    "Droughts",
+    "DR"
+  ],
+  "providers": [
+    {
+      "name": "TerraClimate",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.climatologylab.org/terraclimate.html"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Meteorological Drought (Standardized Precipitation Evapotranspiration Index) (Cloud-Optimized GeoTIFF)",
+      "proj:shape": [
+        721,
+        1440
+      ],
+      "proj:transform": [
+        0.25,
+        0.0,
+        -180.125,
+        0.0,
+        -0.25,
+        90.125,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proj:bbox": [
+        -180.125,
+        -90.125,
+        179.875,
+        90.125
+      ],
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": "nan",
+          "statistics": {
+            "mean": -4.923140577099837,
+            "minimum": -33.854244232177734,
+            "maximum": -1.8218475580215454,
+            "stddev": 2.45523150504551,
+            "valid_percent": 35.82956414473684
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": -33.854244232177734,
+            "max": -1.8218475580215454,
+            "buckets": [
+              2,
+              16,
+              34,
+              102,
+              461,
+              2585,
+              4186,
+              4835,
+              44289,
+              131707
+            ]
+          }
+        }
+      ],
+      "file:size": 1489803,
+      "file:checksum": "d501102292f237a699b4ff745658e90d3e8c3a"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 133098,
+      "file:checksum": "1220c4889809df500366f2e3cd06f3bde49f0f1e90e654e703f10b9e902fca3bd9a4"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 521390,
+      "file:checksum": "1220b6ea9c4d11e8abc4381452c41a5a780cb7854e7af60358f4e595de514489b401"
+    }
+  },
+  "updated": "2026-11-26T16:19:09Z"
+}

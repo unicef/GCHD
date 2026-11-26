@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_female_png",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          140.84166538329998,
+          -0.7558329943100137
+        ],
+        [
+          159.49249864202997,
+          -0.7558329943100137
+        ],
+        [
+          159.49249864202997,
+          -11.654999617380014
+        ],
+        [
+          140.84166538329998,
+          -11.654999617380014
+        ],
+        [
+          140.84166538329998,
+          -0.7558329943100137
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    140.84166538329998,
+    -11.654999617380014,
+    159.49249864202997,
+    -0.7558329943100137
+  ],
+  "properties": {
+    "title": "Female U18 population 2025 – Papua New Guinea",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "PNG",
+    "GCHD:country": "Papua New Guinea",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/F_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_F_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            140.84166538329998,
+            -11.654999617380014
+          ],
+          [
+            159.49249864202997,
+            -11.654999617380014
+          ],
+          [
+            159.49249864202997,
+            -0.7558329943100137
+          ],
+          [
+            140.84166538329998,
+            -0.7558329943100137
+          ],
+          [
+            140.84166538329998,
+            -11.654999617380014
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      140.84166538329998,
+      -11.654999617380014,
+      159.49249864202997,
+      -0.7558329943100137
+    ],
+    "proj:shape": [
+      13079,
+      22381
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      140.84166538329998,
+      0.0,
+      -0.00083333333,
+      -0.7558329943100137,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/F_U18/png_F_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female U18 population 2025 – Papua New Guinea (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 24782308,
+      "file:checksum": "d5011031830908737edf63b0b5842846f28184",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.5662503862111582,
+            "minimum": 0.0,
+            "maximum": 63.79747009277344,
+            "stddev": 0.6754530304840245,
+            "valid_percent": 5.540484140233723
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 63.79747009277344,
+            "buckets": [
+              33959,
+              22,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 6041,
+      "file:checksum": "122061b1368e5cea09f26f586831b22306414168d401864d8b28fc02d81c8ca733dd"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 5044,
+      "file:checksum": "122038e12f8ee8d7bafd6b1d2b4436bce824c8832a3c73320e3580779dd95b1870d0"
+    }
+  },
+  "collection": "worldpop_u18_2025_female"
+}

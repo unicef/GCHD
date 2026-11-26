@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_nfk",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          167.91416527501,
+          -28.99416621469
+        ],
+        [
+          167.99833194133998,
+          -28.99416621469
+        ],
+        [
+          167.99833194133998,
+          -29.13666621412
+        ],
+        [
+          167.91416527501,
+          -29.13666621412
+        ],
+        [
+          167.91416527501,
+          -28.99416621469
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    167.91416527501,
+    -29.13666621412,
+    167.99833194133998,
+    -28.99416621469
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Norfolk Island",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "NFK",
+    "GCHD:country": "Norfolk Island",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            167.91416527501,
+            -29.13666621412
+          ],
+          [
+            167.99833194133998,
+            -29.13666621412
+          ],
+          [
+            167.99833194133998,
+            -28.99416621469
+          ],
+          [
+            167.91416527501,
+            -28.99416621469
+          ],
+          [
+            167.91416527501,
+            -29.13666621412
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      167.91416527501,
+      -29.13666621412,
+      167.99833194133998,
+      -28.99416621469
+    ],
+    "proj:shape": [
+      171,
+      101
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      167.91416527501,
+      0.0,
+      -0.00083333333,
+      -28.99416621469,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/nfk_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Norfolk Island (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 18109,
+      "file:checksum": "d501101ee06ad42a6dbc61fa7df6d89d205b9f",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.1402215796537295,
+            "minimum": 3.400000059627928e-05,
+            "maximum": 1.288288950920105,
+            "stddev": 0.20635878354618284,
+            "valid_percent": 17.480169069538533
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 3.400000059627928e-05,
+            "max": 1.288288950920105,
+            "buckets": [
+              2096,
+              359,
+              200,
+              152,
+              87,
+              57,
+              34,
+              17,
+              12,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 2174,
+      "file:checksum": "122049ddeecddcdee000cfc608f12189d420303bd27eb9963ecb64690e8f6074235c"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3112,
+      "file:checksum": "12209d184c847ec8d51c999cf012f23b0b9c8c7688e19be130abb1fdb491f3a0f5cc"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

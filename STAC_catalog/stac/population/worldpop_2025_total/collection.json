@@ -1,0 +1,1605 @@
+{
+  "type": "Collection",
+  "id": "worldpop_2025_total",
+  "stac_version": "1.1.0",
+  "description": "Estimated number of people (all ages) per ~100 m grid cell in 2025 (WorldPop R2025A, constrained), one item per country.\n\nEstimated number of people (all ages) per ~100 m grid cell (3 arc-seconds) in 2025, from the WorldPop R2025A constrained (`CN`) population estimates. Constrained means people are only allocated to cells mapped as built settlement; all other cells are nodata.\n\nThe data are one Cloud-Optimized GeoTIFF per country, served from their original location on Azure, with one STAC item per country. The collection's `data` asset is a GDAL VRT over all country files, with virtual overviews, for global access with a single URL.\n\nUnits: people per grid cell. Nodata: -99999. License: CC-BY-4.0. Citation: WorldPop (www.worldpop.org), R2025A.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_abw/worldpop_2025_total_abw.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Aruba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_afg/worldpop_2025_total_afg.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Afghanistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ago/worldpop_2025_total_ago.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Angola"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_aia/worldpop_2025_total_aia.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Anguilla"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ala/worldpop_2025_total_ala.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Åland Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_alb/worldpop_2025_total_alb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Albania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_and/worldpop_2025_total_and.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Andorra"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_are/worldpop_2025_total_are.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – United Arab Emirates"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_arg/worldpop_2025_total_arg.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Argentina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_arm/worldpop_2025_total_arm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Armenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_asm/worldpop_2025_total_asm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – American Samoa (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_atg/worldpop_2025_total_atg.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Antigua and Barbuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_aus/worldpop_2025_total_aus.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ashmore and Cartier Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_aut/worldpop_2025_total_aut.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Austria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_aze/worldpop_2025_total_aze.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Azerbaijan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bdi/worldpop_2025_total_bdi.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Burundi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bel/worldpop_2025_total_bel.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Belgium"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ben/worldpop_2025_total_ben.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Benin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bes/worldpop_2025_total_bes.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bonaire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bfa/worldpop_2025_total_bfa.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Burkina Faso"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bgd/worldpop_2025_total_bgd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bangladesh"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bgr/worldpop_2025_total_bgr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bulgaria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bhr/worldpop_2025_total_bhr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bahrain"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bhs/worldpop_2025_total_bhs.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bahamas"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bih/worldpop_2025_total_bih.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bosnia and Herzegovina"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_blm/worldpop_2025_total_blm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Barthélemy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_blr/worldpop_2025_total_blr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Belarus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_blz/worldpop_2025_total_blz.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Belize"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bmu/worldpop_2025_total_bmu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bermuda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bol/worldpop_2025_total_bol.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bolivia (Plurinational State of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bra/worldpop_2025_total_bra.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Brazil"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_brb/worldpop_2025_total_brb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Barbados"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_brn/worldpop_2025_total_brn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Brunei Darussalam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_btn/worldpop_2025_total_btn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bhutan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_bwa/worldpop_2025_total_bwa.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Botswana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_caf/worldpop_2025_total_caf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Central African Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_can/worldpop_2025_total_can.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Canada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_che/worldpop_2025_total_che.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Switzerland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_chl/worldpop_2025_total_chl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Chile"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_chn/worldpop_2025_total_chn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – China"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_civ/worldpop_2025_total_civ.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Côte d'Ivoire"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cmr/worldpop_2025_total_cmr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cameroon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cod/worldpop_2025_total_cod.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Democratic Republic of the Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cog/worldpop_2025_total_cog.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Congo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cok/worldpop_2025_total_cok.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cook Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_col/worldpop_2025_total_col.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Colombia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_com/worldpop_2025_total_com.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Comoros"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cpv/worldpop_2025_total_cpv.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cape Verde"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cri/worldpop_2025_total_cri.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Costa Rica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cub/worldpop_2025_total_cub.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cuba"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cuw/worldpop_2025_total_cuw.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Curaçao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cym/worldpop_2025_total_cym.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cayman Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cyp/worldpop_2025_total_cyp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cyprus"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_cze/worldpop_2025_total_cze.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Czechia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_deu/worldpop_2025_total_deu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Germany"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_dji/worldpop_2025_total_dji.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Djibouti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_dma/worldpop_2025_total_dma.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Dominica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_dnk/worldpop_2025_total_dnk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Denmark"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_dom/worldpop_2025_total_dom.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Dominican Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_dza/worldpop_2025_total_dza.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Algeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ecu/worldpop_2025_total_ecu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ecuador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_egy/worldpop_2025_total_egy.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Egypt"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_eri/worldpop_2025_total_eri.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Eritrea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_esh/worldpop_2025_total_esh.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Western Sahara"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_esp/worldpop_2025_total_esp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Canary Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_est/worldpop_2025_total_est.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Estonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_eth/worldpop_2025_total_eth.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ethiopia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_fin/worldpop_2025_total_fin.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Finland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_fji/worldpop_2025_total_fji.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Fiji"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_flk/worldpop_2025_total_flk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Falkland Islands (Malvinas)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_fra/worldpop_2025_total_fra.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – France"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_fro/worldpop_2025_total_fro.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Faroe Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_fsm/worldpop_2025_total_fsm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Micronesia (Federated States of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gab/worldpop_2025_total_gab.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Gabon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gbr/worldpop_2025_total_gbr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – United Kingdom of Great Britain & Northern Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_geo/worldpop_2025_total_geo.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Georgia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ggy/worldpop_2025_total_ggy.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guernsey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gha/worldpop_2025_total_gha.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ghana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gib/worldpop_2025_total_gib.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Gibraltar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gin/worldpop_2025_total_gin.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_glp/worldpop_2025_total_glp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guadeloupe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gmb/worldpop_2025_total_gmb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Gambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gnb/worldpop_2025_total_gnb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guinea-Bissau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gnq/worldpop_2025_total_gnq.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Equatorial Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_grc/worldpop_2025_total_grc.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Greece"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_grd/worldpop_2025_total_grd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Grenada"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_grl/worldpop_2025_total_grl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Greenland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gtm/worldpop_2025_total_gtm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guatemala"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_guf/worldpop_2025_total_guf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – French Guiana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_gum/worldpop_2025_total_gum.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guam (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_guy/worldpop_2025_total_guy.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Guyana"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_hkg/worldpop_2025_total_hkg.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Hong Kong"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_hnd/worldpop_2025_total_hnd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Honduras"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_hrv/worldpop_2025_total_hrv.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Croatia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_hti/worldpop_2025_total_hti.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Haiti"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_hun/worldpop_2025_total_hun.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Hungary"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_idn/worldpop_2025_total_idn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Indonesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_imn/worldpop_2025_total_imn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Isle of Man"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ind/worldpop_2025_total_ind.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – India"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_irl/worldpop_2025_total_irl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ireland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_irn/worldpop_2025_total_irn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Iran (Islamic Republic of)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_irq/worldpop_2025_total_irq.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Iraq"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_isl/worldpop_2025_total_isl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Iceland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_isr/worldpop_2025_total_isr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Israel"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ita/worldpop_2025_total_ita.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Italy"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_jam/worldpop_2025_total_jam.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Jamaica"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_jey/worldpop_2025_total_jey.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Jersey"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_jor/worldpop_2025_total_jor.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Jordan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_jpn/worldpop_2025_total_jpn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Japan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kaz/worldpop_2025_total_kaz.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kazakhstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ken/worldpop_2025_total_ken.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kenya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kgz/worldpop_2025_total_kgz.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kyrgyzstan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_khm/worldpop_2025_total_khm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Cambodia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kir/worldpop_2025_total_kir.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kiribati"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kna/worldpop_2025_total_kna.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Kitts and Nevis"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kor/worldpop_2025_total_kor.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_kwt/worldpop_2025_total_kwt.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kuwait"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lao/worldpop_2025_total_lao.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Lao People's Democratic Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lbn/worldpop_2025_total_lbn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Lebanon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lbr/worldpop_2025_total_lbr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Liberia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lby/worldpop_2025_total_lby.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Libya"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lca/worldpop_2025_total_lca.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Lucia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lie/worldpop_2025_total_lie.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Liechtenstein"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lka/worldpop_2025_total_lka.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sri Lanka"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lso/worldpop_2025_total_lso.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Lesotho"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ltu/worldpop_2025_total_ltu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Lithuania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lux/worldpop_2025_total_lux.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Luxembourg"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_lva/worldpop_2025_total_lva.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Latvia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mac/worldpop_2025_total_mac.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Macao"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_maf/worldpop_2025_total_maf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Martin"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mar/worldpop_2025_total_mar.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Morocco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mco/worldpop_2025_total_mco.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Monaco"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mda/worldpop_2025_total_mda.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Moldova"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mdg/worldpop_2025_total_mdg.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Madagascar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mdv/worldpop_2025_total_mdv.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Maldives"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mex/worldpop_2025_total_mex.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mexico"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mhl/worldpop_2025_total_mhl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Marshall Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mkd/worldpop_2025_total_mkd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – North Macedonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mli/worldpop_2025_total_mli.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mali"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mlt/worldpop_2025_total_mlt.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Malta"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mmr/worldpop_2025_total_mmr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Myanmar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mne/worldpop_2025_total_mne.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Montenegro"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mng/worldpop_2025_total_mng.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mongolia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mnp/worldpop_2025_total_mnp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Northern Mariana Is. (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_moz/worldpop_2025_total_moz.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mozambique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mrt/worldpop_2025_total_mrt.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mauritania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_msr/worldpop_2025_total_msr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Montserrat"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mtq/worldpop_2025_total_mtq.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Martinique"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mus/worldpop_2025_total_mus.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mauritius"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mwi/worldpop_2025_total_mwi.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Malawi"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_mys/worldpop_2025_total_mys.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Malaysia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_myt/worldpop_2025_total_myt.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Mayotte"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nam/worldpop_2025_total_nam.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Namibia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ncl/worldpop_2025_total_ncl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – New Caledonia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ner/worldpop_2025_total_ner.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Niger"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nfk/worldpop_2025_total_nfk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Norfolk Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nga/worldpop_2025_total_nga.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Nigeria"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nic/worldpop_2025_total_nic.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Nicaragua"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_niu/worldpop_2025_total_niu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Niue"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nld/worldpop_2025_total_nld.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Netherlands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nor/worldpop_2025_total_nor.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Norway"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_npl/worldpop_2025_total_npl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Nepal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nru/worldpop_2025_total_nru.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Nauru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_nzl/worldpop_2025_total_nzl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – New Zealand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_omn/worldpop_2025_total_omn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Oman"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pak/worldpop_2025_total_pak.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Pakistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pan/worldpop_2025_total_pan.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Panama"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pcn/worldpop_2025_total_pcn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Pitcairn"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_per/worldpop_2025_total_per.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Peru"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_phl/worldpop_2025_total_phl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Philippines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_plw/worldpop_2025_total_plw.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Palau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_png/worldpop_2025_total_png.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Papua New Guinea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pol/worldpop_2025_total_pol.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Poland"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pri/worldpop_2025_total_pri.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Puerto Rico (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_prk/worldpop_2025_total_prk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Democratic People's Republic of Korea"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_prt/worldpop_2025_total_prt.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Madeira Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pry/worldpop_2025_total_pry.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Paraguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pse/worldpop_2025_total_pse.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – State of Palestine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_pyf/worldpop_2025_total_pyf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – French Polynesia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_qat/worldpop_2025_total_qat.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Qatar"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_reu/worldpop_2025_total_reu.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Réunion"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_rou/worldpop_2025_total_rou.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Romania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_rus/worldpop_2025_total_rus.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Russian Federation"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_rwa/worldpop_2025_total_rwa.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Rwanda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sau/worldpop_2025_total_sau.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saudi Arabia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sdn/worldpop_2025_total_sdn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sen/worldpop_2025_total_sen.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sgp/worldpop_2025_total_sgp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Singapore"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_shn/worldpop_2025_total_shn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Helena"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sjm/worldpop_2025_total_sjm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Svalbard and Jan Mayen Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_slb/worldpop_2025_total_slb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Solomon Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sle/worldpop_2025_total_sle.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sierra Leone"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_slv/worldpop_2025_total_slv.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – El Salvador"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_smr/worldpop_2025_total_smr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – San Marino"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_som/worldpop_2025_total_som.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Somalia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_spm/worldpop_2025_total_spm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Pierre et Miquelon"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_srb/worldpop_2025_total_srb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Serbia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ssd/worldpop_2025_total_ssd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – South Sudan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_stp/worldpop_2025_total_stp.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sao Tome and Principe"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sur/worldpop_2025_total_sur.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Suriname"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_svk/worldpop_2025_total_svk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Slovakia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_svn/worldpop_2025_total_svn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Slovenia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_swe/worldpop_2025_total_swe.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sweden"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_swz/worldpop_2025_total_swz.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Eswatini"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_sxm/worldpop_2025_total_sxm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Sint Maarten"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_syc/worldpop_2025_total_syc.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Seychelles"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_syr/worldpop_2025_total_syr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Syrian Arab Republic"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tca/worldpop_2025_total_tca.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Turks and Caicos Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tcd/worldpop_2025_total_tcd.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Chad"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tgo/worldpop_2025_total_tgo.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Togo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tha/worldpop_2025_total_tha.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Thailand"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tjk/worldpop_2025_total_tjk.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Tajikistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tkl/worldpop_2025_total_tkl.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Tokelau"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tkm/worldpop_2025_total_tkm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Turkmenistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tls/worldpop_2025_total_tls.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Timor-Leste"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ton/worldpop_2025_total_ton.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Tonga"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tto/worldpop_2025_total_tto.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Trinidad and Tobago"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tun/worldpop_2025_total_tun.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Tunisia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tur/worldpop_2025_total_tur.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Republic of Türkiye"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tuv/worldpop_2025_total_tuv.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Tuvalu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_twn/worldpop_2025_total_twn.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Taiwan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_tza/worldpop_2025_total_tza.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – United Republic of Tanzania"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_uga/worldpop_2025_total_uga.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Uganda"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ukr/worldpop_2025_total_ukr.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Ukraine"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ury/worldpop_2025_total_ury.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Uruguay"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_usa/worldpop_2025_total_usa.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – United States of America"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_uzb/worldpop_2025_total_uzb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Uzbekistan"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_vct/worldpop_2025_total_vct.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Saint Vincent and the Grenadines"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_ven/worldpop_2025_total_ven.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Bird Island"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_vgb/worldpop_2025_total_vgb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – British Virgin Islands"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_vir/worldpop_2025_total_vir.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – United States Virgin Islands (USA)"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_vnm/worldpop_2025_total_vnm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Viet Nam"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_vut/worldpop_2025_total_vut.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Vanuatu"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_wlf/worldpop_2025_total_wlf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Wallis and Futuna"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_wsm/worldpop_2025_total_wsm.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Samoa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_xkx/worldpop_2025_total_xkx.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Kosovo"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_yem/worldpop_2025_total_yem.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Yemen"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_zaf/worldpop_2025_total_zaf.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – South Africa"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_zmb/worldpop_2025_total_zmb.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Zambia"
+    },
+    {
+      "rel": "item",
+      "href": "./worldpop_2025_total_zwe/worldpop_2025_total_zwe.json",
+      "type": "application/geo+json",
+      "title": "Total population 2025, all ages – Zimbabwe"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Population"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC-BY-4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://www.worldpop.org/",
+      "type": "text/html",
+      "title": "Original source (WorldPop, University of Southampton)"
+    }
+  ],
+  "GCHD:units": "people per grid cell",
+  "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+  "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+  "GCHD:source_release": "R2025A",
+  "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+  "title": "Total population 2025, all ages (WorldPop R2025A)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -56.52583277122999,
+          179.99999856,
+          83.66166666802
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2025-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "population",
+    "WorldPop",
+    "exposure",
+    "all ages",
+    "Total"
+  ],
+  "providers": [
+    {
+      "name": "WorldPop, University of Southampton",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.worldpop.org/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/total/mosaic_ovr.vrt",
+      "type": "application/xml",
+      "title": "Total population 2025, all ages (WorldPop R2025A) – global mosaic (GDAL VRT)",
+      "description": "GDAL VRT mosaic of the per-country WorldPop R2025A COGs (worldpop_2025/R2025A/2025/100m/T/), with virtual overviews (OverviewList 2-512) built from the country COGs' own overviews",
+      "bands": [
+        {
+          "data_type": "float32",
+          "nodata": -99999.0,
+          "raster:sampling": "area",
+          "unit": "people per grid cell"
+        }
+      ],
+      "roles": [
+        "data"
+      ],
+      "file:size": 133272,
+      "file:checksum": "d50110a7e4577cc59ec4a400f524396707d78d"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 26452,
+      "file:checksum": "1220cfacd09dc31c8eac06c749f741496be00a94be6235d93edb3cddcecf8cf2d1d6"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 98640,
+      "file:checksum": "12206845852850bafb660ca735c2005a442cc85fd74e2a57e7f6eca0aa1467c69972"
+    },
+    "items_parquet": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Item index (stac-geoparquet, all items)",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 167323,
+      "file:checksum": "1220916527776047694a32eed471115822fc26961d2e5693f73e1c98c7820c340624"
+    },
+    "items_geojson": {
+      "href": "./items.geojson",
+      "type": "application/geo+json",
+      "title": "Item index (GeoJSON FeatureCollection, all items)",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1003294,
+      "file:checksum": "1220ea33d1326b933522d37d3a3e3659e287dd18808eae28677410bc5033e6265a00"
+    }
+  },
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "updated": "2026-11-26T16:19:09Z"
+}

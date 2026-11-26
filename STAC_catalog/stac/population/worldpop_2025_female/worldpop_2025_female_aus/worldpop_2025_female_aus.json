@@ -1,0 +1,214 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_female_aus",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          112.92083216165,
+          -9.21916629379001
+        ],
+        [
+          159.09499864362,
+          -9.21916629379001
+        ],
+        [
+          159.09499864362,
+          -54.77666611156001
+        ],
+        [
+          112.92083216165,
+          -54.77666611156001
+        ],
+        [
+          112.92083216165,
+          -9.21916629379001
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    112.92083216165,
+    -54.77666611156001,
+    159.09499864362,
+    -9.21916629379001
+  ],
+  "properties": {
+    "title": "Female population 2025, all ages – Ashmore and Cartier Islands",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "AUS",
+    "GCHD:country": "Ashmore and Cartier Islands",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_F/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            112.92083216165,
+            -54.77666611156001
+          ],
+          [
+            159.09499864362,
+            -54.77666611156001
+          ],
+          [
+            159.09499864362,
+            -9.21916629379001
+          ],
+          [
+            112.92083216165,
+            -9.21916629379001
+          ],
+          [
+            112.92083216165,
+            -54.77666611156001
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      112.92083216165,
+      -54.77666611156001,
+      159.09499864362,
+      -9.21916629379001
+    ],
+    "proj:shape": [
+      54669,
+      55409
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      112.92083216165,
+      0.0,
+      -0.00083333333,
+      -9.21916629379001,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Female population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_F/aus_T_F_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Female population 2025 – Ashmore and Cartier Islands (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 253222326,
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 0.04372215625529614,
+            "minimum": 0.0,
+            "maximum": 26.292110443115234,
+            "stddev": 0.39321693363564986,
+            "valid_percent": 17.668536721068246
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 26.292110443115234,
+            "buckets": [
+              182328,
+              346,
+              120,
+              79,
+              22,
+              11,
+              1,
+              7,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 4834,
+      "file:checksum": "1220c3c91a0804a6b9a377e25244d62c72e6531ec44c80f182f0e90431d97657b544"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 3703,
+      "file:checksum": "1220fc37574d72c908c803f22bcdbeeacda7e6b2ba20bc106e439ad0127d2ecf32df"
+    }
+  },
+  "collection": "worldpop_2025_female"
+}

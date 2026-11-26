@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_bih",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          15.729999217079998,
+          45.27583348823
+        ],
+        [
+          19.623332534839996,
+          45.27583348823
+        ],
+        [
+          19.623332534839996,
+          42.55583349911
+        ],
+        [
+          15.729999217079998,
+          42.55583349911
+        ],
+        [
+          15.729999217079998,
+          45.27583348823
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    15.729999217079998,
+    42.55583349911,
+    19.623332534839996,
+    45.27583348823
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Bosnia and Herzegovina",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "BIH",
+    "GCHD:country": "Bosnia and Herzegovina",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            15.729999217079998,
+            42.55583349911
+          ],
+          [
+            19.623332534839996,
+            42.55583349911
+          ],
+          [
+            19.623332534839996,
+            45.27583348823
+          ],
+          [
+            15.729999217079998,
+            45.27583348823
+          ],
+          [
+            15.729999217079998,
+            42.55583349911
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      15.729999217079998,
+      42.55583349911,
+      19.623332534839996,
+      45.27583348823
+    ],
+    "proj:shape": [
+      3264,
+      4672
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      15.729999217079998,
+      0.0,
+      -0.00083333333,
+      45.27583348823,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/bih_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Bosnia and Herzegovina (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 14641423,
+      "file:checksum": "d50110ac5c1ab8e579683306f41ff512e9c766",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.0106703042746794,
+            "minimum": 0.0,
+            "maximum": 63.562294006347656,
+            "stddev": 2.7755431354015507,
+            "valid_percent": 22.618742362081008
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 63.562294006347656,
+            "buckets": [
+              161573,
+              2442,
+              889,
+              485,
+              206,
+              98,
+              68,
+              51,
+              15,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 13090,
+      "file:checksum": "12207baa0980a42400ee3fcd440e7c9595cca314bf549c8a8fc16d2a8c2945dfe8a1"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 12436,
+      "file:checksum": "1220d976a0d650819b6a9284774588fcd72f2ab1e7dcd8b1e141ef7786245daf21a3"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

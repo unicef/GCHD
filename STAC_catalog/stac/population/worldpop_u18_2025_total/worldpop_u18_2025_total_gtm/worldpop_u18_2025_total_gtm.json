@@ -1,0 +1,211 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_u18_2025_total_gtm",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -92.23166701774001,
+          17.815000264739982
+        ],
+        [
+          -88.23500036706001,
+          17.815000264739982
+        ],
+        [
+          -88.23500036706001,
+          13.740833614369983
+        ],
+        [
+          -92.23166701774001,
+          13.740833614369983
+        ],
+        [
+          -92.23166701774001,
+          17.815000264739982
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -92.23166701774001,
+    13.740833614369983,
+    -88.23500036706001,
+    17.815000264739982
+  ],
+  "properties": {
+    "title": "Total U18 population 2025 – Guatemala",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GTM",
+    "GCHD:country": "Guatemala",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_U18/",
+    "GCHD:gee_asset": "projects/unicef-ccri/assets/population/worldpop_T_U18_2025_CN_100m",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -92.23166701774001,
+            13.740833614369983
+          ],
+          [
+            -88.23500036706001,
+            13.740833614369983
+          ],
+          [
+            -88.23500036706001,
+            17.815000264739982
+          ],
+          [
+            -92.23166701774001,
+            17.815000264739982
+          ],
+          [
+            -92.23166701774001,
+            13.740833614369983
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      -92.23166701774001,
+      13.740833614369983,
+      -88.23500036706001,
+      17.815000264739982
+    ],
+    "proj:shape": [
+      4889,
+      4796
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      -92.23166701774001,
+      0.0,
+      -0.00083333333,
+      17.815000264739982,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total U18 population 2025 (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_U18/gtm_T_Under_18_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total U18 population 2025 – Guatemala (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 23266744,
+      "file:checksum": "d50110f7022e25ae3c10b25f6cee8d366bf865",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.4601014003357753,
+            "minimum": 0.0,
+            "maximum": 54.583213806152344,
+            "stddev": 2.752023480440068,
+            "valid_percent": 25.466417910447763
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 54.583213806152344,
+            "buckets": [
+              251146,
+              6717,
+              1983,
+              1028,
+              719,
+              334,
+              110,
+              32,
+              7,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 18373,
+      "file:checksum": "1220c5207c712e6c771999250573db88a0d7593cc41016658405b6b89aa5a0054da1"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 18412,
+      "file:checksum": "1220017d4f50d7b13ca62fdf636af37f81873792e8e94efa1cee5b5cf6adb05e231d"
+    }
+  },
+  "collection": "worldpop_u18_2025_total"
+}

@@ -1,0 +1,210 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_total_gab",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.699165911869997,
+          2.3183336600599853
+        ],
+        [
+          14.527499221889997,
+          2.3183336600599853
+        ],
+        [
+          14.527499221889997,
+          -3.9608329814900145
+        ],
+        [
+          8.699165911869997,
+          -3.9608329814900145
+        ],
+        [
+          8.699165911869997,
+          2.3183336600599853
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    8.699165911869997,
+    -3.9608329814900145,
+    14.527499221889997,
+    2.3183336600599853
+  ],
+  "properties": {
+    "title": "Total population 2025, all ages – Gabon",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "GAB",
+    "GCHD:country": "Gabon",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T/",
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            8.699165911869997,
+            -3.9608329814900145
+          ],
+          [
+            14.527499221889997,
+            -3.9608329814900145
+          ],
+          [
+            14.527499221889997,
+            2.3183336600599853
+          ],
+          [
+            8.699165911869997,
+            2.3183336600599853
+          ],
+          [
+            8.699165911869997,
+            -3.9608329814900145
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      8.699165911869997,
+      -3.9608329814900145,
+      14.527499221889997,
+      2.3183336600599853
+    ],
+    "proj:shape": [
+      7535,
+      6994
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      8.699165911869997,
+      0.0,
+      -0.00083333333,
+      2.3183336600599853,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Total population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T/gab_pop_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Total population 2025 – Gabon (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4662076,
+      "file:checksum": "d501104b1b6de10ff46c493e73a2c32c2dfe13",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 2.7717145904551694,
+            "minimum": 0.0,
+            "maximum": 59.368595123291016,
+            "stddev": 5.035818448211019,
+            "valid_percent": 3.8149604035226075
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 59.368595123291016,
+            "buckets": [
+              34513,
+              1496,
+              381,
+              207,
+              171,
+              131,
+              74,
+              92,
+              63,
+              23
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 9436,
+      "file:checksum": "12205147c55eef2502bfaaf978e24c44b3b9db2c4a82682b514cbd008c38008085a1"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 9676,
+      "file:checksum": "1220345307505b2f11d23186608e7fb45c317a0d11cdea9d113e6a975195376b4142"
+    }
+  },
+  "collection": "worldpop_2025_total"
+}

@@ -1,0 +1,215 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "worldpop_2025_male_mne",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          18.4333325396,
+          43.55833349509999
+        ],
+        [
+          20.35166586526,
+          43.55833349509999
+        ],
+        [
+          20.35166586526,
+          41.84833350193999
+        ],
+        [
+          18.4333325396,
+          41.84833350193999
+        ],
+        [
+          18.4333325396,
+          43.55833349509999
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    18.4333325396,
+    41.84833350193999,
+    20.35166586526,
+    43.55833349509999
+  ],
+  "properties": {
+    "title": "Male population 2025, all ages – Montenegro",
+    "start_datetime": "2025-01-01T00:00:00+00:00",
+    "end_datetime": "2025-12-31T23:59:59+00:00",
+    "GCHD:iso3": "MNE",
+    "GCHD:country": "Montenegro",
+    "GCHD:units": "people per grid cell",
+    "GCHD:nominal_resolution": "100 m (3 arc-seconds)",
+    "GCHD:citation": "WorldPop (www.worldpop.org), R2025A",
+    "GCHD:source_release": "R2025A",
+    "GCHD:source_folder": "worldpop_2025/R2025A/2025/100m/T_M/",
+    "GCHD:missing_countries": [
+      "FJI",
+      "GRL",
+      "RUS"
+    ],
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            18.4333325396,
+            41.84833350193999
+          ],
+          [
+            20.35166586526,
+            41.84833350193999
+          ],
+          [
+            20.35166586526,
+            43.55833349509999
+          ],
+          [
+            18.4333325396,
+            43.55833349509999
+          ],
+          [
+            18.4333325396,
+            41.84833350193999
+          ]
+        ]
+      ]
+    },
+    "proj:bbox": [
+      18.4333325396,
+      41.84833350193999,
+      20.35166586526,
+      43.55833349509999
+    ],
+    "proj:shape": [
+      2052,
+      2302
+    ],
+    "proj:transform": [
+      0.00083333333,
+      0.0,
+      18.4333325396,
+      0.0,
+      -0.00083333333,
+      43.55833349509999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "providers": [
+      {
+        "name": "WorldPop, University of Southampton",
+        "roles": [
+          "producer",
+          "licensor"
+        ],
+        "url": "https://www.worldpop.org/"
+      },
+      {
+        "name": "UNICEF",
+        "description": "Global Child Hazard Database (GCHD)",
+        "roles": [
+          "processor",
+          "host"
+        ],
+        "url": "https://www.unicef.org/"
+      }
+    ],
+    "datetime": null,
+    "proj:code": "EPSG:4326"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Male population 2025, all ages (WorldPop R2025A)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/worldpop_2025/R2025A/2025/100m/T_M/mne_T_M_2025_CN_100m_R2025A_v1.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Male population 2025 – Montenegro (Cloud-Optimized GeoTIFF)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 2355378,
+      "file:checksum": "d50110dc51856f962c21021e4d04b74d1c7835",
+      "bands": [
+        {
+          "data_type": "float32",
+          "raster:scale": 1.0,
+          "raster:offset": 0.0,
+          "raster:sampling": "area",
+          "nodata": -99999.0,
+          "statistics": {
+            "mean": 1.1254961316181953,
+            "minimum": 0.0,
+            "maximum": 21.96786117553711,
+            "stddev": 1.9364856545474576,
+            "valid_percent": 7.171797987404162
+          },
+          "raster:histogram": {
+            "count": 11,
+            "min": 0.0,
+            "max": 21.96786117553711,
+            "buckets": [
+              59576,
+              4258,
+              1405,
+              778,
+              391,
+              265,
+              156,
+              143,
+              63,
+              15
+            ]
+          }
+        }
+      ]
+    },
+    "thumbnail": {
+      "href": "./thumbnail.png",
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 10551,
+      "file:checksum": "12208556f021b344472f7e2d80e2f15f99e996ff0e604dcbf03f9993bca0cb643361"
+    },
+    "overview": {
+      "href": "./overview.png",
+      "type": "image/png",
+      "title": "Map overlay (data only)",
+      "roles": [
+        "overview"
+      ],
+      "file:size": 10217,
+      "file:checksum": "1220f05d2f5df923176d48fad942f89f39a8ee5bc20ce7c9f82bbdd672beba2213eb"
+    }
+  },
+  "collection": "worldpop_2025_male"
+}
