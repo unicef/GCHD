@@ -76,19 +76,65 @@ function merge(into: ZoneResult[], add: ZoneResult[]) {
   });
 }
 
-export async function runZonal(cat: Catalog, iso3: string, bbox: BBox, bounds: Boundaries, req: ZonalRequest,
-                               onProgress: (msg: string) => void): Promise<ZonalOutput> {
+export interface RasterPlan {
+  exact: boolean;
+  bytes: number;            // full-resolution download for the area
+  aoi: BBox;                // bbox of the units computed (within the country)
+  blockers: string[];       // why the request cannot be computed reliably (empty = ok)
+}
+
+/**
+ * Exact or coarse mode for a request, from the area actually computed (all units of the level, or the ones
+ * asked for). Coarse mode reads the COG overviews; a hazard whose native pixels are finer than the coarse grid
+ * would be thresholded on averaged overview values, which inflates exposure (the overviews average only valid
+ * pixels: where "no hazard" is nodata, e.g. flood depth, a coarse cell with a few flooded pixels counts as
+ * flooded everywhere; around São Paulo 7.5 % of 100 m cells are flooded but 37 % of ~1.6 km overview cells).
+ * Such a request is refused, with the way out: fewer units, so exact mode fits.
+ */
+export async function planRaster(cat: Catalog, iso3: string, countryBBox: BBox, bounds: Boundaries, req: ZonalRequest,
+                                 allUnits: number): Promise<RasterPlan & { pop: Source; popGeo: Awaited<ReturnType<typeof cogGeo>>; sources: Source[][]; grid?: Grid }> {
   const units = [...bounds.units.values()];
+  const ub = units.map((u) => polysBBox(u.polygons)).reduce<BBox>((a, b) =>
+    [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[2], b[2]), Math.max(a[3], b[3])], [Infinity, Infinity, -Infinity, -Infinity]);
+  const aoi: BBox = units.length ? [Math.max(ub[0], countryBBox[0]), Math.max(ub[1], countryBBox[1]), Math.min(ub[2], countryBBox[2]), Math.min(ub[3], countryBBox[3])] : countryBBox;
   const popColl = `${POP_COLL[req.population]}_${req.sex}`;
   const pop = await worldpopSource(cat, popColl, iso3);
   if (!pop) throw new Error(`no WorldPop ${popColl} raster for ${iso3}`);
-  const sources = await Promise.all(req.hazards.map((h) => hazardSources(cat, h.hazard_code, bbox)));
-  const bytes = pop.size + sources.flat().reduce((s, x) => s + windowBytes(x, bbox), 0);
   const popGeo = await cogGeo(pop.href);
+  const sources = await Promise.all(req.hazards.map((h) => hazardSources(cat, h.hazard_code, aoi)));
+  const bytes = windowBytes(pop, aoi) + sources.flat().reduce((s, x) => s + windowBytes(x, aoi), 0);
+  const cells = area(aoi) / (popGeo.rx * popGeo.ry);
+  const exact = bytes <= EXACT_MAX_BYTES && cells <= EXACT_MAX_CELLS;
+  const blockers: string[] = [];
+  let grid: Grid | undefined;
+  if (!exact) {
+    grid = makeGrid(aoi, WORLDPOP_RES, MAX_GRID_CELLS);
+    const km = (grid.dx * 111.32 * Math.cos((((aoi[1] + aoi[3]) / 2) * Math.PI) / 180)).toFixed(1);
+    for (let h = 0; h < req.hazards.length; h++) {
+      if (!sources[h].length) continue;
+      const native = (await cogGeo(sources[h][0].href)).rx;
+      if (native < grid.dx * 0.999) {
+        const code = req.hazards[h].hazard_code;
+        blockers.push(`${code}: computing ${units.length === allUnits ? "the whole country" : `these ${units.length} units`} at full resolution `
+          + `would download about ${(bytes / 1e6).toFixed(0)} MB (limit ${EXACT_MAX_BYTES / 1e6} MB), and on the coarse ~${km} km grid the `
+          + `${(native * 111.32).toFixed(1)} km hazard pixels would be averaged before the threshold is applied, which overstates `
+          + "exposure badly (for flood: several times the true value). Ask the user to limit the area: one or a few ADM1 units "
+          + "(set units in the plan), which runs at full resolution.");
+      }
+    }
+  }
+  return { exact, bytes, aoi, blockers, pop, popGeo, sources, grid };
+}
+
+export async function runZonal(cat: Catalog, iso3: string, bbox: BBox, bounds: Boundaries, req: ZonalRequest,
+                               onProgress: (msg: string) => void, allUnits = bounds.units.size): Promise<ZonalOutput> {
+  const units = [...bounds.units.values()];
+  const plan = await planRaster(cat, iso3, bbox, bounds, req, allUnits);
+  if (plan.blockers.length) throw new Error(`Cannot compute this reliably in the browser. ${plan.blockers.join(" ")}`);
+  const { exact, bytes, pop, popGeo, sources } = plan;
   const combine = req.combine === "single" ? "all" : req.combine;
   const totals: ZoneResult[] = units.map(() => ({ pixelPop: 0, exposedPixelPop: 0, hazSum: 0, hazN: 0, hazMax: -Infinity, hazMin: Infinity }));
   const notes: string[] = [];
-  const exact = bytes <= EXACT_MAX_BYTES && popGeo.width * popGeo.height <= EXACT_MAX_CELLS;
 
   if (exact) {
     // the WorldPop file covers the country: its own 100 m pixels are the analysis grid
@@ -121,8 +167,8 @@ export async function runZonal(cat: Catalog, iso3: string, bbox: BBox, bounds: B
     }
     notes.push(`Exact mode: WorldPop 2025 100 m grid, hazards sampled at full resolution (nearest), as in the GCHD pipeline.`);
   } else {
-    const g = makeGrid(bbox, WORLDPOP_RES, MAX_GRID_CELLS);
-    const m = Math.round(g.dx * 111_320 * Math.cos((((bbox[1] + bbox[3]) / 2) * Math.PI) / 180));
+    const g = plan.grid!;
+    const m = Math.round(g.dx * 111_320 * Math.cos((((plan.aoi[1] + plan.aoi[3]) / 2) * Math.PI) / 180));
     notes.push(`Coarse mode: full-resolution rasters for this country would be ≈${(bytes / 1e6).toFixed(0)} MB, so the grid is ~${m} m `
       + `(${g.width}×${g.height}) sampled from the raster overviews; shares are approximate and can differ from official figures.`);
     onProgress(`Coarse computation on a ${g.width}×${g.height} grid…`);
