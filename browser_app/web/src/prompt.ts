@@ -49,6 +49,9 @@ the tools return.
   explicitly asks for raster processing (set user_asked_for_raster). It reads the source rasters in the
   browser, is slower, and its shares are approximate (exposed people = browser-computed share x official
   unit population). Say so in the plan. The app rejects a plan whose route does not match the request.
+  When the request is about part of the country (one province, a few districts), pass zonal_stats "units"
+  (names or ucodes at admin_level; for ADM2, an ADM1 name selects its districts): only that area is read,
+  which is much faster than the whole country.
   For heatwave, extreme heat, drought (ASI, SPI, SPEI) and malaria, the official tables were computed in GEE
   on a different version of the layer than the catalog rasters, so raster-route numbers for those hazards
   can differ from the official ones even at default thresholds: mention this in cannot_do when relevant.

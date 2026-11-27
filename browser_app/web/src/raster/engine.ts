@@ -94,15 +94,19 @@ export async function runZonal(cat: Catalog, iso3: string, bbox: BBox, bounds: B
     // the WorldPop file covers the country: its own 100 m pixels are the analysis grid
     const ub = units.map((u) => polysBBox(u.polygons));
     const nx = Math.ceil(popGeo.width / TILE), ny = Math.ceil(popGeo.height / TILE);
-    let k = 0;
+    // only the tiles that touch a unit being computed (all of the country, or the units asked for)
+    const todo: { win: [number, number, number, number]; g: Grid; tb: BBox; inTile: boolean[] }[] = [];
     for (let ty = 0; ty < ny; ty++) for (let tx = 0; tx < nx; tx++) {
-      k++;
-      onProgress(`Exact 100 m computation: tile ${k}/${nx * ny} (≈${(bytes / 1e6).toFixed(0)} MB of rasters in all)…`);
       const win: [number, number, number, number] = [tx * TILE, ty * TILE, Math.min(popGeo.width, (tx + 1) * TILE), Math.min(popGeo.height, (ty + 1) * TILE)];
       const g: Grid = { x0: popGeo.ox + win[0] * popGeo.rx, y0: popGeo.oy - win[1] * popGeo.ry, dx: popGeo.rx, width: win[2] - win[0], height: win[3] - win[1] };
       const tb: BBox = [g.x0, g.y0 - g.height * g.dx, g.x0 + g.width * g.dx, g.y0];
       const inTile = units.map((_, i) => bboxIntersects(ub[i], tb));
-      if (!inTile.some(Boolean)) continue;
+      if (inTile.some(Boolean)) todo.push({ win, g, tb, inTile });
+    }
+    let k = 0;
+    for (const { win, g, tb, inTile } of todo) {
+      k++;
+      onProgress(`Exact 100 m computation: tile ${k}/${todo.length} (${units.length} unit${units.length > 1 ? "s" : ""})…`);
       const zonesIdx = rasterizeZones(g, units.map((u, i) => (inTile[i] ? u.polygons : [])));
       if (!zonesIdx.some((z) => z > 0)) continue;
       const p = await readWindow(pop.href, win);

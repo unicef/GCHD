@@ -36,10 +36,23 @@ export interface Catalog {
   boundaryHref: Record<0 | 1 | 2, { parquet: string; pmtiles: string }>;
 }
 
-async function getJson(url: string): Promise<any> {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`${r.status} ${url}`);
-  return r.json();
+// GitHub Pages answers 503/429 now and then (for example while a new version is being deployed); start-up
+// reads ~45 catalog files at once, so retry those (and network errors) a few times before failing.
+export async function getJson(url: string, tries = 4): Promise<any> {
+  for (let i = 1; ; i++) {
+    let status = 0;
+    try {
+      const r = await fetch(url);
+      if (r.ok) return await r.json();
+      status = r.status;
+      if (status !== 429 && status < 500) throw new Error(`${status} ${url}`);
+    } catch (e) {
+      if (status && status !== 429 && status < 500) throw e;   // 404 etc.: do not retry
+      if (i >= tries) throw e;
+    }
+    if (i >= tries) throw new Error(`${status} ${url}`);
+    await new Promise((res) => setTimeout(res, 500 * 2 ** (i - 1)));   // 0.5, 1, 2 s
+  }
 }
 
 function parseNodata(v: unknown): number | undefined {

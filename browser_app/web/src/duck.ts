@@ -1,6 +1,7 @@
 // DuckDB-WASM: the summary (exposure) tables for the chosen country, queried locally in the browser.
 import * as duckdb from "@duckdb/duckdb-wasm";
 import type { Catalog } from "./catalog";
+import { getJson } from "./catalog";
 import { byCountryHref } from "./config";
 import { guardSql } from "./sqlguard";
 
@@ -95,7 +96,7 @@ export function ensureTable(cat: Catalog, level: 0 | 1 | 2, onProgress?: (msg: s
 export async function listCountries(cat: Catalog): Promise<Country[]> {
   const c = cat.collections.get("worldpop_u18_2025_total");
   if (!c) throw new Error("worldpop_u18_2025_total missing from the catalog");
-  const g = await (await fetch(new URL(c.raw.assets.items_geojson.href, c.url).href)).json();
+  const g = await getJson(new URL(c.raw.assets.items_geojson.href, c.url).href);
   const names = new Map((await run(`SELECT iso3, any_value(adm0_name) AS n
       FROM read_parquet('adm0_hazard_src.parquet') GROUP BY 1`)).rows.map((r) => [String(r.iso3), String(r.n)]));
   return g.features
@@ -188,4 +189,12 @@ export async function unitPopulation(level: 0 | 1 | 2): Promise<Map<string, Reco
   const m = new Map<string, Record<string, number>>();
   for (const r of t.rows) m.set(String(r.ucode), r as Record<string, number>);
   return m;
+}
+
+/** ADM2 ucodes of the chosen country inside the given ADM1 units (names or ucodes, any case). */
+export async function adm2Within(adm1: string[]): Promise<string[]> {
+  if (!adm1.length) return [];
+  const list = adm1.map((k) => q(k.toLowerCase())).join(", ");
+  return (await run(`SELECT DISTINCT adm2_ucode FROM adm2_hazard
+    WHERE lower(adm1_ucode) IN (${list}) OR lower(adm1_name) IN (${list})`)).rows.map((r) => String(r.adm2_ucode));
 }

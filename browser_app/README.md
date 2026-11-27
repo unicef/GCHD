@@ -9,7 +9,7 @@ A static web app at **https://unicef.github.io/GCHD/browser_app/app/**. Users ch
 3. **Explain.** The model calls `propose_plan`. A plan card lists the steps, what can and cannot be done, and the data route.
 4. **Confirm.** The user clicks **Confirm**, **Edit** or **Cancel**. The tools that touch data refuse to run until the plan is confirmed, and they only accept that plan's id.
 5. **Show.** The app shows the result table and a map (a choropleth, or a hazard pixel map), and offers a CSV download.
-6. **Export the map.** The **PNG** button on the map saves the map with its title, legend, OpenStreetMap attribution and a GCHD source line. The **GeoJSON** button saves the mapped units and their values, for use in a GIS (choropleths only). The GeoJSON polygons come from the boundary vector tiles, so they are simplified; for exact boundaries, join the CSV to `adm*.parquet` on `ucode`.
+6. **Export the map.** The **PNG** button on the map redraws the current view at 4× its on-screen size (basemap tiles from a closer zoom level, polygons as vectors, hazard pixels unsmoothed; at most 6000 px on the long side) and saves it with its title, legend, OpenStreetMap attribution and a GCHD source line. The **GeoJSON** button saves the mapped units and their values, for use in a GIS (choropleths only). The GeoJSON polygons come from the boundary vector tiles, so they are simplified; for exact boundaries, join the CSV to `adm*.parquet` on `ucode`.
 
 ## How the catalog's AGENTS.md reaches the model
 
