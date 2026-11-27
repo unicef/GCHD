@@ -131,4 +131,5 @@ await page.screenshot({ path: `/tmp/claude-1000/e2e_${ISO3}_raster.png` });
   console.log("raster map export:", d.suggestedFilename());
 }
 console.log(logs.filter((l) => /error/i.test(l)).slice(0, 10).join("\n"));
+clearInterval(poll);
 await browser.close();

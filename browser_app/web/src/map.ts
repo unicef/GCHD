@@ -40,6 +40,7 @@ export function initMap(el: HTMLElement): L.Map {
     return d;
   };
   ctl.addTo(map);
+  L.control.scale({ metric: true, imperial: false, position: "bottomleft" }).addTo(map);
   return map;
 }
 
@@ -51,18 +52,37 @@ function save(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
 }
 
-/** The mapped units with their values (choropleths only), as GeoJSON. */
-export function exportGeoJSON() {
+/**
+ * The mapped units with their values (choropleths only), as GeoJSON. Each unit is built from pieces clipped
+ * to the vector-tile grid; the pieces are dissolved here so the file has no tile seams.
+ */
+export async function exportGeoJSON() {
   if (!shown?.geojson) { alert("GeoJSON export is available for district / region maps (choropleths)."); return; }
-  const fc = {
-    type: "FeatureCollection",
-    features: shown.geojson.features.map((f) => ({
-      type: "Feature",
-      properties: { ucode: f.properties?.ucode, name: f.properties?.name, [shown!.prop!]: f.properties?.[shown!.prop!] ?? null },
-      geometry: f.geometry,
-    })),
-  };
-  save(new Blob([JSON.stringify(fc)], { type: "application/geo+json" }), `${exportName}.geojson`);
+  const btn = map.getContainer().querySelector<HTMLButtonElement>('.map-export [data-x="geojson"]');
+  if (btn) { btn.disabled = true; btn.textContent = "…"; }
+  try {
+    const { default: pc } = await import("polygon-clipping");
+    const prop = shown.prop!;
+    const features = shown.geojson.features.map((f) => {
+      let geometry = f.geometry;
+      if (geometry.type === "MultiPolygon" && geometry.coordinates.length > 1) {
+        try {
+          const [first, ...rest] = geometry.coordinates as any[];
+          geometry = { type: "MultiPolygon", coordinates: pc.union(first, ...rest) as GeoJSON.Position[][][] };
+        } catch (e) {
+          console.warn(`could not dissolve ${f.properties?.ucode}; kept its tile pieces`, e);
+        }
+      }
+      return {
+        type: "Feature",
+        properties: { ucode: f.properties?.ucode, name: f.properties?.name, [prop]: f.properties?.[prop] ?? null },
+        geometry,
+      };
+    });
+    save(new Blob([JSON.stringify({ type: "FeatureCollection", features })], { type: "application/geo+json" }), `${exportName}.geojson`);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = "GeoJSON"; }
+  }
 }
 
 // PNG export: the current view redrawn at EXPORT_SCALE x its on-screen size (capped at EXPORT_MAX_PX on the
@@ -174,6 +194,7 @@ export async function exportPng(withBasemap = true): Promise<void> {
       ctx.fillText(shown.title, 16, 26);
       drawLegend(ctx, shown, W, H);
     }
+    drawScaleBar(ctx, H);
     const foot = `${withBasemap ? "Basemap © OpenStreetMap contributors · " : ""}Data: UNICEF Global Child Hazard Database (GCHD)`;
     ctx.font = "11px system-ui, sans-serif";
     const fw = ctx.measureText(foot).width;
@@ -193,6 +214,37 @@ export async function exportPng(withBasemap = true): Promise<void> {
   } finally {
     if (btn) { btn.disabled = false; btn.textContent = "PNG"; }
   }
+}
+
+/**
+ * Metric scale bar, bottom left above the source line. Measured along the map's vertical centre, as Leaflet's
+ * own scale control does (web mercator: the scale changes with latitude, so it is exact there only).
+ */
+function drawScaleBar(ctx: CanvasRenderingContext2D, H: number) {
+  const y = map.getSize().y / 2;
+  const maxPx = 120;
+  const metres = map.distance(map.containerPointToLatLng([0, y]), map.containerPointToLatLng([maxPx, y]));
+  const pow = 10 ** Math.floor(Math.log10(metres));
+  const nice = [5, 2, 1].map((k) => k * pow).find((v) => v <= metres) ?? pow;
+  const px = (maxPx * nice) / metres;
+  const label = nice >= 1000 ? `${nice / 1000} km` : `${nice} m`;
+  const x = 12, yb = H - 30;
+  ctx.font = "11px system-ui, sans-serif";
+  const lw = ctx.measureText(label).width;
+  ctx.fillStyle = "rgba(255,255,255,0.85)";
+  ctx.fillRect(x - 8, yb - 21, px + lw / 2 + 14, 28);
+  // two-tone bar: halves in black and white
+  ctx.fillStyle = "#1d2733";
+  ctx.fillRect(x, yb - 4, px / 2, 5);
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(x + px / 2, yb - 4, px / 2, 5);
+  ctx.strokeStyle = "#1d2733";
+  ctx.lineWidth = 1;
+  ctx.strokeRect(x, yb - 4, px, 5);
+  ctx.font = "11px system-ui, sans-serif";
+  ctx.fillStyle = "#1d2733";
+  ctx.fillText("0", x - 3, yb - 8);
+  ctx.fillText(label, x + px - ctx.measureText(label).width / 2, yb - 8);
 }
 
 function drawLegend(ctx: CanvasRenderingContext2D, s: Shown, W: number, H: number) {
