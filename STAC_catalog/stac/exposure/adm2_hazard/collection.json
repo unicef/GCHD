@@ -2,7 +2,7 @@
   "type": "Collection",
   "id": "adm2_hazard",
   "stac_version": "1.1.0",
-  "description": "One row per (adm2_ucode, hazard_code). Columns follow the ' Data Schema' sheet of Global Hazard Data catalog.xlsx. Computed by the GEE exposure pipeline (CSV release 2026-08-31); for some hazards (heatwave, extreme heat, ASI, malaria, SPI/SPEI drought) GEE used a different version of the layer than the hazard COGs in this catalog, so the numbers can differ from a recomputation on the COGs. Join to adm2 on adm2_ucode = ucode.",
+  "description": "One row per (adm2_ucode, hazard_code). Columns follow the ' Data Schema' sheet of Global Hazard Data catalog.xlsx. Computed by the GEE exposure pipeline (CSV release 2026-08-31); for some hazards (heatwave, extreme heat, ASI, malaria) GEE used a different version of the layer than the hazard COGs in this catalog, so the numbers can differ from a recomputation on the COGs. Join to adm2 on adm2_ucode = ucode.",
   "links": [
     {
       "rel": "root",
