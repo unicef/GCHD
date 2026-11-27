@@ -89,6 +89,7 @@ Run from `STAC_catalog/` with the repo venv (`../.venv/bin/python pipeline/<step
 | `08_build_stac.py` | Builds `stac/`. It applies the Portolan rules (`gchd_stac/portolan.py`) and writes every README.md and AGENTS.md | No |
 | `09_check.py` | `portolan check` (offline), pystac validation, and coverage of the hazard codes and the Portolan collections. Writes `reports/portolan_check.txt` and `reports/catalog_summary.csv` | No |
 | `10_publish.py` | Checks that blob CORS allows GitHub Pages (read-only), then builds STAC Browser into `browser/`. Needs Node 22 or later; pass `--node-bin` if the system Node is older | No |
+| `11_split_exposure.py` | Per-country copies of the ADM1/ADM2 exposure tables for the browser data assistant, at `public/gchd_cog/exposure_by_country/<table>/<sha>/<ISO3>.parquet`, where `<sha>` is the start of the table's STAC checksum. A new table version goes to a new folder and existing files are never overwritten. Run it again after the exposure tables change | Yes, with `--upload` |
 
 Tests: `../.venv/bin/python -m pytest -q`. Add `-m "not network"` to stay offline.
 

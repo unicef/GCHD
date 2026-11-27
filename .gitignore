@@ -74,3 +74,8 @@ STAC_catalog/work/
 !STAC_catalog/browser/**
 !STAC_catalog/config/*.json
 !STAC_catalog/reports/*.csv
+
+# Data assistant (browser_app): sources and the built site (app/) in, dependencies out
+browser_app/node_modules/
+!browser_app/package-lock.json
+!browser_app/tsconfig.json

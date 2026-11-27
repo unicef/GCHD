@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCHD data assistant</title>
+  <meta name="description" content="Ask questions about children's exposure to hazards, answered in your browser from the Global Child Hazard Database (GCHD).">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>GCHD data assistant</h1>
+      <p>Ask about children's exposure to hazards in one country. The data is processed in your browser, from the
+        <a href="https://unicef.github.io/GCHD/STAC_catalog/browser/" target="_blank" rel="noopener">GCHD catalog</a>.</p>
+    </div>
+  </header>
+  <main>
+    <aside id="setup">
+      <section>
+        <h2>1. Language model</h2>
+        <label>Provider
+          <select id="provider">
+            <option value="anthropic">Anthropic (Claude)</option>
+            <option value="openai">OpenAI</option>
+            <option value="gemini">Google Gemini</option>
+          </select>
+        </label>
+        <label>Model <input id="model" type="text" spellcheck="false"></label>
+        <label>API key <input id="apikey" type="password" autocomplete="off" spellcheck="false" placeholder="paste your key"></label>
+        <label class="inline"><input id="remember" type="checkbox"> Remember the key on this device</label>
+        <p class="hint">Your key stays in this browser tab and is sent only to the provider you choose. Nothing goes to a GCHD server: there is none.</p>
+      </section>
+      <section>
+        <h2>2. Country</h2>
+        <input id="country" list="countries" placeholder="Loading countries…" disabled>
+        <datalist id="countries"></datalist>
+        <button id="loadCountry" disabled>Load country</button>
+        <p id="countryInfo" class="hint"></p>
+      </section>
+      <section>
+        <h2>Status</h2>
+        <p id="status" class="hint">Starting…</p>
+      </section>
+    </aside>
+    <section id="chatPane">
+      <div id="chat" aria-live="polite"></div>
+      <form id="ask">
+        <textarea id="question" rows="3" placeholder="Choose a country first, then ask, for example: How many children are exposed to river floods in each district?" disabled></textarea>
+        <button id="send" type="submit" disabled>Ask</button>
+      </form>
+    </section>
+    <section id="resultPane">
+      <div id="map"></div>
+      <div id="results"></div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>
