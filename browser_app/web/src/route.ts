@@ -18,6 +18,7 @@ export interface Plan {
   cannot_do: string[];
   why_not_summary?: string;
   user_asked_for_raster?: boolean;
+  units?: string[];                  // raster route: only these units (names / ucodes; ADM1 names at ADM2)
 }
 
 export interface RouteContext {

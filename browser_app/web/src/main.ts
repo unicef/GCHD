@@ -7,7 +7,7 @@ import type { BBox } from "./geo";
 import { DEFAULT_MODELS, LlmError, LlmSession, Provider, StepInput, ToolResult, createSession } from "./llm";
 import { fitBBox, initMap, setExportName, showChoropleth, showOutline, showRaster } from "./map";
 import { systemPrompt } from "./prompt";
-import { hazardPixelMap, runZonal } from "./raster/engine";
+import { hazardPixelMap, planRaster, runZonal } from "./raster/engine";
 import type { Plan, RouteContext } from "./route";
 import { Dispatcher, StoredResult, TOOLS } from "./tools";
 
@@ -172,6 +172,15 @@ async function selectUnits(b: Boundaries, wanted: unknown): Promise<Boundaries> 
   return { ...b, units: new Map(units.filter((u) => hit.has(u.ucode)).map((u) => [u.ucode, u])) };
 }
 
+async function rasterCheck(plan: Plan): Promise<string[]> {
+  const all = await boundaries(plan.admin_level);
+  const b = await selectUnits(all, plan.units);
+  const p = await planRaster(catalog, country!.iso3, country!.bbox as BBox, b, {
+    hazards: plan.hazards, combine: plan.combine ?? "single", population: plan.population ?? "u18", sex: plan.sex ?? "total",
+  }, all.units.size);
+  return p.blockers;
+}
+
 async function zonal(plan: Plan, a: Record<string, unknown>): Promise<StoredResult> {
   const hazards = (a.hazards as Plan["hazards"]) ?? plan.hazards;
   const allowed = new Set(plan.hazards.map((h) => h.hazard_code));
@@ -179,11 +188,11 @@ async function zonal(plan: Plan, a: Record<string, unknown>): Promise<StoredResu
   if (extra.length) throw new Error(`hazards not in plan ${plan.plan_id}: ${extra.map((h) => h.hazard_code).join(", ")}`);
   const level = Number(a.admin_level ?? plan.admin_level) as 0 | 1 | 2;
   const all = await boundaries(level);
-  const b = await selectUnits(all, a.units);
+  const b = await selectUnits(all, a.units ?? plan.units);
   const out = await runZonal(catalog, country!.iso3, country!.bbox as BBox, b, {
     hazards, combine: (a.combine as any) ?? plan.combine ?? "single",
     population: (a.population as any) ?? plan.population ?? "u18", sex: (a.sex as any) ?? plan.sex ?? "total",
-  }, status);
+  }, status, all.units.size);
   status("Raster route done.");
   if (b !== all) out.notes.unshift(`Computed for ${b.units.size} of ${all.units.size} ADM${level} units: ${[...b.units.values()].map((u) => u.name).slice(0, 12).join(", ")}${b.units.size > 12 ? ", …" : ""}.`);
   return dispatcher.addResult({ columns: out.columns, rows: out.rows }, String(a.title ?? "Raster exposure"), { level, notes: out.notes });
@@ -336,7 +345,7 @@ function newDispatcher(): Dispatcher {
     defaultRule: (code) => { const r = catalog.hazards.get(code)?.rule; return r && { op: r.op, threshold: r.threshold }; },
   };
   return new Dispatcher({
-    catalog, routeContext, showPlan, progress: status, showTable, offerCsv, choropleth, pixelMap, zonal,
+    catalog, routeContext, showPlan, progress: status, showTable, offerCsv, choropleth, pixelMap, zonal, rasterCheck,
   });
 }
 

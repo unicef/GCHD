@@ -43,6 +43,7 @@ export const TOOLS: ToolDef[] = [
         cannot_do: { type: "array", items: { type: "string" } },
         why_not_summary: { type: "string", description: "required for the raster route" },
         user_asked_for_raster: { type: "boolean" },
+        units: { type: "array", items: { type: "string" }, description: "raster route: only these units (names or ucodes at admin_level; for ADM2 an ADM1 name selects its districts). Omit for the whole country." },
       },
       required: ["intent", "data_route", "admin_level", "hazards", "outputs", "steps", "can_do", "cannot_do"],
     },
@@ -112,6 +113,7 @@ export interface Hooks {
   choropleth(r: StoredResult, column: string, level: number, title: string): Promise<void>;
   pixelMap(planId: string, hazardCode: string, title: string): Promise<void>;
   zonal(plan: Plan, args: Record<string, unknown>): Promise<StoredResult>;
+  rasterCheck(plan: Plan): Promise<string[]>;     // reasons a raster plan cannot be computed reliably
 }
 
 export class Dispatcher {
@@ -182,6 +184,13 @@ export class Dispatcher {
           for (const h of plan.hazards) if (h.threshold !== undefined && h.threshold !== null) h.threshold = Number(h.threshold);
           const chk = checkPlan(plan, this.h.routeContext);
           if (!chk.ok) return { ...ok(`Plan rejected: ${chk.errors.join(" ")}`), isError: true };
+          if (plan.data_route === "raster") {
+            this.h.progress("Checking what the raster route needs…");
+            const blockers = await this.h.rasterCheck(plan);
+            if (blockers.length)
+              return { ...ok(`Plan rejected: ${blockers.join(" ")} Explain this to the user in plain words and ask which area to compute; `
+                + "do not propose the same plan again."), isError: true };
+          }
           plan.plan_id = `P${++this.nPlan}`;
           this.plans.set(plan.plan_id, plan);
           this.latest = plan.plan_id;

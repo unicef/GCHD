@@ -31,7 +31,10 @@ The route is enforced in code as well as in the prompt. `route.ts` works out whi
 The raster route has two modes:
 - **Exact mode**, when the country's full-resolution rasters total at most about 400 MB (most countries). It uses the WorldPop 100 m grid, processed tile by tile, with hazards sampled at full resolution, as in the GCHD pipeline.
   - Checked against the official ADM1 numbers for river flood: Bangladesh +0.8 % and Kenya +2.0 % in total, with per-unit differences at most 2.3 % of a unit's children.
-- **Coarse mode**, for very large countries (for example Brazil, about 1.7 GB). It uses a coarser grid sampled from the COG overviews, and the result is marked approximate.
+- **Coarse mode**, when the area is too large for exact mode. It uses a coarser grid sampled from the COG overviews. It is allowed only for hazards whose native pixels are at least as coarse as that grid, so no averaged overview gets thresholded.
+  - The COG overviews average the valid pixels only. Where "no hazard" is stored as nodata, as in flood depth, a coarse cell with a few flooded pixels counts as flooded over its whole area. Around São Paulo, 7.5 % of the 100 m cells are flooded, but 37 % of the ~1.6 km overview cells are, so a whole-Brazil run overstated exposure about tenfold.
+  - A raster plan that would need this is rejected before the user confirms it, with the reason. The assistant then offers to compute one or a few ADM1 units instead (`units` in the plan and in `zonal_stats`).
+- **Area:** exact or coarse mode is decided from the area actually computed (the bbox of the units asked for), not the whole country. São Paulo state (645 districts) runs in exact mode in about 50 s. Its river-flood numbers at the default threshold match the official ones with a median per-district difference of 0.08 % of the district's children (São Paulo city 71,593 against 69,263).
 
 In both modes, exposed people = (exposed share computed in the browser) × (the unit's official population from the summary tables).
 
@@ -75,6 +78,8 @@ npx vite preview --port 4173 &
 node tests/e2e.mjs KEN                         # summary flow + raster flow (custom threshold, pixel map); lists the Parquet files fetched
 NO_SPLIT=1 node tests/e2e.mjs BEN              # same, with the per-country tables blocked (whole-table fallback)
 node tests/parity.mjs BGD river_flood_100yr    # raster route at default threshold vs the official ADM1 table
+node tests/parity.mjs BRA river_flood_100yr 0.1 2 "São Paulo"   # custom threshold, districts of one state
+node tests/parity.mjs BRA river_flood_100yr 0.1 2               # whole Brazil: the plan is rejected
 ```
 
 ## Files
