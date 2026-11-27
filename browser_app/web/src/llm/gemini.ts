@@ -29,32 +29,40 @@ export function geminiSession(o: SessionOptions): LlmSession {
       if (input.userText) parts.push({ text: input.userText });
       const turn = { role: "user", parts };
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(o.model)}:generateContent`;
-      const call = async (extra: any[]) => {
+      const call = async (extra: any[], mode: "AUTO" | "ANY" = "AUTO") => {
         const res = await fetch(url, {
           method: "POST",
           headers: { "content-type": "application/json", "x-goog-api-key": o.apiKey },
           body: JSON.stringify({
             systemInstruction: { parts: [{ text: o.system }] },
             contents: [...contents, turn, ...extra], tools,
-            toolConfig: { functionCallingConfig: { mode: "AUTO" } },
+            toolConfig: { functionCallingConfig: { mode } },
           }),
         });
         if (!res.ok) throw new LlmError(`Gemini ${res.status}: ${(await res.text()).slice(0, 400)}`, res.status);
         return res.json();
       };
+      // empty = no tool call and no visible text (no parts at all, or only "thought" parts)
+      const empty = (c: any) => !c?.content?.parts?.some((p: any) => p.functionCall || (p.text && !p.thought));
       let d = await call([]);
       let cand = d.candidates?.[0];
-      // an empty reply (typically finishReason MALFORMED_FUNCTION_CALL): retry once with a nudge
-      if (!cand?.content?.parts?.length && !d.promptFeedback?.blockReason) {
+      // Gemini 2.5 sometimes ends a turn with nothing to show (often right after a function response):
+      // retry with a nudge; after a confirmed plan the next step must be a tool call, so the last retry
+      // requires one (functionCallingConfig ANY).
+      const retries: ("AUTO" | "ANY")[] = input.expectTool ? ["AUTO", "ANY"] : ["AUTO"];
+      for (const mode of retries) {
+        if (!empty(cand) || d.promptFeedback?.blockReason) break;
         const why = cand?.finishReason ?? "no candidate";
-        console.warn("Gemini empty reply, retrying:", why, d);
+        console.warn(`Gemini empty reply (${why}), retrying with mode ${mode}`, d);
         d = await call([{ role: "model", parts: [{ text: "(my previous reply was empty)" }] },
-          { role: "user", parts: [{ text: `Your previous reply was empty (${why}). Answer again: either reply in plain text or call one tool with valid JSON arguments that follow its schema.` }] }]);
+          { role: "user", parts: [{ text: input.expectTool
+            ? "Your previous reply was empty. The plan is confirmed: call the tool for its first step now, with valid arguments that follow the schema."
+            : `Your previous reply was empty (${why}). Answer again: either reply in plain text or call one tool with valid JSON arguments that follow its schema.` }] }], mode);
         cand = d.candidates?.[0];
       }
       const fr: string = cand?.finishReason ?? "";
       const content = cand?.content;
-      if (!content?.parts?.length) {
+      if (empty(cand)) {
         // keep the history valid for the next message: do not store an empty model turn
         const reason = d.promptFeedback?.blockReason ? `blocked: ${d.promptFeedback.blockReason}` : fr || "no candidate";
         return { text: "", toolCalls: [], stop: fr === "SAFETY" || d.promptFeedback?.blockReason ? "refusal" : "other",

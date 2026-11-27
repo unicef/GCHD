@@ -96,7 +96,7 @@ function showPlan(p: Plan) {
   d.querySelector<HTMLButtonElement>('[data-a="ok"]')!.onclick = () => {
     dispatcher.confirm(p.plan_id!);
     done("Confirmed");
-    send({ userText: `I confirm plan ${p.plan_id}. Please run it.` }, `Confirmed plan ${p.plan_id}.`);
+    send({ userText: `I confirm plan ${p.plan_id}. Please run it.`, expectTool: true }, `Confirmed plan ${p.plan_id}.`);
   };
   d.querySelector<HTMLButtonElement>('[data-a="edit"]')!.onclick = () => {
     done("Being edited");
