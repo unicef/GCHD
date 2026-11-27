@@ -17,7 +17,11 @@ export interface StepResult {
   detail?: string;          // why a reply is empty, shown to the user
 }
 
-export interface StepInput { userText?: string; toolResults?: ToolResult[] }
+export interface StepInput {
+  userText?: string;
+  toolResults?: ToolResult[];
+  expectTool?: boolean;     // the next step should be a tool call (after a plan is confirmed): adapters may enforce it
+}
 
 export interface LlmSession {
   step(input: StepInput): Promise<StepResult>;

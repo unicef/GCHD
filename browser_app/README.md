@@ -54,7 +54,7 @@ For heatwave, extreme heat, drought (ASI, SPI, SPEI) and malaria, the official t
 
 - **Anthropic:** default `claude-opus-5-5`, through the official `@anthropic-ai/sdk` (`dangerouslyAllowBrowser`). It uses adaptive thinking, effort `medium`, the server-side refusal fallback, and a cached system prompt.
 - **OpenAI** (Chat Completions with function tools): default `gpt-5`.
-- **Gemini** (`generateContent` with function declarations): default `gemini-2.5-flash`.
+- **Gemini** (`generateContent` with function declarations): default `gemini-2.5-flash`. Gemini 2.5 sometimes ends a turn with no text and no tool call (only "thought" parts), often right after a confirmation; the app retries with a nudge, and after a confirmation the last retry requires a tool call (`functionCallingConfig` `ANY`).
 
 The model field is editable, and each provider adapter keeps its own message history.
 
