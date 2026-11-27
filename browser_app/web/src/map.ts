@@ -8,12 +8,17 @@ import type { Grid } from "./raster/grid";
 const RAMP = ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#b10026"];
 
 let map: L.Map;
+const OSM = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 let dataLayer: L.Layer | null = null;
 let legend: L.Control | null = null;
 const renderer = L.canvas({ padding: 0.5 });
 
 // what is on the map now, for export
-interface Shown { title: string; br: number[]; note?: string; geojson?: GeoJSON.FeatureCollection; prop?: string }
+interface Shown {
+  title: string; br: number[]; note?: string;
+  geojson?: GeoJSON.FeatureCollection; prop?: string; outlines?: GeoJSON.FeatureCollection;   // choropleth
+  raster?: { canvas: HTMLCanvasElement; bounds: L.LatLngBounds };                  // pixel map
+}
 let shown: Shown | null = null;
 let exportName = "GCHD_map";
 export function setExportName(name: string) { exportName = name.replace(/[^\w.-]+/g, "_"); }
@@ -21,7 +26,7 @@ export function setExportName(name: string) { exportName = name.replace(/[^\w.-]
 export function initMap(el: HTMLElement): L.Map {
   map = L.map(el, { preferCanvas: true, worldCopyJump: true }).setView([10, 20], 2);
   // crossOrigin: OSM tiles allow CORS, so they can be drawn into the exported PNG
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  L.tileLayer(OSM, {
     maxZoom: 12, attribution: "© OpenStreetMap contributors", crossOrigin: "anonymous",
   }).addTo(map);
   const ctl = new L.Control({ position: "topright" });
@@ -60,50 +65,133 @@ export function exportGeoJSON() {
   save(new Blob([JSON.stringify(fc)], { type: "application/geo+json" }), `${exportName}.geojson`);
 }
 
-/** The map as drawn now (basemap, data layer), with title, legend, attribution and source, as a PNG. */
-export async function exportPng(withBasemap = true): Promise<void> {
-  const el = map.getContainer();
-  const box = el.getBoundingClientRect();
-  const s = Math.max(2, window.devicePixelRatio || 1);
-  const c = document.createElement("canvas");
-  c.width = Math.round(box.width * s); c.height = Math.round(box.height * s);
-  const ctx = c.getContext("2d")!;
-  ctx.scale(s, s);
-  ctx.fillStyle = "#fff";
-  ctx.fillRect(0, 0, box.width, box.height);
-  const draw = (img: CanvasImageSource, r: DOMRect) => ctx.drawImage(img, r.left - box.left, r.top - box.top, r.width, r.height);
-  if (withBasemap)
-    el.querySelectorAll<HTMLImageElement>(".leaflet-tile-pane img.leaflet-tile-loaded").forEach((i) => draw(i, i.getBoundingClientRect()));
-  el.querySelectorAll<HTMLElement>(".leaflet-overlay-pane canvas, .leaflet-overlay-pane img").forEach((n) =>
-    draw(n as HTMLCanvasElement | HTMLImageElement, n.getBoundingClientRect()));
+// PNG export: the current view redrawn at EXPORT_SCALE x its on-screen size (capped at EXPORT_MAX_PX on the
+// long side): basemap tiles from a higher zoom level, choropleth polygons as vectors, raster pixels unsmoothed.
+const EXPORT_SCALE = 4;
+const EXPORT_MAX_PX = 6000;
+const EXPORT_MAX_TILES = 400;
 
-  // title
-  if (shown) {
-    ctx.font = "bold 15px system-ui, sans-serif";
-    const w = ctx.measureText(shown.title).width;
-    ctx.fillStyle = "rgba(255,255,255,0.9)";
-    ctx.fillRect(8, 8, w + 16, 26);
-    ctx.fillStyle = "#1d2733";
-    ctx.fillText(shown.title, 16, 26);
-    drawLegend(ctx, shown, box.width, box.height);
+function loadImage(url: string): Promise<HTMLImageElement | null> {
+  return new Promise((res) => {
+    const i = new Image();
+    i.crossOrigin = "anonymous";
+    i.onload = () => res(i);
+    i.onerror = () => res(null);
+    i.src = url;
+  });
+}
+
+/** OSM tiles covering the view, drawn at the export scale (ctx is in CSS pixels of the map view). */
+async function drawBasemap(ctx: CanvasRenderingContext2D, W: number, H: number, s: number) {
+  const zoom = map.getZoom();
+  let z = Math.min(19, Math.round(zoom + Math.log2(s)));
+  let tiles: { x: number; y: number; dx: number; dy: number; f: number }[] = [];
+  for (;;) {
+    const f = 2 ** (z - zoom);                         // z-level pixels per view CSS pixel
+    const p0 = map.project(map.containerPointToLatLng([0, 0]), z);
+    const n = 2 ** z;
+    tiles = [];
+    for (let ty = Math.floor(p0.y / 256); ty <= Math.floor((p0.y + H * f) / 256); ty++) {
+      if (ty < 0 || ty >= n) continue;
+      for (let tx = Math.floor(p0.x / 256); tx <= Math.floor((p0.x + W * f) / 256); tx++)
+        tiles.push({ x: ((tx % n) + n) % n, y: ty, dx: (tx * 256 - p0.x) / f, dy: (ty * 256 - p0.y) / f, f });
+    }
+    if (tiles.length <= EXPORT_MAX_TILES || z <= Math.round(zoom)) break;
+    z--;
   }
-  // attribution and source
-  const foot = `${withBasemap ? "Basemap © OpenStreetMap contributors · " : ""}Data: UNICEF Global Child Hazard Database (GCHD)`;
-  ctx.font = "11px system-ui, sans-serif";
-  const fw = ctx.measureText(foot).width;
-  ctx.fillStyle = "rgba(255,255,255,0.85)";
-  ctx.fillRect(0, box.height - 18, fw + 12, 18);
-  ctx.fillStyle = "#333";
-  ctx.fillText(foot, 6, box.height - 5);
+  const url = (t: { x: number; y: number }) => OSM.replace("{z}", String(z)).replace("{x}", String(t.x)).replace("{y}", String(t.y));
+  for (let i = 0; i < tiles.length; i += 8) {           // a few at a time, to be polite to the OSM tile servers
+    const batch = tiles.slice(i, i + 8);
+    const imgs = await Promise.all(batch.map((t) => loadImage(url(t))));
+    batch.forEach((t, k) => { if (imgs[k]) ctx.drawImage(imgs[k]!, t.dx, t.dy, 256 / t.f + 0.02, 256 / t.f + 0.02); });
+  }
+}
 
+function tracePolys(ctx: CanvasRenderingContext2D, g: GeoJSON.Geometry) {
+  const ring = (r: number[][]) => r.forEach(([lon, lat], i) => {
+    const p = map.latLngToContainerPoint([lat, lon]);
+    if (i) ctx.lineTo(p.x, p.y); else ctx.moveTo(p.x, p.y);
+  });
+  if (g.type === "Polygon") g.coordinates.forEach((r) => { ring(r); ctx.closePath(); });
+  else if (g.type === "MultiPolygon") g.coordinates.forEach((pl) => pl.forEach((r) => { ring(r); ctx.closePath(); }));
+  else if (g.type === "LineString") ring(g.coordinates);
+  else if (g.type === "MultiLineString") g.coordinates.forEach(ring);
+}
+
+function drawData(ctx: CanvasRenderingContext2D, s: Shown) {
+  if (s.geojson && s.prop) {
+    ctx.globalAlpha = 0.75;
+    for (const f of s.geojson.features) {
+      ctx.beginPath();
+      tracePolys(ctx, f.geometry);
+      ctx.fillStyle = colorFor(Number(f.properties?.[s.prop]), s.br);
+      ctx.fill("evenodd");
+    }
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = "#555";
+    ctx.lineWidth = 0.6;
+    ctx.lineJoin = "round";
+    for (const f of s.outlines?.features ?? []) {
+      ctx.beginPath();
+      tracePolys(ctx, f.geometry);
+      ctx.stroke();
+    }
+  }
+  if (s.raster) {
+    const b = s.raster.bounds;
+    const a = map.latLngToContainerPoint(b.getNorthWest()), c = map.latLngToContainerPoint(b.getSouthEast());
+    ctx.globalAlpha = 0.85;
+    ctx.imageSmoothingEnabled = false;                   // keep the hazard pixels crisp
+    ctx.drawImage(s.raster.canvas, a.x, a.y, c.x - a.x, c.y - a.y);
+    ctx.imageSmoothingEnabled = true;
+    ctx.globalAlpha = 1;
+  }
+}
+
+/** The current view as a high-resolution PNG: basemap, data, title, legend, attribution and source. */
+export async function exportPng(withBasemap = true): Promise<void> {
+  const size = map.getSize();
+  const W = size.x, H = size.y;
+  const s = Math.max(2, Math.min(EXPORT_SCALE, EXPORT_MAX_PX / Math.max(W, H)));
+  const btn = map.getContainer().querySelector<HTMLButtonElement>('.map-export [data-x="png"]');
+  if (btn) { btn.disabled = true; btn.textContent = "…"; }
   try {
-    const blob = await new Promise<Blob | null>((res) => c.toBlob(res, "image/png"));
-    if (!blob) throw new Error("empty image");
+    const c = document.createElement("canvas");
+    c.width = Math.round(W * s); c.height = Math.round(H * s);
+    const ctx = c.getContext("2d")!;
+    ctx.scale(s, s);
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, W, H);
+    if (withBasemap) await drawBasemap(ctx, W, H, s);
+    if (shown) drawData(ctx, shown);
+
+    if (shown) {                                         // title
+      ctx.font = "bold 15px system-ui, sans-serif";
+      const w = ctx.measureText(shown.title).width;
+      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.fillRect(8, 8, w + 16, 26);
+      ctx.fillStyle = "#1d2733";
+      ctx.fillText(shown.title, 16, 26);
+      drawLegend(ctx, shown, W, H);
+    }
+    const foot = `${withBasemap ? "Basemap © OpenStreetMap contributors · " : ""}Data: UNICEF Global Child Hazard Database (GCHD)`;
+    ctx.font = "11px system-ui, sans-serif";
+    const fw = ctx.measureText(foot).width;
+    ctx.fillStyle = "rgba(255,255,255,0.85)";
+    ctx.fillRect(0, H - 18, fw + 12, 18);
+    ctx.fillStyle = "#333";
+    ctx.fillText(foot, 6, H - 5);
+
+    let blob: Blob | null = null;
+    try { blob = await new Promise<Blob | null>((res) => c.toBlob(res, "image/png")); } catch { blob = null; }
+    if (!blob) {
+      // a tile without CORS taints the canvas: export again without the basemap
+      if (withBasemap) return await exportPng(false);
+      throw new Error("could not create the PNG");
+    }
     save(blob, `${exportName}.png`);
-  } catch (e) {
-    // a basemap tile without CORS taints the canvas: export again without the basemap
-    if (withBasemap) return exportPng(false);
-    throw e;
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = "PNG"; }
   }
 }
 
@@ -205,7 +293,7 @@ export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, titl
   const lines = L.geoJSON(outlines, { renderer, interactive: false, style: () => ({ color: "#555", weight: 0.6 }) } as L.GeoJSONOptions);
   dataLayer = L.layerGroup([fills, lines]).addTo(map);
   addLegend(title, br, note);
-  shown = { title, br, note, geojson: fc, prop };
+  shown = { title, br, note, geojson: fc, prop, outlines };
 }
 
 /** Outline only (country chosen, nothing computed yet). */
@@ -253,7 +341,8 @@ export function showRaster(g: Grid, values: Float32Array, title: string, mask?: 
     }
   }
   ctx.putImageData(img, 0, 0);
-  dataLayer = L.imageOverlay(canvas.toDataURL(), [[bottom, g.x0], [top, g.x0 + g.width * g.dx]], { opacity: 0.85 }).addTo(map);
+  const bounds: L.LatLngBoundsExpression = [[bottom, g.x0], [top, g.x0 + g.width * g.dx]];
+  dataLayer = L.imageOverlay(canvas.toDataURL(), bounds, { opacity: 0.85 }).addTo(map);
   addLegend(title, br, note);
-  shown = { title, br, note };
+  shown = { title, br, note, raster: { canvas, bounds: L.latLngBounds(bounds) } };
 }

@@ -2,9 +2,9 @@ import "./style.css";
 import { Boundaries, loadBoundaries, outlinesGeoJSON, toGeoJSON } from "./boundaries";
 import { Catalog, loadCatalog, usageNotes } from "./catalog";
 import { downloadCsv } from "./csv";
-import { Country, Table, ensureTable, listCountries, listTableHazards, loadCountryTables, startDuckDB } from "./duck";
+import { Country, Table, adm2Within, ensureTable, listCountries, listTableHazards, loadCountryTables, startDuckDB } from "./duck";
 import type { BBox } from "./geo";
-import { DEFAULT_MODELS, LlmError, LlmSession, Provider, StepInput, createSession } from "./llm";
+import { DEFAULT_MODELS, LlmError, LlmSession, Provider, StepInput, ToolResult, createSession } from "./llm";
 import { fitBBox, initMap, setExportName, showChoropleth, showOutline, showRaster } from "./map";
 import { systemPrompt } from "./prompt";
 import { hazardPixelMap, runZonal } from "./raster/engine";
@@ -155,18 +155,37 @@ async function choropleth(r: StoredResult, column: string, level: number, title:
   fitBBox(country!.bbox as BBox);
 }
 
+/**
+ * The units a zonal_stats call asks for (names or ucodes at the analysis level; for ADM2 also an ADM1 name or
+ * ucode, meaning its districts, looked up in the ADM2 table's adm1_ucode / adm1_name).
+ * Only those units are rasterized, and tiles without them are skipped.
+ */
+async function selectUnits(b: Boundaries, wanted: unknown): Promise<Boundaries> {
+  const keys = (Array.isArray(wanted) ? wanted : []).map((x) => String(x).trim().toLowerCase()).filter(Boolean);
+  if (!keys.length) return b;
+  const units = [...b.units.values()];
+  const hit = new Set(units.filter((u) => keys.includes(u.ucode.toLowerCase()) || keys.includes(u.name.toLowerCase())).map((u) => u.ucode));
+  if (b.level === 2) (await adm2Within(keys)).forEach((c) => { if (b.units.has(c)) hit.add(c); });
+  if (!hit.size)
+    throw new Error(`none of ${JSON.stringify(wanted)} matches an ADM${b.level} unit of ${country!.iso3}; `
+      + `names: ${units.map((u) => u.name).sort().slice(0, 60).join(", ")}${units.length > 60 ? ", …" : ""}`);
+  return { ...b, units: new Map(units.filter((u) => hit.has(u.ucode)).map((u) => [u.ucode, u])) };
+}
+
 async function zonal(plan: Plan, a: Record<string, unknown>): Promise<StoredResult> {
   const hazards = (a.hazards as Plan["hazards"]) ?? plan.hazards;
   const allowed = new Set(plan.hazards.map((h) => h.hazard_code));
   const extra = hazards.filter((h) => !allowed.has(h.hazard_code));
   if (extra.length) throw new Error(`hazards not in plan ${plan.plan_id}: ${extra.map((h) => h.hazard_code).join(", ")}`);
   const level = Number(a.admin_level ?? plan.admin_level) as 0 | 1 | 2;
-  const b = await boundaries(level);
+  const all = await boundaries(level);
+  const b = await selectUnits(all, a.units);
   const out = await runZonal(catalog, country!.iso3, country!.bbox as BBox, b, {
     hazards, combine: (a.combine as any) ?? plan.combine ?? "single",
     population: (a.population as any) ?? plan.population ?? "u18", sex: (a.sex as any) ?? plan.sex ?? "total",
   }, status);
   status("Raster route done.");
+  if (b !== all) out.notes.unshift(`Computed for ${b.units.size} of ${all.units.size} ADM${level} units: ${[...b.units.values()].map((u) => u.name).slice(0, 12).join(", ")}${b.units.size > 12 ? ", …" : ""}.`);
   return dispatcher.addResult({ columns: out.columns, rows: out.rows }, String(a.title ?? "Raster exposure"), { level, notes: out.notes });
 }
 
@@ -210,12 +229,21 @@ function send(input: StepInput, shown?: string) {
   } else converse(input, shown);
 }
 
+// Tool results of the step that showed a plan. They are not sent back at once: the model would get the
+// turn again and (Gemini especially) keep calling data tools before the user has confirmed. They go with
+// the user's next message instead (Confirm / Edit / Cancel or typed text), in the same request.
+let pendingResults: ToolResult[] = [];
+let pendingFor: LlmSession | null = null;     // the session they belong to (a new session drops them)
+
 async function converse(input: StepInput, shown?: string) {
   if (busy) return;
   setBusy(true);
   if (shown ?? input.userText) addMsg("user", shown ?? input.userText!);
   try {
     const s = ensureSession();
+    if (pendingResults.length && pendingFor === s)
+      input = { ...input, toolResults: [...pendingResults, ...(input.toolResults ?? [])] };
+    pendingResults = [];
     status("Thinking…");
     let res = await s.step(input);
     for (let i = 0; i < 16; i++) {
@@ -225,12 +253,20 @@ async function converse(input: StepInput, shown?: string) {
       if (!res.text.trim() && !res.toolCalls.length && res.stop !== "refusal")
         addMsg("error", res.detail ?? `The model returned an empty reply (${res.stop}). Try asking again.`);
       if (!res.toolCalls.length) break;
-      const results = [];
+      const results: ToolResult[] = [];
+      let planShown = false;
       for (const call of res.toolCalls) {
         addMsg("system", `→ ${call.name}${call.name === "query_tables" ? `: ${String(call.input.sql ?? "").slice(0, 300)}` : ""}`);
         const r = await dispatcher.run(call);
         if (r.isError) addMsg("system", `  ${r.content.slice(0, 400)}`);
+        else if (call.name === "propose_plan") planShown = true;
         results.push(r);
+      }
+      if (planShown) {           // the user's turn: wait for Confirm / Edit / Cancel
+        pendingResults = results;
+        pendingFor = s;
+        addMsg("system", "Waiting for your confirmation of the plan.");
+        break;
       }
       status("Thinking…");
       res = await s.step({ toolResults: results });

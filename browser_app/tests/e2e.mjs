@@ -39,29 +39,41 @@ await page.route("https://api.anthropic.com/v1/messages*", async (route) => {
     intent: "Children exposed to river floods by ADM2", data_route: "summary", admin_level: 2,
     hazards: [{ hazard_code: "river_flood_100yr" }], population: "u18", sex: "total", outputs: ["table", "map", "csv"],
     steps: ["query adm2_hazard", "map u18_aexp", "offer CSV"], can_do: ["official numbers per district"], cannot_do: ["no time series"] })], "tool_use");
-  else if (turn === 2) res = msg([{ type: "text", text: "Waiting for your confirmation." }], "end_turn");
-  else if (turn === 3) res = msg([
+  // the app ends the turn after a plan; the propose_plan result comes with the user's "Confirm"
+  else if (turn === 2) {
+    const last = body.messages.at(-1).content;
+    console.log("confirm request carries:", last.map((b) => b.type === "tool_result" ? `tool_result(${b.tool_use_id})` : b.type).join(" + "));
+    res = msg([
     tool("query_tables", { plan_id: "P1", title: "Children exposed to river floods", sql:
       "SELECT adm2_ucode, adm2_name, u18_pop_total, u18_aexp, round(u18_rexp*100,1) AS pct FROM adm2_hazard WHERE hazard_code='river_flood_100yr' ORDER BY u18_aexp DESC" }),
   ], "tool_use");
-  else if (turn === 4) res = msg([tool("show_map", { plan_id: "P1", result_id: "R1", value_column: "u18_aexp", title: "Children exposed" }),
+  }
+  else if (turn === 3) res = msg([tool("show_map", { plan_id: "P1", result_id: "R1", value_column: "u18_aexp", title: "Children exposed" }),
     tool("export_csv", { plan_id: "P1", result_id: "R1", filename: "flood_children.csv" })], "tool_use");
-  else if (turn === 5) res = msg([{ type: "text", text: "Done: the map and CSV are ready." }], "end_turn");
+  else if (turn === 4) res = msg([{ type: "text", text: "Done: the map and CSV are ready." }], "end_turn");
   // raster route: custom threshold + pixel map
-  else if (turn === 6) res = msg([tool("propose_plan", {
+  else if (turn === 5) res = msg([tool("propose_plan", {
     intent: "Children in areas with flood depth over 0.5 m, by ADM1", data_route: "raster", admin_level: 1,
     hazards: [{ hazard_code: "river_flood_100yr", op: ">", threshold: 0.5 }], combine: "single", population: "u18", sex: "total",
     outputs: ["table", "map", "pixel_map"], steps: ["zonal stats", "maps"], can_do: ["approximate shares"], cannot_do: ["official numbers for custom thresholds"],
     why_not_summary: "The summary tables use the default 0.01 m threshold." })], "tool_use");
-  else if (turn === 7) res = msg([{ type: "text", text: "Please confirm." }], "end_turn");
-  else if (turn === 8) res = msg([tool("zonal_stats", { plan_id: "P2", hazards: [{ hazard_code: "river_flood_100yr", op: ">", threshold: 0.5 }],
-    combine: "single", admin_level: 1, population: "u18", sex: "total", title: "Children, flood depth > 0.5 m" })], "tool_use");
-  else if (turn === 9) res = msg([tool("show_map", { plan_id: "P2", hazard_code: "river_flood_100yr", title: "Flood depth (m)" })], "tool_use");
+  else if (turn === 6) res = msg([tool("zonal_stats", { plan_id: "P2", hazards: [{ hazard_code: "river_flood_100yr", op: ">", threshold: 0.5 }],
+    combine: "single", admin_level: 1, population: "u18", sex: "total", title: "Children, flood depth > 0.5 m",
+    // UNITS=Jagang,... restricts the computation to those units
+    ...(process.env.UNITS ? { units: process.env.UNITS.split(",") } : {}) })], "tool_use");
+  else if (turn === 7) res = msg([tool("show_map", { plan_id: "P2", hazard_code: "river_flood_100yr", title: "Flood depth (m)" })], "tool_use");
   else res = msg([{ type: "text", text: "Raster done." }], "end_turn");
   await route.fulfill({ status: 200, contentType: "application/json", headers: { "access-control-allow-origin": "*" }, body: JSON.stringify(res) });
 });
 
 const t0 = Date.now();
+// raster progress lines seen in the status box (to check how many tiles are read)
+const tilesSeen = new Set();
+const poll = setInterval(async () => {
+  const t = await page.textContent("#status").catch(() => "");
+  if (/tile \d+\/\d+/.test(t)) tilesSeen.add(t.match(/tile \d+\/\d+[^…]*/)[0]);
+}, 300);
+process.on("exit", () => { clearInterval(poll); console.log("raster tiles:", [...tilesSeen].join(" | ")); });
 const stamp = (s) => console.log(`${((Date.now() - t0) / 1000).toFixed(1)}s  ${s}`);
 await page.goto(URL_);
 await page.waitForFunction(() => document.getElementById("status").textContent.startsWith("Ready:"), null, { timeout: 180_000 })

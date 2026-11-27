@@ -68,6 +68,7 @@ export const TOOLS: ToolDef[] = [
         admin_level: { type: "integer", enum: [0, 1, 2] },
         population: { type: "string", enum: ["u18", "all"] },
         sex: { type: "string", enum: ["total", "female", "male"] },
+        units: { type: "array", items: { type: "string" }, description: "optional: compute only these units (names or ucodes at admin_level; for ADM2 an ADM1 name or ucode selects its districts). Omit for the whole country." },
         title: { type: "string" },
       },
       required: ["plan_id", "hazards", "admin_level", "population", "sex", "title"],
