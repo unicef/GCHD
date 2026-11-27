@@ -1,5 +1,5 @@
 import { expect, it, vi } from "vitest";
-import { geminiSchema, geminiSession } from "../web/src/llm/gemini";
+import { geminiSchema, geminiSession, rateLimitWait } from "../web/src/llm/gemini";
 import { TOOLS } from "../web/src/tools";
 
 it("Gemini tool schemas carry only string enums and no additionalProperties", () => {
@@ -43,5 +43,33 @@ it("without a confirmed plan, one retry and then the empty reply is reported", a
   expect(modes).toEqual(["AUTO", "AUTO"]);
   expect(r.toolCalls).toEqual([]);
   expect(r.detail).toMatch(/no answer/);
+  vi.unstubAllGlobals();
+});
+
+// Gemini 429 bodies: per-minute quota (RetryInfo) vs daily quota
+const quota429 = (quotaId: string, retryDelay?: string) => JSON.stringify({ error: { code: 429, status: "RESOURCE_EXHAUSTED", details: [
+  { "@type": "type.googleapis.com/google.rpc.QuotaFailure", violations: [{ quotaId, quotaMetric: "generativelanguage.googleapis.com/generate_content_free_tier_requests" }] },
+  ...(retryDelay ? [{ "@type": "type.googleapis.com/google.rpc.RetryInfo", retryDelay }] : [])] } });
+
+it("rate limits: wait out a per-minute limit, stop on a daily one", () => {
+  expect(rateLimitWait(quota429("GenerateRequestsPerMinutePerProjectPerModel-FreeTier", "37.2s"))).toBe(38);
+  expect(rateLimitWait(quota429("GenerateRequestsPerMinutePerProjectPerModel-FreeTier"))).toBe(20);
+  expect(rateLimitWait(quota429("GenerateRequestsPerDayPerProjectPerModel-FreeTier", "40s"))).toBeNull();
+  expect(rateLimitWait("not json")).toBe(20);
+});
+
+it("a per-minute 429 is waited out and the step continues; a daily 429 is reported", async () => {
+  vi.useFakeTimers();
+  const waits: string[] = [];
+  const bodies = [new Response(quota429("GenerateRequestsPerMinutePerProjectPerModel-FreeTier", "3s"), { status: 429 }),
+    new Response(JSON.stringify(toolCall), { status: 200 })];
+  vi.stubGlobal("fetch", async () => bodies.shift());
+  const p = geminiSession({ ...opts, onWait: (m: string) => waits.push(m) }).step({ userText: "go" });
+  await vi.advanceTimersByTimeAsync(3000);
+  expect((await p).toolCalls.map((c) => c.name)).toEqual(["query_tables"]);
+  expect(waits[0]).toMatch(/waiting 3 s/);
+  vi.stubGlobal("fetch", async () => new Response(quota429("GenerateRequestsPerDayPerProjectPerModel-FreeTier"), { status: 429 }));
+  await expect(geminiSession(opts).step({ userText: "go" })).rejects.toThrow(/daily limit/);
+  vi.useRealTimers();
   vi.unstubAllGlobals();
 });

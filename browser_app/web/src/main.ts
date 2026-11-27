@@ -1,4 +1,8 @@
 import "./style.css";
+// header type: Roboto (bundled, no font host) matches the light grotesque of the UNICEF tagline
+import "@fontsource/roboto/latin-300.css";
+import "@fontsource/roboto/latin-500.css";
+import { hashToState, initBasic } from "./basic";
 import { Boundaries, loadBoundaries, outlinesGeoJSON, toGeoJSON } from "./boundaries";
 import { Catalog, loadCatalog, usageNotes } from "./catalog";
 import { downloadCsv } from "./csv";
@@ -10,6 +14,7 @@ import { systemPrompt } from "./prompt";
 import { hazardPixelMap, planRaster, runZonal } from "./raster/engine";
 import type { Plan, RouteContext } from "./route";
 import { Dispatcher, StoredResult, TOOLS } from "./tools";
+import { escapeHtml, resultBlock } from "./ui";
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const el = {
@@ -38,8 +43,9 @@ const KEY_STORE = "gchd.llm";
 const NOTE_SECTIONS_TABLE = ["Data quality & usage notes", "Related collections", "Additional notes"] as const;
 function loadSettings() {
   const saved = JSON.parse(localStorage.getItem(KEY_STORE) ?? sessionStorage.getItem(KEY_STORE) ?? "{}");
-  el.provider.value = saved.provider ?? "anthropic";
-  el.model.value = saved.model ?? DEFAULT_MODELS[el.provider.value as Provider];
+  el.provider.value = saved.provider ?? "gemini";   // a free Gemini key is the easiest start
+  // gemini-2.5-flash was the default until 2026-11; Google retires it on 2026-12-01
+  el.model.value = !saved.model || saved.model === "gemini-2.5-flash" ? DEFAULT_MODELS[el.provider.value as Provider] : saved.model;
   el.key.value = saved.key ?? "";
   el.remember.checked = !!localStorage.getItem(KEY_STORE);
 }
@@ -49,13 +55,17 @@ function saveSettings() {
   sessionStorage.removeItem(KEY_STORE);
   (el.remember.checked ? localStorage : sessionStorage).setItem(KEY_STORE, v);
 }
-el.provider.addEventListener("change", () => { el.model.value = DEFAULT_MODELS[el.provider.value as Provider]; saveSettings(); });
+// the free-key help is shown for Gemini, opened while no key is pasted
+const keyHelp = $<HTMLDetailsElement>("geminiHelp");
+function showKeyHelp() {
+  keyHelp.hidden = el.provider.value !== "gemini";
+  if (!el.key.value.trim()) keyHelp.open = true;
+}
+el.provider.addEventListener("change", () => { el.model.value = DEFAULT_MODELS[el.provider.value as Provider]; saveSettings(); showKeyHelp(); });
 for (const e of [el.model, el.key, el.remember]) e.addEventListener("change", saveSettings);
+el.key.addEventListener("change", () => { if (el.key.value.trim()) keyHelp.open = false; });
 
 // ---------------------------------------------------------------- chat rendering
-function escapeHtml(s: string) {
-  return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
-}
 function md(s: string) {
   return escapeHtml(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/`([^`]+)`/g, "<code>$1</code>");
 }
@@ -111,19 +121,8 @@ function showPlan(p: Plan) {
   el.chat.scrollTop = el.chat.scrollHeight;
 }
 
-const fmtCell = (v: unknown) => typeof v === "number" ? (Number.isInteger(v) ? v.toLocaleString() : Number(v.toPrecision(4)).toLocaleString()) : escapeHtml(String(v ?? ""));
-
 function showTable(r: StoredResult) {
-  const d = document.createElement("div");
-  d.className = "result";
-  const shown = r.rows.slice(0, 200);
-  d.innerHTML = `<h3><span>${r.id}: ${escapeHtml(r.title)} <small>(${r.rows.length} rows)</small></span><button class="secondary">CSV</button></h3>
-    ${(r.notes ?? []).map((n) => `<p class="note">${escapeHtml(n)}</p>`).join("")}
-    <div style="overflow:auto"><table><thead><tr>${r.columns.map((c) => `<th>${escapeHtml(c)}</th>`).join("")}</tr></thead>
-    <tbody>${shown.map((row) => `<tr>${r.columns.map((c) => `<td class="${typeof row[c] === "number" ? "num" : ""}">${fmtCell(row[c])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
-    ${r.rows.length > shown.length ? `<p class="note">First ${shown.length} rows shown; the CSV has all ${r.rows.length}.</p>` : ""}`;
-  d.querySelector("button")!.onclick = () => downloadCsv(`${country?.iso3 ?? "GCHD"}_${r.id}.csv`, r.columns, r.rows);
-  el.results.prepend(d);
+  el.results.prepend(resultBlock(r, `${r.id}: ${r.title}`, `${country?.iso3 ?? "GCHD"}_${r.id}.csv`, r.notes ?? []));
 }
 
 function offerCsv(r: StoredResult, filename: string) {
@@ -217,6 +216,7 @@ function ensureSession(): LlmSession {
     session = createSession(el.provider.value as Provider, {
       apiKey: key, model: el.model.value.trim() || DEFAULT_MODELS[el.provider.value as Provider],
       system: systemPrompt(catalog, tableHazards, country!, rowCounts, tableNotes), tools: TOOLS,
+      onWait: status,
     });
     sessionKey = sig;
   }
@@ -310,6 +310,12 @@ async function chooseCountry() {
   const v = el.country.value.trim().toLowerCase();
   const c = countries.find((x) => x.name.toLowerCase() === v || x.iso3.toLowerCase() === v || `${x.name} (${x.iso3})`.toLowerCase() === v);
   if (!c) { status("Pick a country from the list."); return; }
+  await loadCountry(c);
+}
+
+/** Shared by both tabs: load the country's tables once, reset the AI conversation, refresh the Basic view. */
+async function loadCountry(c: Country, want: Parameters<typeof basic.onCountry>[0] = {}) {
+  el.country.value = `${c.name} (${c.iso3})`;
   el.loadCountry.disabled = true;
   try {
     rowCounts = await loadCountryTables(catalog, c.iso3, status);
@@ -324,6 +330,8 @@ async function chooseCountry() {
     el.countryInfo.textContent = `${c.name}: ${rowCounts.adm2_hazard.toLocaleString()} ADM2 rows, ${rowCounts.adm1_hazard.toLocaleString()} ADM1 rows loaded.`;
     addMsg("system", `${c.name} loaded. Ask a question about hazards and children (or people) exposed, by country, ADM1 or ADM2.`);
     status("Ready.");
+    if (tab === "basic") await basic.onCountry(want);
+    else basicStale = true;
   } catch (e) {
     status(`Could not load ${c.name}: ${(e as Error).message}`);
   } finally {
@@ -349,9 +357,31 @@ function newDispatcher(): Dispatcher {
   });
 }
 
+// ---------------------------------------------------------------- tabs
+type Tab = "basic" | "ai";
+let tab: Tab = "basic";
+let basicStale = false;          // a country was loaded while the AI tab was shown
+const basic = initBasic({
+  catalog: () => catalog, country: () => country, boundaries: (l) => boundaries(l), status, active: () => tab === "basic",
+});
+function setTab(t: Tab) {
+  tab = t;
+  document.querySelectorAll<HTMLElement>("[data-tab]").forEach((e) => (e.hidden = e.dataset.tab !== t));
+  document.querySelectorAll<HTMLButtonElement>("[data-tab-btn]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tabBtn === t)));
+  if (t === "ai") history.replaceState(null, "", "#tool=ai");
+  else if (country) {
+    if (basicStale) { basicStale = false; void basic.onCountry(); } else void basic.render();
+  } else history.replaceState(null, "", "#tool=basic");
+}
+document.querySelectorAll<HTMLButtonElement>("[data-tab-btn]").forEach((b) => (b.onclick = () => setTab(b.dataset.tabBtn as Tab)));
+
 // ---------------------------------------------------------------- start
 async function start() {
   loadSettings();
+  showKeyHelp();
+  // a shared link (#tool=basic&iso3=KEN&level=2&hazard=…) restores the Basic tool view
+  const want = hashToState(location.hash);
+  setTab(want.tool === "ai" ? "ai" : "basic");
   initMap($("map"));
   try {
     catalog = await loadCatalog(status);
@@ -366,6 +396,8 @@ async function start() {
     el.country.placeholder = "Type a country name";
     el.loadCountry.disabled = false;
     status(`Ready: ${catalog.collections.size} catalog collections, ${countries.length} countries, ${tableHazards.rows.length} hazards in the summary tables.`);
+    const c = want.iso3 && countries.find((x) => x.iso3 === want.iso3);
+    if (c) { const { tool: _t, iso3: _i, ...rest } = want; await loadCountry(c, rest); }
   } catch (e) {
     status(`Start-up failed: ${(e as Error).message}`);
   }

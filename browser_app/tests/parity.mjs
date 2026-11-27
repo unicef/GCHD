@@ -34,7 +34,7 @@ await page.route("https://api.anthropic.com/v1/messages*", async (route) => {
 });
 await page.goto("http://localhost:4173/");
 await page.waitForFunction(() => document.getElementById("status").textContent.startsWith("Ready:"), null, { timeout: 120_000 });
-await page.fill("#apikey", "sk-test");
+await page.click("[data-tab-btn=ai]"); await page.selectOption("#provider", "anthropic"); await page.fill("#apikey", "sk-test");
 await page.fill("#country", await page.$$eval("#countries option", (os, iso) => os.map((o) => o.value).find((v) => v.endsWith(`(${iso})`)), ISO3));
 await page.click("#loadCountry");
 await page.waitForFunction(() => document.getElementById("countryInfo").textContent.length > 0, null, { timeout: 300_000 });

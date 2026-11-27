@@ -45,7 +45,7 @@ await page.route("https://api.anthropic.com/v1/messages*", async (route) => {
     console.log("confirm request carries:", last.map((b) => b.type === "tool_result" ? `tool_result(${b.tool_use_id})` : b.type).join(" + "));
     res = msg([
     tool("query_tables", { plan_id: "P1", title: "Children exposed to river floods", sql:
-      "SELECT adm2_ucode, adm2_name, u18_pop_total, u18_aexp, round(u18_rexp*100,1) AS pct FROM adm2_hazard WHERE hazard_code='river_flood_100yr' ORDER BY u18_aexp DESC" }),
+      "SELECT adm2_ucode, adm2_name, u18_pop_total, u18_aexp, round(u18_rexp,1) AS pct FROM adm2_hazard WHERE hazard_code='river_flood_100yr' ORDER BY u18_aexp DESC" }),
   ], "tool_use");
   }
   else if (turn === 3) res = msg([tool("show_map", { plan_id: "P1", result_id: "R1", value_column: "u18_aexp", title: "Children exposed" }),
@@ -79,12 +79,55 @@ await page.goto(URL_);
 await page.waitForFunction(() => document.getElementById("status").textContent.startsWith("Ready:"), null, { timeout: 180_000 })
   .catch(async () => { console.log("STATUS:", await page.textContent("#status")); });
 stamp(await page.textContent("#status"));
-await page.fill("#apikey", "sk-test");
+// ---- Basic tool (the default tab): no key, no LLM
 const opt = await page.$$eval("#countries option", (os, iso) => os.map((o) => o.value).find((v) => v.endsWith(`(${iso})`)), ISO3);
 await page.fill("#country", opt);
 await page.click("#loadCountry");
 await page.waitForFunction(() => document.getElementById("countryInfo").textContent.length > 0, null, { timeout: 300_000 });
 stamp(await page.textContent("#countryInfo"));
+const basicView = async (label) => {
+  await page.waitForFunction(() => document.querySelector("#basicResults .result h3") && document.getElementById("status").textContent === "Ready.", null, { timeout: 180_000 });
+  const h = await page.textContent("#basicResults .result h3");
+  const n = await page.$$eval("#basicResults .result tbody tr", (r) => r.length);
+  const top = await page.$$eval("#basicResults .result tbody tr", (r) => r.slice(0, 3).map((x) => x.textContent).join(" || "));
+  const leg = await page.textContent(".legend").catch(() => "");
+  console.log(`basic ${label}: ${h} | ${n} rows | ${top.slice(0, 220)} | legend: ${(leg ?? "").slice(0, 80)} | ${await page.evaluate(() => location.hash)}`);
+};
+await basicView("default");
+await page.screenshot({ path: `/tmp/claude-1000/basic_${ISO3}.png` });
+{
+  const [d] = await Promise.all([page.waitForEvent("download"), page.click("#basicResults .result button")]);
+  console.log("basic CSV:", d.suggestedFilename());
+}
+// unit profile: click the middle of the map (lands on a unit for most countries)
+const box = await (await page.$("#map")).boundingBox();
+await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+await page.waitForSelector("#b_profile .result", { timeout: 30_000 }).then(async () =>
+  console.log("profile:", await page.textContent("#b_profile .result h3"))).catch(() => console.log("profile: no unit under the map centre"));
+await page.screenshot({ path: `/tmp/claude-1000/basic_${ISO3}_profile.png` });
+await page.selectOption("#b_adm1", { index: 1 });
+await basicView("one region");
+await page.selectOption("#b_value", "pct_exposed");
+await basicView("% exposed");
+await page.check("#b_layer");
+await basicView("hazard layer");
+await page.screenshot({ path: `/tmp/claude-1000/basic_${ISO3}_layer.png` });
+const shared = await page.evaluate(() => location.href);
+await page.selectOption("#b_level", "0");
+await basicView("ADM0");
+await page.screenshot({ path: `/tmp/claude-1000/basic_${ISO3}_adm0.png` });
+// share link in a fresh page restores the view
+{
+  const p2 = await browser.newPage({ viewport: { width: 1500, height: 950 } });
+  await p2.goto(shared);
+  await p2.waitForFunction(() => document.querySelector("#basicResults .result h3") && document.getElementById("status").textContent === "Ready.", null, { timeout: 300_000 });
+  console.log("share link restored:", await p2.textContent("#basicResults .result h3"), "| controls:",
+    await p2.evaluate(() => ["b_level", "b_adm1", "b_hazard", "b_value"].map((i) => document.getElementById(i).value).join(",") + " layer=" + document.getElementById("b_layer").checked));
+  await p2.close();
+}
+// ---- AI tool
+await page.click("[data-tab-btn=ai]");
+await page.selectOption("#provider", "anthropic"); await page.fill("#apikey", "sk-test");
 await page.fill("#question", "How many children are exposed to river floods in each district?");
 await page.click("#send");
 await page.waitForSelector(".plan button[data-a=ok]", { timeout: 60_000 });
@@ -92,8 +135,8 @@ stamp("plan card shown: " + (await page.textContent(".plan h3")));
 await page.click(".plan button[data-a=ok]");
 await page.waitForFunction(() => [...document.querySelectorAll(".msg.assistant")].some((m) => m.textContent.includes("Done")), null, { timeout: 300_000 });
 stamp("flow finished");
-const result = await page.textContent(".result h3");
-const rows = await page.$$eval(".result tbody tr", (r) => r.length);
+const result = await page.textContent("#results .result h3");
+const rows = await page.$$eval("#results .result tbody tr", (r) => r.length);
 const legend = await page.textContent(".legend").catch(() => null);
 const [dl] = await Promise.all([page.waitForEvent("download"), page.click(".msg.system button")]);
 const csvPath = `/tmp/claude-1000/e2e_${ISO3}.csv`;
@@ -121,8 +164,8 @@ stamp("raster plan shown");
 await page.click(".plan:not(.done) button[data-a=ok]");
 await page.waitForFunction(() => [...document.querySelectorAll(".msg")].some((m) => m.textContent.includes("Raster done") || m.classList.contains("error")), null, { timeout: 560_000 });
 stamp("raster flow finished: " + (await page.textContent("#status")));
-console.log("raster result:", await page.textContent(".result h3"), (await page.$$eval(".result .note", (n) => n.map((x) => x.textContent))).join(" | ").slice(0, 500));
-console.log("raster rows:", (await page.$$eval(".result:first-child tbody tr", (r) => r.slice(0, 5).map((x) => x.textContent))).join(" || "));
+console.log("raster result:", await page.textContent("#results .result h3"), (await page.$$eval("#results .result .note", (n) => n.map((x) => x.textContent))).join(" | ").slice(0, 500));
+console.log("raster rows:", (await page.$$eval("#results .result:first-child tbody tr", (r) => r.slice(0, 5).map((x) => x.textContent))).join(" || "));
 console.log("tool errors:", (await page.$$eval(".msg.system, .msg.error", (m) => m.map((x) => x.textContent).filter((t) => /Error|rejected|not /.test(t)))).join(" | "));
 await page.screenshot({ path: `/tmp/claude-1000/e2e_${ISO3}_raster.png` });
 {

@@ -27,14 +27,17 @@ export interface LlmSession {
   step(input: StepInput): Promise<StepResult>;
 }
 
-export interface SessionOptions { apiKey: string; model: string; system: string; tools: ToolDef[] }
+export interface SessionOptions {
+  apiKey: string; model: string; system: string; tools: ToolDef[];
+  onWait?: (msg: string) => void;   // shown while the adapter waits out a rate limit
+}
 
 export type Provider = "anthropic" | "openai" | "gemini";
 
 export const DEFAULT_MODELS: Record<Provider, string> = {
   anthropic: "claude-opus-5-5",
   openai: "gpt-5",
-  gemini: "gemini-2.5-flash",
+  gemini: "gemini-3.8-flash",   // on the Gemini API free tier (no billing account needed)
 };
 
 export class LlmError extends Error {

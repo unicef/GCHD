@@ -17,6 +17,18 @@ export function geminiSchema(s: any): any {
   return out;
 }
 
+/** Seconds to wait after a 429, or null when the daily quota is used up (waiting a minute will not help). */
+export function rateLimitWait(body: string): number | null {
+  let d: any = {};
+  try { d = JSON.parse(body); } catch { /* not JSON */ }
+  const details: any[] = d?.error?.details ?? [];
+  const ids = details.flatMap((x) => x.violations ?? []).map((v: any) => `${v.quotaId ?? ""} ${v.quotaMetric ?? ""}`).join(" ");
+  if (/PerDay/i.test(ids)) return null;
+  const delay = details.find((x) => String(x["@type"] ?? "").endsWith("RetryInfo"))?.retryDelay;
+  const s = Math.ceil(parseFloat(String(delay ?? "")) || 20);
+  return Math.min(Math.max(s, 2), 65);
+}
+
 export function geminiSession(o: SessionOptions): LlmSession {
   const contents: any[] = [];
   const tools = [{ functionDeclarations: o.tools.map((t) => ({ name: t.name, description: t.description, parameters: geminiSchema(t.parameters) })) }];
@@ -39,9 +51,25 @@ export function geminiSession(o: SessionOptions): LlmSession {
             toolConfig: { functionCallingConfig: { mode } },
           }),
         });
+        if (res.status === 429) {
+          const body = await res.text();
+          const wait = rateLimitWait(body);
+          if (wait !== null && tries429 < 3) {
+            tries429++;
+            o.onWait?.(`Gemini free-tier limit per minute reached: waiting ${wait} s, then continuing…`);
+            await new Promise((r) => setTimeout(r, wait * 1000));
+            return call(extra, mode);
+          }
+          throw new LlmError(wait === null
+            ? "Gemini daily limit reached for this API key (free tier). It resets at midnight Pacific time; try again "
+              + "then, or use another model in the Model box (each model has its own limit)."
+            : "Gemini keeps answering 'too many requests'. Wait a minute and ask again.", 429);
+        }
         if (!res.ok) throw new LlmError(`Gemini ${res.status}: ${(await res.text()).slice(0, 400)}`, res.status);
+        tries429 = 0;
         return res.json();
       };
+      let tries429 = 0;
       // empty = no tool call and no visible text (no parts at all, or only "thought" parts)
       const empty = (c: any) => !c?.content?.parts?.some((p: any) => p.functionCall || (p.text && !p.thought));
       let d = await call([]);
