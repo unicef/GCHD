@@ -372,6 +372,7 @@
     <a href="#methodology">Methodology</a>
     <a href="#dashboard">Dashboard</a>
     <a href="STAC_catalog/browser/">Data Catalog</a>
+    <a href="browser_app/app/">Data Assistant</a>
     <a href="https://github.com/unicef/GCHD" target="_blank">GitHub</a>
   </div>
 </nav>
@@ -548,6 +549,21 @@
       <div class="catalog-links">
         <a class="btn btn-primary" href="STAC_catalog/browser/">Open the data catalog →</a>
         <a class="catalog-json" href="STAC_catalog/stac/catalog.json">catalog.json (STAC 1.1)</a>
+      </div>
+    </div>
+
+    <!-- Data assistant (client-side LLM + DuckDB-WASM) -->
+    <div class="catalog-callout">
+      <div class="catalog-text">
+        <h3>Ask the data in plain language</h3>
+        <p>
+          Choose a country and ask, for example, how many children are exposed to river floods in each
+          district. The assistant proposes a plan, runs it after you confirm, and shows a map and a CSV.
+          It uses your own Claude, OpenAI or Gemini API key, and all the data processing happens in your browser.
+        </p>
+      </div>
+      <div class="catalog-links">
+        <a class="btn btn-primary" href="browser_app/app/">Open the data assistant →</a>
       </div>
     </div>
   </div>

@@ -33,6 +33,7 @@ GCHD/
 ├── exposure_analysis/       # Population and boundary data for exposure computation
 ├── web_app/                 # Interactive dashboard (Python Dash + Google Earth Engine)
 ├── STAC_catalog/            # STAC catalog (hazards, MHI, population, boundaries, exposure tables) and its STAC Browser
+├── browser_app/             # Data assistant: plain-language questions, answered in the browser (LLM + DuckDB-WASM)
 └── index.html               # Public landing page
 ```
 
@@ -82,6 +83,10 @@ All hazard layers, the Multi-Hazard Intensity (MHI) index, the WorldPop 2025 pop
 - **STAC root:** [`catalog.json`](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json)
 
 Rasters are Cloud-Optimized GeoTIFFs and tables are (Geo)Parquet, so both can be streamed straight into GIS tools, DuckDB or code without downloading whole files. See [`STAC_catalog/`](STAC_catalog/) for how the catalog is built and for examples, including how to read the ~90 m river flood tiles over an area of interest and how to query the exposure tables.
+
+### Data assistant
+
+[unicef.github.io/GCHD/browser_app/app/](https://unicef.github.io/GCHD/browser_app/app/) answers questions about one country in plain language, such as "How many children are exposed to river floods in each district?". It uses your own Anthropic, OpenAI or Gemini API key; the catalog data is processed in your browser (DuckDB-WASM and geotiff.js), with a map and a CSV of every result. See [`browser_app/`](browser_app/).
 
 ---
 
