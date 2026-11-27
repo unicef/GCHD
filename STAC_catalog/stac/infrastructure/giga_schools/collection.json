@@ -1,0 +1,177 @@
+{
+  "type": "Collection",
+  "id": "giga_schools",
+  "stac_version": "1.1.0",
+  "description": "School point locations from Giga, the UNICEF-ITU initiative to connect every school to the Internet, for 180 countries (2,324,244 schools, snapshot of 2026-11-20). One row per school with its Giga identifier, name, education level and coordinates. The data come from governments, which share their school records with Giga, and from open sources such as OpenStreetMap, checked by Giga against satellite imagery.\n\n`education_level` is free text as reported by each source, in several languages ('Primary', 'Primaria', 'Primaire', ...), and is 'Unknown' for about half of the schools. Coverage and completeness vary by country. A country missing from the table, or with few rows, does not mean it has no schools.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "UNICEF Global Child Hazard Database"
+    },
+    {
+      "rel": "via",
+      "href": "https://giga.global/",
+      "type": "text/html",
+      "title": "Giga (UNICEF and ITU)"
+    },
+    {
+      "rel": "license",
+      "href": "https://giga.global/",
+      "type": "text/html",
+      "title": "Terms of use (Giga (UNICEF and ITU))"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Infrastructure"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Agent/LLM usage guide"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.2.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "table:columns": [
+    {
+      "name": "facility_id",
+      "type": "large_string",
+      "description": "Giga school identifier (unique)"
+    },
+    {
+      "name": "name",
+      "type": "large_string",
+      "description": "School name as reported by the source ('Name unknown' when missing)"
+    },
+    {
+      "name": "education_level",
+      "type": "large_string",
+      "description": "Education level, free text as reported by the source (not harmonised; 'Unknown' for about half the rows)"
+    },
+    {
+      "name": "iso3",
+      "type": "large_string",
+      "description": "ISO 3166-1 alpha-3 country code; the file is sorted by iso3, so a filter on it reads only a few row groups"
+    },
+    {
+      "name": "country_name",
+      "type": "large_string",
+      "description": "Country name"
+    },
+    {
+      "name": "longitude",
+      "type": "double",
+      "description": "Longitude, WGS84"
+    },
+    {
+      "name": "latitude",
+      "type": "double",
+      "description": "Latitude, WGS84"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Point geometry, EPSG:4326 (WKB)"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "GeoParquet 1.1 bbox covering of the geometry (xmin, ymin, xmax, ymax), for spatial filters"
+    }
+  ],
+  "table:row_count": 2324244,
+  "table:primary_geometry": "geometry",
+  "GCHD:geometry_types": [
+    "Point"
+  ],
+  "GCHD:notes": "The terms are those of Giga and of the governments that share the data; check them at https://giga.global/ before redistributing.",
+  "title": "School locations (Giga)",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9976043701172,
+          -55.08280563354492,
+          179.99490356445312,
+          79.4339599609375
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-11-20T16:22:08Z",
+          "2026-11-20T16:22:08Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "GCHD",
+    "UNICEF",
+    "children",
+    "schools",
+    "education",
+    "Giga",
+    "infrastructure",
+    "points"
+  ],
+  "providers": [
+    {
+      "name": "Giga (UNICEF and ITU)",
+      "description": "School location data shared by governments and open sources (Giga Maps)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://giga.global/"
+    },
+    {
+      "name": "UNICEF",
+      "description": "Global Child Hazard Database (GCHD)",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://www.unicef.org/"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/infrastructure/giga_schools_global.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "School locations (Giga) (GeoParquet 1.1)",
+      "roles": [
+        "data"
+      ],
+      "file:size": 172931431,
+      "file:checksum": "12202448a1e20011001dafbecc3fec29859810e26f4c7293c13b1ffa45e82509a4b5"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Thumbnail (point density)",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 19654,
+      "file:checksum": "1220ad3339a3381c9ccdf34c0964227a0295f2848c5546f97d191b6c1aed4ada4a16"
+    }
+  },
+  "updated": "2026-11-27T13:12:06Z"
+}

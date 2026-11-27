@@ -296,9 +296,9 @@
     Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
     Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
     Fix: add file:checksum, the multihash of the asset bytes: '1220' followed by the sha256 hex digest
-✓ Catalog conforms (1752 file(s) checked)
+✓ Catalog conforms (1754 file(s) checked)
     290 fixable by `portolan check --fix`
-    34 need a decision (see Requires: lines)
+    36 need a decision (see Requires: lines)
 ⚠ PTL-CAT-001 hazards/flood/river_flood_100yr_jrc_2024/collection.json: collection holds 264 children with no subcatalog grouping them; a flat list this long is hard to browse
 ⚠ PTL-CAT-001 population/worldpop_2025_female/collection.json: collection holds 237 children with no subcatalog grouping them; a flat list this long is hard to browse
 ⚠ PTL-AST-003 population/worldpop_2025_female/worldpop_2025_female_ago/worldpop_2025_female_ago.json: asset 'data' has no file:checksum
