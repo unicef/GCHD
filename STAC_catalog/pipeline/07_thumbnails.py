@@ -37,13 +37,14 @@ from rasterio.enums import Resampling
 
 import _path  # noqa: F401,E402  (STAC_catalog/ on sys.path)
 from gchd_stac.common import (COG_PREFIX, PUBLIC_CONTAINER, STAC_DIR, THUMB_DIR, clamp_world, container_client, gdal_env,
-                    gdal_path, load_layers)
+                    cog_blob, gdal_path, load_layers)
 
 NE_DIR = STAC_DIR / "work" / "naturalearth"   # ne_110m_land / ne_50m_land GeoJSON
 OCEAN, LAND, COAST, TEXT = "#eef2f6", "#dde1e6", "#b9c0c8", "#3a3f45"
 TILE_RANGE_DEFAULT = (0.0, 3.0)  # river flood depth (m) when thumb_range is not set
-# Return levels where lower = more severe: dark end of the palette goes to the low values
-REVERSED_PALETTE = {"drought_spi_terraclimate_1958-2025", "drought_spei_terraclimate_1958-2025"}
+# Layers where lower = more severe (e.g. SPI/SPEI return levels): the dark end of the palette goes to the low
+# values. Empty since SPI/SPEI became probabilities of drought months (higher = more severe), 2026-11-27.
+REVERSED_PALETTE: set[str] = set()
 # Sparse, thin features (1-px coastal strips, conflict points) vanish when subsampled: read a finer overview
 # and keep the maximum of each block instead
 MAX_POOL = {"coastal_flood_100yr_jrc_2024": 8, "UNICEF_ACLED_CI_Sep2020_Aug2025": 4}
@@ -205,7 +206,7 @@ def main():
     for layer in load_layers():
         col = layer["collection"]
         if layer["source"]["type"] == "file":
-            blob = f"{COG_PREFIX}/{col}/{layer['id']}.tif"
+            blob = cog_blob(layer)
             if blob not in published:
                 continue
             url = f"{base}/{blob}"

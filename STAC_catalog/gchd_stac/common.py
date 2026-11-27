@@ -83,6 +83,12 @@ def load_layers() -> list[dict]:
     return layers + load_catalog_config().get("layers", [])
 
 
+def cog_blob(layer: dict) -> str:
+    """Blob of a single-file layer's COG: <COG_PREFIX>/<collection>/<id>.tif, or `cog_blob` (a file name in the
+    same folder) for a COG built outside step 3, e.g. one band of a multi-band source."""
+    return f"{COG_PREFIX}/{layer['collection']}/{layer.get('cog_blob') or layer['id'] + '.tif'}"
+
+
 def stac_id(layer: dict) -> str:
     """Collection id of a layer: `stac_id` if set, else the layer id in lower case (as in the Portolan catalog)."""
     return layer.get("stac_id") or layer["id"].lower()

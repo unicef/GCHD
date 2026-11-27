@@ -218,7 +218,7 @@ layers:
   thumb_range: null
 - id: drought_spi_terraclimate_1958-2025
   collection: drought
-  source_filename: drought_spi_copernicus_1940_2024.tif
+  source_filename: spi12_TerraClilmate_1958-2025.tif (band 2)
   title: Meteorological Drought (Standardized Precipitation Index)
   hazard: Droughts
   description: SPI measures the deviation of precipitation from the climatological average over a given accumulation period
@@ -230,28 +230,31 @@ layers:
   data_type: Probabilistic - empirical
   resolution: 5km
   coverage: Global
-  units: Index
-  legend_label: Index
-  threshold: '>0.09 (global mean)'
+  units: probability (0-1), share of months in drought
+  legend_label: Probability of drought months
+  threshold: '>0.091 (global mean)'
   classes: Use natural breaks/quantile
   range:
-  - -10.0
-  - 10.0
-  actual_range:
   - 0.0
   - 1.0
-  nodata_note: nan
+  actual_range:
+  - 0.0
+  - 0.471
+  nodata_note: -9999 (sea and no data)
   source_provider: TerraClimate
   alternate_sources: World Bank (GOST)
-  gee_asset: projects/unicef-ccri/assets/droughts/spei12_TerraClimate_1958-2025
+  gee_asset: projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025
   naming_convention: drought_spi_terraclimate_1958-2025
   start_year: 1958
   end_year: 2025
   source:
     type: file
-    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/drought_spi_copernicus_1940_2024.tif
-  nodata: .nan
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/spi12_TerraClilmate_1958-2025.tif
+    band: 2   # band 2 = share of months with SPI-12 below -1.5 (TH in the description); bands 1 and 3 other thresholds; band 4 = 1 where valid
+  nodata: -9999.0
   dtype: null
+  # prebuilt COG of band 2 (the band the GEE exposure pipeline used, web_app/config.py), identical to the source band
+  cog_blob: drought_spi12_terraclimate_1958-2025_b2.tif
   overview_resampling: average
   palette:
   - '#fdf4cb'
@@ -263,7 +266,7 @@ layers:
   thumb_range: null
 - id: drought_spei_terraclimate_1958-2025
   collection: drought
-  source_filename: SPEI12_return_level_100yr.tif
+  source_filename: spei12_TerraClimate_1958-2025.tif (band 2)
   title: Meteorological Drought (Standardized Precipitation Evapotranspiration Index)
   hazard: Droughts
   description: SPEI adds the effect of evapotranspiration and is better suited to assess droughts under climate change scenarios
@@ -275,29 +278,32 @@ layers:
   data_type: Probabilistic - empirical
   resolution: 5km
   coverage: Global
-  units: Index
-  legend_label: Index
-  threshold: '>0.06 (global mean)'
+  units: probability (0-1), share of months in drought
+  legend_label: Probability of drought months
+  threshold: '>0.065 (global mean)'
   classes: Use quantile
   range:
-  - -10.0
-  - 10.0
-  actual_range:
   - 0.0
   - 1.0
-  nodata_note: nan
+  actual_range:
+  - 0.0
+  - 0.388
+  nodata_note: -9999 (sea and no data)
   source_provider: TerraClimate
   alternate_sources: World Bank (GOST)
-  gee_asset: projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025
+  gee_asset: projects/unicef-ccri/assets/droughts/spei12_TerraClimate_1958-2025
   naming_convention: drought_spei_terraclimate_1958-2025
   start_year: 1958
   end_year: 2025
   source:
     type: file
-    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/SPEI12_return_level_100yr.tif
-  nodata: .nan
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/spei12_TerraClimate_1958-2025.tif
+    band: 2   # band 2 = share of months with SPEI-12 below -1.5 (TH in the description); bands 1 and 3 other thresholds; band 4 = 1 where valid
+  nodata: -9999.0
   source_nodata: -9999.0
   dtype: null
+  # prebuilt COG of band 2 (the band the GEE exposure pipeline used, web_app/config.py), identical to the source band
+  cog_blob: drought_spei12_terraclimate_1958-2025_b2.tif
   overview_resampling: average
   palette:
   - '#fdf4cb'
