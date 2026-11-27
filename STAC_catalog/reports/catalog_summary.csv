@@ -26,6 +26,7 @@ hazards/malaria,vectorborne_malariapv_2012-2022,Malaria Plasmodium Vivax,0,https
 hazards/sand_dust_storm,sand_dust_storm_unccd_2024,SDS Susceptiblity,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/sand_dust_storm/sand_dust_storm_unccd_2024.tif
 hazards/tropical_storm,tropical_storm_100yr_giri_2024,Wind speed,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/tropical_storm/tropical_storm_100yr_giri_2024.tif
 hazards/volcano,gvp_hol_volcanoes_1800,Volcanoes,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/volcano/GVP_Hol_volcanoes_1800.tif
+infrastructure,giga_schools,School locations (Giga),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/infrastructure/giga_schools_global.parquet
 multi_hazard,mhi_climate,Multi-Hazard Intensity (MHI) - climate,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/multi_hazard/MHI_climate.tif
 population,worldpop_2025_female,"Female population 2025, all ages (WorldPop R2025A)",237,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/female/mosaic_ovr.vrt
 population,worldpop_2025_male,"Male population 2025, all ages (WorldPop R2025A)",237,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/worldpop_2025/male/mosaic_ovr.vrt

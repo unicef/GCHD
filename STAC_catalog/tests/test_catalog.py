@@ -37,7 +37,7 @@ def collections(objects) -> dict[str, tuple[Path, dict]]:
 def test_groups_and_layout(objects):
     root = load(STAC / "catalog.json")
     groups = [l["href"].split("/")[1] for l in root["links"] if l["rel"] == "child"]
-    assert groups == ["hazards", "multi_hazard", "population", "boundaries", "exposure", "reference"]
+    assert groups == ["hazards", "multi_hazard", "population", "boundaries", "exposure", "infrastructure", "reference"]
     for p, d in objects.items():
         kids = [load((p.parent / l["href"]).resolve()) for l in d["links"] if l["rel"] == "child"]
         if d["type"] == "Collection":
@@ -129,3 +129,11 @@ def test_data_assets_are_live(collections):
             assert r.status == 200, cid
             size = d["assets"]["data"].get("file:size")
             assert size is None or int(r.headers["content-length"]) == size, cid
+
+
+def test_infrastructure_points(collections):
+    p, d = collections["giga_schools"]
+    assert p.parent.parent.name == "infrastructure"
+    assert d["table:primary_geometry"] == "geometry" and d["GCHD:geometry_types"] == ["Point"]
+    assert d["assets"]["data"]["file:checksum"].startswith("1220")
+    assert any(l["rel"] == "license" and "giga.global" in l["href"] for l in d["links"])

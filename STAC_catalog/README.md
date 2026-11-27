@@ -28,6 +28,7 @@ stac/catalog.json
 ├─ population/      worldpop_u18_2025_{total,female,male}  worldpop_2025_{total,female,male}   (country items)
 ├─ boundaries/      adm0  adm1  adm2                        GeoParquet + PMTiles
 ├─ exposure/        adm0_hazard  adm1_hazard  adm2_hazard   Parquet, one row per unit and hazard
+├─ infrastructure/  giga_schools                            GeoParquet points (2.3 M schools, Giga)
 └─ reference/       land_sea_mask
 ```
 
@@ -42,6 +43,7 @@ Collection ids are the layer ids in lower case, the same ids as in the earlier `
 | `mhi_climate`, `land_sea_mask` | `public/gchd_cog/{multi_hazard,reference}/` | `multi_hazard_indicators/mhi/` (ERA5 0.1° grid) |
 | `worldpop_*_2025_*` | Country COGs in `public/worldpop_2025/R2025A/2025/100m/{T,T_F,T_M,T_U18,F_U18,M_U18}/`, referenced in place; `mosaic_ovr.vrt` per group in `public/gchd_cog/<dataset>/<group>/` | WorldPop R2025A (CC-BY-4.0) |
 | `adm0`–`adm2`, `adm*_hazard` | `public/GCHD_portolan/<id>/` (Parquet, PMTiles) | Steps 5 and 6; exposure CSVs from `exposure_analysis/subnational_level/` (release 2026-08-31) |
+| `giga_schools` | `public/gchd_cog/infrastructure/giga_schools_global.parquet` (GeoParquet 1.1, referenced in place) | Giga (UNICEF and ITU) school locations, snapshot of 2026-11-20. The terms are Giga's and those of the governments that share the data. Configured under `tables.infrastructure` in `config/catalog.yaml` |
 
 ## Folder structure
 
@@ -90,6 +92,7 @@ Run from `STAC_catalog/` with the repo venv (`../.venv/bin/python pipeline/<step
 | `09_check.py` | `portolan check` (offline), pystac validation, and coverage of the hazard codes and the Portolan collections. Writes `reports/portolan_check.txt` and `reports/catalog_summary.csv` | No |
 | `10_publish.py` | Checks that blob CORS allows GitHub Pages (read-only), then builds STAC Browser into `browser/`. Needs Node 22 or later; pass `--node-bin` if the system Node is older | No |
 | `11_split_exposure.py` | Per-country copies of the ADM1/ADM2 exposure tables for the browser data assistant, at `public/gchd_cog/exposure_by_country/<table>/<sha>/<ISO3>.parquet`, where `<sha>` is the start of the table's STAC checksum. A new table version goes to a new folder and existing files are never overwritten. Run it again after the exposure tables change | Yes, with `--upload` |
+| `12_infrastructure.py` | Point tables under `tables.infrastructure` in `config/catalog.yaml` (Giga schools). It downloads each file once to `work/infrastructure/`, prints its sha256 checksum (paste it into the config) and a short profile, and draws the point-density thumbnail. Run it before step 8 when a table is added or replaced | No |
 
 Tests: `../.venv/bin/python -m pytest -q`. Add `-m "not network"` to stay offline.
 
@@ -179,6 +182,21 @@ import geopandas as gpd
 adm2 = gpd.read_parquet("https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2/adm2.parquet",
                         filters=[("iso3", "==", "BGD")])
 ```
+
+### School locations
+
+`giga_schools` is one GeoParquet file sorted by `iso3`, so a country filter reads only a few of its 47 row groups:
+
+```python
+import geopandas as gpd, rasterio
+schools = gpd.read_parquet("https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/infrastructure/giga_schools_global.parquet",
+                           filters=[("iso3", "==", "BGD")])
+# flood depth at each school, from the hazard COG
+with rasterio.open("/vsicurl/https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/flood/river_flood_100yr_jrc_2024/mosaic.vrt") as src:
+    schools["flood_depth"] = [v[0] for v in src.sample(zip(schools.longitude, schools.latitude))]
+```
+
+`education_level` is free text as reported by each source, and is 'Unknown' for about half of the schools.
 
 ## WorldPop population
 

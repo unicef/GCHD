@@ -53,7 +53,9 @@ def kind(d: dict) -> str:
     a = d.get("assets", {}).get("data", {})
     t = a.get("type", "")
     if "parquet" in t:
-        return "boundaries" if d.get("table:primary_geometry") else "table"
+        if not d.get("table:primary_geometry"):
+            return "table"
+        return "points" if "Point" in (d.get("GCHD:geometry_types") or []) else "boundaries"
     if t == "application/xml":
         return "mosaic"
     if "tiff" in t:
@@ -116,6 +118,25 @@ ORDER BY u18_aexp DESC LIMIT 10;
 import pandas as pd
 df = pd.read_parquet("{url}", filters=[("iso3", "==", "BGD")])
 ```'''
+    if k == "points":
+        return f'''```python
+import geopandas as gpd
+gdf = gpd.read_parquet("{url}", filters=[("iso3", "==", "BGD")])          # one country
+gdf = gpd.read_parquet("{url}", bbox=(west, south, east, north))          # GeoParquet 1.1 bbox covering
+```
+```sql
+INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;
+SELECT iso3, count(*) AS n FROM '{url}' GROUP BY iso3 ORDER BY n DESC;
+-- points in an area: the bbox column lets DuckDB skip row groups
+SELECT name, education_level, longitude, latitude FROM '{url}'
+WHERE bbox.xmin BETWEEN 88 AND 93 AND bbox.ymin BETWEEN 20.5 AND 26.7;
+```
+Hazard value at each point (sample a hazard COG of this catalog; GDAL streams only the blocks it needs):
+```python
+import rasterio
+with rasterio.open(hazard_cog_url) as src:
+    gdf["hazard"] = [v[0] for v in src.sample(zip(gdf.longitude, gdf.latitude))]
+```'''
     if k == "boundaries":
         return f'''```python
 import geopandas as gpd
@@ -157,6 +178,10 @@ def related(d: dict, index: dict) -> list[str]:
         out.append("- Hazard layers: each hazard collection lists its `hazard_code`s in `GCHD:exposure_rules`.")
     if k == "boundaries":
         ref(f"{cid}_hazard", f"exposure statistics per unit: join `ucode` = `{cid}_ucode`")
+    if k == "points":
+        ref("adm2", "ADM2 boundaries: assign each point to its district with a spatial join")
+        out.append("- Hazard layers: sample any hazard COG at the points to find facilities in hazard zones; "
+                   "each hazard collection's `GCHD:exposure_rules` give the threshold for 'exposed'.")
     if cid == "mhi_climate":
         ref("land_sea_mask", "the land/sea mask of the same ERA5 0.1° grid")
     if cid == "land_sea_mask":
@@ -220,7 +245,8 @@ def collection_agents(d: dict, path: Path, stac_root: Path, index: dict, n_items
             "mosaic": f"{n_items} files, one STAC item each, plus a global GDAL VRT mosaic as the collection-level "
                       "`data` asset",
             "table": "one Parquet table (collection-level `data` asset)",
-            "boundaries": "one GeoParquet file (`data`) plus PMTiles vector tiles (`tiles`)"}.get(k, "see assets")
+            "boundaries": "one GeoParquet file (`data`) plus PMTiles vector tiles (`tiles`)",
+            "points": "one GeoParquet 1.1 point table (collection-level `data` asset), sorted by `iso3`"}.get(k, "see assets")
     lic_link = next((l["href"] for l in d["links"] if l["rel"] == "license"), None)
     facts = [f"- Layout: {what}.", f"- Data URL: {url}" if url else "",
              f"- Item index: {_abs_href(path, stac_root, idx['href'])}" if idx else "",
@@ -285,7 +311,7 @@ def catalog_readme(d: dict, path: Path, stac_root: Path, children: list[tuple[st
 
 def catalog_agents(d: dict, path: Path, stac_root: Path, index: dict, is_root: bool) -> str:
     here = path.parent.resolve()
-    order = ["hazards", "multi_hazard", "population", "boundaries", "exposure", "reference"]
+    order = ["hazards", "multi_hazard", "population", "boundaries", "exposure", "infrastructure", "reference"]
 
     def key(row):
         rel = Path(row[1]["path"]).resolve().relative_to(stac_root.resolve()).parts
@@ -301,7 +327,7 @@ def catalog_agents(d: dict, path: Path, stac_root: Path, index: dict, is_root: b
             "- Static STAC 1.1 catalog conforming to the Portolan profile v0.2.0, served from GitHub Pages: "
             f"{PAGES_STAC}/catalog.json",
             "- Root -> sub-catalogs (`hazards/<theme>`, `multi_hazard`, `population`, `boundaries`, `exposure`, "
-            "`reference`) -> one Collection per dataset. Every Collection has a `data` asset; collections made of "
+            "`infrastructure`, `reference`) -> one Collection per dataset. Every Collection has a `data` asset; collections made of "
             "many files (river flood tiles, WorldPop countries) also have items and an `items_parquet` index.",
             "- Data files are on Azure Blob Storage (https://unidatadapmclimatechange.blob.core.windows.net/public/), "
             "public, with HTTP range requests and CORS: stream them, no download or credentials needed.",

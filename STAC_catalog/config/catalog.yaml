@@ -5,7 +5,7 @@ root:
   id: GCHD
   title: UNICEF Global Child Hazard Database
   description: |-
-    The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It adds the Multi-Hazard Intensity (MHI) index, WorldPop 2025 population grids (under 18 and all ages, female, male and total), harmonised administrative boundaries (ADM0/1/2), and hazard-exposure statistics per administrative unit.
+    The **Global Child Hazard Database (GCHD)** brings together global, gridded layers of the climate, environmental, geophysical and conflict hazards that children are exposed to: floods, tropical storms, droughts, heatwaves, fire, sand and dust storms, air pollution, malaria, landslides, earthquakes, volcanoes and conflict. It adds the Multi-Hazard Intensity (MHI) index, WorldPop 2025 population grids (under 18 and all ages, female, male and total), harmonised administrative boundaries (ADM0/1/2), hazard-exposure statistics per administrative unit, and the locations of infrastructure that serves children, starting with schools from Giga.
 
     Gridded layers are Cloud-Optimized GeoTIFFs that stream directly into GIS tools or analysis code; boundaries and exposure statistics are (Geo)Parquet tables that DuckDB, GeoPandas or Arrow read over HTTP. Processing scripts and documentation: https://github.com/unicef/GCHD
   keywords: [GCHD, UNICEF, children, hazard, exposure, climate, population, administrative boundaries]
@@ -30,6 +30,9 @@ groups:
   exposure:
     title: Hazard exposure statistics
     description: Population and child exposure to each hazard per administrative unit (ADM2, with ADM1 and ADM0 roll-ups), from the GCHD exposure pipeline. Join to the boundaries on the unit codes.
+  infrastructure:
+    title: Infrastructure
+    description: Locations of facilities that serve children, such as schools, as (Geo)Parquet point tables. Overlay them on the hazard layers to find facilities in hazard zones.
   reference:
     title: Reference grids
     description: Auxiliary grids used to build the indicators, such as the land/sea mask of the ERA5 0.1° grid.
@@ -134,6 +137,33 @@ tables:
     title: Hazard exposure by country (ADM0), per hazard (roll-up)
     description: Roll-up of adm2_hazard to country level, with the same rules and GEE provenance as adm1_hazard. Join to adm0 on adm0_ucode = ucode.
     checksum: {parquet: 12208bac0a12d09941b5aa09014319d2f985d2f9fbbe0afc9f43e62c767b1737f837}
+  # Point tables owned by their producers, already on Azure under gchd_cog/infrastructure/ (absolute `href`).
+  # pipeline/12_infrastructure.py prints the checksum and draws the thumbnail.
+  infrastructure:
+  - id: giga_schools
+    href: https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/infrastructure/giga_schools_global.parquet
+    title: School locations (Giga)
+    description: |-
+      School point locations from Giga, the UNICEF-ITU initiative to connect every school to the Internet, for 180 countries (2,324,244 schools, snapshot of 2026-11-20). One row per school with its Giga identifier, name, education level and coordinates. The data come from governments, which share their school records with Giga, and from open sources such as OpenStreetMap, checked by Giga against satellite imagery.
+
+      `education_level` is free text as reported by each source, in several languages ('Primary', 'Primaria', 'Primaire', ...), and is 'Unknown' for about half of the schools. Coverage and completeness vary by country. A country missing from the table, or with few rows, does not mean it has no schools.
+    datetime: "2026-11-20T16:22:08Z"
+    keywords: [schools, education, Giga, infrastructure, points]
+    provider: {name: Giga (UNICEF and ITU), url: "https://giga.global/", description: "School location data shared by governments and open sources (Giga Maps)"}
+    license_url: https://giga.global/
+    license_note: The terms are those of Giga and of the governments that share the data; check them at https://giga.global/ before redistributing.
+    checksum: 12202448a1e20011001dafbecc3fec29859810e26f4c7293c13b1ffa45e82509a4b5
+    profile: [education_level]
+    columns:
+      facility_id: Giga school identifier (unique)
+      name: School name as reported by the source ('Name unknown' when missing)
+      education_level: Education level, free text as reported by the source (not harmonised; 'Unknown' for about half the rows)
+      iso3: ISO 3166-1 alpha-3 country code; the file is sorted by iso3, so a filter on it reads only a few row groups
+      country_name: Country name
+      longitude: Longitude, WGS84
+      latitude: Latitude, WGS84
+      geometry: Point geometry, EPSG:4326 (WKB)
+      bbox: GeoParquet 1.1 bbox covering of the geometry (xmin, ymin, xmax, ymax), for spatial filters
 
 # Landing pages of data producers that config/layers.yaml / web_app/config.py give no URL for (rel:via, providers).
 provider_urls:

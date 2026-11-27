@@ -10,6 +10,7 @@ Layout (grouped; every leaf is a Collection with a collection-level `data` asset
   stac/multi_hazard/mhi_climate/  stac/reference/land_sea_mask/          (config/catalog.yaml layers)
   stac/population/worldpop_{u18_2025,2025}_{total,female,male}/          data = VRT, + country items
   stac/boundaries/adm{0,1,2}/  stac/exposure/adm{0,1,2}_hazard/          (Geo)Parquet on Azure
+  stac/infrastructure/giga_schools/                     GeoParquet points on Azure (config/catalog.yaml)
 
 Hazard metadata comes from config/layers.yaml (the xlsx), exposure rules from config/hazard_map.yaml,
 geometry / proj / raster bands from the COG itself (rio-stac), table schemas from the Parquet footers and
@@ -348,6 +349,47 @@ def table_collections(cfg: dict) -> tuple[list, list, dict[str, str]]:
     return bounds, expo, known
 
 
+def infrastructure_collections(cfg: dict, known: dict[str, str]) -> list[pystac.Collection]:
+    """Point tables of config/catalog.yaml `tables.infrastructure` (e.g. Giga schools): one GeoParquet each."""
+    out = []
+    for spec in cfg["tables"].get("infrastructure", []):
+        cid, url = spec["id"], spec["href"]
+        if spec.get("checksum"):
+            known[url] = spec["checksum"]
+        cols, rows, geo = parquet_meta(url)
+        for c in cols:
+            if spec.get("columns", {}).get(c["name"]):
+                c["description"] = spec["columns"][c["name"]]
+        gcol = geo.get("columns", {}).get(geo.get("primary_column", "geometry"), {})
+        bbox = list(clamp_world(gcol["bbox"])) if gcol.get("bbox") else [-180, -90, 180, 90]
+        when = datetime.fromisoformat(spec["datetime"].replace("Z", "+00:00"))
+        p = spec["provider"]
+        col = pystac.Collection(
+            id=cid, title=spec["title"], description=spec["description"],
+            extent=pystac.Extent(pystac.SpatialExtent([bbox]), pystac.TemporalExtent([[when, when]])),
+            license="other", keywords=["GCHD", "UNICEF", "children", *spec.get("keywords", [])],
+            providers=[pystac.Provider(name=p["name"], url=p.get("url"), description=p.get("description"),
+                                       roles=[pystac.ProviderRole.PRODUCER, pystac.ProviderRole.LICENSOR]), UNICEF],
+            extra_fields={"table:columns": cols, "table:row_count": rows, "table:primary_geometry": "geometry",
+                          "GCHD:geometry_types": gcol.get("geometry_types"),
+                          "GCHD:notes": spec.get("license_note")})
+        col.stac_extensions = [EXT_TABLE]
+        col.add_asset("data", pystac.Asset(url, title=f"{spec['title']} (GeoParquet 1.1)", media_type=PARQUET_TYPE,
+                                           roles=["data"]))
+        thumb = THUMB_DIR / "infrastructure" / f"{cid}.jpg"
+        if thumb.exists():
+            col.add_asset("thumbnail", pystac.Asset(str(thumb), title="Thumbnail (point density)",
+                                                    media_type=pystac.MediaType.JPEG, roles=["thumbnail"]))
+        if p.get("url"):
+            col.add_link(pystac.Link("via", p["url"], media_type="text/html", title=p["name"]))
+        if spec.get("license_url"):   # kept by portolan.conform (it adds the GCHD repo only when none is set)
+            col.add_link(pystac.Link("license", spec["license_url"], media_type="text/html",
+                                     title=f"Terms of use ({p['name']})"))
+        out.append(col)
+        print(f"coll   infrastructure/{cid} ({rows:,} rows)", flush=True)
+    return out
+
+
 # --- after normalize_hrefs ----------------------------------------------------------------------
 
 def localize_assets(root: pystac.Catalog):
@@ -433,6 +475,8 @@ def build(workers: int, hash_remote: bool = False):
         groups["boundaries"].add_child(col)
     for col in expo:
         groups["exposure"].add_child(col)
+    for col in infrastructure_collections(cfg, known):
+        groups["infrastructure"].add_child(col)
 
     for t, cat in theme_cat.items():
         if list(cat.get_children()):
