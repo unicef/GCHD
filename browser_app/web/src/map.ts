@@ -165,6 +165,13 @@ function drawData(ctx: CanvasRenderingContext2D, s: Shown) {
     ctx.drawImage(s.raster.canvas, a.x, a.y, c.x - a.x, c.y - a.y);
     ctx.imageSmoothingEnabled = true;
     ctx.globalAlpha = 1;
+    ctx.strokeStyle = "#555";
+    ctx.lineWidth = 0.6;
+    for (const f of s.outlines?.features ?? []) {
+      ctx.beginPath();
+      tracePolys(ctx, f.geometry);
+      ctx.stroke();
+    }
   }
 }
 
@@ -330,7 +337,8 @@ function addLegend(title: string, br: number[], extra?: string) {
 }
 
 /** Choropleth of one numeric property of the features. */
-export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, title: string, outlines: GeoJSON.FeatureCollection, note?: string) {
+export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, title: string, outlines: GeoJSON.FeatureCollection, note?: string,
+                               onClick?: (ucode: string) => void) {
   clear();
   const vals = fc.features.map((f) => Number(f.properties?.[prop]));
   const br = breaks(vals);
@@ -339,7 +347,9 @@ export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, titl
     style: (f) => ({ stroke: false, fillOpacity: 0.75, fillColor: colorFor(Number(f?.properties?.[prop]), br) }),
     onEachFeature: (f, layer) => {
       const v = Number(f.properties?.[prop]);
-      layer.bindTooltip(`${f.properties?.name ?? f.properties?.ucode}<br>${title}: ${Number.isFinite(v) ? fmt(v) : "no data"}`, { sticky: true });
+      layer.bindTooltip(`${f.properties?.name ?? f.properties?.ucode}<br>${title}: ${Number.isFinite(v) ? fmt(v) : "no data"}`
+        + (onClick ? "<br><small>Click for all hazards</small>" : ""), { sticky: true });
+      if (onClick) layer.on("click", () => onClick(String(f.properties?.ucode)));
     },
   } as L.GeoJSONOptions);
   const lines = L.geoJSON(outlines, { renderer, interactive: false, style: () => ({ color: "#555", weight: 0.6 }) } as L.GeoJSONOptions);
@@ -363,7 +373,8 @@ export function showOutline(fc: GeoJSON.FeatureCollection, outlines: GeoJSON.Fea
 const mercY = (lat: number) => Math.log(Math.tan(Math.PI / 4 + (Math.max(Math.min(lat, 85), -85) * Math.PI) / 360));
 
 /** Raster overlay of a grid (re-projected row by row to web mercator so it lines up on the basemap). */
-export function showRaster(g: Grid, values: Float32Array, title: string, mask?: Uint8Array, note?: string) {
+export function showRaster(g: Grid, values: Float32Array, title: string, mask?: Uint8Array, note?: string,
+                           outlines?: GeoJSON.FeatureCollection) {
   clear();
   const finite: number[] = [];
   for (let i = 0; i < values.length; i += Math.max(1, Math.floor(values.length / 20000)))
@@ -394,7 +405,9 @@ export function showRaster(g: Grid, values: Float32Array, title: string, mask?: 
   }
   ctx.putImageData(img, 0, 0);
   const bounds: L.LatLngBoundsExpression = [[bottom, g.x0], [top, g.x0 + g.width * g.dx]];
-  dataLayer = L.imageOverlay(canvas.toDataURL(), bounds, { opacity: 0.85 }).addTo(map);
+  const layers: L.Layer[] = [L.imageOverlay(canvas.toDataURL(), bounds, { opacity: 0.85 })];
+  if (outlines) layers.push(L.geoJSON(outlines, { renderer, interactive: false, style: () => ({ color: "#555", weight: 0.6 }) } as L.GeoJSONOptions));
+  dataLayer = L.layerGroup(layers).addTo(map);
   addLegend(title, br, note);
-  shown = { title, br, note, raster: { canvas, bounds: L.latLngBounds(bounds) } };
+  shown = { title, br, note, raster: { canvas, bounds: L.latLngBounds(bounds) }, outlines };
 }

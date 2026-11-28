@@ -1,8 +1,37 @@
 # GCHD data assistant
 
-A static web app at **https://unicef.github.io/GCHD/browser_app/app/**. Users choose a country and ask questions in plain language, such as "How many children are exposed to river floods in each district?". An LLM, called with the user's own API key, turns the question into a plan. The plan runs in the user's browser on data from the [GCHD STAC catalog](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json). There is no server.
+A static web app at **https://unicef.github.io/GCHD/browser_app/app/**, with two tabs:
 
-## How a request goes
+- **Basic tool** (opens first): the official numbers from the summary tables, chosen from menus. No API key and no raster analysis. See [Basic tool](#basic-tool).
+- **AI tool**: users choose a country and ask questions in plain language, such as "How many children are exposed to river floods in each district?". An LLM, called with the user's own API key, turns the question into a plan. The plan runs in the user's browser on data from the [GCHD STAC catalog](https://unicef.github.io/GCHD/STAC_catalog/stac/catalog.json). There is no server.
+
+## Basic tool
+
+Choose a country, then:
+
+1. **Level:**
+   - ADM0 lists every hazard for the country, ranked by the number exposed.
+   - ADM1 or ADM2 shows one hazard by unit.
+2. **Region** (at ADM2): all districts, or the districts of one ADM1 unit. The map zooms to them.
+3. **Hazard**, as listed in the summary tables for the country.
+4. **Population:** children under 18 (all, girls, boys) or all ages (total, female, male).
+5. **Map value:**
+   - number exposed or % exposed;
+   - hazard intensity (mean or max);
+   - at ADM2 only, the country-scaled exposure index (0–10) and class (1–5). The ADM1 roll-up has no indices or classes.
+6. **Show the hazard layer** draws the hazard pixels with unit outlines. It is for display only, from the COG overviews; the table keeps the official numbers.
+
+What you get:
+
+- **The view:** every change redraws the table (with CSV) and the map (PNG and GeoJSON export work as in the AI tool).
+- **Info panel:** shows the hazard's description, exposure rule, period, resolution and source, and its AGENTS.md usage notes.
+- **Unit profile:** clicking a unit on the map shows all its hazards.
+- **No-data rows:** rows with a `status` (for example 'No Data') keep their status and are grey on the map.
+- **Share link:** the address bar always holds the current view, for example `#tool=basic&iso3=KEN&level=2&adm1=KEN_0001_V1&hazard=river_flood_100yr&pop=u18&sex=total&value=exposed`. Opening such a link loads the country and restores the view.
+
+The SQL is built by the app (`web/src/basic_query.ts`) over the same per-country local tables the AI tool uses (`adm{0,1,2}_hazard`), and it goes through the same SQL guard. Share columns (`*rexp`) are percentages (0–100).
+
+## How a request goes (AI tool)
 
 1. **Choose a country.** The app loads that country's rows of the exposure tables into DuckDB-WASM: ADM0 is downloaded whole at start-up (0.3 MB, it also gives the country list), and ADM1/ADM2 come from per-country copies (Kenya: 0.4 MB; the largest country 4.7 MB). Boundaries come from the ADM0/1/2 PMTiles.
 2. **Clarify.** The model asks short questions until the request is clear: the hazard, admin level, under-18 or all ages, sex, threshold and outputs.
@@ -57,9 +86,24 @@ For heatwave, extreme heat, drought (ASI, SPI, SPEI) and malaria, the official t
 
 - **Anthropic:** default `claude-opus-5-5`, through the official `@anthropic-ai/sdk` (`dangerouslyAllowBrowser`). It uses adaptive thinking, effort `medium`, the server-side refusal fallback, and a cached system prompt.
 - **OpenAI** (Chat Completions with function tools): default `gpt-5`.
-- **Gemini** (`generateContent` with function declarations): default `gemini-2.5-flash`. Gemini 2.5 sometimes ends a turn with no text and no tool call (only "thought" parts), often right after a confirmation; the app retries with a nudge, and after a confirmation the last retry requires a tool call (`functionCallingConfig` `ANY`).
+- **Gemini** (`generateContent` with function declarations): the default provider, with model `gemini-3.8-flash`, which is on Google's free tier. A model saved as `gemini-2.5-flash`, the earlier default that Google retires on 2026-12-01, is switched to the new default. Gemini sometimes ends a turn with no text and no tool call (only "thought" parts), often right after a confirmation; the app retries with a nudge, and after a confirmation the last retry requires a tool call (`functionCallingConfig` `ANY`).
 
 The model field is editable, and each provider adapter keeps its own message history.
+
+### A free Gemini key
+
+The app shows these steps under the key field when Gemini is selected:
+
+1. Open [Google AI Studio, API keys](https://aistudio.google.com/apikey) and sign in with a Google account. AI Studio creates a project; click **Create API key**.
+2. **Do not set up billing** for that project. A project with no billing account stays on the free tier and cannot be charged; AI Studio shows its plan as "Free tier".
+
+What users should know about the free tier:
+
+- **Limits:** requests per minute and per day are limited for each project and model, and AI Studio shows the current limits. One question takes several requests.
+  - On a per-minute 429, the app waits for the delay Google gives (`RetryInfo`, at most 65 s), up to 3 times, and shows the wait in the status line.
+  - On a daily 429 (a `PerDay` quota id), it stops and explains that the limit resets at midnight Pacific time.
+- **Data use:** on the free tier ("Unpaid Services"), Google may use prompts and responses to improve its products, and human reviewers may read them. The app sends the user's questions and the summary rows it reads, all public GCHD data. Users should not type personal or confidential information.
+- **Terms:** users must be 18 or over, and free-tier use is restricted in the EEA, Switzerland and the UK. See the [Gemini API terms](https://ai.google.dev/gemini-api/terms) and [pricing](https://ai.google.dev/gemini-api/docs/pricing).
 
 ## Develop
 
@@ -67,7 +111,7 @@ The model field is editable, and each provider adapter keeps its own message his
 cd browser_app
 npm install
 npm run dev          # http://localhost:5173 (sources in web/)
-npm test             # unit tests: SQL guard, routing, rasterization, clipping, CSV
+npm test             # unit tests: SQL guard, routing, rasterization, clipping, CSV, Basic tool SQL and share links
 npm run build        # type-check + build into app/ (commit app/ so Pages serves it)
 ```
 
@@ -75,7 +119,7 @@ The end-to-end checks drive headless Chrome with WebGL disabled. They use real d
 
 ```bash
 npx vite preview --port 4173 &
-node tests/e2e.mjs KEN                         # summary flow + raster flow (custom threshold, pixel map); lists the Parquet files fetched
+node tests/e2e.mjs KEN                         # Basic tool (views, profile, hazard layer, share link), then the AI tool: summary flow + raster flow; lists the Parquet files fetched
 NO_SPLIT=1 node tests/e2e.mjs BEN              # same, with the per-country tables blocked (whole-table fallback)
 node tests/parity.mjs BGD river_flood_100yr    # raster route at default threshold vs the official ADM1 table
 node tests/parity.mjs BRA river_flood_100yr 0.1 2 "São Paulo"   # custom threshold, districts of one state
@@ -86,7 +130,9 @@ node tests/parity.mjs BRA river_flood_100yr 0.1 2               # whole Brazil: 
 
 | File | Role |
 |---|---|
-| `web/src/main.ts` | UI: settings, country, chat, plan cards, conversation loop |
+| `web/src/main.ts` | UI: tabs, settings, country, chat, plan cards, conversation loop |
+| `web/src/basic.ts`, `basic_query.ts` | Basic tool: menus, table, map, info panel, unit profile; its SQL, column mapping and share-link state |
+| `web/src/ui.ts` | Result table block shared by both tabs |
 | `web/src/tools.ts` | Tool schemas; dispatcher with the plan / confirmation gate |
 | `web/src/route.ts` | Summary-first routing rules |
 | `web/src/prompt.ts` | System prompt with the catalog digest (hazards, rules, table columns) |

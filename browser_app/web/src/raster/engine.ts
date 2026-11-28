@@ -31,7 +31,7 @@ const EXACT_MAX_BYTES = 400e6;
 const EXACT_MAX_CELLS = 800e6;
 const TILE = 2048;
 // hazard groups whose official exposure used a different layer version in GEE than the catalog COG
-// (see the exposure tables' AGENTS.md): heatwave, extreme heat, ASI / SPI / SPEI drought, malaria
+// (see the exposure tables' AGENTS.md): heatwave, extreme heat, ASI drought, malaria (SPI / SPEI match since the catalog fix of 2026-11-27)
 export const GEE_VERSION_DIFFERS = /^hazards\/(heatwave|drought|malaria)$/;
 
 const POP_COLL = { u18: "worldpop_u18_2025", all: "worldpop_2025" } as const;

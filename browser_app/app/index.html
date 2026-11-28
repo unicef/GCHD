@@ -5,46 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GCHD data assistant</title>
   <meta name="description" content="Ask questions about children's exposure to hazards, answered in your browser from the Global Child Hazard Database (GCHD).">
-  <script type="module" crossorigin src="./assets/index-Cs8l5DEL.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-5tBRogRW.css">
+  <script type="module" crossorigin src="./assets/index-Oah8A8El.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CRaMZOaD.css">
 </head>
 <body>
   <header>
+    <a class="logo" href="https://www.unicef.org/" target="_blank" rel="noopener"><img src="./unicef_logo.png" alt="UNICEF: for every child" width="200" height="26"></a>
     <div>
       <h1>GCHD data assistant</h1>
       <p>Ask about children's exposure to hazards in one country. The data is processed in your browser, from the
         <a href="https://unicef.github.io/GCHD/STAC_catalog/browser/" target="_blank" rel="noopener">GCHD catalog</a>.</p>
     </div>
   </header>
+  <nav id="tabs" role="tablist">
+    <button role="tab" data-tab-btn="basic" title="Official numbers chosen from menus: no API key needed">Basic tool</button>
+    <button role="tab" data-tab-btn="ai" title="Ask in your own words, with a language model (needs an API key)">AI tool</button>
+  </nav>
   <main>
     <aside id="setup">
       <section>
-        <h2>1. Language model</h2>
+        <h2>1. Country</h2>
+        <input id="country" list="countries" placeholder="Loading countries…" disabled>
+        <datalist id="countries"></datalist>
+        <button id="loadCountry" disabled>Load country</button>
+        <p id="countryInfo" class="hint"></p>
+      </section>
+      <section id="basicControls" data-tab="basic">
+        <h2>2. What to show</h2>
+        <label>Level
+          <select id="b_level" disabled>
+            <option value="0">Country (ADM0): all hazards</option>
+            <option value="1">Regions (ADM1)</option>
+            <option value="2">Districts (ADM2)</option>
+          </select>
+        </label>
+        <label id="b_adm1Row">Region <select id="b_adm1" disabled><option value="">All</option></select></label>
+        <label id="b_hazardRow">Hazard <select id="b_hazard" disabled></select></label>
+        <label>Population
+          <select id="b_pop" disabled>
+            <option value="u18">Children (under 18)</option>
+            <option value="all">All ages</option>
+          </select>
+        </label>
+        <label>Sex <select id="b_sex" disabled></select></label>
+        <label>Map value <select id="b_value" disabled></select></label>
+        <label id="b_layerRow" class="inline"><input id="b_layer" type="checkbox" disabled> Show the hazard layer on the map</label>
+        <p class="hint">Official numbers from the GCHD summary tables, at each hazard's default exposure threshold. No API key needed. For custom thresholds or combined hazards, use the AI tool.</p>
+      </section>
+      <section data-tab="ai">
+        <h2>2. Language model</h2>
         <label>Provider
           <select id="provider">
+            <option value="gemini">Google (Gemini)</option>
             <option value="anthropic">Anthropic (Claude)</option>
-            <option value="openai">OpenAI</option>
-            <option value="gemini">Google Gemini</option>
+            <option value="openai">OpenAI (ChatGPT)</option>
           </select>
         </label>
         <label>Model <input id="model" type="text" spellcheck="false"></label>
         <label>API key <input id="apikey" type="password" autocomplete="off" spellcheck="false" placeholder="paste your key"></label>
         <label class="inline"><input id="remember" type="checkbox"> Remember the key on this device</label>
-        <p class="hint">Your key stays in this browser tab and is sent only to the provider you choose. Nothing goes to a GCHD server: there is none.</p>
-      </section>
-      <section>
-        <h2>2. Country</h2>
-        <input id="country" list="countries" placeholder="Loading countries…" disabled>
-        <datalist id="countries"></datalist>
-        <button id="loadCountry" disabled>Load country</button>
-        <p id="countryInfo" class="hint"></p>
+        <details id="geminiHelp" class="help">
+          <summary>How to get a free API key</summary>
+          <ol>
+            <li>Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio, API keys</a> and sign in with a Google account.</li>
+            <li>Accept the terms. AI Studio creates a project for you. Click <b>Create API key</b>, copy the key and paste it above.</li>
+            <li><b>To keep it free, do not set up billing</b> for that project: skip any "Set up billing" or "Upgrade" button. A project with no billing account stays on the free tier and cannot be charged. In AI Studio, the project's plan shows <b>Free tier</b>.</li>
+          </ol>
+          <p><b>Limits.</b> The free tier allows a limited number of requests per minute and per day, shown in AI Studio for your project. One question takes several requests. When the per-minute limit is reached, the app waits and carries on. When the daily limit is reached, try again the next day: it resets at midnight Pacific time.</p>
+          <p><b>Privacy.</b> On the free tier, Google may use what the app sends (your questions and the summary numbers it reads) to improve its products, and human reviewers may read it. GCHD data is public, but do not type personal or confidential information.</p>
+          <p>Google's terms: you must be 18 or over, and free-tier use is restricted in the EEA, Switzerland and the UK. See the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API terms</a> and <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener">pricing</a>.</p>
+        </details>
+        <p class="hint">Your key is kept only in this browser and is sent only to the provider you choose. GCHD has no server of its own, so it never sees your key or your questions.</p>
       </section>
       <section>
         <h2>Status</h2>
         <p id="status" class="hint">Starting…</p>
       </section>
     </aside>
-    <section id="chatPane">
+    <section id="basicPane" data-tab="basic">
+      <div id="b_info" class="info"><h3>Basic tool</h3><p>Choose a country, then a level, a hazard and a population. The table and the map show the official GCHD numbers.</p></div>
+      <div id="b_profile"></div>
+    </section>
+    <section id="chatPane" data-tab="ai">
       <div id="chat" aria-live="polite"></div>
       <form id="ask">
         <textarea id="question" rows="3" placeholder="Choose a country first, then ask, for example: How many children are exposed to river floods in each district?" disabled></textarea>
@@ -53,7 +95,8 @@
     </section>
     <section id="resultPane">
       <div id="map"></div>
-      <div id="results"></div>
+      <div id="results" data-tab="ai"></div>
+      <div id="basicResults" data-tab="basic"></div>
     </section>
   </main>
 </body>
