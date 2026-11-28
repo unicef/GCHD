@@ -8,8 +8,8 @@ exposure,adm2_hazard,"Hazard exposure by district (ADM2), per hazard",0,https://
 hazards/air_pollution,air_pollution_pm25_2012-2022,PM 2.5,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/air_pollution/air_pollution_pm25_2012-2022.tif
 hazards/conflict,unicef_acled_ci_sep2020_aug2025,Conflict,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/conflict/UNICEF_ACLED_CI_Sep2020_Aug2025.tif
 hazards/drought,agricultural_drought_fao_1984-2023,Agricultural Drought (Agricultural Stress Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/agricultural_drought_fao_1984-2023.tif
-hazards/drought,drought_spei_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Evapotranspiration Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif
-hazards/drought,drought_spi_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spi_terraclimate_1958-2025.tif
+hazards/drought,drought_spei_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Evapotranspiration Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei12_terraclimate_1958-2025_b2.tif
+hazards/drought,drought_spi_terraclimate_1958-2025,Meteorological Drought (Standardized Precipitation Index),0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spi12_terraclimate_1958-2025_b2.tif
 hazards/earthquake,earthquake_v2023_1_pga_475_rock_3min,Earthquake,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/earthquake/earthquake_v2023_1_pga_475_rock_3min.tif
 hazards/fire,fire_frequency_nasa_2001-2023,Fire Frequency,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_frequency_nasa_2001-2023.tif
 hazards/fire,fire_frp_nasa_2001-2024,Fire Intensity,0,https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/fire/fire_FRP_nasa_2001-2024.tif

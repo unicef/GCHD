@@ -7,7 +7,7 @@ Guidance for AI agents and LLMs working with this collection. Generated from the
 SPEI adds the effect of evapotranspiration and is better suited to assess droughts under climate change scenarios where temperature changes are important. Probability values are computed from the full 1958–2025 record (804 monthly time steps) dividing the numbers of months lower than TH (1.5) with total months
 
 - Layout: one global Cloud-Optimized GeoTIFF (collection-level `data` asset).
-- Data URL: https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif
+- Data URL: https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei12_terraclimate_1958-2025_b2.tif
 - Period: 1958-01-01 – 2025-12-31
 - License: other (https://github.com/unicef/GCHD)
 
@@ -15,27 +15,27 @@ SPEI adds the effect of evapotranspiration and is better suited to assess drough
 
 ```python
 import rasterio
-url = "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif"
+url = "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei12_terraclimate_1958-2025_b2.tif"
 with rasterio.open(url) as src:                      # streams only the bytes it needs (COG)
     print(src.profile)
     value = next(src.sample([(lon, lat)]))           # value at a point (EPSG:4326)
     window = src.read(1, window=src.window(*bbox))   # bbox = (west, south, east, north)
 ```
-QGIS: Layer > Add Raster Layer > Protocol: HTTP(S), paste the URL. GDAL: `gdalinfo /vsicurl/https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei_terraclimate_1958-2025.tif`.
+QGIS: Layer > Add Raster Layer > Protocol: HTTP(S), paste the URL. GDAL: `gdalinfo /vsicurl/https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spei12_terraclimate_1958-2025_b2.tif`.
 
 ## Schema & field notes
 
-- Band: data type `float32`, nodata `nan`; observed range -33.85 to -1.822, mean -4.923, valid pixels 35.8%
+- Band: data type `float32`, nodata `-9999.0`; observed range 0 to 0.3617, mean 0.06469, valid pixels 35.8%
 - Hazard (`GCHD:hazard`): Droughts
 - Phase (`GCHD:hazard_phase`): Preparedness/Planning
 - Data type (`GCHD:data_type`): Probabilistic - empirical
-- Units (`GCHD:units`): Index
+- Units (`GCHD:units`): probability (0-1), share of months in drought
 - Resolution (`GCHD:nominal_resolution`): 5km
 - Coverage (`GCHD:coverage`): Global
-- Exposure threshold (`GCHD:threshold`): >0.06 (global mean)
+- Exposure threshold (`GCHD:threshold`): >0.065 (global mean)
 - Classes (`GCHD:classes`): Use quantile
-- Value range (`GCHD:value_range`): [-10.0, 10.0]
-- GEE asset (`GCHD:gee_asset`): projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025
+- Value range (`GCHD:value_range`): [0.0, 1.0]
+- GEE asset (`GCHD:gee_asset`): projects/unicef-ccri/assets/droughts/spei12_TerraClimate_1958-2025
 - CRS: EPSG:4326
 - Exposure rule `drought_spei_tc`: exposed where value > 0.0650162152126539; a pixel has data where value > -1000 (default variant)
 

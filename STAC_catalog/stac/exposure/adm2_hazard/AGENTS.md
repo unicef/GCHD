@@ -4,7 +4,7 @@ Guidance for AI agents and LLMs working with this collection. Generated from the
 
 ## Overview
 
-One row per (adm2_ucode, hazard_code). Columns follow the ' Data Schema' sheet of Global Hazard Data catalog.xlsx. Computed by the GEE exposure pipeline (CSV release 2026-08-31); for some hazards (heatwave, extreme heat, ASI, malaria, SPI/SPEI drought) GEE used a different version of the layer than the hazard COGs in this catalog, so the numbers can differ from a recomputation on the COGs. Join to adm2 on adm2_ucode = ucode.
+One row per (adm2_ucode, hazard_code). Columns follow the ' Data Schema' sheet of Global Hazard Data catalog.xlsx. Computed by the GEE exposure pipeline (CSV release 2026-08-31); for some hazards (heatwave, extreme heat, ASI, malaria) GEE used a different version of the layer than the hazard COGs in this catalog, so the numbers can differ from a recomputation on the COGs. Join to adm2 on adm2_ucode = ucode.
 
 - Layout: one Parquet table (collection-level `data` asset).
 - Data URL: https://unidatadapmclimatechange.blob.core.windows.net/public/GCHD_portolan/adm2_hazard/adm2_hazard.parquet

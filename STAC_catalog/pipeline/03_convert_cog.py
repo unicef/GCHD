@@ -31,7 +31,7 @@ from rio_cogeo.profiles import cog_profiles
 
 import _path  # noqa: F401,E402  (STAC_catalog/ on sys.path)
 from gchd_stac.common import (ACCOUNT_URL, COG_PREFIX, PUBLIC_CONTAINER, RAW_CONTAINER, REPORTS_DIR,
-                    STAC_DIR, container_client, load_layers)
+                    STAC_DIR, container_client, cog_blob, load_layers)
 
 WORK_DIR = Path(os.getenv("GCHD_WORK_DIR", STAC_DIR / "work"))
 GDAL_CFG = {"GDAL_NUM_THREADS": "ALL_CPUS", "GDAL_TIFF_OVR_BLOCKSIZE": "512",
@@ -227,6 +227,9 @@ def main():
 
     for layer in layers:
         src = layer["source"]
+        if src["type"] == "file" and layer.get("cog_blob"):
+            print(f"skip   {layer['id']}: prebuilt COG {cog_blob(layer)} (cog_blob in layers.yaml)", flush=True)
+            continue
         if src["type"] == "file":
             blob = src["href"].split(f"/{PUBLIC_CONTAINER}/", 1)[1]
             print(process(layer, PUBLIC_CONTAINER, blob, cog_blob_name(layer), args.force, args.keep), flush=True)

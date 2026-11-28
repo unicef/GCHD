@@ -44,7 +44,7 @@ import _path  # noqa: F401,E402  (STAC_catalog/ on sys.path)
 from gchd_stac import docs, population, portolan
 from gchd_stac.common import (CONFIG_DIR, COG_PREFIX, HAZARD_MAP_YAML, LAYERS_YAML, OVERVIEWS, PAGES_URL,
                               PUBLIC_CONTAINER, REPO_DIR, STAC_DIR, STAC_OUT, THUMB_DIR, WORK_DIR, clamp_world,
-                              container_client, gdal_env, load_catalog_config, load_layers, stac_id)
+                              cog_blob, container_client, gdal_env, load_catalog_config, load_layers, stac_id)
 
 COG_TYPE = pystac.MediaType.COG
 VRT_TYPE = "application/xml"
@@ -449,7 +449,7 @@ def build(workers: int, hash_remote: bool = False):
         theme = themes.get(grp)
         parent = theme_cat[grp] if theme else groups[grp]
         if layer["source"]["type"] == "file":
-            blob = f"{COG_PREFIX}/{grp}/{layer['id']}.tif"
+            blob = cog_blob(layer)
             if blob not in published:
                 print(f"skip   {stac_id(layer)} ({blob} not published)")
                 continue

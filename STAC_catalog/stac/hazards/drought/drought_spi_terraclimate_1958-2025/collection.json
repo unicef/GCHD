@@ -12,7 +12,7 @@
     },
     {
       "rel": "derived_from",
-      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/drought_spi_copernicus_1940_2024.tif",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/final_hazard_layers/drought/spi12_TerraClilmate_1958-2025.tif",
       "type": "image/tiff",
       "title": "Source file (pre-COG)"
     },
@@ -58,16 +58,16 @@
   "GCHD:data_type": "Probabilistic - empirical",
   "GCHD:nominal_resolution": "5km",
   "GCHD:coverage": "Global",
-  "GCHD:units": "Index",
-  "GCHD:threshold": ">0.09 (global mean)",
+  "GCHD:units": "probability (0-1), share of months in drought",
+  "GCHD:threshold": ">0.091 (global mean)",
   "GCHD:classes": "Use natural breaks/quantile",
   "GCHD:value_range": [
-    -10.0,
-    10.0
+    0.0,
+    1.0
   ],
   "GCHD:notes": "The SPI measures the precipitation deficit that accumulated over the preceding months and evaluates the deficit with respect to a reference period -12-month time scale. More details: https://github.com/dohyung-kim/precip-index/blob/main/README.md",
   "GCHD:alternate_sources": "World Bank (GOST)",
-  "GCHD:gee_asset": "projects/unicef-ccri/assets/droughts/spei12_TerraClimate_1958-2025",
+  "GCHD:gee_asset": "projects/unicef-ccri/assets/droughts/spi12_TerraClimate_1958-2025",
   "GCHD:exposure_rules": [
     {
       "hazard_code": "drought_spi_tc",
@@ -85,8 +85,8 @@
       "bbox": [
         [
           -180.0,
-          -90.0,
-          179.875,
+          -89.99999999999997,
+          180.0,
           90.0
         ]
       ]
@@ -130,29 +130,29 @@
   ],
   "assets": {
     "data": {
-      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spi_terraclimate_1958-2025.tif",
+      "href": "https://unidatadapmclimatechange.blob.core.windows.net/public/gchd_cog/drought/drought_spi12_terraclimate_1958-2025_b2.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "title": "Meteorological Drought (Standardized Precipitation Index) (Cloud-Optimized GeoTIFF)",
       "proj:shape": [
-        721,
-        1440
+        4320,
+        8640
       ],
       "proj:transform": [
-        0.25,
+        0.041666666666666664,
         0.0,
-        -180.125,
+        -180.0,
         0.0,
-        -0.25,
-        90.125,
+        -0.04166666666666666,
+        90.0,
         0.0,
         0.0,
         1.0
       ],
       "proj:bbox": [
-        -180.125,
-        -90.125,
-        179.875,
-        90.125
+        -180.0,
+        -89.99999999999997,
+        180.0,
+        90.0
       ],
       "roles": [
         "data"
@@ -164,35 +164,35 @@
           "raster:scale": 1.0,
           "raster:offset": 0.0,
           "raster:sampling": "area",
-          "nodata": "nan",
+          "nodata": -9999.0,
           "statistics": {
-            "mean": -1.7156872121009261,
-            "minimum": -8.222082138061523,
-            "maximum": 8.2095365524292,
-            "stddev": 0.7065153344255253,
-            "valid_percent": 35.82956414473684
+            "mean": 0.09124062183367107,
+            "minimum": 0.0,
+            "maximum": 0.43608954548835754,
+            "stddev": 0.04566885838595003,
+            "valid_percent": 35.7666015625
           },
           "raster:histogram": {
             "count": 11,
-            "min": -8.222082138061523,
-            "max": 8.2095365524292,
+            "min": 0.0,
+            "max": 0.43608954548835754,
             "buckets": [
-              1188,
-              154,
-              1636,
-              87324,
-              97846,
-              56,
-              8,
-              0,
-              0,
-              5
+              22332,
+              79192,
+              52680,
+              23321,
+              6992,
+              2439,
+              425,
+              112,
+              26,
+              1
             ]
           }
         }
       ],
-      "file:size": 1493827,
-      "file:checksum": "d501108c77d862d49538391c3752b5fb725e3a"
+      "file:size": 37131405,
+      "file:checksum": "d501106c5562b15aff04d5a61ce2ec9b91e33d"
     },
     "thumbnail": {
       "href": "./thumbnail.png",
@@ -201,8 +201,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 148412,
-      "file:checksum": "122060bc9c1ea208daefe94e276ee435c3c6e5243ba9d725a559ce92cc25a28232ee"
+      "file:size": 151899,
+      "file:checksum": "12207f5e4b92998d0a1371158bd4c689e315a4de4b70144ff7f6f8be5d79fe311d82"
     },
     "overview": {
       "href": "./overview.png",
@@ -211,9 +211,9 @@
       "roles": [
         "overview"
       ],
-      "file:size": 634354,
-      "file:checksum": "1220514f1b2a6cff92939da1160220d32e7ef791149eb84956e04bec03134aa22cb5"
+      "file:size": 633517,
+      "file:checksum": "12202e4b18fab351c0a3a0bb002991221074931c6597bd2d21bccfedc7e59ed091f1"
     }
   },
-  "updated": "2026-11-26T16:19:09Z"
+  "updated": "2026-11-27T19:58:37Z"
 }
