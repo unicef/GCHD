@@ -15,7 +15,7 @@ const renderer = L.canvas({ padding: 0.5 });
 
 // what is on the map now, for export
 interface Shown {
-  title: string; br: number[]; note?: string;
+  title: string; br: number[]; min?: number; note?: string;
   geojson?: GeoJSON.FeatureCollection; prop?: string; outlines?: GeoJSON.FeatureCollection;   // choropleth
   raster?: { canvas: HTMLCanvasElement; bounds: L.LatLngBounds };                  // pixel map
 }
@@ -255,7 +255,7 @@ function drawScaleBar(ctx: CanvasRenderingContext2D, H: number) {
 }
 
 function drawLegend(ctx: CanvasRenderingContext2D, s: Shown, W: number, H: number) {
-  const labels = legendLabels(s.br);
+  const labels = legendLabels(s.br, s.min);
   const rows = labels.length + 1;
   const lh = 17, pad = 8, bw = 190;
   const bh = pad * 2 + 20 + rows * lh + (s.note ? 16 : 0);
@@ -295,13 +295,20 @@ function clear() {
   shown = null;
 }
 
-/** Class breaks: quantiles of the finite values (unique, ascending), at most RAMP.length classes. */
+/** Class breaks: quantiles of the finite values (unique, ascending), at most RAMP.length classes.
+ *  When many values equal the minimum (e.g. units with 0 exposed), the minimum gets its own class
+ *  and the other classes are quantiles of the values above it, so they do not collapse into one. */
 export function breaks(values: number[], n = RAMP.length): number[] {
   const v = values.filter(Number.isFinite).sort((a, b) => a - b);
   if (!v.length) return [];
-  const out: number[] = [];
-  for (let i = 1; i < n; i++) out.push(v[Math.min(v.length - 1, Math.floor((i / n) * v.length))]);
-  return [...new Set(out)];
+  const q = (a: number[], k: number) => {
+    const out: number[] = [];
+    for (let i = 1; i < k; i++) out.push(a[Math.min(a.length - 1, Math.floor((i / k) * a.length))]);
+    return out;
+  };
+  const lo = v[0], above = v.filter((x) => x > lo);
+  if (above.length && v.length - above.length >= v.length / n) return [...new Set([lo, ...q(above, n - 1)])];
+  return [...new Set(q(v, n))];
 }
 
 const classColor = (i: number, br: number[]) => RAMP[Math.round((i / Math.max(1, br.length)) * (RAMP.length - 1))];
@@ -315,19 +322,22 @@ function colorFor(x: number, br: number[]): string {
 
 const fmt = (x: number) => Math.abs(x) >= 1000 ? Math.round(x).toLocaleString() : Number(x.toPrecision(3)).toString();
 
-function legendLabels(br: number[]): string[] {
+/** Legend labels; `min` is the smallest value shown, so a class holding only the minimum reads "0", not "≤ 0". */
+export function legendLabels(br: number[], min?: number): string[] {
+  if (!br.length) return Number.isFinite(min) ? [fmt(min!)] : [];
   return [-Infinity, ...br].map((lo, i) => {
     const hi = br[i];
-    return i === 0 ? `≤ ${fmt(hi ?? lo)}` : hi === undefined ? `> ${fmt(lo)}` : `${fmt(lo)} – ${fmt(hi)}`;
+    if (i === 0) return min === hi ? fmt(hi) : `≤ ${fmt(hi)}`;
+    return hi === undefined ? `> ${fmt(lo)}` : `${fmt(lo)} – ${fmt(hi)}`;
   });
 }
 
-function addLegend(title: string, br: number[], extra?: string) {
+function addLegend(title: string, br: number[], extra?: string, min?: number) {
   legend = new L.Control({ position: "bottomright" });
   legend.onAdd = () => {
     const d = L.DomUtil.create("div", "legend");
     const rows = [`<b>${title}</b>`];
-    legendLabels(br).forEach((label, i) => rows.push(`<i style="background:${classColor(i, br)}"></i>${label}`));
+    legendLabels(br, min).forEach((label, i) => rows.push(`<i style="background:${classColor(i, br)}"></i>${label}`));
     rows.push(`<i style="background:#cccccc"></i>no data`);
     if (extra) rows.push(`<small>${extra}</small>`);
     d.innerHTML = rows.join("<br>");
@@ -342,6 +352,7 @@ export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, titl
   clear();
   const vals = fc.features.map((f) => Number(f.properties?.[prop]));
   const br = breaks(vals);
+  const min = Math.min(...vals.filter(Number.isFinite));
   const fills = L.geoJSON(fc, {
     renderer,
     style: (f) => ({ stroke: false, fillOpacity: 0.75, fillColor: colorFor(Number(f?.properties?.[prop]), br) }),
@@ -354,8 +365,8 @@ export function showChoropleth(fc: GeoJSON.FeatureCollection, prop: string, titl
   } as L.GeoJSONOptions);
   const lines = L.geoJSON(outlines, { renderer, interactive: false, style: () => ({ color: "#555", weight: 0.6 }) } as L.GeoJSONOptions);
   dataLayer = L.layerGroup([fills, lines]).addTo(map);
-  addLegend(title, br, note);
-  shown = { title, br, note, geojson: fc, prop, outlines };
+  addLegend(title, br, note, min);
+  shown = { title, br, min, note, geojson: fc, prop, outlines };
 }
 
 /** Outline only (country chosen, nothing computed yet). */
@@ -408,6 +419,7 @@ export function showRaster(g: Grid, values: Float32Array, title: string, mask?: 
   const layers: L.Layer[] = [L.imageOverlay(canvas.toDataURL(), bounds, { opacity: 0.85 })];
   if (outlines) layers.push(L.geoJSON(outlines, { renderer, interactive: false, style: () => ({ color: "#555", weight: 0.6 }) } as L.GeoJSONOptions));
   dataLayer = L.layerGroup(layers).addTo(map);
-  addLegend(title, br, note);
-  shown = { title, br, note, raster: { canvas, bounds: L.latLngBounds(bounds) }, outlines };
+  const min = finite.reduce((a, b) => Math.min(a, b), Infinity);
+  addLegend(title, br, note, min);
+  shown = { title, br, min, note, raster: { canvas, bounds: L.latLngBounds(bounds) }, outlines };
 }
